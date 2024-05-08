@@ -6,15 +6,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
-import { Button } from "@/registry/default/ui/button"
+} from "@/shadcn-scss/components/Avatar/src"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+} from "@/shadcn-scss/components/Card/src"
 import {
   Command,
   CommandEmpty,
@@ -22,12 +22,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/default/ui/command"
+} from "@/shadcn-scss/components/Command/src"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/shadcn-scss/components/Popover/src"
 
 export function CardsTeamMembers() {
   return (
@@ -52,7 +52,7 @@ export function CardsTeamMembers() {
           </div>
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" size="sm" className="ml-auto">
+              <Button className={buttonVariants({variant: "outline", size: "sm"}) + " ml-auto"}>
                 Owner{" "}
                 <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>
@@ -106,7 +106,7 @@ export function CardsTeamMembers() {
           </div>
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" size="sm" className="ml-auto">
+              <Button className={buttonVariants({variant: "outline", size: "sm"}) + " ml-auto"}>
                 Member{" "}
                 <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>
@@ -162,7 +162,7 @@ export function CardsTeamMembers() {
           </div>
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" size="sm" className="ml-auto">
+              <Button className={buttonVariants({variant: "outline", size: "sm"}) + " ml-auto"}>
                 Member{" "}
                 <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>

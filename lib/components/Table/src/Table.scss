@@ -1,0 +1,75 @@
+.table {
+    border-collapse: collapse;
+    border-color: inherit;
+    caption-side: bottom;
+    font-size: var(--font-size-s);
+    text-indent: 0;
+    width: 100%;
+
+    &-wrapper {
+        overflow: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    &-header {
+        &__cell {
+            color: hsl(var(--muted-foreground));
+            font-weight: var(--font-semi-bold);
+            height: var(--space-xxl);
+            padding: 0 var(--space-base);
+            text-align: left;
+            vertical-align: middle;
+
+            &:has([role="checkbox"]) {
+                padding-right: 0;
+                width: 100px;
+            }
+        }
+    }
+
+    &-row {
+        background-color: transparent;
+        border-bottom: var(--border-size-s) solid hsl(var(--border));
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: hsl(var(--muted) / 0.5);
+        }
+
+        &[data-state="selected"] {
+            background-color: hsl(var(--muted));
+        }
+    }
+
+    &-body {
+        .table-row:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+    &-cell {
+        padding: var(--space-base);
+        vertical-align: middle;
+
+        &:has([role="checkbox"]) {
+            padding-right: 0;
+        }
+    }
+
+    &-footer{
+        background-color: hsl(var(--muted) / 0.5);
+        border-top: var(--border-size-s) solid hsl(var(--border));
+        font-weight: var(--font-semi-bold);
+
+        & > .table-row:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+    &-caption{
+        color: hsl(var(--muted-foreground));
+        font-size: var(--font-size-s);
+        margin-top: var(--space-base)
+    }
+}

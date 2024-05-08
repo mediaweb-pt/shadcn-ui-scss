@@ -26,10 +26,10 @@ export default function ThemesPage() {
       >
         <PageHeader>
           <Announcement />
-          <PageHeaderHeading className="hidden md:block">
-            Add colors. Make it yours.
+          <PageHeaderHeading>
+            Add colors,
           </PageHeaderHeading>
-          <PageHeaderHeading className="md:hidden">
+          <PageHeaderHeading>
             Make it yours
           </PageHeaderHeading>
           <PageHeaderDescription>

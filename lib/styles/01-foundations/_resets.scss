@@ -1,0 +1,157 @@
+///
+:host,
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+}
+
+///
+body {
+    margin: 0;
+    line-height: inherit;
+}
+
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+}
+
+///
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+///
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    border: 0 solid #e5e7eb;
+}
+
+* {
+    border-color: hsl(var(--border));
+}
+
+///
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+///
+button,
+select {
+    text-transform: none;
+}
+
+[role="button"],
+button {
+    cursor: pointer;
+}
+
+///
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+
+///
+.animate-spin {
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+        100% {
+            transform: rotate(1turn);
+        }
+    }
+}
+
+///
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+///
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+    margin: 0;
+}
+
+///
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+    display: block;
+    vertical-align: middle;
+}
+
+///
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+///
+menu,
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

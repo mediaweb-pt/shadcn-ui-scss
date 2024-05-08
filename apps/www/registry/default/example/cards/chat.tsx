@@ -6,14 +6,14 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
-import { Button } from "@/registry/default/ui/button"
+} from "@/shadcn-scss/components/Avatar/src"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/default/ui/card"
+} from "@/shadcn-scss/components/Card/src"
 import {
   Command,
   CommandEmpty,
@@ -21,7 +21,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/default/ui/command"
+} from "@/shadcn-scss/components/Command/src"
 import {
   Dialog,
   DialogContent,
@@ -29,14 +29,14 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/default/ui/dialog"
-import { Input } from "@/registry/default/ui/input"
+} from "@/shadcn-scss/components/Dialog/src"
+import { Input } from "@/shadcn-scss/components/Input/src"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/default/ui/tooltip"
+} from "@/shadcn-scss/components/Tooltip/src"
 
 const users = [
   {
@@ -111,9 +111,7 @@ export function CardsChat() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  size="icon"
-                  variant="outline"
-                  className="ml-auto rounded-full"
+                  className={buttonVariants({variant: "outline", size: "icon"}) + "ml-auto rounded-full"}
                   onClick={() => setOpen(true)}
                 >
                   <Plus className="h-4 w-4" />
@@ -165,7 +163,7 @@ export function CardsChat() {
               value={input}
               onChange={(event) => setInput(event.target.value)}
             />
-            <Button type="submit" size="icon" disabled={inputLength === 0}>
+            <Button type="submit" className={buttonVariants({size: "icon"})} disabled={inputLength === 0}>
               <Send className="h-4 w-4" />
               <span className="sr-only">Send</span>
             </Button>

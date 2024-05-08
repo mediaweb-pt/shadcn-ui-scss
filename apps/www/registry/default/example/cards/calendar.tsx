@@ -2,8 +2,8 @@
 
 import { addDays } from "date-fns"
 
-import { Calendar } from "@/registry/default/ui/calendar"
-import { Card, CardContent } from "@/registry/default/ui/card"
+import { Calendar } from "@/shadcn-scss/components/Calendar/src"
+import { Card, CardContent } from "@/shadcn-scss/components/Card/src"
 
 const start = new Date(2023, 5, 5)
 

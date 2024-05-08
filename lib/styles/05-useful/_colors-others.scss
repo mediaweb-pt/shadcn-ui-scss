@@ -1,0 +1,14 @@
+/* Usefull - Colors Other */
+////
+/// @group UsefullClasses-Colors_Other
+/// Usefull - Colors Other
+
+///
+.background {
+    &-transparent {
+        &,
+        .ie11 & {
+            background-color: transparent !important;
+        }
+    }
+}

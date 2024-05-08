@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
-import { Icons } from "@/components/icons"
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/shadcn-scss/components/Button/src";
 import {
   Card,
   CardContent,
@@ -9,17 +8,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/default/ui/select"
+} from "@/shadcn-scss/components/Card/src"
+import { Input } from "@/shadcn-scss/components/Input/src";
+import { Label } from "@/shadcn-scss/components/Label/src";
+import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup/src";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/shadcn-scss/components/Select/src";
+
+import { Icons } from "@/components/icons";
 
 export function CardsPaymentMethod() {
   return (

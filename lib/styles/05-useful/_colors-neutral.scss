@@ -1,0 +1,49 @@
+/* Usefull - Colors Neutral */
+////
+/// @group UsefullClasses-Colors_Neutral
+/// Usefull - Colors Neutral
+
+/*
+	Note:
+	- In order to improve the SASSDOC generated file, the loop was splited in 2!
+*/
+
+///
+.background {
+    $i: 0;
+    @each $type, $value in $colors-neutral {
+        &-neutral {
+            &-#{$type} {
+                background-color: var(--color-neutral-#{$type}) !important;
+
+                &-lightest {
+                    @if ($i < 5) {
+                        background-color: var(--color-neutral-9) !important;
+                    } @else {
+                        background-color: var(--color-neutral-0) !important;
+                    }
+                }
+            }
+        }
+        $i: $i + 1;
+    }
+}
+
+///
+.text {
+    $i: 0;
+    @each $type, $value in $colors-neutral {
+        &-neutral-#{$type} {
+            color: var(--color-neutral-#{$type}) !important;
+
+            & {
+                @if ($i > 4) {
+                    &-darker {
+                        color: var(--color-neutral-#{$type}) !important;
+                    }
+                }
+            }
+        }
+        $i: $i + 1;
+    }
+}

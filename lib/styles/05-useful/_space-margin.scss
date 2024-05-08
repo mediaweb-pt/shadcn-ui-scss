@@ -1,0 +1,59 @@
+/* Usefull - Margin */
+////
+/// @group UsefullClasses-Margin
+/// Usefull - Margin
+
+///
+.margin {
+    @each $type, $value in $sizes {
+        &-#{$type} {
+            margin: var(--space-#{$type}) !important;
+        }
+
+        @each $box-side in $box-sides {
+            &-#{$box-side}-#{$type} {
+                margin-#{$box-side}: var(--space-#{$type}) !important;
+            }
+        }
+
+        &-x-#{$type} {
+            margin-left: var(--space-#{$type}) !important;
+            margin-right: var(--space-#{$type}) !important;
+        }
+
+        &-y-#{$type} {
+            margin-bottom: var(--space-#{$type}) !important;
+            margin-top: var(--space-#{$type}) !important;
+        }
+    }
+
+    &-auto {
+        margin: 0 auto !important;
+    }
+
+    &-left-auto {
+        margin-left: auto;
+    }
+
+    &-right-auto {
+        margin-left: auto;
+    }
+}
+
+// IsRTL -------------------------------------------------------------------------
+///
+.is-rtl {
+    @each $type, $value in $sizes {
+        .margin {
+            &-right-#{$type} {
+                margin-left: var(--space-#{$type}) !important;
+                margin-right: var(--space-none) !important;
+            }
+
+            &-left-#{$type} {
+                margin-left: var(--space-none) !important;
+                margin-right: var(--space-#{$type}) !important;
+            }
+        }
+    }
+}

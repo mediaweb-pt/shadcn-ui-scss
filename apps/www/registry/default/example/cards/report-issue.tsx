@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
 import {
   Card,
   CardContent,
@@ -10,17 +10,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from "@/shadcn-scss/components/Card/src"
+import { Input } from "@/shadcn-scss/components/Input/src"
+import { Label } from "@/shadcn-scss/components/Label/src"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/default/ui/select"
-import { Textarea } from "@/registry/default/ui/textarea"
+} from "@/shadcn-scss/components/Select/src"
+import { Textarea } from "@/shadcn-scss/components/TextArea/src"
 
 export function CardsReportIssue() {
   const id = React.useId()
@@ -82,7 +82,7 @@ export function CardsReportIssue() {
         </div>
       </CardContent>
       <CardFooter className="justify-between space-x-2">
-        <Button variant="ghost">Cancel</Button>
+        <Button className={buttonVariants({variant: "ghost"})}>Cancel</Button>
         <Button>Submit</Button>
       </CardFooter>
     </Card>

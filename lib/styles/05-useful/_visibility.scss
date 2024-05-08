@@ -1,0 +1,30 @@
+/* Usefull - Visibility */
+////
+/// @group UsefullClasses-Visibility
+/// Usefull - Visibility
+
+///
+.ph:empty {
+	display: none !important;
+}
+
+///
+.hidden {
+	display: none !important;
+}
+
+///
+.hide {
+	&-scrollbar {
+		-ms-overflow-style: none !important; // IE and Edge
+		scrollbar-width: none !important; // Firefox
+
+		&:hover {
+			cursor: all-scroll !important;
+		}
+
+		&::-webkit-scrollbar {
+			display: none !important; // Chrome
+		}
+	}
+}

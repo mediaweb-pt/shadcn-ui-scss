@@ -1,0 +1,35 @@
+/* Usefull - Box Height */
+////
+/// @group UsefullClasses-Box_Height
+/// Usefull - Box Height
+
+///
+.full-height {
+    height: 100% !important;
+
+    &-vh {
+        height: 100vh !important;
+    }
+
+    &-minus-header {
+        height: calc(100vh - var(--header-size)) !important;
+    }
+}
+
+///
+.half-height {
+    height: 50% !important;
+
+    &-vh {
+        height: 50vh !important;
+    }
+}
+
+///
+.auto-height {
+    height: auto !important;
+}
+
+.auto-width {
+    width: auto !important;
+}

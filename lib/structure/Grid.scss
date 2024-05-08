@@ -1,0 +1,86 @@
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@for $i from 2 through 12 {
+    .grid-cols-#{$i} {
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+    }
+
+    .sm\:grid-cols-#{$i} {
+        @media (min-width: 640px) {
+            grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        }
+    }
+
+    .md\:grid-cols-#{$i} {
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        }
+    }
+
+    .lg\:grid-cols-#{$i} {
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        }
+    }
+
+    .xl\:grid-cols-#{$i} {
+        @media (min-width: 1280px) {
+            grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        }
+    }
+
+    .\32xl\:grid-cols-#{$i} {
+        @media (min-width: 1536px) {
+            grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        }
+    }
+}
+
+// COLS
+@for $i from 1 through 12 {
+    .col-span-#{$i} {
+        grid-column: span #{$i} / span #{$i};
+    }
+}
+
+@for $i from 1 through 12 {
+    .sm\:col-span-#{$i} {
+        @media (min-width: 640px) {
+            grid-column: span #{$i} / span #{$i};
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .md\:col-span-#{$i} {
+        @media (min-width: 768px) {
+            grid-column: span #{$i} / span #{$i};
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .lg\:col-span-#{$i} {
+        @media (min-width: 1024px) {
+            grid-column: span #{$i} / span #{$i};
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .xl\:col-span-#{$i} {
+        @media (min-width: 1280px) {
+            grid-column: span #{$i} / span #{$i};
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .\32xl\:col-span-#{$i} {
+        @media (min-width: 1536px) {
+            grid-column: span #{$i} / span #{$i};
+        }
+    }
+}

@@ -19,15 +19,15 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Checkbox } from "@/registry/default/ui/checkbox"
+} from "@/shadcn-scss/components/Card/src"
+import { Checkbox } from "@/shadcn-scss/components/Checkbox/src"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -36,8 +36,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
-import { Input } from "@/registry/default/ui/input"
+} from "@/shadcn-scss/components/DropdownMenu/src"
+import { Input } from "@/shadcn-scss/components/Input/src"
 import {
   Table,
   TableBody,
@@ -45,7 +45,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/default/ui/table"
+} from "@/shadcn-scss/components/Table/src"
 
 const data: Payment[] = [
   {
@@ -122,7 +122,7 @@ export const columns: ColumnDef<Payment>[] = [
     header: ({ column }) => {
       return (
         <Button
-          variant="ghost"
+          className={buttonVariants({ variant: "ghost" })}
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Email
@@ -156,7 +156,7 @@ export const columns: ColumnDef<Payment>[] = [
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
+            <Button className={buttonVariants({ variant: "ghost" }) + " h-8 w-8 p-0"}>
               <span className="sr-only">Open menu</span>
               <DotsHorizontalIcon className="h-4 w-4" />
             </Button>
@@ -224,7 +224,7 @@ export function CardsDataTable() {
           />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="ml-auto">
+              <Button className={buttonVariants({ variant: "outline" }) + " ml-auto"}>
                 Columns <ChevronDownIcon className="ml-2 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -312,16 +312,14 @@ export function CardsDataTable() {
           </div>
           <div className="space-x-2">
             <Button
-              variant="outline"
-              size="sm"
+              className={buttonVariants({ variant: "outline", size: "sm" })}
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
             >
               Previous
             </Button>
             <Button
-              variant="outline"
-              size="sm"
+              className={buttonVariants({ variant: "outline", size: "sm" })}
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
             >

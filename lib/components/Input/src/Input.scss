@@ -1,0 +1,32 @@
+.input {
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: var(--border-radius-soft);
+    border: var(--border-size-s) solid hsl(var(--input));
+    background-color: hsl(var(--background));
+    padding: var(--space-s) var(--space-base);
+    font-size: var(--font-size-s);
+
+    &[type="file"]::file-selector-button {
+        border-width: var(--border-size-none);
+        background-color: transparent;
+        font-size: var(--font-size-s);
+        font-weight: var(--font-medium);
+    }
+
+    &::placeholder {
+        color: hsl(var(--muted-foreground));
+    }
+
+    &:focus-visible {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        box-shadow: 0 0 #0000;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}

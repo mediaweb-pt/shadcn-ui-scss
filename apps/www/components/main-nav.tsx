@@ -3,29 +3,45 @@
 import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { TooltipPortal } from "@radix-ui/react-tooltip"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-import { Badge } from "@/registry/new-york/ui/badge"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/shadcn-scss/components/tooltip/src"
 
 export function MainNav() {
   const pathname = usePathname()
 
   return (
-    <div className="mr-4 hidden md:flex">
-      <Link href="/" className="mr-6 flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
-        <span className="hidden font-bold sm:inline-block">
-          {siteConfig.name}
-        </span>
-      </Link>
-      <nav className="flex items-center gap-4 text-sm lg:gap-6">
-        <Link
+    <div className="site__header-main_nav">
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger>
+            <Link href="/" className="site__header-logo">
+              <Icons.logo className="site__header-icon--lg" />
+              <span className="hidden font-bold sm:inline-block">
+                {siteConfig.name}
+              </span>
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent>
+            SCSS Version, created by <a href="http://www.mediaweb.pt" target="_blank">Mediaweb</a>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+
+      <nav className="site__header-menu">
+        {/* <Link
           href="/docs"
           className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/docs" ? "text-foreground" : "text-foreground/60"
+            "site__header-link",
+            pathname === "/docs" ? "site__header-link--active" : ""
           )}
         >
           Docs
@@ -33,32 +49,32 @@ export function MainNav() {
         <Link
           href="/docs/components"
           className={cn(
-            "transition-colors hover:text-foreground/80",
+            "site__header-link",
             pathname?.startsWith("/docs/components")
-              ? "text-foreground"
-              : "text-foreground/60"
+              ? "site__header-link--active"
+              : ""
           )}
         >
           Components
-        </Link>
+        </Link> */}
         <Link
           href="/themes"
           className={cn(
-            "transition-colors hover:text-foreground/80",
+            "site__header-link",
             pathname?.startsWith("/themes")
-              ? "text-foreground"
-              : "text-foreground/60"
+              ? "site__header-link--active"
+              : ""
           )}
         >
           Themes
         </Link>
-        <Link
+        {/* <Link
           href="/examples"
           className={cn(
-            "transition-colors hover:text-foreground/80",
+            "site__header-link",
             pathname?.startsWith("/examples")
-              ? "text-foreground"
-              : "text-foreground/60"
+              ? "site__header-link--active"
+              : ""
           )}
         >
           Examples
@@ -66,22 +82,22 @@ export function MainNav() {
         <Link
           href="/blocks"
           className={cn(
-            "transition-colors hover:text-foreground/80",
+            "site__header-link",
             pathname?.startsWith("/blocks")
-              ? "text-foreground"
-              : "text-foreground/60"
+              ? "site__header-link--active"
+              : ""
           )}
         >
           Blocks
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           href={siteConfig.links.github}
           className={cn(
-            "hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block"
+            "site__header-link"
           )}
         >
           GitHub
-        </Link>
+        </Link> */}
       </nav>
     </div>
   )

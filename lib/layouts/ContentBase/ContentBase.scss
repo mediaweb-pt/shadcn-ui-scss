@@ -1,0 +1,121 @@
+.main-content {
+    flex: 1;
+    position: relative;
+}
+
+.ThemeGrid_Container {
+    box-sizing: border-box;
+    margin: var(--space-none) auto;
+    width: 100%;
+    max-width: 1440px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .layout &.main-content {
+        padding: var(--space-xl);
+    }
+
+    .desktop & {
+        padding-left: var(--space-l);
+        padding-right: var(--space-l);
+
+        &.main-content {
+            padding: var(--space-l);
+        }
+    }
+
+    .fluid-layout .header > &,
+    .fluid-layout &.main-content,
+    .fluid-layout &.footer, /* Rocket UI free*/
+    .rkt-layout.use--fluid-layout & {
+        max-width: 100%;
+    }
+
+    .tablet &,
+    .phone & {
+        .ThemeGrid_Container {
+            padding: var(--space-none);
+        }
+    }
+}
+
+.rkt-content {
+    z-index: var(--layer-global-auto);
+
+    & > .OSBlockWidget {
+        display: contents;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__breadcrumbs {
+        font-size: var(--font-size-xs);
+        margin-bottom: var(--space-s);
+    }
+
+    &__title-section {
+        align-items: center;
+        display: flex;
+        margin-bottom: var(--space-m);
+    }
+
+    &__title {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        padding-right: var(--space-s);
+    }
+
+    &__actions {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding-left: var(--space-s);
+        text-align: right;
+    }
+
+    &__middle {
+        position: relative;
+    }
+
+    .layout-native & {
+        background-color: var(--color-background-body);
+
+        &__middle {
+            height: 100%;
+        }
+    }
+
+    .phone & {
+        &__top {
+            flex-direction: column;
+        }
+
+        &__title {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        &__actions {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+
+    &--inverted-breadcrumbs & {
+        &__breadcrumbs {
+            margin: var(--space-none) var(--space-none) var(--space-m);
+            order: 2;
+        }
+
+        &__title-section {
+            margin-bottom: var(--space-base);
+        }
+    }
+}

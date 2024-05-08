@@ -1,0 +1,51 @@
+/* Usefull - Padding */
+////
+/// @group UsefullClasses-Padding
+/// Usefull - Padding
+
+///
+.padding {
+    @each $type, $value in $sizes {
+        &-#{$type} {
+            padding: var(--space-#{$type}) !important;
+        }
+
+        @each $box-side in $box-sides {
+            &-#{$box-side}-#{$type} {
+                padding-#{$box-side}: var(--space-#{$type}) !important;
+            }
+        }
+
+        &-x-#{$type} {
+            padding-left: var(--space-#{$type}) !important;
+            padding-right: var(--space-#{$type}) !important;
+        }
+
+        &-y-#{$type} {
+            padding-bottom: var(--space-#{$type}) !important;
+            padding-top: var(--space-#{$type}) !important;
+        }
+    }
+
+    &-auto {
+        padding: 0 auto !important;
+    }
+}
+
+// IsRTL -------------------------------------------------------------------------
+///
+.is-rtl {
+    @each $type, $value in $sizes {
+        .padding {
+            &-right-#{$type} {
+                padding-left: var(--space-#{$type}) !important;
+                padding-right: var(--space-none) !important;
+            }
+
+            &-left-#{$type} {
+                padding-left: var(--space-none) !important;
+                padding-right: var(--space-#{$type}) !important;
+            }
+        }
+    }
+}

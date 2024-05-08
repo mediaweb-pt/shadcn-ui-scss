@@ -1,0 +1,20 @@
+/* Usefull - Position */
+////
+/// @group UsefullClasses-Position
+/// Usefull - Position
+
+///
+.position-relative {
+    position: relative !important;
+}
+
+///
+.fixed {
+    position: fixed !important;
+}
+
+///
+.sticky {
+    position: -webkit-sticky !important; //Fix for older iPhones
+    position: sticky !important;
+}

@@ -1,0 +1,73 @@
+.hover-card {
+    &-content {
+        z-index: 50;
+        width: 20rem;
+        border-radius: var(--border-radius-soft);
+        border: var(--border-size-s) solid hsl(var(--border));
+        background-color: hsl(var(--popover));
+        padding: var(--space-base);
+        color: hsl(var(--popover-foreground));
+        box-shadow: var(--shadow-m);
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+
+        &[data-motion^="from-"],
+        &[data-state="open"],
+        &[data-state="visible"] {
+            animation-name: enter;
+            animation-duration: 0.15s;
+            --enter-opacity: initial;
+            --enter-scale: initial;
+            --enter-rotate: initial;
+            --enter-translate-x: initial;
+            --enter-translate-y: initial;
+        }
+
+        &[data-motion^="to-"],
+        &[data-state="closed"],
+        &[data-state="hidden"],
+        &[data-swipe="end"] {
+            animation-name: exit;
+            animation-duration: 0.15s;
+            --exit-opacity: initial;
+            --exit-scale: initial;
+            --exit-rotate: initial;
+            --exit-translate-x: initial;
+            --exit-translate-y: initial;
+        }
+
+        &[data-motion^="to-"],
+        &[data-state="closed"] {
+            --exit-opacity: 0;
+        }
+
+        &[data-state="open"],
+        &[data-state="visible"] {
+            --enter-opacity: 0;
+        }
+
+        &[data-state="closed"] {
+            --exit-scale: 0.95;
+        }
+
+        &[data-state="open"] {
+            --enter-scale: 0.95;
+        }
+
+        &[data-side="bottom"] {
+            --enter-translate-y: -0.5rem;
+        }
+
+        &[data-side="left"] {
+            --enter-translate-x: 0.5rem;
+        }
+
+        &[data-side="right"] {
+            --enter-translate-x: -0.5rem;
+        }
+
+        &[data-side="top"] {
+            --enter-translate-y: 0.5rem;
+        }
+    }
+}

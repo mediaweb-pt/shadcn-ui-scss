@@ -1,0 +1,43 @@
+// MATH AND CONVERSIONS
+
+// ==========          Converts PX to EMs          ========== //
+//                                                            //
+// input's with units 100px or simple integeres 100           //
+// ex: px-to-em( 32px, 16px ) result = 2em                    //
+// ========================================================== //
+@function px-to-em($pixels, $context: 16px) {
+    @if (type-of($pixels) != "number") {
+        @error "#{$pixels} must be a number ";
+    }
+    @if (type-of($context) != "number") {
+        @error "#{$context} must be a number ";
+    }
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1em;
+}
+
+// ==========         Converts PX to REMs          ========== //
+//                                                            //
+// input's with units 100px or simple integeres 100           //
+// ex: px-to-em( 32px, 16px ) result = 2em                    //
+// ========================================================== //
+@function px-to-rem($pixels, $context: 16px) {
+    @if (type-of($pixels) != "number") {
+        @error "#{$pixels} must be a number ";
+    }
+    @if (type-of($context) != "number") {
+        @error "#{$context} must be a number ";
+    }
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return calc($pixels / $context) * 1rem;
+}

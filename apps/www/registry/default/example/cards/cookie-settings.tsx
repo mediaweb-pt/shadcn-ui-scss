@@ -1,16 +1,9 @@
-"use client"
+"use client";
 
-import { Button } from "@/registry/default/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card"
-import { Label } from "@/registry/default/ui/label"
-import { Switch } from "@/registry/default/ui/switch"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shadcn-scss/components/Card/src";
+import { Label } from "@/shadcn-scss/components/Label/src";
+import { Switch } from "@/shadcn-scss/components/Switch/src"
 
 export function CardsCookieSettings() {
   return (
@@ -51,7 +44,7 @@ export function CardsCookieSettings() {
         </div>
       </CardContent>
       <CardFooter>
-        <Button variant="outline" className="w-full">
+        <Button className={ buttonVariants({variant: "outline"}) + " w-full"}>
           Save preferences
         </Button>
       </CardFooter>

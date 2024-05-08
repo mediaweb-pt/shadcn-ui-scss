@@ -4,25 +4,25 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
-import { Button } from "@/registry/default/ui/button"
+} from "@/shadcn-scss/components/Avatar/src"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from "@/shadcn-scss/components/Card/src"
+import { Input } from "@/shadcn-scss/components/Input/src"
+import { Label } from "@/shadcn-scss/components/Label/src"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/default/ui/select"
-import { Separator } from "@/registry/default/ui/separator"
+} from "@/shadcn-scss/components/Select/src"
+import { Separator } from "@/shadcn-scss/components/Separator/src"
 
 export function CardsShare() {
   return (
@@ -43,7 +43,7 @@ export function CardsShare() {
             value="http://example.com/link/to/document"
             readOnly
           />
-          <Button variant="secondary" className="shrink-0">
+          <Button className={ buttonVariants({variant: "secondary"})+ " shrink-0"}>
             Copy Link
           </Button>
         </div>

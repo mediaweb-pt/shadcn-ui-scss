@@ -1,0 +1,29 @@
+/* Usefull - Border Radius */
+////
+/// @group UsefullClasses-Border_Radius
+/// Usefull - Border Radius
+
+///
+.border-radius {
+    @each $type, $value in $border-radius-types {
+        // Generated - Eg: .border-radius-none
+        &-#{$type} {
+            border-radius: var(--border-radius-#{$type}) !important;
+        }
+
+        @each $box-corner in $box-corners {
+            // Generated - Eg: .border-radius-top-left-none
+            &-#{$box-corner}-#{$type} {
+                border-#{$box-corner}-radius: var(--border-radius-#{$type}) !important;
+            }
+        }
+
+        @each $border-side, $border-corner1, $border-corner2 in $border-radius-box-sides {
+            // Generated - Eg: .border-radius-top-none
+            &-#{$border-side}-#{$type} {
+                border-#{$border-side}-#{$border-corner1}-radius: var(--border-radius-#{$type}) !important;
+                border-#{$border-side}-#{$border-corner2}-radius: var(--border-radius-#{$type}) !important;
+            }
+        }
+    }
+}

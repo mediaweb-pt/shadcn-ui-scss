@@ -1,0 +1,62 @@
+/* Usefull - Typography */
+////
+/// @group UsefullClasses-Typography
+/// Usefull - Typography
+
+///
+.font {
+    &-size {
+        @each $type, $value in $typography-sizes {
+            @if ($type != "display") {
+                &-#{$type} {
+                    font-size: var(--font-size-#{$type}) !important;
+                }
+            }
+        }
+    }
+
+    // this & is used to ensure that the scss prettier doesn't move the loop to another position
+    & {
+        @each $type, $value in $typography-weight {
+            &-#{$type} {
+                font-weight: var(--font-#{$type}) !important;
+            }
+        }
+    }
+}
+
+///
+.bold {
+    font-weight: var(--font-bold) !important;
+}
+
+///
+.italic {
+    font-style: italic !important;
+}
+
+///
+.oblique {
+    font-style: oblique !important;
+}
+
+///
+.text {
+    &-lowercase {
+        text-transform: lowercase !important;
+    }
+
+    &-uppercase {
+        text-transform: uppercase !important;
+    }
+
+    &-capitalize {
+        text-transform: capitalize !important;
+    }
+
+    &-ellipsis {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+}

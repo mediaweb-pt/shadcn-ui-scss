@@ -1,0 +1,42 @@
+/* Usefull - Text */
+////
+/// @group UsefullClasses-Text
+/// Usefull - Text
+
+///
+.break-word {
+    word-break: break-word !important;
+}
+
+///
+.text-align {
+    &-left {
+        text-align: left !important;
+    }
+
+    &-center {
+        text-align: center !important;
+    }
+
+    &-right {
+        text-align: right !important;
+    }
+}
+
+///
+.white-space-nowrap {
+    white-space: nowrap !important;
+}
+
+// IsRTL -------------------------------------------------------------------------
+.is-rtl {
+    [align="right"],
+    .text-align-right {
+        text-align: left !important;
+    }
+
+    [align="left"],
+    .text-align-left {
+        text-align: right !important;
+    }
+}

@@ -1,17 +1,14 @@
-"use client"
+"use client";
 
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shadcn-scss/components/Card/src";
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/default/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+import { Input } from "@/shadcn-scss/components/Input/src";
+import { Label } from "@/shadcn-scss/components/Label/src";
+
+
+
+
 
 export function CardsCreateAccount() {
   return (
@@ -24,11 +21,11 @@ export function CardsCreateAccount() {
       </CardHeader>
       <CardContent className="grid gap-4">
         <div className="grid grid-cols-2 gap-6">
-          <Button variant="outline">
+          <Button className={buttonVariants({variant: "outline"})}>
             <Icons.gitHub className="mr-2 h-4 w-4" />
             Github
           </Button>
-          <Button variant="outline">
+          <Button className={buttonVariants({variant: "outline"})}>
             <Icons.google className="mr-2 h-4 w-4" />
             Google
           </Button>

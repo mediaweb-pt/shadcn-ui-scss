@@ -1,0 +1,166 @@
+:root {
+    // Shadcn
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 72.22% 50.59%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5% 64.9%;
+    --radius: 0.5rem;
+    --font-geist-sans: "__GeistSans_ac79ff", "__GeistSans_Fallback_ac79ff";
+
+    // Rocket
+    /*! Typography - Size */
+    @each $type, $value in $typography-heading-sizes {
+        --font-size-h#{$type}: #{$value};
+    }
+
+    @each $type, $value in $typography-sizes {
+        --font-size-#{$type}: #{$value};
+    }
+
+    /*! Typography - Weight */
+    @each $type, $value in $typography-weight {
+        --font-#{$type}: #{$value};
+    }
+
+    /*! Color - Brand */
+    @each $type, $value in $colors-brand {
+        --color-#{$type}: #{$value};
+    }
+
+    /*! Color - Extended */
+    @each $color, $variations in $colors-extended {
+        @each $type, $value in $variations {
+            @if ($type == "") {
+                --color-#{$color}: #{$value};
+            } @else {
+                --color-#{$color}-#{$type}: #{$value};
+            }
+        }
+    }
+
+    /*! Color - Neutral */
+    @each $type, $value in $colors-neutral {
+        --color-neutral-#{$type}: #{$value};
+    }
+
+    /*! Color - Semantic */
+    @each $type, $value in $colors-semantic {
+        --color-#{$type}: #{$value};
+    }
+
+    /*! Space - Sizes */
+    @each $type, $value in $sizes {
+        --space-#{$type}: #{$value};
+    }
+
+    /*! Border Radius */
+    @each $type, $value in $border-radius-types {
+        --border-radius-#{$type}: #{$value};
+    }
+
+    /*! Border Size */
+    @each $type, $value in $border-size {
+        --border-size-#{$type}: #{$value};
+    }
+
+    /*! Elevation / Shadow */
+    @each $type, $value in $shadow-types {
+        --shadow-#{$type}: #{$value};
+    }
+
+    /* App Settings */
+    --color-background-body: #{$color-background-body};
+    --color-background-login: #{$color-background-login};
+
+    --header-color: #{$header-color};
+    --header-size: #{$header-size};
+    --header-size-content: #{$header-size-content};
+    --bottom-bar-size: #{$bottom-bar-size};
+
+    --side-menu-color: #{$side-menu-color}; /* TODO: Used on Rocket Free. Should be deprecated */
+    --side-menu-size: #{$side-menu-size}; /* TODO: Used on Rocket Free. Should be deprecated */
+    --sidebar-width: #{$sidebar-width};
+
+    /* Opacities */
+    --opacity-high: #{$opacity-high};
+    --opacity-medium: #{$opacity-medium};
+    --opacity-low: #{$opacity-low};
+
+    --color-opacity-high: rgba(0, 0, 0, #{$opacity-high});
+    --color-opacity-medium: rgba(0, 0, 0, #{$opacity-medium});
+    --color-opacity-low: rgba(0, 0, 0, #{$opacity-low});
+
+    /* Button Size */
+    --btn-height-small: #{$btn-height-small};
+    --btn-height: #{$btn-height};
+    --btn-height-large: #{$btn-height-large};
+
+    /* Input Size */
+    --input-height-small: #{$input-height-small};
+    --input-height: #{$input-height};
+    --input-height-large: #{$input-height-large};
+
+    /* Set Form Elements Variables - Equal to OS UI */
+    --form-element-radius: var(--border-radius-soft);
+    --form-element-text: var(--color-neutral-9);
+    --form-element-border: var(--border-size-s) solid var(--color-neutral-7);
+
+    /* New Layouts */
+    --sidemenu-size: #{$sidemenu-size};
+    --sidemenu-border: var(--border-size-none);
+    --sidemenu-shadow: var(--shadow-none);
+    --sidemenu-collapsed-size: #{$sidemenu-collapsed-size};
+    --sidemenu-vertical-size: #{$sidemenu-vertical-size};
+    --sidemenu-sidebar-size: #{$sidemenu-sidebar-size};
+
+    --sidemenu-menu-padding: var(--space-base);
+    --sidemenu-menu-items-gap: var(--space-s);
+    --sidemenu-menu-radius: var(--border-radius-soft);
+    --sidemenu-menu-icon-size: var(--space-l);
+    --sidemenu-menu-icon-font-size: var(--font-size-xl);
+
+    --topmenu-border: var(--border-size-none);
+    --topmenu-shadow: var(--shadow-none);
+
+    /* New varibles colors */
+    --color-text-main: #{$color-text-main};
+    --color-text-main-opacity: #{$color-text-main-opacity};
+    --color-text-secondary: #{$color-text-secondary};
+    --color-text-secondary-opacity: #{$color-text-secondary-opacity};
+    --color-text-subtle: #{$color-text-subtle};
+    --color-text-subtle-opacity: #{$color-text-subtle-opacity};
+    --color-text-disabled: #{$color-text-disabled};
+
+    --color-background-body: #{$color-background-body};
+    --color-background-content: #{$color-background-content};
+    --color-background-soft: #{$color-background-soft};
+    --color-background-medium-soft: #{$color-background-medium-soft};
+    --color-background-input: #{$color-background-input};
+    --color-background-input-disabled: #{$color-background-input-disabled};
+    --color-background-menu: #{$color-background-menu};
+    --color-background-header: #{$color-background-header};
+    --color-background-opacity-low: #{$color-background-opacity-low};
+    --color-background-opacity-medium: #{$color-background-opacity-medium};
+    --color-background-opacity-high: #{$color-background-opacity-high};
+
+    --color-border-input: #{$color-border-input};
+    --color-border-input-hover: #{$color-border-input-hover};
+    --color-border-soft: #{$color-border-soft};
+    --color-border-focus: #{$color-border-focus};
+    --color-border-shadow: #{$color-border-shadow};
+}

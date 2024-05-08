@@ -1,0 +1,71 @@
+.input-otp {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+
+    &:has(:disabled) {
+        opacity: 0.5;
+    }
+
+    &-input {
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    &-group {
+        display: flex;
+        align-items: center;
+    }
+
+    &-slot {
+        position: relative;
+        display: flex;
+        height: 2.5rem;
+        width: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-right-width: 1px;
+        border-color: hsl(var(--input));
+        font-size: var(--font-size-s);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+
+        &:first-child {
+            border-top-left-radius: var(--border-radius-soft);
+            border-bottom-left-radius: var(--border-radius-soft);
+            border-left-width: 1px;
+        }
+
+        &:last-child {
+            border-top-right-radius: var(--border-radius-soft);
+            border-bottom-right-radius: var(--border-radius-soft);
+        }
+
+        &.is--active {
+            z-index: 10;
+            box-shadow: 0 0 #0000;
+        }
+
+        &-caret {
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-cursor {
+                height: 1rem;
+                width: 1px;
+                animation: caret-blink 1.25s ease-out infinite;
+                background-color: hsl(var(--foreground));
+                transition-duration: 1s;
+                animation-duration: 1s;
+            }
+        }
+    }
+}

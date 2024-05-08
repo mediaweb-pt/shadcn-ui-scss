@@ -1,0 +1,49 @@
+/* Usefull - Miscellaneous */
+////
+/// @group UsefullClasses-Miscellaneous
+/// Usefull - Miscellaneous
+
+///
+.cursor {
+    &-pointer {
+        cursor: pointer !important;
+    }
+}
+
+///
+.no {
+    &-transition {
+        transition: none !important;
+    }
+
+    &-transform {
+        transform: none !important;
+    }
+}
+
+/* Hide StickyObserve when HideOnScroll is used*/
+///
+.sticky-observer {
+    height: var(--header-size) !important;
+    left: 0 !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Used in order to deal with allow propagation event when is't blocked by default
+Example can be checked at Tooltip since we can have clickable containers. */
+///
+[data-allow-event-propagation="true"] > *,
+[data-allow-event-propagation="True"] > * {
+    pointer-events: none !important;
+}
+
+// Responsive --------------------------------------------------------------------
+///
+.tablet .tablet-full-width,
+.phone .phone-full-width {
+    margin-left: 0 !important;
+    width: 100% !important;
+}

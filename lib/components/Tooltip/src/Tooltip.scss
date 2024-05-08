@@ -1,0 +1,29 @@
+.tooltip {
+    --anim-enter-scale: 0.95;
+    --anim-enter-opacity: 0;
+    --anim-enter-translate-y: 0.5rem;
+
+    &__content {
+        background-color: hsl(var(--primary));
+        border-color: hsl(var(--border));
+        border-radius: calc(var(--radius) - 2px);
+        color: hsl(var(--primary-foreground));
+        font-size: var(--font-size-s);
+        padding: var(--space-xs) var(--space-s);
+        z-index: 50;
+    }
+
+    &__arrow {
+        fill: hsl(var(--primary));
+    }
+}
+
+.animate-in {
+    animation-duration: 0.15s;
+    animation-name: enter;
+    --enter-opacity: initial;
+    --enter-scale: initial;
+    --enter-rotate: initial;
+    --enter-translate-x: initial;
+    --enter-translate-y: initial;
+}

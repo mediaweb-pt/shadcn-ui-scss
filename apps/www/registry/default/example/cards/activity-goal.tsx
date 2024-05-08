@@ -1,21 +1,20 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Minus, Plus } from "lucide-react"
-import { useTheme } from "next-themes"
-import { Bar, BarChart, ResponsiveContainer } from "recharts"
+import * as React from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shadcn-scss/components/Card/src";
+import { Minus, Plus } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Bar, BarChart, ResponsiveContainer } from "recharts";
 
-import { useConfig } from "@/hooks/use-config"
+
+
+import { useConfig } from "@/hooks/use-config";
 import { Button } from "@/registry/default/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/default/ui/card"
-import { themes } from "@/registry/themes"
+import { themes } from "@/registry/themes";
+
+
+
+
 
 const data = [
   {
