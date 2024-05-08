@@ -18,7 +18,7 @@ export function ThemeWrapper({
     <div
       className={cn(
         `theme-${defaultTheme || config.theme}`,
-        "w-full",
+        "theme-wrapper",
         className
       )}
       style={

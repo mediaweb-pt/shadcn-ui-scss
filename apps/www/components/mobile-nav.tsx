@@ -9,9 +9,9 @@ import { docsConfig } from "@/config/docs"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york/ui/button"
-import { ScrollArea } from "@/registry/new-york/ui/scroll-area"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/new-york/ui/sheet"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
+import { ScrollArea } from "@/shadcn-scss/components/ScrollArea/src"
+import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/components/Sheet/src"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
@@ -20,8 +20,7 @@ export function MobileNav() {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button
-          variant="ghost"
-          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className={buttonVariants({variant: "ghost"}) + " mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"}
         >
           <svg
             strokeWidth="1.5"
@@ -55,7 +54,7 @@ export function MobileNav() {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="pr-0">
+      <SheetContent side={"left"} className="pr-0">
         <MobileLink
           href="/"
           className="flex items-center"
@@ -80,7 +79,7 @@ export function MobileNav() {
             )}
           </div>
           <div className="flex flex-col space-y-2">
-            {docsConfig.sidebarNav.map((item, index) => (
+            {/* {docsConfig.sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&
@@ -106,7 +105,7 @@ export function MobileNav() {
                     </React.Fragment>
                   ))}
               </div>
-            ))}
+            ))} */}
           </div>
         </ScrollArea>
       </SheetContent>

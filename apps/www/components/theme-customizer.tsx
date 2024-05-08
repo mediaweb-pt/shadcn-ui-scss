@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils"
 import { useConfig } from "@/hooks/use-config"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
 import { ThemeWrapper } from "@/components/theme-wrapper"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
 import {
   Dialog,
   DialogContent,
@@ -60,7 +60,7 @@ export function ThemeCustomizer() {
     <div className="flex items-center space-x-2">
       <Drawer>
         <DrawerTrigger asChild>
-          <Button variant="outline" className="md:hidden">
+          <Button className={buttonVariants({variant: "outline"}) + " " + cn(" md:hidden")}>
             <Paintbrush className="mr-2 h-4 w-4" />
             Customize
           </Button>
@@ -141,7 +141,7 @@ export function ThemeCustomizer() {
         </div>
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="outline">
+            <Button className={buttonVariants({variant: "outline"}) + " "}>
               <Paintbrush className="mr-2 h-4 w-4" />
               Customize
             </Button>
@@ -183,9 +183,7 @@ function Customizer() {
           </div>
         </div>
         <Button
-          variant="ghost"
-          size="icon"
-          className="ml-auto rounded-[0.5rem]"
+          className={buttonVariants({variant: "ghost", size: "icon"}) + " ml-auto rounded-[0.5rem]"}
           onClick={() => {
             setConfig({
               ...config,
@@ -235,22 +233,14 @@ function Customizer() {
           </div>
           <div className="grid grid-cols-3 gap-2">
             <Button
-              variant={"outline"}
-              size="sm"
+              className={buttonVariants({variant: "outline", size: "sm"})}
               onClick={() => setConfig({ ...config, style: "default" })}
-              className={cn(
-                config.style === "default" && "border-2 border-primary"
-              )}
             >
               Default
             </Button>
             <Button
-              variant={"outline"}
-              size="sm"
+              className={buttonVariants({variant: "outline", size: "sm"})}
               onClick={() => setConfig({ ...config, style: "new-york" })}
-              className={cn(
-                config.style === "new-york" && "border-2 border-primary"
-              )}
             >
               New York
             </Button>
@@ -264,8 +254,10 @@ function Customizer() {
 
               return mounted ? (
                 <Button
-                  variant={"outline"}
-                  size="sm"
+                  className={buttonVariants({variant: "outline", size: "sm"}) + " " + cn(
+                    "justify-start",
+                    isActive && "border-2 border-primary"
+                  )}
                   key={theme.name}
                   onClick={() => {
                     setConfig({
@@ -273,10 +265,7 @@ function Customizer() {
                       theme: theme.name,
                     })
                   }}
-                  className={cn(
-                    "justify-start",
-                    isActive && "border-2 border-primary"
-                  )}
+
                   style={
                     {
                       "--theme-primary": `hsl(${
@@ -306,8 +295,10 @@ function Customizer() {
             {["0", "0.3", "0.5", "0.75", "1.0"].map((value) => {
               return (
                 <Button
-                  variant={"outline"}
-                  size="sm"
+                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(
+                    config.radius === parseFloat(value) &&
+                      " border-2 border-primary"
+                  )}
                   key={value}
                   onClick={() => {
                     setConfig({
@@ -315,10 +306,6 @@ function Customizer() {
                       radius: parseFloat(value),
                     })
                   }}
-                  className={cn(
-                    config.radius === parseFloat(value) &&
-                      "border-2 border-primary"
-                  )}
                 >
                   {value}
                 </Button>
@@ -332,19 +319,15 @@ function Customizer() {
             {mounted ? (
               <>
                 <Button
-                  variant={"outline"}
-                  size="sm"
+                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(mode === "light" && " border-2 border-primary")}
                   onClick={() => setMode("light")}
-                  className={cn(mode === "light" && "border-2 border-primary")}
                 >
                   <SunIcon className="mr-1 -translate-x-1" />
                   Light
                 </Button>
                 <Button
-                  variant={"outline"}
-                  size="sm"
+                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(mode === "dark" && " border-2 border-primary")}
                   onClick={() => setMode("dark")}
-                  className={cn(mode === "dark" && "border-2 border-primary")}
                 >
                   <MoonIcon className="mr-1 -translate-x-1" />
                   Dark
@@ -413,7 +396,7 @@ function CopyCodeButton() {
             <CustomizerCode />
             {activeTheme && (
               <Button
-                size="sm"
+                className={buttonVariants({variant: "outline", size: "sm"}) + " absolute right-4 top-4 bg-muted text-muted-foreground hover:bg-muted hover:text-muted-foreground"}
                 onClick={() => {
                   copyToClipboardWithMeta(
                     getThemeCode(activeTheme, config.radius),
@@ -427,7 +410,6 @@ function CopyCodeButton() {
                   )
                   setHasCopied(true)
                 }}
-                className="absolute right-4 top-4 bg-muted text-muted-foreground hover:bg-muted hover:text-muted-foreground"
               >
                 {hasCopied ? (
                   <CheckIcon className="mr-2 h-4 w-4" />

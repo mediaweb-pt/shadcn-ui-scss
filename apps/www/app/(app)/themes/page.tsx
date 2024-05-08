@@ -22,7 +22,7 @@ export default function ThemesPage() {
     <div className="container">
       <ThemeWrapper
         defaultTheme="zinc"
-        className="relative flex flex-col items-start md:flex-row md:items-center"
+        className="themes-page"
       >
         <PageHeader>
           <Announcement />

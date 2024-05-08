@@ -145,4 +145,41 @@ export const Icons = {
       <path d="M21 12a9 9 0 1 1-6.219-8.56" />
     </svg>
   ),
+
+  mediaweb: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={props?.className} viewBox="0 0 250 166" fill="none">
+      <path
+        d="M83.6539 83.0001H0.960938L83.6539 0.307129V83.0001Z"
+        fill="currentColor"
+      />
+      <path
+        d="M166.347 83.0002H83.6538L166.347 0.30719V83.0002Z"
+        fill="currentColor"
+      />
+      <path
+        d="M166.347 83.0001H249.04L166.347 165.693V83.0001Z"
+        fill="currentColor"
+      />
+      <path
+        d="M83.6538 83.0001H166.347L83.6538 165.693V83.0001Z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
+
+  rocketui: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 135 135"
+      {...props}
+      fill="none"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M0 67.8024H67.1975V0.60485L0 67.8024ZM134.396 0.604952H67.1986V67.8025V135L134.396 67.8025L134.396 0.604952Z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
 }
