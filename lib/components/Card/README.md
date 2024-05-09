@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/card
+$ yarn add @shadcn-ui-sass/card
 # or
-$ npm install @rocket-ui-core/card
+$ npm install @shadcn-ui-sass/card
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/card).
+View docs [here](https://shadcn-ui-sass.com/docs/components/card).

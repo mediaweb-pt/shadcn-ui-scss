@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/combobox
+$ yarn add @shadcn-ui-sass/combobox
 # or
-$ npm install @rocket-ui-core/combobox
+$ npm install @shadcn-ui-sass/combobox
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/combobox).
+View docs [here](https://shadcn-ui-sass.com/docs/components/combobox).

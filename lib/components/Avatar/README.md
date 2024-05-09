@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/avatar
+$ yarn add @shadcn-ui-sass/avatar
 # or
-$ npm install @rocket-ui-core/avatar
+$ npm install @shadcn-ui-sass/avatar
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/avatar).
+View docs [here](https://shadcn-ui-sass.com/docs/components/avatar).

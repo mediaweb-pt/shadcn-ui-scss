@@ -1,5 +1,5 @@
 {
-    "name": "@rocket-ui-core/badge",
+    "name": "@shadcn-ui-sass/badge",
     "version": "1.0.0",
     "license": "MIT",
     "exports": {
@@ -44,12 +44,12 @@
             "optional": true
         }
     },
-    "homepage": "https://rocket-ui.com",
+    "homepage": "https://shadcn-ui-sass.com",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/mediaweb-pt/rocket-ui-core.git"
+        "url": "git+https://github.com/mediaweb-pt/shadcn-ui-sass.git"
     },
     "bugs": {
-        "url": "https://github.com/mediaweb-pt/rocket-ui-core/issues"
+        "url": "https://github.com/mediaweb-pt/shadcn-ui-sass/issues"
     }
 }

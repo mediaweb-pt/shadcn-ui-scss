@@ -16,7 +16,7 @@ const meta: Meta<Props> = {
         lg: 4,
         xl: 5,
         xxl: 6,
-        gap: 4,
+        gap: "base",
     },
     parameters: { layout: "fullscreen" },
 }
@@ -26,18 +26,42 @@ type Story = StoryObj<Props>
 export const Grid: Story = {
     render: (args) => (
         <Row {...args}>
-            <Col className="h-[100px] bg-card">Col1</Col>
-            <Col className="h-[100px] bg-card">Col2</Col>
-            <Col className="h-[100px] bg-card">Col3</Col>
-            <Col className="h-[100px] bg-card">Col4</Col>
-            <Col className="h-[100px] bg-card">Col5</Col>
-            <Col className="h-[100px] bg-card">Col6</Col>
-            <Col className="h-[100px] bg-card">Col7</Col>
-            <Col className="h-[100px] bg-card">Col8</Col>
-            <Col className="h-[100px] bg-card">Col9</Col>
-            <Col className="h-[100px] bg-card">Col10</Col>
-            <Col className="h-[100px] bg-card">Col11</Col>
-            <Col className="h-[100px] bg-card">Col12</Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col1
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col2
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col3
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col4
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col5
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col6
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col7
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col8
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col9
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col10
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col11
+            </Col>
+            <Col className="background-neutral-4" style={{ height: 100 }}>
+                Col12
+            </Col>
         </Row>
     ),
 }
@@ -56,7 +80,7 @@ export const Cols: Story = {
     render: (args) => (
         <Row {...args} sm={args.columns} md={args.columns} lg={args.columns} xl={args.columns} xxl={args.columns}>
             {Array.from({ length: args.columns || 1 }, (v, i) => i).map((col) => (
-                <Col className="h-[100px] bg-card">{`Col${col + 1}`}</Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>{`Col${col + 1}`}</Col>
             ))}
         </Row>
     ),
@@ -82,21 +106,31 @@ export const Col3: Story = {
     render: (args) => (
         <>
             <Row {...args}>
-                <Col className="h-[100px] bg-card">Col1</Col>
-                <Col className="h-[100px] bg-card">Col2</Col>
-                <Col className="h-[100px] bg-card">Col3</Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col1
+                </Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col2
+                </Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col3
+                </Col>
             </Row>
-            <Row {...args} className="mt-4">
-                <Col className="h-[100px] bg-card">Col1</Col>
-                <Col sm={2} className="h-[100px] bg-card">
+            <Row {...args} className="margin-top-base">
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col1
+                </Col>
+                <Col sm={2} className="background-neutral-4" style={{ height: 100 }}>
                     Col2
                 </Col>
             </Row>
-            <Row {...args} className="mt-4">
-                <Col sm={2} className="h-[100px] bg-card">
+            <Row {...args} className="margin-top-base">
+                <Col sm={2} className="background-neutral-4" style={{ height: 100 }}>
                     Col1
                 </Col>
-                <Col className="h-[100px] bg-card">Col2</Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col2
+                </Col>
             </Row>
         </>
     ),
@@ -122,41 +156,65 @@ export const Col4: Story = {
     render: (args) => (
         <>
             <Row {...args}>
-                <Col className="h-[100px] bg-card">Col1</Col>
-                <Col className="h-[100px] bg-card">Col2</Col>
-                <Col className="h-[100px] bg-card">Col3</Col>
-                <Col className="h-[100px] bg-card">Col4</Col>
-            </Row>
-            <Row {...args} className="mt-4">
-                <Col sm={2} className="h-[100px] bg-card">
+                <Col className="background-neutral-4" style={{ height: 100 }}>
                     Col1
                 </Col>
-                <Col className="h-[100px] bg-card">Col3</Col>
-                <Col className="h-[100px] bg-card">Col4</Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col2
+                </Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col3
+                </Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col4
+                </Col>
             </Row>
-            <Row {...args} className="mt-4">
-                <Col sm={3} className="h-[100px] bg-card">
+            <Row {...args} className="margin-top-base">
+                <Col sm={2} className="background-neutral-4" style={{ height: 100 }}>
                     Col1
                 </Col>
-                <Col className="h-[100px] bg-card">Col4</Col>
-            </Row>
-            <Row {...args} className="mt-4">
-                <Col className="h-[100px] bg-card">Col1</Col>
-                <Col sm={2} className="h-[100px] bg-card">
-                    Col2
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col3
                 </Col>
-                <Col className="h-[100px] bg-card">Col4</Col>
-            </Row>
-            <Row {...args} className="mt-4">
-                <Col className="h-[100px] bg-card">Col1</Col>
-                <Col sm={3} className="h-[100px] bg-card">
-                    Col2
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col4
                 </Col>
             </Row>
-            <Row {...args} className="mt-4">
-                <Col className="h-[100px] bg-card">Col1</Col>
-                <Col className="h-[100px] bg-card">Col2</Col>
-                <Col sm={2} className="h-[100px] bg-card">
+            <Row {...args} className="margin-top-base">
+                <Col sm={3} className="background-neutral-4" style={{ height: 100 }}>
+                    Col1
+                </Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col4
+                </Col>
+            </Row>
+            <Row {...args} className="margin-top-base">
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col1
+                </Col>
+                <Col sm={2} className="background-neutral-4" style={{ height: 100 }}>
+                    Col2
+                </Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col4
+                </Col>
+            </Row>
+            <Row {...args} className="margin-top-base">
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col1
+                </Col>
+                <Col sm={3} className="background-neutral-4" style={{ height: 100 }}>
+                    Col2
+                </Col>
+            </Row>
+            <Row {...args} className="margin-top-base">
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col1
+                </Col>
+                <Col className="background-neutral-4" style={{ height: 100 }}>
+                    Col2
+                </Col>
+                <Col sm={2} className="background-neutral-4" style={{ height: 100 }}>
                     Col3
                 </Col>
             </Row>

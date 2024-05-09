@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/dialog
+$ yarn add @shadcn-ui-sass/dialog
 # or
-$ npm install @rocket-ui-core/dialog
+$ npm install @shadcn-ui-sass/dialog
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/dialog).
+View docs [here](https://shadcn-ui-sass.com/docs/components/dialog).

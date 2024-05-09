@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/form
+$ yarn add @shadcn-ui-sass/form
 # or
-$ npm install @rocket-ui-core/form
+$ npm install @shadcn-ui-sass/form
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/form).
+View docs [here](https://shadcn-ui-sass.com/docs/components/form).

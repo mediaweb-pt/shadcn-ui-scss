@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/skeleton
+$ yarn add @shadcn-ui-sass/skeleton
 # or
-$ npm install @rocket-ui-core/skeleton
+$ npm install @shadcn-ui-sass/skeleton
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/skeleton).
+View docs [here](https://shadcn-ui-sass.com/docs/components/skeleton).

@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/text-area
+$ yarn add @shadcn-ui-sass/text-area
 # or
-$ npm install @rocket-ui-core/text-area
+$ npm install @shadcn-ui-sass/text-area
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/text-area).
+View docs [here](https://shadcn-ui-sass.com/docs/components/text-area).

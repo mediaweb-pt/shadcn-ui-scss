@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/hover-card
+$ yarn add @shadcn-ui-sass/hover-card
 # or
-$ npm install @rocket-ui-core/hover-card
+$ npm install @shadcn-ui-sass/hover-card
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/hover-card).
+View docs [here](https://shadcn-ui-sass.com/docs/components/hover-card).

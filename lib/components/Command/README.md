@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/command
+$ yarn add @shadcn-ui-sass/command
 # or
-$ npm install @rocket-ui-core/command
+$ npm install @shadcn-ui-sass/command
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/command).
+View docs [here](https://shadcn-ui-sass.com/docs/components/command).

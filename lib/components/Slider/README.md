@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/slider
+$ yarn add @shadcn-ui-sass/slider
 # or
-$ npm install @rocket-ui-core/slider
+$ npm install @shadcn-ui-sass/slider
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/slider).
+View docs [here](https://shadcn-ui-sass.com/docs/components/slider).

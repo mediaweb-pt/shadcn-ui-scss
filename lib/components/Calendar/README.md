@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/calendar
+$ yarn add @shadcn-ui-sass/calendar
 # or
-$ npm install @rocket-ui-core/calendar
+$ npm install @shadcn-ui-sass/calendar
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/calendar).
+View docs [here](https://shadcn-ui-sass.com/docs/components/calendar).

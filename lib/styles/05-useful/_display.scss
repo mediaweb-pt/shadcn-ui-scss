@@ -4,32 +4,30 @@
 /// Usefull - Display
 
 ///
-.display {
-    &-none {
-        display: none !important;
-    }
+.none {
+  display: none !important;
+}
 
-    &-block {
-        display: block !important;
-    }
+.block {
+  display: block !important;
+}
 
-    &-contents {
-        display: contents !important;
-    }
+.contents {
+  display: contents !important;
+}
 
-    &-inline {
-        display: inline !important;
-    }
+.inline {
+  display: inline !important;
+}
 
-    &-inline-block {
-        display: inline-block !important;
-    }
+.inline-block {
+  display: inline-block !important;
+}
 
-    &-inline-flex {
-        display: inline-flex !important;
-    }
+.inline-flex {
+  display: inline-flex !important;
+}
 
-    &-grid {
-        display: grid !important;
-    }
+.grid {
+  display: grid !important;
 }

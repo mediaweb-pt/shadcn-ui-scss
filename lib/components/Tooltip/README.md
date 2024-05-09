@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/tooltip
+$ yarn add @shadcn-ui-sass/tooltip
 # or
-$ npm install @rocket-ui-core/tooltip
+$ npm install @shadcn-ui-sass/tooltip
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/tooltip).
+View docs [here](https://shadcn-ui-sass.com/docs/components/tooltip).

@@ -1,39 +1,8 @@
-@import "../../../../lib/styles/00-abstract/variables";
-@import "../../../../lib/styles/01-foundations/root";
-@import "../../../../lib/styles/rocket-ui.scss";
-@import "../../../../lib/styles/7-themes/dark.scss";
-
-.sr-only {
-  border-width: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  width: 100%;
-}
-
-.btn{
+.btn {
   @media (min-width: 768px) {
     &.md\:hidden {
       display: none;
     }
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1400px;
   }
 }
 
@@ -186,7 +155,7 @@
     }
   }
 
-  &__content{
+  &__content {
     flex: 1;
   }
 
@@ -298,7 +267,7 @@
   }
 }
 
-.announcement{
+.announcement {
   align-items: center;
   background-color: hsl(var(--muted));
   border-radius: 0.5rem;
@@ -312,29 +281,27 @@
   padding-right: 0.75rem;
   padding-top: 0.25rem;
 
-  &__logo{
+  &__logo {
     height: 1.75rem;
     margin-right: 0.5rem;
     width: 1.75rem;
-
   }
 
-  &__icon{
+  &__icon {
     height: 1rem;
     margin-left: 0.25rem;
     width: 1rem;
   }
 
-  .separator{
+  .separator {
     height: 1rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
   }
 }
 
-
-.themes{
-  &-page{
+.themes {
+  &-page {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -347,8 +314,8 @@
   }
 }
 
-.theme{
-  &-wrapper{
+.theme {
+  &-wrapper {
     width: 100%;
   }
 }

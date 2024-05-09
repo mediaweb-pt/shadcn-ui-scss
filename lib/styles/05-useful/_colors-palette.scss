@@ -9,39 +9,47 @@
 */
 
 ///
-.background {
-    @each $color, $variations in $colors-extended {
-        @each $type, $value in $variations {
-            &-#{$color} {
-                @if ($type == "") {
-                    & {
-                        background-color: var(--color-#{$color}) !important;
-                    }
-                } @else {
-                    &-#{$type} {
-                        background-color: var(--color-#{$color}-#{$type}) !important;
-                    }
-                }
-            }
+.bg {
+  @each $color, $variations in $colors-extended {
+    @each $type, $value in $variations {
+      &-#{$color} {
+        @if ($type == "") {
+          & {
+            background-color: var(--color-#{$color}) !important;
+          }
+        } @else {
+          &-#{$type} {
+            background-color: var(--color-#{$color}-#{$type}) !important;
+          }
         }
+      }
     }
+  }
+
+  &-background {
+    background-color: hsl(var(--background)) !important;
+  }
 }
 
 ///
 .text {
-    @each $color, $variations in $colors-extended {
-        @each $type, $value in $variations {
-            &-#{$color} {
-                @if ($type == "") {
-                    & {
-                        color: var(--color-#{$color}) !important;
-                    }
-                } @else {
-                    &-#{$type} {
-                        color: var(--color-#{$color}-#{$type}) !important;
-                    }
-                }
-            }
+  @each $color, $variations in $colors-extended {
+    @each $type, $value in $variations {
+      &-#{$color} {
+        @if ($type == "") {
+          & {
+            color: var(--color-#{$color}) !important;
+          }
+        } @else {
+          &-#{$type} {
+            color: var(--color-#{$color}-#{$type}) !important;
+          }
         }
+      }
     }
+  }
+
+  &-background {
+    color: hsl(var(--background)) !important;
+  }
 }

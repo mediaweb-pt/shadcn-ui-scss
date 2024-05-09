@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/sheet
+$ yarn add @shadcn-ui-sass/sheet
 # or
-$ npm install @rocket-ui-core/sheet
+$ npm install @shadcn-ui-sass/sheet
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/sheet).
+View docs [here](https://shadcn-ui-sass.com/docs/components/sheet).

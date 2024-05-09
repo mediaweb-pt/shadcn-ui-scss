@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/toast
+$ yarn add @shadcn-ui-sass/toast
 # or
-$ npm install @rocket-ui-core/toast
+$ npm install @shadcn-ui-sass/toast
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/toast).
+View docs [here](https://shadcn-ui-sass.com/docs/components/toast).

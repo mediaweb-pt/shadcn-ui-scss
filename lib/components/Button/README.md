@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/button
+$ yarn add @shadcn-ui-sass/button
 # or
-$ npm install @rocket-ui-core/button
+$ npm install @shadcn-ui-sass/button
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/button).
+View docs [here](https://shadcn-ui-sass.com/docs/components/button).

@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/radio-group
+$ yarn add @shadcn-ui-sass/radio-group
 # or
-$ npm install @rocket-ui-core/radio-group
+$ npm install @shadcn-ui-sass/radio-group
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/radio-group).
+View docs [here](https://shadcn-ui-sass.com/docs/components/radio-group).

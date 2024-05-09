@@ -22,7 +22,6 @@
     --radius: 0.5rem;
     --font-geist-sans: "__GeistSans_ac79ff", "__GeistSans_Fallback_ac79ff";
 
-    // Rocket
     /*! Typography - Size */
     @each $type, $value in $typography-heading-sizes {
         --font-size-h#{$type}: #{$value};
@@ -92,8 +91,8 @@
     --header-size-content: #{$header-size-content};
     --bottom-bar-size: #{$bottom-bar-size};
 
-    --side-menu-color: #{$side-menu-color}; /* TODO: Used on Rocket Free. Should be deprecated */
-    --side-menu-size: #{$side-menu-size}; /* TODO: Used on Rocket Free. Should be deprecated */
+    --side-menu-color: #{$side-menu-color};
+    --side-menu-size: #{$side-menu-size};
     --sidebar-width: #{$sidebar-width};
 
     /* Opacities */

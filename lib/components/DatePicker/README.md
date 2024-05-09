@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/date-picker
+$ yarn add @shadcn-ui-sass/date-picker
 # or
-$ npm install @rocket-ui-core/date-picker
+$ npm install @shadcn-ui-sass/date-picker
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/date-picker).
+View docs [here](https://shadcn-ui-sass.com/docs/components/date-picker).

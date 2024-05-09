@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/drawer
+$ yarn add @shadcn-ui-sass/drawer
 # or
-$ npm install @rocket-ui-core/drawer
+$ npm install @shadcn-ui-sass/drawer
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/drawer).
+View docs [here](https://shadcn-ui-sass.com/docs/components/drawer).

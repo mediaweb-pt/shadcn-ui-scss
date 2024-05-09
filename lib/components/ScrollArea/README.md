@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/scroll-area
+$ yarn add @shadcn-ui-sass/scroll-area
 # or
-$ npm install @rocket-ui-core/scroll-area
+$ npm install @shadcn-ui-sass/scroll-area
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/scroll-area).
+View docs [here](https://shadcn-ui-sass.com/docs/components/scroll-area).

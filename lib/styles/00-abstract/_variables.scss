@@ -184,13 +184,13 @@ $colors-semantic: (
 // Spacing
 $sizes: (
     none: 0,
-    xs: 4px,
-    s: 8px,
-    base: 16px,
-    m: 24px,
-    l: 32px,
-    xl: 40px,
-    xxl: 48px,
+    xs: 0.25rem,
+    s: 0.5rem,
+    base: 1rem,
+    m: 1.5rem,
+    l: 2rem,
+    xl: 2.5rem,
+    xxl: 3rem,
 );
 
 $box-sides: "top", "right", "bottom", "left";
@@ -212,6 +212,7 @@ $border-size: (
     s: 1px,
     m: 2px,
     l: 3px,
+    xl: 4px,
 );
 
 // Border Radius BoxSides
@@ -222,11 +223,11 @@ $border-radius-box-sides:
 // Shadows (Elevations)
 $shadow-types: (
     "none": none,
-    "xs": 0 1px 2px rgba(0, 0, 0, 0.1),
-    "s": 0 2px 4px rgba(0, 0, 0, 0.1),
-    "m": 0 4px 6px rgba(0, 0, 0, 0.1),
-    "l": 0 6px 8px rgba(0, 0, 0, 0.1),
-    "xl": 0 8px 10px rgba(0, 0, 0, 0.1),
+    "xs": "0 1px 2px 0 rgb(0 0 0 / 0.01)",
+    "s": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+    "m": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+    "l": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+    "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
 );
 
 // App Settings

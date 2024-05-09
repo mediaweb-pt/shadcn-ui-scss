@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/input-otp
+$ yarn add @shadcn-ui-sass/input-otp
 # or
-$ npm install @rocket-ui-core/input-otp
+$ npm install @shadcn-ui-sass/input-otp
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/input-otp).
+View docs [here](https://shadcn-ui-sass.com/docs/components/input-otp).

@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/dropdown-menu
+$ yarn add @shadcn-ui-sass/dropdown-menu
 # or
-$ npm install @rocket-ui-core/dropdown-menu
+$ npm install @shadcn-ui-sass/dropdown-menu
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/dropdown-menu).
+View docs [here](https://shadcn-ui-sass.com/docs/components/dropdown-menu).

@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/table
+$ yarn add @shadcn-ui-sass/table
 # or
-$ npm install @rocket-ui-core/table
+$ npm install @shadcn-ui-sass/table
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/table).
+View docs [here](https://shadcn-ui-sass.com/docs/components/table).

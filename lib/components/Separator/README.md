@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/separator
+$ yarn add @shadcn-ui-sass/separator
 # or
-$ npm install @rocket-ui-core/separator
+$ npm install @shadcn-ui-sass/separator
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/separator).
+View docs [here](https://shadcn-ui-sass.com/docs/components/separator).

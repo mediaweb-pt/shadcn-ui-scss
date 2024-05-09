@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/accordion
+$ yarn add @shadcn-ui-sass/accordion
 # or
-$ npm install @rocket-ui-core/accordion
+$ npm install @shadcn-ui-sass/accordion
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/accordion).
+View docs [here](https://shadcn-ui-sass.com/docs/components/accordion).

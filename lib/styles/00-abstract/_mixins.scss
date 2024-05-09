@@ -1,0 +1,35 @@
+/* Responsive classes */
+@mixin responsive($className, $prop, $val) {
+  @media (min-width: 640px) {
+    .sm\:#{str-replace($className, ".", "")} {
+      #{$prop}: #{$val} !important;
+    }
+  }
+  @media (min-width: 768px) {
+    .md\:#{str-replace($className, ".", "")} {
+      #{$prop}: #{$val} !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    .lg\:#{str-replace($className, ".", "")} {
+      #{$prop}: #{$val} !important;
+    }
+  }
+  @media (min-width: 1280px) {
+    .xl\:#{str-replace($className, ".", "")} {
+      #{$prop}: #{$val} !important;
+    }
+  }
+  @media (min-width: 1536px) {
+    .\32xl\:#{str-replace($className, ".", "")} {
+      #{$prop}: #{$val} !important;
+    }
+  }
+}
+
+@mixin useful($className, $prop, $val) {
+  #{$className} {
+    #{$prop}: #{$val} !important;
+  }
+  @include responsive($className, $prop, $val);
+}

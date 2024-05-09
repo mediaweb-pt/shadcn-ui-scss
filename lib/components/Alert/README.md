@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/alert
+$ yarn add @shadcn-ui-sass/alert
 # or
-$ npm install @rocket-ui-core/alert
+$ npm install @shadcn-ui-sass/alert
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/alert).
+View docs [here](https://shadcn-ui-sass.com/docs/components/alert).

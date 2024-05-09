@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/breadcrumbs
+$ yarn add @shadcn-ui-sass/breadcrumbs
 # or
-$ npm install @rocket-ui-core/breadcrumbs
+$ npm install @shadcn-ui-sass/breadcrumbs
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/breadcrumbs).
+View docs [here](https://shadcn-ui-sass.com/docs/components/breadcrumbs).

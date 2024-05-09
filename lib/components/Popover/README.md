@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/popover
+$ yarn add @shadcn-ui-sass/popover
 # or
-$ npm install @rocket-ui-core/popover
+$ npm install @shadcn-ui-sass/popover
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/popover).
+View docs [here](https://shadcn-ui-sass.com/docs/components/popover).

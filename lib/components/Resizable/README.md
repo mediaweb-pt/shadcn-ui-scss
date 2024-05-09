@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/resizable
+$ yarn add @shadcn-ui-sass/resizable
 # or
-$ npm install @rocket-ui-core/resizable
+$ npm install @shadcn-ui-sass/resizable
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/resizable).
+View docs [here](https://shadcn-ui-sass.com/docs/components/resizable).

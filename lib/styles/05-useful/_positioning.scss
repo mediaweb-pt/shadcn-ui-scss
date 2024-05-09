@@ -4,17 +4,17 @@
 /// Usefull - Position
 
 ///
-.position-relative {
-    position: relative !important;
+.relative {
+  position: relative !important;
 }
 
 ///
 .fixed {
-    position: fixed !important;
+  position: fixed !important;
 }
 
 ///
 .sticky {
-    position: -webkit-sticky !important; //Fix for older iPhones
-    position: sticky !important;
+  position: -webkit-sticky !important; //Fix for older iPhones
+  position: sticky !important;
 }

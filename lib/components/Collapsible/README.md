@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/collapsible
+$ yarn add @shadcn-ui-sass/collapsible
 # or
-$ npm install @rocket-ui-core/collapsible
+$ npm install @shadcn-ui-sass/collapsible
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/collapsible).
+View docs [here](https://shadcn-ui-sass.com/docs/components/collapsible).

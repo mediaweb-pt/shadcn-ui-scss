@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/sonner
+$ yarn add @shadcn-ui-sass/sonner
 # or
-$ npm install @rocket-ui-core/sonner
+$ npm install @shadcn-ui-sass/sonner
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/sonner).
+View docs [here](https://shadcn-ui-sass.com/docs/components/sonner).

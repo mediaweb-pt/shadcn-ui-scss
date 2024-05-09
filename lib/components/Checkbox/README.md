@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/checkbox
+$ yarn add @shadcn-ui-sass/checkbox
 # or
-$ npm install @rocket-ui-core/checkbox
+$ npm install @shadcn-ui-sass/checkbox
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/checkbox).
+View docs [here](https://shadcn-ui-sass.com/docs/components/checkbox).

@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/toggle
+$ yarn add @shadcn-ui-sass/toggle
 # or
-$ npm install @rocket-ui-core/toggle
+$ npm install @shadcn-ui-sass/toggle
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/toggle).
+View docs [here](https://shadcn-ui-sass.com/docs/components/toggle).

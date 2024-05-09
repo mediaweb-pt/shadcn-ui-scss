@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/pagination
+$ yarn add @shadcn-ui-sass/pagination
 # or
-$ npm install @rocket-ui-core/pagination
+$ npm install @shadcn-ui-sass/pagination
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/pagination).
+View docs [here](https://shadcn-ui-sass.com/docs/components/pagination).

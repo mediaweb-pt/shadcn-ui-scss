@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/toggle-group
+$ yarn add @shadcn-ui-sass/toggle-group
 # or
-$ npm install @rocket-ui-core/toggle-group
+$ npm install @shadcn-ui-sass/toggle-group
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/toggle-group).
+View docs [here](https://shadcn-ui-sass.com/docs/components/toggle-group).

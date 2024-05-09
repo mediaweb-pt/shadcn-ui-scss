@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/tabs
+$ yarn add @shadcn-ui-sass/tabs
 # or
-$ npm install @rocket-ui-core/tabs
+$ npm install @shadcn-ui-sass/tabs
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/tabs).
+View docs [here](https://shadcn-ui-sass.com/docs/components/tabs).

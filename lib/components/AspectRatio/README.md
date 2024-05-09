@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/aspect-ratio
+$ yarn add @shadcn-ui-sass/aspect-ratio
 # or
-$ npm install @rocket-ui-core/aspect-ratio
+$ npm install @shadcn-ui-sass/aspect-ratio
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/aspect-ratio).
+View docs [here](https://shadcn-ui-sass.com/docs/components/aspect-ratio).

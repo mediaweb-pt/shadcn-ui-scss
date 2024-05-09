@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/badge
+$ yarn add @shadcn-ui-sass/badge
 # or
-$ npm install @rocket-ui-core/badge
+$ npm install @shadcn-ui-sass/badge
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/badge).
+View docs [here](https://shadcn-ui-sass.com/docs/components/badge).

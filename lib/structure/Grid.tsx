@@ -25,7 +25,7 @@ export function Row({ columns = 1, sm, md, lg, xl, xxl, gap = "base", className,
     )
 }
 
-export function Col({ span, sm, md, lg, xl, xxl, children, className }: ColProps) {
+export function Col({ span, sm, md, lg, xl, xxl, children, className, style }: ColProps) {
     return (
         <div
             className={cn(
@@ -39,6 +39,7 @@ export function Col({ span, sm, md, lg, xl, xxl, children, className }: ColProps
                 },
                 className
             )}
+            style={{ ...style }}
         >
             {children}
         </div>

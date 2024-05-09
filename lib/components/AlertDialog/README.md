@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/alert-dialog
+$ yarn add @shadcn-ui-sass/alert-dialog
 # or
-$ npm install @rocket-ui-core/alert-dialog
+$ npm install @shadcn-ui-sass/alert-dialog
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/alert-dialog).
+View docs [here](https://shadcn-ui-sass.com/docs/components/alert-dialog).

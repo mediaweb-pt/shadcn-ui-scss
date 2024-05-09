@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/carousel
+$ yarn add @shadcn-ui-sass/carousel
 # or
-$ npm install @rocket-ui-core/carousel
+$ npm install @shadcn-ui-sass/carousel
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/carousel).
+View docs [here](https://shadcn-ui-sass.com/docs/components/carousel).

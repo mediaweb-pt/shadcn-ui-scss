@@ -3,11 +3,11 @@
 ## Installation
 
 ```sh
-$ yarn add @rocket-ui-core/progress
+$ yarn add @shadcn-ui-sass/progress
 # or
-$ npm install @rocket-ui-core/progress
+$ npm install @shadcn-ui-sass/progress
 ```
 
 ## Usage
 
-View docs [here](https://rocket-ui-core.com/docs/components/progress).
+View docs [here](https://shadcn-ui-sass.com/docs/components/progress).

@@ -5,26 +5,24 @@
 
 ///
 .ph:empty {
-	display: none !important;
+  display: none !important;
 }
 
 ///
-// .hidden {
-// 	display: none !important;
-// }
+@include useful(".hidden", "display", "none");
 
 ///
 .hide {
-	&-scrollbar {
-		-ms-overflow-style: none !important; // IE and Edge
-		scrollbar-width: none !important; // Firefox
+  &-scrollbar {
+    -ms-overflow-style: none !important; // IE and Edge
+    scrollbar-width: none !important; // Firefox
 
-		&:hover {
-			cursor: all-scroll !important;
-		}
+    &:hover {
+      cursor: all-scroll !important;
+    }
 
-		&::-webkit-scrollbar {
-			display: none !important; // Chrome
-		}
-	}
+    &::-webkit-scrollbar {
+      display: none !important; // Chrome
+    }
+  }
 }
