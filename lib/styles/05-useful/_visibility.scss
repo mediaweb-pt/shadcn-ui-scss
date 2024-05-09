@@ -9,9 +9,6 @@
 }
 
 ///
-@include useful(".hidden", "display", "none");
-
-///
 .hide {
   &-scrollbar {
     -ms-overflow-style: none !important; // IE and Edge

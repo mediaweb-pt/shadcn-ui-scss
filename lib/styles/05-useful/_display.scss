@@ -4,13 +4,18 @@
 /// Usefull - Display
 
 ///
-.none {
-  display: none !important;
-}
+@include useful(".hidden,.none", "display", "none");
+@include responsive(
+  (
+    hidden: ".hidden",
+    none: ".none",
+  ),
+  "display",
+  "none"
+);
 
-.block {
-  display: block !important;
-}
+// @include useful(".block", "display", "block");
+// @include responsive(".block", "display", "block");
 
 .contents {
   display: contents !important;
