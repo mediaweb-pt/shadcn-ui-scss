@@ -1,4 +1,6 @@
 import "@/styles/globals.css"
+import "@/styles/scss/layout.scss"
+import "@/shadcn-scss/styles/shadcn-ui.scss"
 import { Metadata, Viewport } from "next"
 
 import { siteConfig } from "@/config/site"
@@ -18,17 +20,15 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Server Components",
-    "Radix UI",
-  ],
+  keywords: ["Next.js", "React", "SCSS", "Server Components", "Radix UI"],
   authors: [
     {
       name: "shadcn",
       url: "https://shadcn.com",
+    },
+    {
+      name: "Mediaweb",
+      url: "https://mediaweb.pt",
     },
   ],
   creator: "shadcn",
@@ -79,12 +79,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
-        >
+        <body className={cn(fontSans.variable)}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
