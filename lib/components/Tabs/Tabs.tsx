@@ -7,7 +7,7 @@ import {
   Trigger,
 } from "@radix-ui/react-tabs"
 
-import { cn } from "../../../utils/utils"
+import { cn } from "../../utils/utils"
 
 //import "./Tabs.scss"
 
