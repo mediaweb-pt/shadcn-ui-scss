@@ -9,16 +9,16 @@ import { cn } from "../../utils/utils"
 const buttonVariants = cva("btn", {
   variants: {
     variant: {
-      destructive: "btn-destructive",
-      outline: "btn-outline",
-      secondary: "btn-secondary",
-      ghost: "btn-ghost",
-      link: "btn-link",
+      destructive: "btn-destructive ",
+      outline: "btn-outline ",
+      secondary: "btn-secondary ",
+      ghost: "btn-ghost ",
+      link: "btn-link ",
     },
     size: {
-      sm: "btn-sm",
-      lg: "btn-lg",
-      icon: "btn-icon",
+      sm: "btn-sm ",
+      lg: "btn-lg ",
+      icon: "btn-icon ",
     },
   },
 })
