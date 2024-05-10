@@ -12,24 +12,24 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/registry/new-york/ui/alert-dialog"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/shadcn-scss/components/AlertDialog"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/new-york/ui/dialog"
+} from "@/shadcn-scss/components/Dialog"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
-import { Label } from "@/registry/new-york/ui/label"
-import { Switch } from "@/registry/new-york/ui/switch"
+} from "@/shadcn-scss/components/DropdownMenu"
+import { Label } from "@/shadcn-scss/components/Label"
+import { Switch } from "@/shadcn-scss/components/Switch"
 import { toast } from "@/registry/new-york/ui/use-toast"
 
 export function PresetActions() {
@@ -40,7 +40,7 @@ export function PresetActions() {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="secondary">
+          <Button className={buttonVariants({variant: "secondary"})}>
             <span className="sr-only">Actions</span>
             <DotsHorizontalIcon className="h-4 w-4" />
           </Button>
@@ -86,7 +86,7 @@ export function PresetActions() {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="secondary" onClick={() => setIsOpen(false)}>
+            <Button className={buttonVariants({variant: "secondary"})} onClick={() => setIsOpen(false)}>
               Close
             </Button>
           </DialogFooter>
@@ -104,7 +104,7 @@ export function PresetActions() {
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <Button
-              variant="destructive"
+              className={buttonVariants({variant: "destructive"})}
               onClick={() => {
                 setShowDeleteDialog(false)
                 toast({

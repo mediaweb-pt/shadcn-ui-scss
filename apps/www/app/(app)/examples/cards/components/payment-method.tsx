@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Card,
   CardContent,
@@ -7,17 +7,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/registry/new-york/ui/radio-group"
+} from "@/shadcn-scss/components/Card"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
+import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/shadcn-scss/components/Select"
 
 export function DemoPaymentMethod() {
   return (

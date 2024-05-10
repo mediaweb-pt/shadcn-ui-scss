@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
+} from "@/shadcn-scss/components/Avatar"
 
 export default function AvatarDemo() {
   return (

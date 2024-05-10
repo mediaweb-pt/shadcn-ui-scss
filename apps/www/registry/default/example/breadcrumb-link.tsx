@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
+} from "@/shadcn-scss/components/Breadcrumbs"
 
 export default function BreadcrumbWithCustomSeparator() {
   return (

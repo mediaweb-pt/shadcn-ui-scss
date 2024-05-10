@@ -3,8 +3,8 @@
 import { Cross2Icon } from "@radix-ui/react-icons"
 import { Table } from "@tanstack/react-table"
 
-import { Button } from "@/registry/new-york/ui/button"
-import { Input } from "@/registry/new-york/ui/input"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Input } from "@/shadcn-scss/components/Input"
 import { DataTableViewOptions } from "@/app/(app)/examples/tasks/components/data-table-view-options"
 
 import { priorities, statuses } from "../data/data"
@@ -46,9 +46,8 @@ export function DataTableToolbar<TData>({
         )}
         {isFiltered && (
           <Button
-            variant="ghost"
             onClick={() => table.resetColumnFilters()}
-            className="h-8 px-2 lg:px-3"
+            className={buttonVariants({ variant: "ghost" }) + " h-8 px-2 lg:px-3"}
           >
             Reset
             <Cross2Icon className="ml-2 h-4 w-4" />

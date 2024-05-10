@@ -8,7 +8,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/registry/default/ui/alert-dialog"
+} from "@/shadcn-scss/components/AlertDialog"
 import { Button } from "@/registry/default/ui/button"
 
 export default function AlertDialogDemo() {

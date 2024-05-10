@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
+} from "@/shadcn-scss/components/Breadcrumbs"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from "@/shadcn-scss/components/DropdownMenu"
 
 export default function BreadcrumbDemo() {
   return (

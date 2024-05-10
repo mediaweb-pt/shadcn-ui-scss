@@ -16,20 +16,20 @@ import {
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Input } from "@/shadcn-scss/components/Input/src"
+import { Input } from "@/shadcn-scss/components/Input"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/shadcn-scss/components/Resizable/src"
-import { Separator } from "@/shadcn-scss/components/Separator/src"
+} from "@/shadcn-scss/components/Resizable"
+import { Separator } from "@/shadcn-scss/components/Separator"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/shadcn-scss/components/Tabs/src"
-import { TooltipProvider } from "@/shadcn-scss/components/Tooltip/src"
+} from "@/shadcn-scss/components/Tabs"
+import { TooltipProvider } from "@/shadcn-scss/components/Tooltip"
 import { AccountSwitcher } from "@/app/(app)/examples/mail/components/account-switcher"
 import { MailDisplay } from "@/app/(app)/examples/mail/components/mail-display"
 import { MailList } from "@/app/(app)/examples/mail/components/mail-list"

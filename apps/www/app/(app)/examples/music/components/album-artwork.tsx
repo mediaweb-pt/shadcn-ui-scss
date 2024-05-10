@@ -11,7 +11,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/new-york/ui/context-menu"
+} from "@/shadcn-scss/components/ContextMenu"
 
 import { Album } from "../data/albums"
 import { playlists } from "../data/playlists"

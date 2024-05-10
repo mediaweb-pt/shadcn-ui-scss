@@ -1,4 +1,4 @@
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Dialog,
   DialogContent,
@@ -7,15 +7,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york/ui/dialog"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/shadcn-scss/components/Dialog"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 
 export function PresetSave() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="secondary">Save</Button>
+        <Button className={buttonVariants({variant: "secondary"})}>Save</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[475px]">
         <DialogHeader>

@@ -16,32 +16,32 @@ import {
 import {
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@/shadcn-scss/components/DropdownMenu/src"
+} from "@/shadcn-scss/components/DropdownMenu"
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/shadcn-scss/components/Avatar/src"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
-import { Calendar } from "@/shadcn-scss/components/Calendar/src"
+} from "@/shadcn-scss/components/Avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Calendar } from "@/shadcn-scss/components/Calendar"
 import {
   DropdownMenu,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu/src"
-import { Label } from "@/shadcn-scss/components/Label/src"
+} from "@/shadcn-scss/components/DropdownMenu"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/shadcn-scss/components/Popover/src"
-import { Separator } from "@/shadcn-scss/components/Separator/src"
-import { Switch } from "@/shadcn-scss/components/Switch/src"
-import { Textarea } from "@/shadcn-scss/components/TextArea/src"
+} from "@/shadcn-scss/components/Popover"
+import { Separator } from "@/shadcn-scss/components/Separator"
+import { Switch } from "@/shadcn-scss/components/Switch"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/shadcn-scss/components/Tooltip/src"
+} from "@/shadcn-scss/components/Tooltip"
 import { Mail } from "@/app/(app)/examples/mail/data"
 
 interface MailDisplayProps {

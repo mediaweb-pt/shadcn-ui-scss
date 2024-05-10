@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
-import { Button } from "@/registry/default/ui/button"
+} from "@/shadcn-scss/components/Breadcrumbs"
+import { Button } from "@/shadcn-scss/components/Button"
 import {
   Drawer,
   DrawerClose,
@@ -23,13 +23,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/default/ui/drawer"
+} from "@/shadcn-scss/components/Drawer"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from "@/shadcn-scss/components/DropdownMenu"
 
 const items = [
   { href: "#", label: "Home" },

@@ -6,19 +6,19 @@ import { CaretSortIcon, CheckIcon } from "@radix-ui/react-icons"
 import { PopoverProps } from "@radix-ui/react-popover"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/registry/new-york/ui/command"
+} from "@/shadcn-scss/components/Command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from "@/shadcn-scss/components/Popover"
 
 import { Preset } from "../data/presets"
 
@@ -39,7 +39,7 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
           role="combobox"
           aria-label="Load a preset..."
           aria-expanded={open}
-          className="flex-1 justify-between md:max-w-[200px] lg:max-w-[300px]"
+          className={buttonVariants({variant: "outline"}) + " flex-1 justify-between md:max-w-[200px] lg:max-w-[300px]"}
         >
           {selectedPreset ? selectedPreset.name : "Load a preset..."}
           <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />

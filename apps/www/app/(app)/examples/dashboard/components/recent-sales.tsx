@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york/ui/avatar"
+} from "@/shadcn-scss/components/Avatar"
 
 export function RecentSales() {
   return (

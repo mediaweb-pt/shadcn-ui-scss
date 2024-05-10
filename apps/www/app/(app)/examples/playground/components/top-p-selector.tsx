@@ -7,9 +7,9 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/new-york/ui/hover-card"
-import { Label } from "@/registry/new-york/ui/label"
-import { Slider } from "@/registry/new-york/ui/slider"
+} from "@/shadcn-scss/components/HoverCard"
+import { Label } from "@/shadcn-scss/components/Label"
+import { Slider } from "@/shadcn-scss/components/Slider"
 
 interface TopPSelectorProps {
   defaultValue: SliderProps["defaultValue"]

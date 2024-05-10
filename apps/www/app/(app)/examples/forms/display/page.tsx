@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/new-york/ui/separator"
+import { Separator } from "@/shadcn-scss/components/Separator"
 import { DisplayForm } from "@/app/(app)/examples/forms/display/display-form"
 
 export default function SettingsDisplayPage() {

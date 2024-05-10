@@ -6,13 +6,13 @@ import { Calendar as CalendarIcon } from "lucide-react"
 import { DateRange } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
-import { Calendar } from "@/registry/default/ui/calendar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
+import { Calendar } from "@/shadcn-scss/components/Calendar/src"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/shadcn-scss/components/Popover/src"
 
 export default function DatePickerWithRange({
   className,
@@ -29,9 +29,9 @@ export default function DatePickerWithRange({
           <Button
             id="date"
             variant={"outline"}
-            className={cn(
-              "w-[300px] justify-start text-left font-normal",
-              !date && "text-muted-foreground"
+            className={buttonVariants({variant: "outline"}) + cn(
+              " w-[300px] justify-start text-left font-normal",
+              !date && " text-muted-foreground"
             )}
           >
             <CalendarIcon className="mr-2 h-4 w-4" />

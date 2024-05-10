@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/shadcn-scss/components/Card"
 
 export function DemoNotifications() {
   return (

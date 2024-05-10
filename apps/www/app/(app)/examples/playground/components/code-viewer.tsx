@@ -1,4 +1,4 @@
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Dialog,
   DialogContent,
@@ -6,13 +6,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york/ui/dialog"
+} from "@/shadcn-scss/components/Dialog"
 
 export function CodeViewer() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="secondary">View code</Button>
+        <Button className={buttonVariants({variant: "secondary"})}>View code</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[625px]">
         <DialogHeader>

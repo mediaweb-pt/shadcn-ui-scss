@@ -4,7 +4,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/default/ui/alert"
+} from "@/shadcn-scss/components/Alert"
 
 export default function AlertDemo() {
   return (

@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/new-york/ui/separator"
+import { Separator } from "@/shadcn-scss/components/Separator"
 import { AccountForm } from "@/app/(app)/examples/forms/account/account-form"
 
 export default function SettingsAccountPage() {

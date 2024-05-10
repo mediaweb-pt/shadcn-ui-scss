@@ -12,8 +12,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york/ui/avatar"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/shadcn-scss/components/Avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Command,
   CommandEmpty,
@@ -22,7 +22,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/new-york/ui/command"
+} from "@/shadcn-scss/components/Command"
 import {
   Dialog,
   DialogContent,
@@ -31,21 +31,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york/ui/dialog"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/shadcn-scss/components/Dialog"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from "@/shadcn-scss/components/Popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/shadcn-scss/components/Select"
 
 const groups = [
   {
@@ -94,7 +94,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
             role="combobox"
             aria-expanded={open}
             aria-label="Select a team"
-            className={cn("w-[200px] justify-between", className)}
+            className={buttonVariants({ variant: "outline" }) + cn(" w-[200px] justify-between", className)}
           >
             <Avatar className="mr-2 h-5 w-5">
               <AvatarImage
@@ -203,7 +203,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
           </div>
         </div>
         <DialogFooter>
-          <Button variant="outline" onClick={() => setShowNewTeamDialog(false)}>
+          <Button className={buttonVariants({variant: "outline"})} onClick={() => setShowNewTeamDialog(false)}>
             Cancel
           </Button>
           <Button type="submit">Continue</Button>

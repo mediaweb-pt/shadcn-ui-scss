@@ -1,7 +1,7 @@
 "use client"
 
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Card,
   CardContent,
@@ -9,9 +9,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/shadcn-scss/components/Card"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 
 export function DemoCreateAccount() {
   return (
@@ -24,11 +24,11 @@ export function DemoCreateAccount() {
       </CardHeader>
       <CardContent className="grid gap-4">
         <div className="grid grid-cols-2 gap-6">
-          <Button variant="outline">
+          <Button className={buttonVariants({variant: "outline"})}>
             <Icons.gitHub className="mr-2 h-4 w-4" />
             Github
           </Button>
-          <Button variant="outline">
+          <Button className={buttonVariants({variant: "outline"})}>
             <Icons.google className="mr-2 h-4 w-4" />
             Google
           </Button>

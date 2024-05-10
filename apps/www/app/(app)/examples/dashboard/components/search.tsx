@@ -1,4 +1,4 @@
-import { Input } from "@/registry/new-york/ui/input"
+import { Input } from "@/shadcn-scss/components/Input"
 
 export function Search() {
   return (

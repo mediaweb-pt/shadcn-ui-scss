@@ -6,7 +6,7 @@ import { useFieldArray, useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Form,
   FormControl,
@@ -15,16 +15,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/new-york/ui/form"
-import { Input } from "@/registry/new-york/ui/input"
+} from "@/shadcn-scss/components/Form"
+import { Input } from "@/shadcn-scss/components/Input"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
-import { Textarea } from "@/registry/new-york/ui/textarea"
+} from "@/shadcn-scss/components/Select"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
 import { toast } from "@/registry/new-york/ui/use-toast"
 
 const profileFormSchema = z.object({
@@ -176,9 +176,7 @@ export function ProfileForm() {
           ))}
           <Button
             type="button"
-            variant="outline"
-            size="sm"
-            className="mt-2"
+            className={buttonVariants({ variant: "outline", size: "sm" }) + " mt-2"}
             onClick={() => append({ value: "" })}
           >
             Add URL

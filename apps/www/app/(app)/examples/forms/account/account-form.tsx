@@ -7,15 +7,15 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
-import { Calendar } from "@/registry/new-york/ui/calendar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Calendar } from "@/shadcn-scss/components/Calendar"
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/registry/new-york/ui/command"
+} from "@/shadcn-scss/components/Command"
 import {
   Form,
   FormControl,
@@ -24,13 +24,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/new-york/ui/form"
-import { Input } from "@/registry/new-york/ui/input"
+} from "@/shadcn-scss/components/Form"
+import { Input } from "@/shadcn-scss/components/Input"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from "@/shadcn-scss/components/Popover"
 import { toast } from "@/registry/new-york/ui/use-toast"
 
 const languages = [
@@ -117,10 +117,9 @@ export function AccountForm() {
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant={"outline"}
-                      className={cn(
-                        "w-[240px] pl-3 text-left font-normal",
-                        !field.value && "text-muted-foreground"
+                      className={buttonVariants({variant: "outline"}) + cn(
+                        " w-[240px] pl-3 text-left font-normal",
+                        !field.value && " text-muted-foreground"
                       )}
                     >
                       {field.value ? (
@@ -163,9 +162,9 @@ export function AccountForm() {
                     <Button
                       variant="outline"
                       role="combobox"
-                      className={cn(
-                        "w-[200px] justify-between",
-                        !field.value && "text-muted-foreground"
+                      className={buttonVariants({ variant: "outline"}) + cn(
+                        " w-[200px] justify-between",
+                        !field.value && " text-muted-foreground"
                       )}
                     >
                       {field.value
