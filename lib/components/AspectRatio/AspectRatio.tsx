@@ -1,7 +1,7 @@
 import * as React from "react"
 import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
 
-import { cn } from "../../../utils/utils"
+import { cn } from "../../utils/utils"
 
 //import "./AspectRatio.scss"
 
