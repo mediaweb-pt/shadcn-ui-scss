@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { buttonVariants } from "@/shadcn-scss/components/Button/src"
+import { buttonVariants } from "@/shadcn-scss/components/Button"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"

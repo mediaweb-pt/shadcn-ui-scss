@@ -9,9 +9,9 @@ import { docsConfig } from "@/config/docs"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
-import { ScrollArea } from "@/shadcn-scss/components/ScrollArea/src"
-import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/components/Sheet/src"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { ScrollArea } from "@/shadcn-scss/components/ScrollArea"
+import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/components/Sheet"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)

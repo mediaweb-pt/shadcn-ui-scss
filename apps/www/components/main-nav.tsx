@@ -13,7 +13,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/shadcn-scss/components/tooltip/src"
+} from "@/shadcn-scss/components/Tooltip"
 
 export function MainNav() {
   const pathname = usePathname()

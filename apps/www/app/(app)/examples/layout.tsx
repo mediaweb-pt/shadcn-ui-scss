@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import { buttonVariants } from "@/shadcn-scss/components/Button/src"
+import { buttonVariants } from "@/shadcn-scss/components/Button"
 
 import { cn } from "@/lib/utils"
 import { Announcement } from "@/components/announcement"

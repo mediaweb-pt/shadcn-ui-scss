@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ScrollArea, ScrollBar } from "@/shadcn-scss/components/ScrollArea/src"
+import { ScrollArea, ScrollBar } from "@/shadcn-scss/components/ScrollArea"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 
 import { cn } from "@/lib/utils"
