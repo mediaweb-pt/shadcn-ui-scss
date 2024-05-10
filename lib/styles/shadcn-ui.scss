@@ -95,7 +95,6 @@ Functions & Mixins
 /*! ==============================================================================
 6. Patterns
 =============================================================================== */
-@import "../components/Command/src/Command.scss";
 @import "../components/ContextMenu/src/ContextMenu.scss";
 @import "../components/Dialog/src/Dialog.scss";
 @import "../components/Drawer/src/Drawer.scss";
@@ -139,6 +138,7 @@ Functions & Mixins
 @import "../components/Carousel/Carousel.scss";
 @import "../components/Checkbox/Checkbox.scss";
 @import "../components/Collapsible/Collapsible.scss";
+@import "../components/Command/Command.scss";
 
 /*! ==============================================================================
 7. Usefull Classes

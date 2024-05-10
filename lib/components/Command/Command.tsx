@@ -3,8 +3,8 @@ import { type DialogProps } from "@radix-ui/react-dialog"
 import { Command as CommandPrimitive } from "cmdk"
 import { Search } from "lucide-react"
 
-import { cn } from "../../../utils/utils"
-import { Dialog, DialogContent } from "../../Dialog/src"
+import { cn } from "../../utils/utils"
+import { Dialog, DialogContent } from "../Dialog"
 
 //import "./Command.scss"
 
