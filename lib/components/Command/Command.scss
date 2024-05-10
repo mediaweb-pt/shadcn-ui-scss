@@ -8,7 +8,7 @@
   background-color: hsl(var(--popover));
   color: hsl(var(--popover-foreground));
 
-  &-content-dialog {
+  &-content-dialog.dialog-content {
     overflow: hidden;
     padding: var(--space-none);
     box-shadow: var(--shadow-l);

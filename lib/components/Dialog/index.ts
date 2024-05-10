@@ -1,4 +1,5 @@
 export {
+  type DialogProps,
   Dialog,
   DialogPortal,
   DialogOverlay,

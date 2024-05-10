@@ -1,5 +1,6 @@
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
+import { DialogProps } from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
 
 import { cn } from "../../utils/utils"
@@ -88,6 +89,7 @@ const DialogDescription = React.forwardRef<
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 
 export {
+  type DialogProps,
   Dialog,
   DialogPortal,
   DialogOverlay,

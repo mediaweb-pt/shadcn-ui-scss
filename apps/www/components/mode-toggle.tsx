@@ -1,9 +1,14 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { Button } from "@/shadcn-scss/components/Button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/shadcn-scss/components/DropdownMenu";
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import * as React from "react"
+import { Button } from "@/shadcn-scss/components/Button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/shadcn-scss/components/DropdownMenu"
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 import { useTheme } from "next-themes"
 
 export function ModeToggle() {
@@ -12,9 +17,9 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="site__header-button">
-          <SunIcon className="site__header-icon rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <MoonIcon className="site__header-icon absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <Button variant="ghost" className="w-9 px-0">
+          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>

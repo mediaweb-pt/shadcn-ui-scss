@@ -2,7 +2,17 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { DialogProps } from "@radix-ui/react-alert-dialog"
+import { Button } from "@/shadcn-scss/components/Button"
+import {
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+} from "@/shadcn-scss/components/Command"
+import { DialogProps } from "@/shadcn-scss/components/Dialog"
 import {
   CircleIcon,
   FileIcon,
@@ -14,16 +24,6 @@ import { useTheme } from "next-themes"
 
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
-import {
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-} from "@/registry/new-york/ui/command"
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
@@ -92,7 +92,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
           </CommandGroup>
-          {docsConfig.sidebarNav.map((group) => (
+          {docsConfig.sidebarNav?.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem

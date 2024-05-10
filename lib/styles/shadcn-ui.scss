@@ -146,8 +146,8 @@ Functions & Mixins
 @tailwind utilities;
 // /*! 7.0. a11y (Accessibility) */
 // @import "05-useful/a11y";
-// /*! 7.1. Animations */
-// @import "05-useful/animations";
+/*! 7.1. Animations */
+@import "05-useful/animations";
 // /*! 7.2. Animations */
 // @import "05-useful/aspect-ratio";
 // /*! 7.3. Colors - Brand */

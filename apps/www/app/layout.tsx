@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: ["Next.js", "React", "SCSS", "Server Components", "Radix UI"],
+  keywords: ["Next.js", "React", "SCSS", "Server Components", "Radix UI", "Rocket UI", "Mediaweb"],
   authors: [
     {
       name: "shadcn",
