@@ -2,8 +2,8 @@ import React from "react"
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
 import { VariantProps } from "class-variance-authority"
 
-import { cn } from "../../../utils/utils"
-import { toggleVariants } from "../../Toggle/src/Toggle"
+import { cn } from "../../utils/utils"
+import { toggleVariants } from "../Toggle"
 
 //import "./ToggleGroup.scss"
 
