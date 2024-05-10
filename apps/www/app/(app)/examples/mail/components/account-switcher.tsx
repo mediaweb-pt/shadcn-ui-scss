@@ -1,15 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/shadcn-scss/components/Select/src";
 
 import { cn } from "@/lib/utils"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/new-york/ui/select"
 
 interface AccountSwitcherProps {
   isCollapsed: boolean

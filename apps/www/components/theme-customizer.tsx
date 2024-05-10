@@ -179,7 +179,7 @@ function Customizer() {
             Customize
           </div>
           <div className="text-xs text-muted-foreground">
-            Pick a style and color for your components.
+            Pick a color for your components.
           </div>
         </div>
         <Button
@@ -197,55 +197,6 @@ function Customizer() {
         </Button>
       </div>
       <div className="flex flex-1 flex-col space-y-4 md:space-y-6">
-        <div className="space-y-1.5">
-          <div className="flex w-full items-center">
-            <Label className="text-xs">Style</Label>
-            <Popover>
-              <PopoverTrigger>
-                <InfoCircledIcon className="ml-1 h-3 w-3" />
-                <span className="sr-only">About styles</span>
-              </PopoverTrigger>
-              <PopoverContent
-                className="space-y-3 rounded-[0.5rem] text-sm"
-                side="right"
-                align="start"
-                alignOffset={-20}
-              >
-                <p className="font-medium">
-                  What is the difference between the New York and Default style?
-                </p>
-                <p>
-                  A style comes with its own set of components, animations,
-                  icons and more.
-                </p>
-                <p>
-                  The <span className="font-medium">Default</span> style has
-                  larger inputs, uses lucide-react for icons and
-                  tailwindcss-animate for animations.
-                </p>
-                <p>
-                  The <span className="font-medium">New York</span> style ships
-                  with smaller buttons and cards with shadows. It uses icons
-                  from Radix Icons.
-                </p>
-              </PopoverContent>
-            </Popover>
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            <Button
-              className={buttonVariants({variant: "outline", size: "sm"})}
-              onClick={() => setConfig({ ...config, style: "default" })}
-            >
-              Default
-            </Button>
-            <Button
-              className={buttonVariants({variant: "outline", size: "sm"})}
-              onClick={() => setConfig({ ...config, style: "new-york" })}
-            >
-              New York
-            </Button>
-          </div>
-        </div>
         <div className="space-y-1.5">
           <Label className="text-xs">Color</Label>
           <div className="grid grid-cols-3 gap-2">
