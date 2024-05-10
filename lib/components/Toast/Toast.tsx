@@ -5,7 +5,7 @@ import { X } from "lucide-react"
 
 //import "./Toast.scss"
 
-import { cn } from "../../../utils/utils"
+import { cn } from "../../utils/utils"
 
 const ToastProvider = ToastPrimitives.Provider
 
