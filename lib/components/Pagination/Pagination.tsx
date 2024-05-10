@@ -1,8 +1,8 @@
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
-import { cn } from "../../../utils/utils"
-import { ButtonProps, buttonVariants } from "../../Button/src"
+import { cn } from "../../utils/utils"
+import { ButtonProps, buttonVariants } from "../Button"
 
 //import "./Pagination.scss"
 
