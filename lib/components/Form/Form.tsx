@@ -10,8 +10,8 @@ import {
   useFormContext,
 } from "react-hook-form"
 
-import { cn } from "../../../utils/utils"
-import { Label } from "../../Label/src"
+import { cn } from "../../utils/utils"
+import { Label } from "../Label"
 
 //import "./Form.scss"
 
