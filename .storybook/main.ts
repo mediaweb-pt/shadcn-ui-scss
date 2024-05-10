@@ -9,14 +9,12 @@ function getAbsolutePath(value: string): any {
   return dirname(require.resolve(join(value, "package.json")))
 }
 const config: StorybookConfig = {
-  stories: [
-    "../lib/components/**/src/*.stories.@(js|jsx|mjs|ts|tsx)",
-  ],
+  stories: ["../lib/components/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   webpackFinal: async (config, { configType }) => {
-    if (configType === 'PRODUCTION') {
-      config.output.publicPath = '/storybook/';
+    if (configType === "PRODUCTION") {
+      config.output.publicPath = "/storybook/"
     }
-    return config;
+    return config
   },
   addons: [
     getAbsolutePath("@storybook/addon-onboarding"),

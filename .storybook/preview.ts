@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react"
 
-import "../lib/styles/shadcn-ui.scss";
+import "../lib/styles/shadcn-ui.scss"
 
 const preview: Preview = {
   parameters: {
