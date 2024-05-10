@@ -7,7 +7,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card/src"
+} from "@/shadcn-scss/components/Card"
 import { themes } from "@/registry/themes"
 
 const data = [

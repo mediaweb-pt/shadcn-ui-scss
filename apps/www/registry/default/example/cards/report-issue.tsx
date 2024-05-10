@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Card,
   CardContent,
@@ -10,17 +10,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card/src"
-import { Input } from "@/shadcn-scss/components/Input/src"
-import { Label } from "@/shadcn-scss/components/Label/src"
+} from "@/shadcn-scss/components/Card"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select/src"
-import { Textarea } from "@/shadcn-scss/components/TextArea/src"
+} from "@/shadcn-scss/components/Select"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
 
 export function CardsReportIssue() {
   const id = React.useId()

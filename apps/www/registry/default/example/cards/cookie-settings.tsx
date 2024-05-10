@@ -1,9 +1,9 @@
 "use client";
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shadcn-scss/components/Card/src";
-import { Label } from "@/shadcn-scss/components/Label/src";
-import { Switch } from "@/shadcn-scss/components/Switch/src"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shadcn-scss/components/Card";
+import { Label } from "@/shadcn-scss/components/Label";
+import { Switch } from "@/shadcn-scss/components/Switch"
 
 export function CardsCookieSettings() {
   return (

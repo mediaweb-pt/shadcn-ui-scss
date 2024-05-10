@@ -1,10 +1,10 @@
 "use client";
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shadcn-scss/components/Card/src";
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shadcn-scss/components/Card";
 import { Icons } from "@/components/icons"
-import { Input } from "@/shadcn-scss/components/Input/src";
-import { Label } from "@/shadcn-scss/components/Label/src";
+import { Input } from "@/shadcn-scss/components/Input";
+import { Label } from "@/shadcn-scss/components/Label";
 
 
 

@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shadcn-scss/components/Card/src";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shadcn-scss/components/Card";
 import { Minus, Plus } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Bar, BarChart, ResponsiveContainer } from "recharts";

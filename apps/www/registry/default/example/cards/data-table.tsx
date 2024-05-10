@@ -19,15 +19,15 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card/src"
-import { Checkbox } from "@/shadcn-scss/components/Checkbox/src"
+} from "@/shadcn-scss/components/Card"
+import { Checkbox } from "@/shadcn-scss/components/Checkbox"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -36,8 +36,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu/src"
-import { Input } from "@/shadcn-scss/components/Input/src"
+} from "@/shadcn-scss/components/DropdownMenu"
+import { Input } from "@/shadcn-scss/components/Input"
 import {
   Table,
   TableBody,
@@ -45,7 +45,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/shadcn-scss/components/Table/src"
+} from "@/shadcn-scss/components/Table"
 
 const data: Payment[] = [
   {

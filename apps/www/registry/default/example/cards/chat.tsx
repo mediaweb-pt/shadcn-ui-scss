@@ -6,14 +6,14 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/shadcn-scss/components/Avatar/src"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
+} from "@/shadcn-scss/components/Avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/shadcn-scss/components/Card/src"
+} from "@/shadcn-scss/components/Card"
 import {
   Command,
   CommandEmpty,
@@ -21,7 +21,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/shadcn-scss/components/Command/src"
+} from "@/shadcn-scss/components/Command"
 import {
   Dialog,
   DialogContent,
@@ -29,14 +29,14 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/shadcn-scss/components/Dialog/src"
-import { Input } from "@/shadcn-scss/components/Input/src"
+} from "@/shadcn-scss/components/Dialog"
+import { Input } from "@/shadcn-scss/components/Input"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/shadcn-scss/components/Tooltip/src"
+} from "@/shadcn-scss/components/Tooltip"
 
 const users = [
   {

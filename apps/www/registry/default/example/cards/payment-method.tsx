@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/shadcn-scss/components/Button/src";
+import { Button } from "@/shadcn-scss/components/Button";
 import {
   Card,
   CardContent,
@@ -8,11 +8,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card/src"
-import { Input } from "@/shadcn-scss/components/Input/src";
-import { Label } from "@/shadcn-scss/components/Label/src";
-import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup/src";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/shadcn-scss/components/Select/src";
+} from "@/shadcn-scss/components/Card"
+import { Input } from "@/shadcn-scss/components/Input";
+import { Label } from "@/shadcn-scss/components/Label";
+import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/shadcn-scss/components/Select";
 
 import { Icons } from "@/components/icons";
 

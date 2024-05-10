@@ -4,25 +4,25 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/shadcn-scss/components/Avatar/src"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
+} from "@/shadcn-scss/components/Avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card/src"
-import { Input } from "@/shadcn-scss/components/Input/src"
-import { Label } from "@/shadcn-scss/components/Label/src"
+} from "@/shadcn-scss/components/Card"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select/src"
-import { Separator } from "@/shadcn-scss/components/Separator/src"
+} from "@/shadcn-scss/components/Select"
+import { Separator } from "@/shadcn-scss/components/Separator"
 
 export function CardsShare() {
   return (

@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils"
 import { useConfig } from "@/hooks/use-config"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
 import { ThemeWrapper } from "@/components/theme-wrapper"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Dialog,
   DialogContent,
@@ -60,7 +60,7 @@ export function ThemeCustomizer() {
     <div className="flex items-center space-x-2">
       <Drawer>
         <DrawerTrigger asChild>
-          <Button className={buttonVariants({variant: "outline"}) + " " + cn(" md:hidden")}>
+          <Button className={buttonVariants({variant: "outline"}) + cn(" md:hidden")}>
             <Paintbrush className="mr-2 h-4 w-4" />
             Customize
           </Button>
@@ -205,7 +205,7 @@ function Customizer() {
 
               return mounted ? (
                 <Button
-                  className={buttonVariants({variant: "outline", size: "sm"}) + " " + cn(
+                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(
                     "justify-start",
                     isActive && "border-2 border-primary"
                   )}
@@ -248,7 +248,7 @@ function Customizer() {
                 <Button
                   className={buttonVariants({variant: "outline", size: "sm"}) + cn(
                     config.radius === parseFloat(value) &&
-                      " border-2 border-primary"
+                       "border-2 border-primary"
                   )}
                   key={value}
                   onClick={() => {
@@ -270,14 +270,14 @@ function Customizer() {
             {mounted ? (
               <>
                 <Button
-                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(mode === "light" && " border-2 border-primary")}
+                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(mode === "light" && "border-2 border-primary")}
                   onClick={() => setMode("light")}
                 >
                   <SunIcon className="mr-1 -translate-x-1" />
                   Light
                 </Button>
                 <Button
-                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(mode === "dark" && " border-2 border-primary")}
+                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(mode === "dark" && "border-2 border-primary")}
                   onClick={() => setMode("dark")}
                 >
                   <MoonIcon className="mr-1 -translate-x-1" />

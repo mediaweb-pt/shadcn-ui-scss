@@ -6,15 +6,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/shadcn-scss/components/Avatar/src"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button/src"
+} from "@/shadcn-scss/components/Avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card/src"
+} from "@/shadcn-scss/components/Card"
 import {
   Command,
   CommandEmpty,
@@ -22,12 +22,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/shadcn-scss/components/Command/src"
+} from "@/shadcn-scss/components/Command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/shadcn-scss/components/Popover/src"
+} from "@/shadcn-scss/components/Popover"
 
 export function CardsTeamMembers() {
   return (
