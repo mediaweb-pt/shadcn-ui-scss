@@ -1,0 +1,16 @@
+.progress {
+  background-color: hsl(var(--secondary));
+  border-radius: var(--border-radius-rounded);
+  height: var(--space-base);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &__indicator {
+    background-color: hsl(var(--primary));
+    flex: 1;
+    height: 100%;
+    transition: 0.3s ease;
+    width: 100%;
+  }
+}
