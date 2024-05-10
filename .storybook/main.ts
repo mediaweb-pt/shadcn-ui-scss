@@ -12,6 +12,12 @@ const config: StorybookConfig = {
   stories: [
     "../lib/components/**/src/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
+  webpackFinal: async (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.output.publicPath = '/storybook/';
+    }
+    return config;
+  },
   addons: [
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-links"),
