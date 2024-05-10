@@ -1,0 +1,11 @@
+.skeleton {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background-color: hsl(var(--muted));
+  border-radius: var(--border-radius-soft);
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
