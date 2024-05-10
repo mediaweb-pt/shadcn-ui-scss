@@ -12,12 +12,7 @@ const ScrollArea = React.forwardRef<
   <ScrollAreaPrimitive.Root
     ref={ref}
     className={cn("scroll-area", className)}
-    style={
-      {
-        "--_scroll-area-width": "192px",
-        "--_scroll-area-height": "288px",
-      } as React.CSSProperties
-    }
+    style={...props.style}
     {...props}
   >
     <ScrollAreaPrimitive.Viewport className="scroll-area__viewport">
