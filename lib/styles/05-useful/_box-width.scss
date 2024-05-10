@@ -4,19 +4,23 @@
 /// Usefull - Box Width
 
 ///
-.full-width {
-    width: 100% !important;
+@include useful(".max-w-none", "max-width", "none");
+@include responsive(".max-w-none", "max-width", "none");
 
-    &-vw {
-        width: 100vw !important;
-    }
+///
+.full-width {
+  width: 100% !important;
+
+  &-vw {
+    width: 100vw !important;
+  }
 }
 
 ///
 .half-width {
-    width: 50% !important;
+  width: 50% !important;
 
-    &-vw {
-        width: 50vw !important;
-    }
+  &-vw {
+    width: 50vw !important;
+  }
 }

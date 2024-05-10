@@ -29,6 +29,14 @@
   &-background {
     background-color: hsl(var(--background)) !important;
   }
+
+  &-muted {
+    background-color: hsl(var(--muted)) !important;
+
+    &-foreground {
+      background-color: hsl(var(--foreground)) !important;
+    }
+  }
 }
 
 ///
@@ -51,5 +59,13 @@
 
   &-background {
     color: hsl(var(--background)) !important;
+  }
+
+  &-muted {
+    color: hsl(var(--muted)) !important;
+
+    &-foreground {
+      color: hsl(var(--muted-foreground)) !important;
+    }
   }
 }

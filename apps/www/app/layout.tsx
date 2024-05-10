@@ -1,4 +1,4 @@
-import "@/styles/globals.css"
+//import "@/styles/globals.css"
 import "@/styles/scss/layout.scss"
 import "@/shadcn-scss/styles/shadcn-ui.scss"
 import { Metadata, Viewport } from "next"

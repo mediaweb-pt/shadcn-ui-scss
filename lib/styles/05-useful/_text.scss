@@ -5,38 +5,38 @@
 
 ///
 .break-word {
-    word-break: break-word !important;
+  word-break: break-word !important;
 }
 
 ///
-.text-align {
-    &-left {
-        text-align: left !important;
-    }
+.text {
+  &-left {
+    text-align: left !important;
+  }
 
-    &-center {
-        text-align: center !important;
-    }
+  &-center {
+    text-align: center !important;
+  }
 
-    &-right {
-        text-align: right !important;
-    }
+  &-right {
+    text-align: right !important;
+  }
 }
 
 ///
 .white-space-nowrap {
-    white-space: nowrap !important;
+  white-space: nowrap !important;
 }
 
 // IsRTL -------------------------------------------------------------------------
 .is-rtl {
-    [align="right"],
-    .text-align-right {
-        text-align: left !important;
-    }
+  [align="right"],
+  .text-align-right {
+    text-align: left !important;
+  }
 
-    [align="left"],
-    .text-align-left {
-        text-align: right !important;
-    }
+  [align="left"],
+  .text-align-left {
+    text-align: right !important;
+  }
 }

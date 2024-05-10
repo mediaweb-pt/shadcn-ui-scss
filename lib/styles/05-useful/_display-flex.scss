@@ -4,12 +4,10 @@
 /// Usefull - Display Flex
 
 ///
-@include useful(".flex", "display", "flex");
-
-///
 @for $index from 1 through 3 {
   // Generate .flex-1
   @include useful(".flex-#{$index}", "flex", $index);
+  @include responsive(".flex-#{$index}", "flex", $index);
 }
 
 .flex {

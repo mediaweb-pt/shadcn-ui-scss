@@ -14,8 +14,11 @@
   "none"
 );
 
-// @include useful(".block", "display", "block");
-// @include responsive(".block", "display", "block");
+@include useful(".block", "display", "block");
+@include responsive(".block", "display", "block");
+
+@include useful(".flex", "display", "flex");
+@include responsive(".flex", "display", "flex");
 
 .contents {
   display: contents !important;

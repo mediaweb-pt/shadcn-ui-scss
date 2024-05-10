@@ -4,32 +4,36 @@
 /// Usefull - Box Height
 
 ///
+@include useful(".max-h-none", "max-height", "none");
+@include responsive(".max-h-none", "max-height", "none");
+
+///
 .full-height {
-    height: 100% !important;
+  height: 100% !important;
 
-    &-vh {
-        height: 100vh !important;
-    }
+  &-vh {
+    height: 100vh !important;
+  }
 
-    &-minus-header {
-        height: calc(100vh - var(--header-size)) !important;
-    }
+  &-minus-header {
+    height: calc(100vh - var(--header-size)) !important;
+  }
 }
 
 ///
 .half-height {
-    height: 50% !important;
+  height: 50% !important;
 
-    &-vh {
-        height: 50vh !important;
-    }
+  &-vh {
+    height: 50vh !important;
+  }
 }
 
 ///
 .auto-height {
-    height: auto !important;
+  height: auto !important;
 }
 
 .auto-width {
-    width: auto !important;
+  width: auto !important;
 }

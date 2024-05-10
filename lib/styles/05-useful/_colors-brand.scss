@@ -4,37 +4,41 @@
 /// Usefull - Colors Brand
 
 ///
-.background {
-    &-primary {
-        background-color: var(--color-primary) !important;
+.bg {
+  &-primary {
+    background-color: var(--color-primary) !important;
 
-        &-lightest {
-            background-color: var(--color-neutral-0) !important;
-        }
+    &-lightest {
+      background-color: var(--color-neutral-0) !important;
     }
+  }
 
-    &-secondary {
-        background-color: var(--color-secondary) !important;
+  &-secondary {
+    background-color: var(--color-secondary) !important;
 
-        &-lightest {
-            background-color: var(--color-neutral-0) !important;
-        }
+    &-lightest {
+      background-color: var(--color-neutral-0) !important;
     }
+  }
 }
 
 ///
 .text {
-    &-primary {
-        &,
-        &-darker {
-            color: var(--color-primary) !important;
-        }
+  &-primary {
+    &,
+    &-darker {
+      color: var(--color-primary) !important;
     }
 
-    &-secondary {
-        &,
-        &-darker {
-            color: var(--color-secondary) !important;
-        }
+    &:hover {
+      color: var(--color-primary) !important;
     }
+  }
+
+  &-secondary {
+    &,
+    &-darker {
+      color: var(--color-secondary) !important;
+    }
+  }
 }
