@@ -1,0 +1,321 @@
+.btn {
+  @media (min-width: 768px) {
+    &.md\:hidden {
+      display: none;
+    }
+  }
+}
+
+.site {
+  &__header {
+    backdrop-filter: blur(8px);
+    background-color: hsl(var(--background) / 0.95);
+    border-bottom: 1px solid hsl(var(--border) / 0.4);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+
+    @supports (backdrop-filter: blur(8px)) {
+      background-color: hsl(var(--background) / 0.6);
+    }
+
+    &-link {
+      color: hsl(var(--foreground) / 0.6);
+      transition: 0.3s ease;
+
+      &--active {
+        color: hsl(var(--foreground));
+      }
+
+      &:hover {
+        color: hsl(var(--foreground) / 0.8);
+      }
+    }
+
+    &-button {
+      align-items: center;
+      border-radius: calc(var(--radius) - 2px);
+      color: hsl(var(--foreground));
+      display: inline-flex;
+      font-size: 0.875rem;
+      font-weight: 500;
+      height: 2.25rem;
+      justify-content: center;
+      line-height: 1.25rem;
+      padding: 0.5rem 0;
+      transition: 0.3s ease;
+      white-space: nowrap;
+      width: 2.25rem;
+
+      &:hover {
+        background-color: hsl(var(--accent));
+        color: hsl(var(--accent-foreground));
+      }
+
+      &:focus-visible {
+        outline: 1px solid hsl(var(--ring));
+        outline-offset: 2px;
+      }
+
+      &[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      &.btn.dropdown-menu-trigger {
+        background-color: transparent;
+        color: hsl(var(--foreground));
+        padding: 0.5rem 0;
+
+        &:hover {
+          background-color: hsl(var(--accent));
+          color: hsl(var(--accent-foreground));
+        }
+
+        &:focus-visible {
+          outline: 1px solid hsl(var(--ring));
+          outline-offset: 2px;
+        }
+
+        &[disabled] {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &-main_nav {
+      display: none;
+      margin-right: 16px;
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
+    }
+
+    &-icon {
+      fill: currentColor;
+      height: 1rem;
+      width: 1rem;
+      &--lg {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+
+    &-menu {
+      align-items: center;
+      display: flex;
+      font-size: 0.875rem;
+      gap: 1rem;
+      line-height: 1.25rem;
+
+      @media screen and (min-width: 1024px) {
+        gap: 1.5rem;
+      }
+    }
+
+    &-logo {
+      align-items: center;
+      display: flex;
+      margin-right: 1.5rem;
+
+      & > *:not(:first-child) {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    &-container {
+      align-items: center;
+      display: flex;
+      height: 3.5rem;
+      max-width: 1536px;
+    }
+
+    &-socials {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+
+      & > *:not(:first-child) {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      @media screen and (min-width: 768px) {
+        justify-content: flex-end;
+      }
+
+      &_container {
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__footer {
+    padding: 1.5rem 0;
+
+    @media screen and (min-width: 768px) {
+      padding: 0 2rem;
+    }
+
+    &-container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: space-between;
+
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+        height: 6rem;
+      }
+
+      & > p {
+        color: hsl(var(--muted-foreground));
+        font-size: 0.875rem;
+        line-height: 2rem;
+        text-align: center;
+        text-wrap: balance;
+
+        @media screen and (min-width: 768px) {
+          text-align: left;
+        }
+      }
+    }
+
+    &-link {
+      color: inherit;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+}
+
+.page {
+  &-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 2rem;
+      padding-top: 3rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-bottom: 5rem;
+      padding-top: 6rem;
+    }
+
+    &__heading {
+      font-size: 1.875rem;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      line-height: 1.25;
+      text-align: center;
+
+      @media screen and (min-width: 768px) {
+        font-size: 3rem;
+      }
+
+      @media screen and (min-width: 1024px) {
+        line-height: 1.1;
+      }
+    }
+
+    &__description {
+      color: hsl(var(--foreground));
+      font-size: 1.125rem;
+      font-weight: 300;
+      line-height: 1.75rem;
+      max-width: 750px;
+      text-align: center;
+    }
+
+    &__actions {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      width: 100%;
+
+      & > *:not(:first-child) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
+      @media screen and (min-width: 768px) {
+        padding-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
+.announcement {
+  align-items: center;
+  background-color: hsl(var(--muted));
+  border-radius: 0.5rem;
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+
+  &__logo {
+    height: 1.75rem;
+    margin-right: 0.5rem;
+    width: 1.75rem;
+  }
+
+  &__icon {
+    height: 1rem;
+    margin-left: 0.25rem;
+    width: 1rem;
+  }
+
+  .separator {
+    height: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.themes {
+  &-page {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+}
+
+.theme {
+  &-wrapper {
+    width: 100%;
+  }
+}

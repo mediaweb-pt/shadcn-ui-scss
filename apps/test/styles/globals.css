@@ -1,0 +1,43 @@
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
+
+/* .step {
+  counter-increment: step;
+}
+
+.step::before {
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: hsl(var(--muted));
+  border-radius: var(--border-radius-rounded);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-weight: var(--font-medium);
+  text-align: center;
+  font-size: var(--font-size-base);
+  line-height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-indent: -1px;
+  border-width: var(--border-size-xl);
+  border-color: hsl(var(--background));
+  margin-left: -50px;
+  margin-top: -40px;
+  content: counter(step);
+}
+
+.chunk-container {
+  box-shadow: var(--shadow-none);
+}
+
+.chunk-container::after {
+  content: "";
+  position: absolute;
+  inset: -1rem;
+  box-shadow: var(--shadow-xl);
+  border-radius: var(--border-radius-soft);
+  border: var(--border-size-s) solid hsl(var(--border));
+} */
