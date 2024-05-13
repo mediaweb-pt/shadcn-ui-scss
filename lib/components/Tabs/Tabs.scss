@@ -5,9 +5,9 @@
     border-radius: var(--border-radius-soft);
     color: hsl(var(--muted-foreground));
     display: inline-flex;
-    height: var(--space-xl);
+    height: 2.25rem;
     justify-content: center;
-    padding: var(--space-s);
+    padding: var(--space-xs);
   }
 
   &__trigger {

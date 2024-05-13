@@ -13,7 +13,7 @@
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
   border: var(--border-size-none);
-  height: 2.5rem;
+  height: 2.25rem;
   padding: var(--space-s) var(--space-base);
   cursor: pointer;
   gap: var(--space-s);
@@ -93,19 +93,19 @@
   }
 
   &-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
     padding: var(--space-none);
   }
 
   // sizes
   &-sm {
-    height: 2.25rem;
+    height: 2.05rem;
     padding: var(--space-none) var(--space-s);
   }
 
   &-lg {
-    height: 2.75rem;
+    height: 2.5rem;
     padding: var(--space-none) var(--space-l);
   }
 }
