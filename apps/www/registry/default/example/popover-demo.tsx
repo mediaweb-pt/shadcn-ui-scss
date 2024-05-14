@@ -1,11 +1,11 @@
-import { Button } from "@/registry/default/ui/button"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/shadcn-scss/components/Popover"
 
 export default function PopoverDemo() {
   return (

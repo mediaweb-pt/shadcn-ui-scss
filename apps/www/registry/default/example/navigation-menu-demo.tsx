@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/default/ui/navigation-menu"
+} from "@/shadcn-scss/components/NavigationMenu"
 
 const components: { title: string; href: string; description: string }[] = [
   {

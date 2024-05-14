@@ -15,8 +15,8 @@ import {
 } from "@tanstack/react-table"
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
 
-import { Button } from "@/registry/default/ui/button"
-import { Checkbox } from "@/registry/default/ui/checkbox"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Checkbox } from "@/shadcn-scss/components/Checkbox"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -25,8 +25,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
-import { Input } from "@/registry/default/ui/input"
+} from "@/shadcn-scss/components/DropdownMenu"
+import { Input } from "@/shadcn-scss/components/Input"
 import {
   Table,
   TableBody,
@@ -34,7 +34,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/default/ui/table"
+} from "@/shadcn-scss/components/Table"
 
 const data: Payment[] = [
   {
@@ -111,7 +111,7 @@ export const columns: ColumnDef<Payment>[] = [
     header: ({ column }) => {
       return (
         <Button
-          variant="ghost"
+          className={buttonVariants({variant: "ghost"})}
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Email
@@ -208,7 +208,7 @@ export default function DataTableDemo() {
         />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto">
+            <Button className={buttonVariants({variant: "outline"}) + " ml-auto"}>
               Columns <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
@@ -290,16 +290,14 @@ export default function DataTableDemo() {
         </div>
         <div className="space-x-2">
           <Button
-            variant="outline"
-            size="sm"
+            className={buttonVariants({variant: "outline", size: "sm"})}
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
             Previous
           </Button>
           <Button
-            variant="outline"
-            size="sm"
+            className={buttonVariants({variant: "outline", size: "sm"})}
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >

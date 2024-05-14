@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/default/ui/command"
+} from "@/shadcn-scss/components/Command"
 
 export default function CommandDemo() {
   return (

@@ -1,6 +1,6 @@
 import { Bold } from "lucide-react"
 
-import { Toggle } from "@/registry/default/ui/toggle"
+import { Toggle } from "@/shadcn-scss/components/Toggle"
 
 export default function ToggleDemo() {
   return (

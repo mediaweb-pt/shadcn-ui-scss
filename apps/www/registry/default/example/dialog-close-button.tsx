@@ -1,6 +1,6 @@
 import { Copy } from "lucide-react"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Dialog,
   DialogClose,
@@ -10,15 +10,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/default/ui/dialog"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from "@/shadcn-scss/components/Dialog"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 
 export default function DialogCloseButton() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Share</Button>
+        <Button className={buttonVariants({variant: "outline"})}>Share</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
@@ -38,14 +38,14 @@ export default function DialogCloseButton() {
               readOnly
             />
           </div>
-          <Button type="submit" size="sm" className="px-3">
+          <Button type="submit" className={buttonVariants({size: "sm"}) + " px-3"}>
             <span className="sr-only">Copy</span>
             <Copy className="h-4 w-4" />
           </Button>
         </div>
         <DialogFooter className="sm:justify-start">
           <DialogClose asChild>
-            <Button type="button" variant="secondary">
+            <Button type="button" className={buttonVariants({variant: "secondary"})}>
               Close
             </Button>
           </DialogClose>

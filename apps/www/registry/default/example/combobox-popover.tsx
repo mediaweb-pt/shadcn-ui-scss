@@ -11,7 +11,7 @@ import {
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Command,
   CommandEmpty,
@@ -19,12 +19,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/default/ui/command"
+} from "@/shadcn-scss/components/Command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/shadcn-scss/components/Popover"
 
 type Status = {
   value: string
@@ -72,9 +72,7 @@ export default function ComboboxPopover() {
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
-            variant="outline"
-            size="sm"
-            className="w-[150px] justify-start"
+            className={buttonVariants({variant: "outline", size: "sm"}) + " w-[150px] justify-start"}
           >
             {selectedStatus ? (
               <>

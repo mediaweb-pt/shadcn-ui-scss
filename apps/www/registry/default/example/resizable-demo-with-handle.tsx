@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/default/ui/resizable"
+} from "@/shadcn-scss/components/Resizable"
 
 export default function ResizableDemo() {
   return (

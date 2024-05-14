@@ -4,19 +4,19 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
-import { Button } from "@/registry/default/ui/button"
+} from "@/shadcn-scss/components/Avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/default/ui/hover-card"
+} from "@/shadcn-scss/components/HoverCard"
 
 export default function HoverCardDemo() {
   return (
     <HoverCard>
       <HoverCardTrigger asChild>
-        <Button variant="link">@nextjs</Button>
+        <Button className={buttonVariants({variant: "link"})}>@nextjs</Button>
       </HoverCardTrigger>
       <HoverCardContent className="w-80">
         <div className="flex justify-between space-x-4">

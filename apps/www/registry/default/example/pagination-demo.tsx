@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/registry/default/ui/pagination"
+} from "@/shadcn-scss/components/Pagination"
 
 export default function PaginationDemo() {
   return (

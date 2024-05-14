@@ -1,13 +1,13 @@
 import * as React from "react"
 
-import { Card, CardContent } from "@/registry/default/ui/card"
+import { Card, CardContent } from "@/shadcn-scss/components/Card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/default/ui/carousel"
+} from "@/shadcn-scss/components/Carousel"
 
 export default function CarouselDemo() {
   return (

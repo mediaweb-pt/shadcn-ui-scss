@@ -1,5 +1,5 @@
-import { Label } from "@/registry/default/ui/label"
-import { Switch } from "@/registry/default/ui/switch"
+import { Label } from "@/shadcn-scss/components/Label"
+import { Switch } from "@/shadcn-scss/components/Switch"
 
 export default function SwitchDemo() {
   return (

@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/default/ui/checkbox"
-import { Label } from "@/registry/default/ui/label"
+import { Checkbox } from "@/shadcn-scss/components/Checkbox"
+import { Label } from "@/shadcn-scss/components/Label"
 
 export default function LabelDemo() {
   return (

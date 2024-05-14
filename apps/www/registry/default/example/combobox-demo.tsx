@@ -4,19 +4,19 @@ import * as React from "react"
 import { Check, ChevronsUpDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/registry/default/ui/command"
+} from "@/shadcn-scss/components/Command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/shadcn-scss/components/Popover"
 
 const frameworks = [
   {
@@ -52,7 +52,7 @@ export default function ComboboxDemo() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between"
+          className={buttonVariants({variant: "outline"}) + " w-[200px] justify-between"}
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.label

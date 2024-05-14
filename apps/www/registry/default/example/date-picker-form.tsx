@@ -7,8 +7,8 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
-import { Calendar } from "@/registry/default/ui/calendar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Calendar } from "@/shadcn-scss/components/Calendar"
 import {
   Form,
   FormControl,
@@ -17,12 +17,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
+} from "@/shadcn-scss/components/Form"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/shadcn-scss/components/Popover"
 import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({
@@ -60,10 +60,9 @@ export default function DatePickerForm() {
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant={"outline"}
-                      className={cn(
-                        "w-[240px] pl-3 text-left font-normal",
-                        !field.value && "text-muted-foreground"
+                      className={buttonVariants({variant: "outline"}) + cn(
+                        " w-[240px] pl-3 text-left font-normal",
+                        !field.value && " text-muted-foreground"
                       )}
                     >
                       {field.value ? (

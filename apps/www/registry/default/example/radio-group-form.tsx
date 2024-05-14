@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Form,
   FormControl,
@@ -12,8 +12,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
-import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group"
+} from "@/shadcn-scss/components/Form"
+import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup"
 import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({

@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 
 export default function ButtonAsChild() {
   return (

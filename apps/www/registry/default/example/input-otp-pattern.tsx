@@ -4,7 +4,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/default/ui/input-otp"
+} from "@/shadcn-scss/components/InputOTP"
 
 export default function InputOTPPattern() {
   return (

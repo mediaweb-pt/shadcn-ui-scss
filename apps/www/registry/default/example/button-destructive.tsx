@@ -1,5 +1,5 @@
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 
 export default function ButtonDestructive() {
-  return <Button variant="destructive">Destructive</Button>
+  return <Button className={buttonVariants({variant: "destructive"})}>Destructive</Button>
 }

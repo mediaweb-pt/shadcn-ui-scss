@@ -6,14 +6,14 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/registry/default/ui/command"
+} from "@/shadcn-scss/components/Command"
 import {
   Form,
   FormControl,
@@ -22,12 +22,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
+} from "@/shadcn-scss/components/Form"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/shadcn-scss/components/Popover"
 import { toast } from "@/registry/default/ui/use-toast"
 
 const languages = [
@@ -79,9 +79,9 @@ export default function ComboboxForm() {
                     <Button
                       variant="outline"
                       role="combobox"
-                      className={cn(
-                        "w-[200px] justify-between",
-                        !field.value && "text-muted-foreground"
+                      className={buttonVariants({variant: "outline"}) + cn(
+                        " w-[200px] justify-between",
+                        !field.value && " text-muted-foreground"
                       )}
                     >
                       {field.value

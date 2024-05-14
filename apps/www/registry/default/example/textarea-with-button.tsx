@@ -1,5 +1,5 @@
-import { Button } from "@/registry/default/ui/button"
-import { Textarea } from "@/registry/default/ui/textarea"
+import { Button } from "@/shadcn-scss/components/Button"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
 
 export default function TextareaWithButton() {
   return (

@@ -2,7 +2,7 @@ import * as React from "react"
 import { Minus, Plus } from "lucide-react"
 import { Bar, BarChart, ResponsiveContainer } from "recharts"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Drawer,
   DrawerClose,
@@ -12,7 +12,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/default/ui/drawer"
+} from "@/shadcn-scss/components/Drawer"
 
 const data = [
   {
@@ -66,7 +66,7 @@ export default function DrawerDemo() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline">Open Drawer</Button>
+        <Button className={buttonVariants({variant: "outline"})}>Open Drawer</Button>
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
@@ -77,9 +77,7 @@ export default function DrawerDemo() {
           <div className="p-4 pb-0">
             <div className="flex items-center justify-center space-x-2">
               <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
+                className={buttonVariants({variant: "outline", size: "icon"}) + " h-8 w-8 shrink-0 rounded-full"}
                 onClick={() => onClick(-10)}
                 disabled={goal <= 200}
               >
@@ -95,9 +93,7 @@ export default function DrawerDemo() {
                 </div>
               </div>
               <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
+                className={buttonVariants({variant: "outline", size: "icon"}) + " h-8 w-8 shrink-0 rounded-full"}
                 onClick={() => onClick(10)}
                 disabled={goal >= 400}
               >
@@ -124,7 +120,7 @@ export default function DrawerDemo() {
           <DrawerFooter>
             <Button>Submit</Button>
             <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
+              <Button className={buttonVariants({variant: "outline"})}>Cancel</Button>
             </DrawerClose>
           </DrawerFooter>
         </div>

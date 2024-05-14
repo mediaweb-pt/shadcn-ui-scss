@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/shadcn-scss/components/Button"
 import {
   Form,
   FormControl,
@@ -13,12 +13,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
+} from "@/shadcn-scss/components/Form"
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/default/ui/input-otp"
+} from "@/shadcn-scss/components/InputOTP"
 import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({

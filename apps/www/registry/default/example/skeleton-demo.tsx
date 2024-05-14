@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/default/ui/skeleton"
+import { Skeleton } from "@/shadcn-scss/components/Skeleton"
 
 export default function SkeletonDemo() {
   return (

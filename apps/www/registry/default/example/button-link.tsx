@@ -1,5 +1,5 @@
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 
 export default function ButtonLink() {
-  return <Button variant="link">Link</Button>
+  return <Button className={buttonVariants({variant: "link"})}>Link</Button>
 }

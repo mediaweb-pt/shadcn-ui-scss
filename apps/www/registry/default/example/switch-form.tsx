@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/shadcn-scss/components/Button"
 import {
   Form,
   FormControl,
@@ -12,8 +12,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/registry/default/ui/form"
-import { Switch } from "@/registry/default/ui/switch"
+} from "@/shadcn-scss/components/Form"
+import { Switch } from "@/shadcn-scss/components/Switch"
 import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({

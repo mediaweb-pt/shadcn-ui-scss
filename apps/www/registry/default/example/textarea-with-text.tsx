@@ -1,5 +1,5 @@
-import { Label } from "@/registry/default/ui/label"
-import { Textarea } from "@/registry/default/ui/textarea"
+import { Label } from "@/shadcn-scss/components/Label"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
 
 export default function TextareaWithText() {
   return (

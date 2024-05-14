@@ -4,8 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/default/ui/button"
-import { Checkbox } from "@/registry/default/ui/checkbox"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Checkbox } from "@/shadcn-scss/components/Checkbox"
 import {
   Form,
   FormControl,
@@ -14,7 +14,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/default/ui/form"
+} from "@/shadcn-scss/components/Form"
 import { toast } from "@/registry/default/ui/use-toast"
 
 const items = [

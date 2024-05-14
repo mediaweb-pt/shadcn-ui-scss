@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import { useToast } from "@/registry/default/ui/use-toast"
 
 export default function ToastWithTitle() {
@@ -9,6 +9,7 @@ export default function ToastWithTitle() {
   return (
     <Button
       variant="outline"
+      className={buttonVariants({variant: "outline"})}
       onClick={() => {
         toast({
           title: "Uh oh! Something went wrong.",

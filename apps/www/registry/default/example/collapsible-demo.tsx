@@ -3,12 +3,12 @@
 import * as React from "react"
 import { ChevronsUpDown, Plus, X } from "lucide-react"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/default/ui/collapsible"
+} from "@/shadcn-scss/components/Collapsible"
 
 export default function CollapsibleDemo() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -24,7 +24,7 @@ export default function CollapsibleDemo() {
           @peduarte starred 3 repositories
         </h4>
         <CollapsibleTrigger asChild>
-          <Button variant="ghost" size="sm" className="w-9 p-0">
+          <Button className={buttonVariants({variant: "ghost", size: "sm"}) + " w-9 p-0"}>
             <ChevronsUpDown className="h-4 w-4" />
             <span className="sr-only">Toggle</span>
           </Button>

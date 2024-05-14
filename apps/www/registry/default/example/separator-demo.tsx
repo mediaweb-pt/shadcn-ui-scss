@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/default/ui/separator"
+import { Separator } from "@/shadcn-scss/components/Separator"
 
 export default function SeparatorDemo() {
   return (

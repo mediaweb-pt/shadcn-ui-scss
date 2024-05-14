@@ -1,8 +1,8 @@
 "use client"
 
-import { Button } from "@/registry/new-york/ui/button"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Sheet,
   SheetClose,
@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/new-york/ui/sheet"
+} from "@/shadcn-scss/components/Sheet"
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const
 
@@ -24,7 +24,7 @@ export default function SheetSide() {
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
           <SheetTrigger asChild>
-            <Button variant="outline">{side}</Button>
+            <Button className={buttonVariants({variant: "outline"})}>{side}</Button>
           </SheetTrigger>
           <SheetContent side={side}>
             <SheetHeader>

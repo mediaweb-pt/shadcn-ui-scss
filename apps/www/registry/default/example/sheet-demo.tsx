@@ -1,6 +1,6 @@
-import { Button } from "@/registry/default/ui/button"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Sheet,
   SheetClose,
@@ -10,13 +10,13 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/default/ui/sheet"
+} from "@/shadcn-scss/components/Sheet"
 
 export default function SheetDemo() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button className={buttonVariants({variant: "outline"})}>Open</Button>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>

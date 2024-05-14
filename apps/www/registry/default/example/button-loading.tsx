@@ -1,6 +1,6 @@
 import { Loader2 } from "lucide-react"
 
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 
 export default function ButtonLoading() {
   return (

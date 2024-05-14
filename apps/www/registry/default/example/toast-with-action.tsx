@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "@/registry/default/ui/button"
-import { ToastAction } from "@/registry/default/ui/toast"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { ToastAction } from "@/shadcn-scss/components/Toast"
 import { useToast } from "@/registry/default/ui/use-toast"
 
 export default function ToastWithAction() {
@@ -9,7 +9,7 @@ export default function ToastWithAction() {
 
   return (
     <Button
-      variant="outline"
+      className={buttonVariants({variant: "outline"})}
       onClick={() => {
         toast({
           title: "Uh oh! Something went wrong.",

@@ -5,13 +5,13 @@ import { format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
-import { Calendar } from "@/registry/default/ui/calendar"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Calendar } from "@/shadcn-scss/components/Calendar"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
+} from "@/shadcn-scss/components/Popover"
 
 export default function DatePickerDemo() {
   const [date, setDate] = React.useState<Date>()
@@ -20,10 +20,9 @@ export default function DatePickerDemo() {
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          variant={"outline"}
-          className={cn(
-            "w-[280px] justify-start text-left font-normal",
-            !date && "text-muted-foreground"
+          className={ buttonVariants({variant: "outline"})+ cn(
+            " w-[280px] justify-start text-left font-normal",
+            !date && " text-muted-foreground"
           )}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />

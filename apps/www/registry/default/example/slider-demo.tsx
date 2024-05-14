@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { Slider } from "@/registry/default/ui/slider"
+import { Slider } from "@/shadcn-scss/components/Slider"
 
 type SliderProps = React.ComponentProps<typeof Slider>
 
