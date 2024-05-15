@@ -4,8 +4,8 @@ import * as React from "react"
 
 import { useConfig } from "@/hooks/use-config"
 import { ThemeWrapper } from "@/components/theme-wrapper"
-import CardsDefault from "@/registry/default/example/cards"
-import { Skeleton } from "@/registry/default/ui/skeleton"
+import CardsDefault from "@/registry/scss/example/cards"
+import { Skeleton } from "@/registry/scss/ui/skeleton"
 
 export function ThemesTabs() {
   const [mounted, setMounted] = React.useState(false)
@@ -63,7 +63,7 @@ export function ThemesTabs() {
         </div>
       ) : (
         <ThemeWrapper>
-          {config.style === "default" && <CardsDefault />}
+          {config.style === "scss" && <CardsDefault />}
         </ThemeWrapper>
       )}
     </div>

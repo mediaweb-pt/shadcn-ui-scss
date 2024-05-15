@@ -1,0 +1,25 @@
+{
+  "name": "separator",
+  "dependencies": [
+    "@radix-ui/react-separator"
+  ],
+  "files": [
+    {
+      "name": "separator.tsx",
+      "content": "import * as React from \"react\"\nimport * as SeparatorPrimitive from \"@radix-ui/react-separator\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./separator.scss\"\n\nconst Separator = React.forwardRef<\n  React.ElementRef<typeof SeparatorPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>\n>(\n  (\n    { className, orientation = \"horizontal\", decorative = true, ...props },\n    ref\n  ) => (\n    <SeparatorPrimitive.Root\n      ref={ref}\n      decorative={decorative}\n      orientation={orientation}\n      className={cn(\n        \"separator\",\n        orientation === \"horizontal\"\n          ? \"separator--horizontal\"\n          : \"separator--vertical\",\n        className\n      )}\n      {...props}\n    />\n  )\n)\nSeparator.displayName = SeparatorPrimitive.Root.displayName\n\nexport { Separator }\n"
+    },
+    {
+      "name": "separator.scss",
+      "content": ".separator {\n  background-color: hsl(var(--border));\n  flex-shrink: 0;\n\n  &--horizontal {\n    height: 1px;\n    width: 100%;\n  }\n\n  &--vertical {\n    height: 100%;\n    width: 1px;\n  }\n}\n"
+    },
+    {
+      "name": "separator.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Separator } from \".\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/separator\n * # or\n * $ npm install @shadcn-ui-sass/separator\n * ```\n *\n */\n\nconst meta: Meta<typeof Separator> = {\n  title: \"Components/Separator\",\n  component: Separator,\n  tags: [\"autodocs\"],\n  decorators: [\n    (Story) => (\n      <div>\n        <Story />\n      </div>\n    ),\n  ],\n  args: {\n    orientation: \"horizontal\",\n  },\n  argTypes: {\n    orientation: {\n      options: [\"horizontal\", \"vertical\"],\n      control: { type: \"select\" },\n    },\n  },\n}\n\ntype Story = StoryObj<typeof Separator>\n\nconst template = (args: any) => <Separator {...args} />\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport const Vertical: Story = {\n  args: {\n    orientation: \"vertical\",\n  },\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Separator } from \"./separator\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

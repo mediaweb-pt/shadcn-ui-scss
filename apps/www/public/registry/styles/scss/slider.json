@@ -1,0 +1,25 @@
+{
+  "name": "slider",
+  "dependencies": [
+    "@radix-ui/react-slider"
+  ],
+  "files": [
+    {
+      "name": "slider.tsx",
+      "content": "import * as React from \"react\"\nimport * as SliderPrimitive from \"@radix-ui/react-slider\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./slider.scss\"\n\nconst Slider = React.forwardRef<\n  React.ElementRef<typeof SliderPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <SliderPrimitive.Root\n    ref={ref}\n    className={cn(\"slider\", className)}\n    {...props}\n  >\n    <SliderPrimitive.Track className=\"slider-track\">\n      <SliderPrimitive.Range className=\"slider-range\" />\n    </SliderPrimitive.Track>\n    <SliderPrimitive.Thumb className=\"slider-thumb\" />\n  </SliderPrimitive.Root>\n))\nSlider.displayName = SliderPrimitive.Root.displayName\n\nexport { Slider }\n"
+    },
+    {
+      "name": "slider.scss",
+      "content": ".slider {\n  align-items: center;\n  display: flex;\n  position: relative;\n  touch-action: none;\n  user-select: none;\n  width: 100%;\n\n  &-track {\n    background-color: hsl(var(--secondary));\n    border-radius: var(--border-radius-rounded);\n    flex-grow: 1;\n    height: var(--space-s);\n    overflow: hidden;\n    position: relative;\n    width: 100%;\n  }\n\n  &-range {\n    background-color: hsl(var(--primary));\n    height: 100%;\n    position: absolute;\n  }\n\n  &-thumb {\n    background-color: hsl(var(--background));\n    border: 2px solid hsl(var(--primary));\n    border-radius: var(--border-radius-rounded);\n    display: block;\n    height: 20px;\n    transition: 0.3s ease;\n    width: 20px;\n\n    &:focus-visible {\n      outline: 2px solid hsl(var(--ring));\n      outline-offset: 2px;\n    }\n\n    &[disabled] {\n      opacity: 0.5;\n      pointer-events: none;\n    }\n  }\n}\n"
+    },
+    {
+      "name": "slider.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Slider } from \".\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/slider\n * # or\n * $ npm install @shadcn-ui-sass/slider\n * ```\n *\n */\n\nconst meta: Meta<typeof Slider> = {\n  title: \"Components/Slider\",\n  component: Slider,\n  tags: [\"autodocs\"],\n  decorators: [\n    (Story) => (\n      <div>\n        <Story />\n      </div>\n    ),\n  ],\n  args: {\n    defaultValue: [30],\n    max: 100,\n    step: 1,\n    disabled: false,\n  },\n}\n\ntype Story = StoryObj<typeof Slider>\n\nconst template = (args: any) => <Slider {...args} />\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Slider } from \"./slider\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

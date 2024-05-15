@@ -9,9 +9,7 @@ import { cn } from "@/lib/utils"
 import { Analytics } from "@/components/analytics"
 import { ThemeProvider } from "@/components/providers"
 import { ThemeSwitcher } from "@/components/theme-switcher"
-import { Toaster as DefaultToaster } from "@/registry/default/ui/toaster"
-import { Toaster as NewYorkSonner } from "@/registry/new-york/ui/sonner"
-import { Toaster as NewYorkToaster } from "@/registry/new-york/ui/toaster"
+import { Toaster as SCSSSonner } from "@/registry/scss/ui/sonner"
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +18,15 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: ["Next.js", "React", "SCSS", "Server Components", "Radix UI", "Rocket UI", "Mediaweb"],
+  keywords: [
+    "Next.js",
+    "React",
+    "SCSS",
+    "Server Components",
+    "Radix UI",
+    "Rocket UI",
+    "Mediaweb",
+  ],
   authors: [
     {
       name: "shadcn",
@@ -93,9 +99,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </div>
             <ThemeSwitcher />
             <Analytics />
-            <NewYorkToaster />
-            <DefaultToaster />
-            <NewYorkSonner />
+            <SCSSSonner />
           </ThemeProvider>
         </body>
       </html>

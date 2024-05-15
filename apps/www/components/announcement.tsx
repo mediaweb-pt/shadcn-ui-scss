@@ -1,11 +1,9 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
-import { Blocks } from "lucide-react"
 
-import { Icons } from '@/components/icons';
-
-import { Separator } from "@/registry/new-york/ui/separator"
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site"
+import { Icons } from "@/components/icons"
+import { Separator } from "@/registry/scss/ui/separator"
 
 export function Announcement() {
   return (

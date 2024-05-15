@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   CheckIcon,
   CopyIcon,
@@ -17,7 +18,6 @@ import { cn } from "@/lib/utils"
 import { useConfig } from "@/hooks/use-config"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
 import { ThemeWrapper } from "@/components/theme-wrapper"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Dialog,
   DialogContent,
@@ -25,19 +25,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york/ui/dialog"
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/registry/new-york/ui/drawer"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/registry/scss/ui/dialog"
+import { Drawer, DrawerContent, DrawerTrigger } from "@/registry/scss/ui/drawer"
+import { Label } from "@/registry/scss/ui/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
-import { Skeleton } from "@/registry/new-york/ui/skeleton"
+} from "@/registry/scss/ui/popover"
+import { Skeleton } from "@/registry/scss/ui/skeleton"
 import { Theme, themes } from "@/registry/themes"
 
 import "@/styles/mdx.css"
@@ -45,7 +41,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
+} from "@/registry/scss/ui/tooltip"
 
 export function ThemeCustomizer() {
   const [config, setConfig] = useConfig()
@@ -60,7 +56,11 @@ export function ThemeCustomizer() {
     <div className="flex items-center space-x-2">
       <Drawer>
         <DrawerTrigger asChild>
-          <Button className={buttonVariants({variant: "outline"}) + cn(" md:hidden")}>
+          <Button
+            className={
+              buttonVariants({ variant: "outline" }) + cn(" md:hidden")
+            }
+          >
             <Paintbrush className="mr-2 h-4 w-4" />
             Customize
           </Button>
@@ -141,7 +141,7 @@ export function ThemeCustomizer() {
         </div>
         <Popover>
           <PopoverTrigger asChild>
-            <Button className={buttonVariants({variant: "outline"}) + " "}>
+            <Button className={buttonVariants({ variant: "outline" }) + " "}>
               <Paintbrush className="mr-2 h-4 w-4" />
               Customize
             </Button>
@@ -183,7 +183,10 @@ function Customizer() {
           </div>
         </div>
         <Button
-          className={buttonVariants({variant: "ghost", size: "icon"}) + " ml-auto rounded-[0.5rem]"}
+          className={
+            buttonVariants({ variant: "ghost", size: "icon" }) +
+            " ml-auto rounded-[0.5rem]"
+          }
           onClick={() => {
             setConfig({
               ...config,
@@ -205,10 +208,10 @@ function Customizer() {
 
               return mounted ? (
                 <Button
-                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(
-                    "justify-start",
-                    isActive && "border-2 border-primary"
-                  )}
+                  className={
+                    buttonVariants({ variant: "outline", size: "sm" }) +
+                    cn("justify-start", isActive && "border-2 border-primary")
+                  }
                   key={theme.name}
                   onClick={() => {
                     setConfig({
@@ -216,7 +219,6 @@ function Customizer() {
                       theme: theme.name,
                     })
                   }}
-
                   style={
                     {
                       "--theme-primary": `hsl(${
@@ -246,10 +248,13 @@ function Customizer() {
             {["0", "0.3", "0.5", "0.75", "1.0"].map((value) => {
               return (
                 <Button
-                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(
-                    config.radius === parseFloat(value) &&
-                       "border-2 border-primary"
-                  )}
+                  className={
+                    buttonVariants({ variant: "outline", size: "sm" }) +
+                    cn(
+                      config.radius === parseFloat(value) &&
+                        "border-2 border-primary"
+                    )
+                  }
                   key={value}
                   onClick={() => {
                     setConfig({
@@ -270,14 +275,20 @@ function Customizer() {
             {mounted ? (
               <>
                 <Button
-                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(mode === "light" && "border-2 border-primary")}
+                  className={
+                    buttonVariants({ variant: "outline", size: "sm" }) +
+                    cn(mode === "light" && "border-2 border-primary")
+                  }
                   onClick={() => setMode("light")}
                 >
                   <SunIcon className="mr-1 -translate-x-1" />
                   Light
                 </Button>
                 <Button
-                  className={buttonVariants({variant: "outline", size: "sm"}) + cn(mode === "dark" && "border-2 border-primary")}
+                  className={
+                    buttonVariants({ variant: "outline", size: "sm" }) +
+                    cn(mode === "dark" && "border-2 border-primary")
+                  }
                   onClick={() => setMode("dark")}
                 >
                   <MoonIcon className="mr-1 -translate-x-1" />
@@ -347,7 +358,10 @@ function CopyCodeButton() {
             <CustomizerCode />
             {activeTheme && (
               <Button
-                className={buttonVariants({variant: "outline", size: "sm"}) + " absolute right-4 top-4 bg-muted text-muted-foreground hover:bg-muted hover:text-muted-foreground"}
+                className={
+                  buttonVariants({ variant: "outline", size: "sm" }) +
+                  " absolute right-4 top-4 bg-muted text-muted-foreground hover:bg-muted hover:text-muted-foreground"
+                }
                 onClick={() => {
                   copyToClipboardWithMeta(
                     getThemeCode(activeTheme, config.radius),

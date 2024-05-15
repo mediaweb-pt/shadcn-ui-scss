@@ -1,0 +1,25 @@
+{
+  "name": "radio-group",
+  "dependencies": [
+    "@radix-ui/react-radio-group"
+  ],
+  "files": [
+    {
+      "name": "radio-group.tsx",
+      "content": "import * as React from \"react\"\nimport * as RadioGroupPrimitive from \"@radix-ui/react-radio-group\"\nimport { Circle } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./radio-group.scss\"\n\nconst RadioGroup = React.forwardRef<\n  React.ElementRef<typeof RadioGroupPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>\n>(({ className, ...props }, ref) => {\n  return (\n    <RadioGroupPrimitive.Root\n      className={cn(\"radio-group\", className)}\n      {...props}\n      ref={ref}\n    />\n  )\n})\nRadioGroup.displayName = RadioGroupPrimitive.Root.displayName\n\nconst RadioGroupItem = React.forwardRef<\n  React.ElementRef<typeof RadioGroupPrimitive.Item>,\n  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>\n>(({ className, ...props }, ref) => {\n  return (\n    <RadioGroupPrimitive.Item\n      ref={ref}\n      className={cn(\"radio-group-item\", className)}\n      {...props}\n    >\n      <RadioGroupPrimitive.Indicator className=\"radio-group-item__indicator\">\n        <Circle className=\"radio-group-item__indicator-circle\" />\n      </RadioGroupPrimitive.Indicator>\n    </RadioGroupPrimitive.Item>\n  )\n})\nRadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName\n\nexport { RadioGroup, RadioGroupItem }\n"
+    },
+    {
+      "name": "radio-group.scss",
+      "content": ".radio-group {\n  /*grid gap-2*/\n  display: grid;\n  gap: var(--space-s);\n  &-item {\n    --ring-shadow: 0 0 0 calc(2px + var(--space-xs)) var(--background);\n\n    aspect-ratio: 1 / 1;\n    border: var(--border-size-s) solid hsl(var(--primary));\n    border-radius: var(--border-radius-circle);\n    box-shadow: 0 0 0 var(--space-xs) hsl(var(--background)), var(--ring-shadow);\n    color: hsl(var(--primary));\n    height: var(--space-base);\n    width: var(--space-base);\n\n    &:focus {\n      outline: none;\n    }\n\n    &:focus-visible {\n      outline: 2px solid hsl(var(--ring));\n      outline-offset: 2px;\n    }\n\n    &[disabled] {\n      cursor: not-allowed;\n      opacity: 0.5;\n    }\n\n    &__indicator {\n      align-items: center;\n      display: flex;\n      justify-content: center;\n\n      &-circle {\n        color: currentColor;\n        fill: currentColor;\n        height: 10px;\n        width: 10px;\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "name": "radio-group.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { RadioGroup, RadioGroupItem } from \".\"\nimport { Label } from \"../label\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/radio-group\n * # or\n * $ npm install @shadcn-ui-sass/radio-group\n * ```\n *\n */\n\nconst meta: Meta<typeof RadioGroup> = {\n  title: \"Components/Radio Group\",\n  component: RadioGroup,\n  tags: [\"autodocs\"],\n  args: {\n    disabled: false,\n    defaultValue: \"2\",\n  },\n}\n\ntype Story = StoryObj<typeof RadioGroup>\n\nconst template = (args: any) => (\n  <RadioGroup {...args}>\n    <div className=\"display-flex align-items-center\">\n      <RadioGroupItem className=\"margin-right-xs\" value=\"1\" id=\"1\" />\n      <Label htmlFor=\"1\">Option 1</Label>\n    </div>\n    <div className=\"display-flex align-items-center\">\n      <RadioGroupItem className=\"margin-right-xs\" value=\"2\" id=\"2\" />\n      <Label htmlFor=\"2\">Option 2</Label>\n    </div>\n    <div className=\"display-flex align-items-center\">\n      <RadioGroupItem className=\"margin-right-xs\" value=\"3\" id=\"3\" />\n      <Label htmlFor=\"3\">Option 3</Label>\n    </div>\n    <div className=\"display-flex align-items-center\">\n      <RadioGroupItem className=\"margin-right-xs\" value=\"4\" id=\"4\" />\n      <Label htmlFor=\"4\">Option 4</Label>\n    </div>\n  </RadioGroup>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { RadioGroup, RadioGroupItem } from \"./radio-group\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

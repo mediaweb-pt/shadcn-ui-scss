@@ -1,0 +1,22 @@
+{
+  "name": "input",
+  "files": [
+    {
+      "name": "input.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./input.scss\"\n\nexport interface InputProps\n  extends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n  ({ className, type, ...props }, ref) => {\n    return (\n      <input\n        type={type}\n        className={cn(\"input\", className)}\n        ref={ref}\n        {...props}\n      />\n    )\n  }\n)\nInput.displayName = \"Input\"\n\nexport { Input }\n"
+    },
+    {
+      "name": "input.scss",
+      "content": ".input {\n  display: flex;\n  height: 2.5rem;\n  width: 100%;\n  border-radius: var(--border-radius-soft);\n  border: var(--border-size-s) solid hsl(var(--input));\n  background-color: hsl(var(--background));\n  padding: var(--space-s) var(--space-base);\n  font-size: var(--font-size-s);\n\n  &[type=\"file\"]::file-selector-button {\n    border-width: var(--border-size-none);\n    background-color: transparent;\n    font-size: var(--font-size-s);\n    font-weight: var(--font-medium);\n  }\n\n  &::placeholder {\n    color: hsl(var(--muted-foreground));\n  }\n\n  &:focus-visible {\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    box-shadow: 0 0 #0000;\n  }\n\n  &:disabled {\n    cursor: not-allowed;\n    opacity: 0.5;\n  }\n}\n"
+    },
+    {
+      "name": "input.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\nimport { useForm } from \"react-hook-form\"\n\nimport { Input } from \".\"\nimport { Button } from \"../button\"\nimport {\n  Form,\n  FormControl,\n  FormDescription,\n  FormField,\n  FormItem,\n  FormLabel,\n  FormMessage,\n} from \"../form\"\nimport { Label } from \"../label\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/input\n * # or\n * $ npm install @shadcn-ui-sass/input\n * ```\n *\n */\n\nconst meta: Meta<typeof Input> = {\n  title: \"Components/Input\",\n  component: Input,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof Input>\n\nconst template = (args: any) => (\n  <Input {...args} type=\"email\" placeholder=\"Email\" />\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport const File: Story = {\n  render: (args) => (\n    <div\n      className=\"display-grid full-width align-items-center gap-s\"\n      style={{\n        maxWidth: \"24rem\",\n      }}\n    >\n      <Label htmlFor=\"picture\">Picture</Label>\n      <Input {...args} id=\"picture\" type=\"file\" style={{ maxWidth: \"20rem\" }} />\n    </div>\n  ),\n}\n\nexport const Disabled: Story = {\n  args: { disabled: true },\n  render: (args) => template(args),\n}\n\nexport const WithLabel: Story = {\n  render: (args) => (\n    <div\n      className=\"display-grid full-width align-items-center gap-s\"\n      style={{\n        maxWidth: \"24rem\",\n      }}\n    >\n      <Label htmlFor=\"email\">Email</Label>\n      <Input {...args} type=\"email\" id=\"email\" placeholder=\"Email\" />\n    </div>\n  ),\n}\n\nexport const WithButton: Story = {\n  render: (args) => (\n    <div\n      className=\"display-flex full-width align-items-center gap-s\"\n      style={{ maxWidth: \"24rem\" }}\n    >\n      <Input {...args} type=\"email\" placeholder=\"Email\" />\n      <Button type=\"submit\">Subscribe</Button>\n    </div>\n  ),\n}\n\nexport const FormExample: Story = {\n  render: (args) => {\n    const form = useForm()\n\n    return (\n      <Form {...form}>\n        <form className=\"gap-s\" style={{ width: \"66.7%\" }}>\n          <FormField\n            control={form.control}\n            name=\"username\"\n            render={({ field }) => (\n              <FormItem>\n                <FormLabel>Username</FormLabel>\n                <FormControl>\n                  <Input {...args} placeholder=\"shadcn\" {...field} />\n                </FormControl>\n                <FormDescription>\n                  This is your public display name.\n                </FormDescription>\n                <FormMessage />\n              </FormItem>\n            )}\n          />\n          <Button type=\"submit\" className=\"margin-top-m\">\n            Submit\n          </Button>\n        </form>\n      </Form>\n    )\n  },\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Input } from \"./input\"\n\nexport type { InputProps } from \"./input\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

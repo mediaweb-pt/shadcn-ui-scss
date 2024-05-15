@@ -1,0 +1,25 @@
+{
+  "name": "hover-card",
+  "dependencies": [
+    "@radix-ui/react-hover-card"
+  ],
+  "files": [
+    {
+      "name": "hover-card.tsx",
+      "content": "import * as React from \"react\"\nimport * as HoverCardPrimitive from \"@radix-ui/react-hover-card\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./hover-card.scss\"\n\nconst HoverCard = HoverCardPrimitive.Root\n\nconst HoverCardTrigger = HoverCardPrimitive.Trigger\n\nconst HoverCardContent = React.forwardRef<\n  React.ElementRef<typeof HoverCardPrimitive.Content>,\n  React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>\n>(({ className, align = \"center\", sideOffset = 4, ...props }, ref) => (\n  <HoverCardPrimitive.Content\n    ref={ref}\n    align={align}\n    sideOffset={sideOffset}\n    className={cn(\"hover-card-content\", className)}\n    {...props}\n  />\n))\nHoverCardContent.displayName = HoverCardPrimitive.Content.displayName\n\nexport { HoverCard, HoverCardTrigger, HoverCardContent }\n"
+    },
+    {
+      "name": "hover-card.scss",
+      "content": ".hover-card {\n  &-content {\n    z-index: 50;\n    width: 20rem;\n    border-radius: var(--border-radius-soft);\n    border: var(--border-size-s) solid hsl(var(--border));\n    background-color: hsl(var(--popover));\n    padding: var(--space-base);\n    color: hsl(var(--popover-foreground));\n    box-shadow: var(--shadow-m);\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n\n    &[data-motion^=\"from-\"],\n    &[data-state=\"open\"],\n    &[data-state=\"visible\"] {\n      animation-name: enter;\n      animation-duration: 0.15s;\n      --enter-opacity: initial;\n      --enter-scale: initial;\n      --enter-rotate: initial;\n      --enter-translate-x: initial;\n      --enter-translate-y: initial;\n    }\n\n    &[data-motion^=\"to-\"],\n    &[data-state=\"closed\"],\n    &[data-state=\"hidden\"],\n    &[data-swipe=\"end\"] {\n      animation-name: exit;\n      animation-duration: 0.15s;\n      --exit-opacity: initial;\n      --exit-scale: initial;\n      --exit-rotate: initial;\n      --exit-translate-x: initial;\n      --exit-translate-y: initial;\n    }\n\n    &[data-motion^=\"to-\"],\n    &[data-state=\"closed\"] {\n      --exit-opacity: 0;\n    }\n\n    &[data-state=\"open\"],\n    &[data-state=\"visible\"] {\n      --enter-opacity: 0;\n    }\n\n    &[data-state=\"closed\"] {\n      --exit-scale: 0.95;\n    }\n\n    &[data-state=\"open\"] {\n      --enter-scale: 0.95;\n    }\n\n    &[data-side=\"bottom\"] {\n      --enter-translate-y: -0.5rem;\n    }\n\n    &[data-side=\"left\"] {\n      --enter-translate-x: 0.5rem;\n    }\n\n    &[data-side=\"right\"] {\n      --enter-translate-x: -0.5rem;\n    }\n\n    &[data-side=\"top\"] {\n      --enter-translate-y: 0.5rem;\n    }\n  }\n}\n"
+    },
+    {
+      "name": "hover-card.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\nimport { CalendarDays } from \"lucide-react\"\n\nimport { HoverCard, HoverCardContent, HoverCardTrigger } from \".\"\nimport { Avatar, AvatarFallback, AvatarImage } from \"../avatar\"\nimport { Button } from \"../button\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/hover-card\n * # or\n * $ npm install @shadcn-ui-sass/hover-card\n * ```\n *\n */\n\nconst meta: Meta<typeof HoverCard> = {\n  title: \"Components/HoverCard\",\n  component: HoverCard,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof HoverCard>\n\nconst template = (args: any) => (\n  <HoverCard {...args}>\n    <HoverCardTrigger asChild>\n      <Button variant=\"link\">@nextjs</Button>\n    </HoverCardTrigger>\n    <HoverCardContent>\n      <div className=\"display-flex justify-content-space-between gap-base\">\n        <Avatar>\n          <AvatarImage src=\"https://github.com/vercel.png\" />\n          <AvatarFallback>VC</AvatarFallback>\n        </Avatar>\n        <div>\n          <h4 className=\"margin-top-xs font-size-s font-semi-bold\">@nextjs</h4>\n          <p className=\"margin-top-xs font-size-s\">\n            The React Framework – created and maintained by @vercel.\n          </p>\n          <div className=\"margin-top-xs display-flex align-items-center padding-top-s\">\n            <CalendarDays\n              className=\"margin-right-s\"\n              style={{\n                opacity: 0.7,\n                height: \"var(--font-size-base)\",\n                width: \"var(--font-size-base)\",\n              }}\n            />\n            <span className=\"font-size-xs text-neutral-7\">\n              Joined December 2021\n            </span>\n          </div>\n        </div>\n      </div>\n    </HoverCardContent>\n  </HoverCard>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { HoverCard, HoverCardTrigger, HoverCardContent } from \"./hover-card\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

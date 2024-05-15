@@ -1,0 +1,25 @@
+{
+  "name": "progress",
+  "dependencies": [
+    "@radix-ui/react-progress"
+  ],
+  "files": [
+    {
+      "name": "progress.tsx",
+      "content": "import * as React from \"react\"\nimport * as ProgressPrimitive from \"@radix-ui/react-progress\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./progress.scss\"\n\nconst Progress = React.forwardRef<\n  React.ElementRef<typeof ProgressPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>\n>(({ className, value, ...props }, ref) => (\n  <ProgressPrimitive.Root\n    ref={ref}\n    className={cn(\"progress\", className)}\n    {...props}\n  >\n    <ProgressPrimitive.Indicator\n      className=\"progress__indicator\"\n      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}\n    />\n  </ProgressPrimitive.Root>\n))\nProgress.displayName = ProgressPrimitive.Root.displayName\n\nexport { Progress }\n"
+    },
+    {
+      "name": "progress.scss",
+      "content": ".progress {\n  background-color: hsl(var(--secondary));\n  border-radius: var(--border-radius-rounded);\n  height: var(--space-base);\n  overflow: hidden;\n  position: relative;\n  width: 100%;\n\n  &__indicator {\n    background-color: hsl(var(--primary));\n    flex: 1;\n    height: 100%;\n    transition: 0.3s ease;\n    width: 100%;\n  }\n}\n"
+    },
+    {
+      "name": "progress.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Progress } from \".\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/progress\n * # or\n * $ npm install @shadcn-ui-sass/progress\n * ```\n *\n */\n\nconst meta: Meta<typeof Progress> = {\n  title: \"Components/Progress\",\n  component: Progress,\n  tags: [\"autodocs\"],\n  args: {\n    value: 30,\n  },\n  argTypes: {\n    value: {\n      control: { type: \"number\" },\n    },\n  },\n}\n\ntype Story = StoryObj<typeof Progress>\n\nconst template = (args: any) => (\n  <div style={{ width: `300px`, height: `50px` }}>\n    <Progress value={args.value} />\n  </div>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Progress } from \"./progress\"\n"
+    }
+  ],
+  "type": "components:ui"
+}
