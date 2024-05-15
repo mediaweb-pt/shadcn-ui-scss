@@ -286,7 +286,7 @@ async function buildStyles(registry: Registry) {
         continue
       }
 
-      const files = item.files?.map((file, i) => {
+      const files = item.files?.map((file) => {
         const content = readFileSync(
           path.join(
             process.cwd(),
