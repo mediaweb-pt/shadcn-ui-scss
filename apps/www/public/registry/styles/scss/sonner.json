@@ -7,7 +7,7 @@
   "files": [
     {
       "name": "sonner.tsx",
-      "content": "import { Toaster as Sonner } from \"sonner\"\n\ntype ToasterProps = React.ComponentProps<typeof Sonner>\n\nconst Toaster = ({ ...props }: ToasterProps) => {\n  return <Sonner className=\"toaster\" {...props} />\n}\n\nexport { Toaster }\n"
+      "content": "\"use client\"\n\nimport { Toaster as Sonner } from \"sonner\"\n\ntype ToasterProps = React.ComponentProps<typeof Sonner>\n\nconst Toaster = ({ ...props }: ToasterProps) => {\n  return <Sonner className=\"toaster\" {...props} />\n}\n\nexport { Toaster }\n"
     },
     {
       "name": "sonner.stories.tsx",

@@ -6,7 +6,7 @@
   "files": [
     {
       "name": "aspect-ratio.tsx",
-      "content": "import * as React from \"react\"\nimport * as AspectRatioPrimitive from \"@radix-ui/react-aspect-ratio\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./aspect-ratio.scss\"\n\nconst AspectRatio = React.forwardRef<\n  React.ElementRef<typeof AspectRatioPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof AspectRatioPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <AspectRatioPrimitive.Root\n    className={cn(\"aspect-ratio\", className)}\n    {...props}\n    ref={ref}\n  />\n))\nAspectRatio.displayName = AspectRatioPrimitive.Root.displayName\n\nexport { AspectRatio }\n"
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as AspectRatioPrimitive from \"@radix-ui/react-aspect-ratio\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./aspect-ratio.scss\"\n\nconst AspectRatio = React.forwardRef<\n  React.ElementRef<typeof AspectRatioPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof AspectRatioPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <AspectRatioPrimitive.Root\n    className={cn(\"aspect-ratio\", className)}\n    {...props}\n    ref={ref}\n  />\n))\nAspectRatio.displayName = AspectRatioPrimitive.Root.displayName\n\nexport { AspectRatio }\n"
     },
     {
       "name": "aspect-ratio.scss",
