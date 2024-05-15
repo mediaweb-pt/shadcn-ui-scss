@@ -11,7 +11,7 @@ import { HttpsProxyAgent } from "https-proxy-agent"
 import fetch from "node-fetch"
 import { z } from "zod"
 
-const baseUrl = process.env.COMPONENTS_REGISTRY_URL ?? "https://ui.shadcn.com"
+const baseUrl = process.env.COMPONENTS_REGISTRY_URL ?? "http://localhost:3003"
 const agent = process.env.https_proxy
   ? new HttpsProxyAgent(process.env.https_proxy)
   : undefined
@@ -114,7 +114,8 @@ export async function fetchTree(
 
 export async function getItemTargetPath(
   config: Config,
-  item: Pick<z.infer<typeof registryItemWithContentSchema>, "type">,
+  item: Pick<z.infer<typeof registryItemWithContentSchema>, "type"> &
+    Pick<z.infer<typeof registryItemWithContentSchema>, "name">,
   override?: string
 ) {
   if (override) {
@@ -126,13 +127,14 @@ export async function getItemTargetPath(
   }
 
   const [parent, type] = item.type.split(":")
+
   if (!(parent in config.resolvedPaths)) {
     return null
   }
 
   return path.join(
     config.resolvedPaths[parent as keyof typeof config.resolvedPaths],
-    type
+    `${type}/${item.name}`
   )
 }
 
