@@ -2,17 +2,6 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { Button } from "@/shadcn-scss/components/Button"
-import {
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-} from "@/shadcn-scss/components/Command"
-import { DialogProps } from "@/shadcn-scss/components/Dialog"
 import {
   CircleIcon,
   FileIcon,
@@ -24,6 +13,17 @@ import { useTheme } from "next-themes"
 
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
+import { Button } from "@/registry/scss/ui/button"
+import {
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+} from "@/registry/scss/ui/command"
+import { DialogProps } from "@/registry/scss/ui/dialog"
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()

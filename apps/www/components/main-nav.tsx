@@ -13,7 +13,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/shadcn-scss/components/Tooltip"
+} from "@/registry/scss/ui/tooltip"
 
 export function MainNav() {
   const pathname = usePathname()
@@ -31,7 +31,10 @@ export function MainNav() {
             </Link>
           </TooltipTrigger>
           <TooltipContent>
-            SCSS Version, created by <a href="http://www.mediaweb.pt" target="_blank">Mediaweb</a>
+            SCSS Version, created by{" "}
+            <a href="http://www.mediaweb.pt" target="_blank">
+              Mediaweb
+            </a>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
@@ -61,9 +64,7 @@ export function MainNav() {
           href="/themes"
           className={cn(
             "site__header-link",
-            pathname?.startsWith("/themes")
-              ? "site__header-link--active"
-              : ""
+            pathname?.startsWith("/themes") ? "site__header-link--active" : ""
           )}
         >
           Themes

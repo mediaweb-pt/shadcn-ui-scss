@@ -1,15 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { Button } from "@/shadcn-scss/components/Button"
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
+import { useTheme } from "next-themes"
+
+import { Button } from "@/registry/scss/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
-import { useTheme } from "next-themes"
+} from "@/registry/scss/ui/dropdown-menu"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()

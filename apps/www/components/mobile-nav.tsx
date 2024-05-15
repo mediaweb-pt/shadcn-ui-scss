@@ -9,9 +9,9 @@ import { docsConfig } from "@/config/docs"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import { ScrollArea } from "@/shadcn-scss/components/ScrollArea"
-import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/components/Sheet"
+import { Button, buttonVariants } from "@/registry/scss/ui/button"
+import { ScrollArea } from "@/registry/scss/ui/scroll-area"
+import { Sheet, SheetContent, SheetTrigger } from "@/registry/scss/ui/sheet"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
@@ -20,7 +20,10 @@ export function MobileNav() {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button
-          className={buttonVariants({variant: "ghost"}) + " mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"}
+          className={
+            buttonVariants({ variant: "ghost" }) +
+            " mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          }
         >
           <svg
             strokeWidth="1.5"

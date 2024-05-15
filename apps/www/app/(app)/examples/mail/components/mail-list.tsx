@@ -2,9 +2,9 @@ import { ComponentProps } from "react"
 import formatDistanceToNow from "date-fns/formatDistanceToNow"
 
 import { cn } from "@/lib/utils"
-import { Badge } from "@/shadcn-scss/components/Badge"
-import { ScrollArea } from "@/shadcn-scss/components/ScrollArea"
-import { Separator } from "@/shadcn-scss/components/Separator"
+import { Badge } from "@/registry/scss/ui/badge"
+import { ScrollArea } from "@/registry/scss/ui/scroll-area"
+import { Separator } from "@/registry/scss/ui/separator"
 import { Mail } from "@/app/(app)/examples/mail/data"
 import { useMail } from "@/app/(app)/examples/mail/use-mail"
 
@@ -16,7 +16,15 @@ export function MailList({ items }: MailListProps) {
   const [mail, setMail] = useMail()
 
   return (
-    <ScrollArea className="h-screen" style={{ "--_scroll-area-width": "unset", "--_scroll-area-height": "unset" } as React.CSSProperties}>
+    <ScrollArea
+      className="h-screen"
+      style={
+        {
+          "--_scroll-area-width": "unset",
+          "--_scroll-area-height": "unset",
+        } as React.CSSProperties
+      }
+    >
       <div className="flex flex-col gap-2 p-4 pt-0">
         {items.map((item) => (
           <button
@@ -61,9 +69,7 @@ export function MailList({ items }: MailListProps) {
             {item.labels.length ? (
               <div className="flex items-center gap-2">
                 {item.labels.map((label) => (
-                  <Badge key={label}>
-                    {label}
-                  </Badge>
+                  <Badge key={label}>{label}</Badge>
                 ))}
               </div>
             ) : null}

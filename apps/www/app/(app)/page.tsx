@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { buttonVariants } from "@/shadcn-scss/components/Button"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -13,6 +12,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
+import { buttonVariants } from "@/registry/scss/ui/button"
 import MailPage from "@/app/(app)/examples/mail/page"
 
 export default function IndexPage() {
