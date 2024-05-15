@@ -3,7 +3,7 @@
   "files": [
     {
       "name": "badge.tsx",
-      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./badge.scss\"\n\nconst badgeVariants = cva(\"badge\", {\n  variants: {\n    variant: {\n      secondary: \"badge-secondary\",\n      destructive: \"badge-destructive\",\n      outline: \"badge-outline\",\n    },\n  },\n})\n\nexport interface BadgeProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof badgeVariants> {}\n\nfunction Badge({ className, variant, ...props }: BadgeProps) {\n  return (\n    <div className={cn(badgeVariants({ variant }), className)} {...props} />\n  )\n}\n\nexport { Badge, badgeVariants }\n"
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./badge.scss\"\n\nconst badgeVariants = cva(\"badge\", {\n  variants: {\n    variant: {\n      secondary: \"badge-secondary\",\n      destructive: \"badge-destructive\",\n      outline: \"badge-outline\",\n    },\n  },\n})\n\nexport interface BadgeProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof badgeVariants> {}\n\nfunction Badge({ className, variant, ...props }: BadgeProps) {\n  return (\n    <div className={cn(badgeVariants({ variant }), className)} {...props} />\n  )\n}\n\nexport { Badge, badgeVariants }\n"
     },
     {
       "name": "badge.scss",
