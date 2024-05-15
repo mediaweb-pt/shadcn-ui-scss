@@ -1,0 +1,18 @@
+/* Responsive classes */
+@mixin responsive($arrClass, $prop, $val) {
+  @each $breakpoint, $maxWidth in $breakpoints {
+    @media (min-width: #{$maxWidth}) {
+      @each $type, $value in $arrClass {
+        .#{$breakpoint}\:#{str-replace($type, ".", "")} {
+          #{$prop}: #{$val} !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin useful($className, $prop, $val) {
+  #{$className} {
+    #{$prop}: #{$val} !important;
+  }
+}

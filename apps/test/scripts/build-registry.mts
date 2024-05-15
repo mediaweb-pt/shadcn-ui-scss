@@ -446,7 +446,7 @@ async function buildThemes() {
 
   @layer base {
     * {
-      @apply border-border;
+      border-color: hsl(var(--border));
     }
     body {
       @apply bg-background text-foreground;
