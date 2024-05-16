@@ -18,7 +18,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "@/shadcn-scss/*": ["../../lib/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"],
+      "@/styles/*" : ["./styles/*"]
     },
     "plugins": [
       {
