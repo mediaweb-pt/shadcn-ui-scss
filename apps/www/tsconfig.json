@@ -20,7 +20,7 @@
       "@/*": ["./*"],
       "@/shadcn-scss/*": ["../../lib/*"],
       "contentlayer/generated": ["./.contentlayer/generated"],
-      "@/styles/*" : ["./styles/*"]
+      "@/styles/*": ["./styles/*"]
     },
     "plugins": [
       {

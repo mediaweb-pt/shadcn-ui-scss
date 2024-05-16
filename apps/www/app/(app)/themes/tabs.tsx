@@ -9,7 +9,6 @@ import { Skeleton } from "@/registry/scss/ui/skeleton"
 
 export function ThemesTabs() {
   const [mounted, setMounted] = React.useState(false)
-  const [config] = useConfig()
 
   React.useEffect(() => {
     setMounted(true)
@@ -63,7 +62,7 @@ export function ThemesTabs() {
         </div>
       ) : (
         <ThemeWrapper>
-          {config.style === "scss" && <CardsDefault />}
+          <CardsDefault />
         </ThemeWrapper>
       )}
     </div>
