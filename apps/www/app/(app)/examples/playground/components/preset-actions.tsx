@@ -1,9 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { Dialog } from "@radix-ui/react-dialog"
-import { DotsHorizontalIcon } from "@radix-ui/react-icons"
-
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -30,7 +27,9 @@ import {
 } from "@/shadcn-scss/components/DropdownMenu"
 import { Label } from "@/shadcn-scss/components/Label"
 import { Switch } from "@/shadcn-scss/components/Switch"
-import { toast } from "@/registry/new-york/ui/use-toast"
+import { toast } from "@/shadcn-scss/components/Toast/useToast"
+import { Dialog } from "@radix-ui/react-dialog"
+import { DotsHorizontalIcon } from "@radix-ui/react-icons"
 
 export function PresetActions() {
   const [open, setIsOpen] = React.useState(false)
@@ -40,7 +39,7 @@ export function PresetActions() {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className={buttonVariants({variant: "secondary"})}>
+          <Button className={buttonVariants({ variant: "secondary" })}>
             <span className="sr-only">Actions</span>
             <DotsHorizontalIcon className="h-4 w-4" />
           </Button>
@@ -86,7 +85,10 @@ export function PresetActions() {
             </div>
           </div>
           <DialogFooter>
-            <Button className={buttonVariants({variant: "secondary"})} onClick={() => setIsOpen(false)}>
+            <Button
+              className={buttonVariants({ variant: "secondary" })}
+              onClick={() => setIsOpen(false)}
+            >
               Close
             </Button>
           </DialogFooter>
@@ -104,7 +106,7 @@ export function PresetActions() {
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <Button
-              className={buttonVariants({variant: "destructive"})}
+              className={buttonVariants({ variant: "destructive" })}
               onClick={() => {
                 setShowDeleteDialog(false)
                 toast({

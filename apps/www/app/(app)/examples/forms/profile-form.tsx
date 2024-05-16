@@ -1,11 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useFieldArray, useForm } from "react-hook-form"
-import { z } from "zod"
-
-import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Form,
@@ -25,7 +20,12 @@ import {
   SelectValue,
 } from "@/shadcn-scss/components/Select"
 import { Textarea } from "@/shadcn-scss/components/TextArea"
-import { toast } from "@/registry/new-york/ui/use-toast"
+import { toast } from "@/shadcn-scss/components/Toast/useToast"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useFieldArray, useForm } from "react-hook-form"
+import { z } from "zod"
+
+import { cn } from "@/lib/utils"
 
 const profileFormSchema = z.object({
   username: z
@@ -176,7 +176,9 @@ export function ProfileForm() {
           ))}
           <Button
             type="button"
-            className={buttonVariants({ variant: "outline", size: "sm" }) + " mt-2"}
+            className={
+              buttonVariants({ variant: "outline", size: "sm" }) + " mt-2"
+            }
             onClick={() => append({ value: "" })}
           >
             Add URL

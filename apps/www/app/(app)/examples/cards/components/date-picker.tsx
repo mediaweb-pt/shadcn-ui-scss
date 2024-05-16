@@ -1,6 +1,7 @@
-import DatePickerWithRange from "@/registry/default/example/date-picker-with-range"
 import { Card, CardContent } from "@/shadcn-scss/components/Card"
 import { Label } from "@/shadcn-scss/components/Label"
+
+import DatePickerWithRange from "@/registry/scss/example/date-picker-with-range"
 
 export function DemoDatePicker() {
   return (

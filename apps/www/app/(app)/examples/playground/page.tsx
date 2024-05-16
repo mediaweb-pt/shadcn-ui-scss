@@ -1,22 +1,21 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import { CounterClockwiseClockIcon } from "@radix-ui/react-icons"
-
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/shadcn-scss/components/Button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/new-york/ui/hover-card"
-import { Label } from "@/registry/new-york/ui/label"
-import { Separator } from "@/registry/new-york/ui/separator"
+} from "@/shadcn-scss/components/HoverCard"
+import { Label } from "@/shadcn-scss/components/Label"
+import { Separator } from "@/shadcn-scss/components/Separator"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york/ui/tabs"
-import { Textarea } from "@/registry/new-york/ui/textarea"
+} from "@/shadcn-scss/components/Tabs"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
+import { CounterClockwiseClockIcon } from "@radix-ui/react-icons"
 
 import { CodeViewer } from "./components/code-viewer"
 import { MaxLengthSelector } from "./components/maxlength-selector"
