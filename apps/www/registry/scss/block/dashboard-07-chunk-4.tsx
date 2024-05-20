@@ -7,7 +7,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 
 export default function Component() {
   return (

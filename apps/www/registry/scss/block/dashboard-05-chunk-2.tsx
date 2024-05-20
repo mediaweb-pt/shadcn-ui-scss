@@ -5,7 +5,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 import { Progress } from "@/registry/scss/ui/progress"
 
 export default function Component() {

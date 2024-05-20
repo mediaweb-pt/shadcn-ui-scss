@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
-import { Input } from "@/registry/scss/ui/input"
-import { Label } from "@/registry/scss/ui/label"
+} from "@/shadcn-scss/components/Card"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Table,
   TableBody,
@@ -18,7 +18,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/scss/ui/table"
+} from "@/shadcn-scss/components/Table"
 import { ToggleGroup, ToggleGroupItem } from "@/registry/scss/ui/toggle-group"
 
 export default function Component() {

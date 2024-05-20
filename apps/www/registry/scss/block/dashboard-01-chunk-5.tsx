@@ -1,10 +1,10 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/scss/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/components/Avatar"
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 
 export default function Component() {
   return (

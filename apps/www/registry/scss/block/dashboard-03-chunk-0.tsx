@@ -1,7 +1,7 @@
 import { Bird, Rabbit, Turtle } from "lucide-react"
 
-import { Input } from "@/registry/scss/ui/input"
-import { Label } from "@/registry/scss/ui/label"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Select,
   SelectContent,
@@ -9,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/scss/ui/select"
-import { Textarea } from "@/registry/scss/ui/textarea"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
 
 export default function Component() {
   return (

@@ -16,7 +16,7 @@ import {
   Users2,
 } from "lucide-react"
 
-import { Badge } from "@/registry/scss/ui/badge"
+import { Badge } from "@/shadcn-scss/components/Badge"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -33,7 +33,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -42,9 +42,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/scss/ui/dropdown-menu"
-import { Input } from "@/registry/scss/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/scss/ui/sheet"
+} from "@/shadcn-scss/components/DropdownMenu"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/components/Sheet"
 import {
   Table,
   TableBody,
@@ -52,7 +52,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/scss/ui/table"
+} from "@/shadcn-scss/components/Table"
 import {
   Tabs,
   TabsContent,
@@ -63,7 +63,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/scss/ui/tooltip"
+} from "@/shadcn-scss/components/Tooltip"
 
 export const description =
   "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions."

@@ -92,7 +92,7 @@ export function ProfileForm() {
           control={form.control}
           name="username"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-2">
               <FormLabel>Username</FormLabel>
               <FormControl>
                 <Input placeholder="shadcn" {...field} />
@@ -109,7 +109,7 @@ export function ProfileForm() {
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-2">
               <FormLabel>Email</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
@@ -135,7 +135,7 @@ export function ProfileForm() {
           control={form.control}
           name="bio"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-2">
               <FormLabel>Bio</FormLabel>
               <FormControl>
                 <Textarea
@@ -159,7 +159,7 @@ export function ProfileForm() {
               key={field.id}
               name={`urls.${index}.value`}
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="space-y-2">
                   <FormLabel className={cn(index !== 0 && "sr-only")}>
                     URLs
                   </FormLabel>

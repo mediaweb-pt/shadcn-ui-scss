@@ -11,8 +11,8 @@ import {
   Users,
 } from "lucide-react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/scss/ui/avatar"
-import { Badge } from "@/registry/scss/ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/components/Avatar"
+import { Badge } from "@/shadcn-scss/components/Badge"
 import { Button } from "@/registry/scss/ui/button"
 import {
   Card,
@@ -20,7 +20,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,9 +28,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/scss/ui/dropdown-menu"
-import { Input } from "@/registry/scss/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/scss/ui/sheet"
+} from "@/shadcn-scss/components/DropdownMenu"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/components/Sheet"
 import {
   Table,
   TableBody,
@@ -38,7 +38,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/scss/ui/table"
+} from "@/shadcn-scss/components/Table"
 
 export const description =
   "An application shell with a header and main content area. The header has a navbar, a search input and and a user nav dropdown. The user nav is toggled by a button with an avatar image."

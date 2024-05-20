@@ -6,8 +6,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
-import { Input } from "@/registry/scss/ui/input"
+} from "@/shadcn-scss/components/Card"
+import { Input } from "@/shadcn-scss/components/Input"
 
 export default function Component() {
   return (

@@ -18,7 +18,7 @@ import {
 } from "@/shadcn-scss/components/Form"
 import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup"
 import { Switch } from "@/shadcn-scss/components/Switch"
-import { toast } from "@/registry/new-york/ui/use-toast"
+import { toast } from "@/registry/scss/ui/toast/use-toast"
 
 const notificationsFormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {

@@ -2,9 +2,9 @@ import { ComponentProps } from "react"
 import formatDistanceToNow from "date-fns/formatDistanceToNow"
 
 import { cn } from "@/lib/utils"
-import { Badge } from "@/registry/scss/ui/badge"
-import { ScrollArea } from "@/registry/scss/ui/scroll-area"
-import { Separator } from "@/registry/scss/ui/separator"
+import { Badge } from "@/shadcn-scss/components/Badge"
+import { ScrollArea } from "@/shadcn-scss/components/ScrollArea"
+import { Separator } from "@/shadcn-scss/components/Separator"
 import { Mail } from "@/app/(app)/examples/mail/data"
 import { useMail } from "@/app/(app)/examples/mail/use-mail"
 

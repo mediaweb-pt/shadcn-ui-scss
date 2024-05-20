@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 import { Checkbox } from "@/registry/scss/ui/checkbox"
 import {
   DropdownMenu,
@@ -18,9 +18,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/scss/ui/dropdown-menu"
-import { Input } from "@/registry/scss/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/scss/ui/sheet"
+} from "@/shadcn-scss/components/DropdownMenu"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/components/Sheet"
 
 export const description =
   "A settings page. The settings page has a sidebar navigation and a main content area. The main content area has a form to update the store name and a form to update the plugins directory. The sidebar navigation has links to general, security, integrations, support, organizations, and advanced settings."

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
-import { Badge } from "@/registry/scss/ui/badge"
+import { Badge } from "@/shadcn-scss/components/Badge"
 import { Button } from "@/registry/scss/ui/button"
 import {
   Card,
@@ -9,7 +9,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 import {
   Table,
   TableBody,
@@ -17,7 +17,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/scss/ui/table"
+} from "@/shadcn-scss/components/Table"
 
 export default function Component() {
   return (

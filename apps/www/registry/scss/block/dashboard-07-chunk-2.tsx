@@ -3,8 +3,8 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
-import { Label } from "@/registry/scss/ui/label"
+} from "@/shadcn-scss/components/Card"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Select,
   SelectContent,

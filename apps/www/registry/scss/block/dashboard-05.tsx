@@ -20,7 +20,7 @@ import {
   Users2,
 } from "lucide-react"
 
-import { Badge } from "@/registry/scss/ui/badge"
+import { Badge } from "@/shadcn-scss/components/Badge"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -37,7 +37,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -46,8 +46,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/scss/ui/dropdown-menu"
-import { Input } from "@/registry/scss/ui/input"
+} from "@/shadcn-scss/components/DropdownMenu"
+import { Input } from "@/shadcn-scss/components/Input"
 import {
   Pagination,
   PaginationContent,
@@ -55,7 +55,7 @@ import {
 } from "@/registry/scss/ui/pagination"
 import { Progress } from "@/registry/scss/ui/progress"
 import { Separator } from "@/registry/scss/ui/separator"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/scss/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/components/Sheet"
 import {
   Table,
   TableBody,
@@ -63,7 +63,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/scss/ui/table"
+} from "@/shadcn-scss/components/Table"
 import {
   Tabs,
   TabsContent,
@@ -74,7 +74,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/scss/ui/tooltip"
+} from "@/shadcn-scss/components/Tooltip"
 
 export const description =
   "An orders dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. The main area has a list of recent orders with a filter and export button. The main area also has a detailed view of a single order with order details, shipping information, billing information, customer information, and payment information."

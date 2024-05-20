@@ -90,3 +90,12 @@
     @apply px-4;
   }
 }
+
+.chunk-container::after {
+  border: var(--border-size-s) solid hsl(var(--border));
+  border-radius: var(--border-radius-soft);
+  box-shadow: var(--shadow-xl);
+  content: "";
+  inset: -1rem;
+  position: absolute;
+}

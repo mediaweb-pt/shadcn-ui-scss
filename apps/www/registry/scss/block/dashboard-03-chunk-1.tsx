@@ -1,13 +1,13 @@
 import { CornerDownLeft, Mic, Paperclip } from "lucide-react"
 
 import { Button } from "@/registry/scss/ui/button"
-import { Label } from "@/registry/scss/ui/label"
-import { Textarea } from "@/registry/scss/ui/textarea"
+import { Label } from "@/shadcn-scss/components/Label"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/scss/ui/tooltip"
+} from "@/shadcn-scss/components/Tooltip"
 
 export default function Component() {
   return (

@@ -15,7 +15,7 @@ import {
   Users2,
 } from "lucide-react"
 
-import { Badge } from "@/registry/scss/ui/badge"
+import { Badge } from "@/shadcn-scss/components/Badge"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -32,7 +32,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -40,9 +40,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/scss/ui/dropdown-menu"
-import { Input } from "@/registry/scss/ui/input"
-import { Label } from "@/registry/scss/ui/label"
+} from "@/shadcn-scss/components/DropdownMenu"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Select,
   SelectContent,
@@ -50,7 +50,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/scss/ui/select"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/scss/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/components/Sheet"
 import {
   Table,
   TableBody,
@@ -58,14 +58,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/scss/ui/table"
-import { Textarea } from "@/registry/scss/ui/textarea"
+} from "@/shadcn-scss/components/Table"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
 import { ToggleGroup, ToggleGroupItem } from "@/registry/scss/ui/toggle-group"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/scss/ui/tooltip"
+} from "@/shadcn-scss/components/Tooltip"
 
 export const description =
   "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images."

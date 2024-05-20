@@ -6,9 +6,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/scss/ui/card"
+} from "@/shadcn-scss/components/Card"
 import { Checkbox } from "@/registry/scss/ui/checkbox"
-import { Input } from "@/registry/scss/ui/input"
+import { Input } from "@/shadcn-scss/components/Input"
 
 export default function Component() {
   return (

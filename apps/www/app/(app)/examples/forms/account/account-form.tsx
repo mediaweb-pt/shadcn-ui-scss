@@ -31,7 +31,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/shadcn-scss/components/Popover"
-import { toast } from "@/registry/new-york/ui/use-toast"
+import { toast } from "@/registry/scss/ui/toast/use-toast"
 
 const languages = [
   { label: "English", value: "en" },
@@ -94,7 +94,7 @@ export function AccountForm() {
           control={form.control}
           name="name"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-2">
               <FormLabel>Name</FormLabel>
               <FormControl>
                 <Input placeholder="Your name" {...field} />
@@ -111,7 +111,7 @@ export function AccountForm() {
           control={form.control}
           name="dob"
           render={({ field }) => (
-            <FormItem className="flex flex-col">
+            <FormItem className="flex flex-col space-y-2">
               <FormLabel>Date of birth</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
@@ -154,13 +154,12 @@ export function AccountForm() {
           control={form.control}
           name="language"
           render={({ field }) => (
-            <FormItem className="flex flex-col">
+            <FormItem className="flex flex-col space-y-2">
               <FormLabel>Language</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant="outline"
                       role="combobox"
                       className={buttonVariants({ variant: "outline"}) + cn(
                         " w-[200px] justify-between",

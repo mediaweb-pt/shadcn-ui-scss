@@ -17,7 +17,7 @@ import {
   Turtle,
 } from "lucide-react"
 
-import { Badge } from "@/registry/scss/ui/badge"
+import { Badge } from "@/shadcn-scss/components/Badge"
 import { Button } from "@/registry/scss/ui/button"
 import {
   Drawer,
@@ -27,8 +27,8 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/registry/scss/ui/drawer"
-import { Input } from "@/registry/scss/ui/input"
-import { Label } from "@/registry/scss/ui/label"
+import { Input } from "@/shadcn-scss/components/Input"
+import { Label } from "@/shadcn-scss/components/Label"
 import {
   Select,
   SelectContent,
@@ -36,12 +36,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/scss/ui/select"
-import { Textarea } from "@/registry/scss/ui/textarea"
+import { Textarea } from "@/shadcn-scss/components/TextArea"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/scss/ui/tooltip"
+} from "@/shadcn-scss/components/Tooltip"
 
 export const description =
   "An AI playground with a sidebar navigation and a main content area. The playground has a header with a settings drawer and a share button. The sidebar has navigation links and a user menu. The main content area shows a form to configure the model and messages."

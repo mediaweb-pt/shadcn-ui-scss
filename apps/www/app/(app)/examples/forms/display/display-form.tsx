@@ -15,7 +15,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/shadcn-scss/components/Form"
-import { toast } from "@/registry/new-york/ui/use-toast"
+import { toast } from "@/registry/scss/ui/toast/use-toast"
 
 const items = [
   {
@@ -90,14 +90,14 @@ export function DisplayForm() {
               </div>
               {items.map((item) => (
                 <FormField
-                  key={item.id}
-                  control={form.control}
-                  name="items"
-                  render={({ field }) => {
-                    return (
-                      <FormItem
-                        key={item.id}
-                        className="flex flex-row items-start space-x-3 space-y-0"
+                key={item.id}
+                control={form.control}
+                name="items"
+                render={({ field }) => {
+                  return (
+                    <FormItem
+                    key={item.id}
+                        className="mb-2 space-x-3 flex items-center"
                       >
                         <FormControl>
                           <Checkbox

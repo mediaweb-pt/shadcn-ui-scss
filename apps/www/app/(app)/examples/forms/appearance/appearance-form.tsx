@@ -17,7 +17,7 @@ import {
   FormMessage,
 } from "@/shadcn-scss/components/Form"
 import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup"
-import { toast } from "@/registry/new-york/ui/use-toast"
+import { toast } from "@/registry/scss/ui/toast/use-toast"
 
 const appearanceFormSchema = z.object({
   theme: z.enum(["light", "dark"], {
