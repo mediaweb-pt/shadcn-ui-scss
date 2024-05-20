@@ -3,7 +3,7 @@
   @each $breakpoint, $maxWidth in $breakpoints {
     @media (min-width: #{$maxWidth}) {
       @each $type, $value in $arrClass {
-        .#{$breakpoint}\:#{str-replace($type, ".", "")} {
+        .#{$breakpoint}_#{str-replace($type, ".", "")} {
           #{$prop}: #{$val} !important;
         }
       }
