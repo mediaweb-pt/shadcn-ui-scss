@@ -53,15 +53,15 @@ export function ThemeCustomizer() {
   }, [])
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex align-items-center space-x-sm">
       <Drawer>
         <DrawerTrigger asChild>
           <Button
             className={
-              buttonVariants({ variant: "outline" }) + cn(" md:hidden")
+              buttonVariants({ variant: "outline" }) + cn(" md_hidden")
             }
           >
-            <Paintbrush className="mr-2 h-4 w-4" />
+            <Paintbrush className="margin-right-s h-4 w-4" />
             Customize
           </Button>
         </DrawerTrigger>
@@ -69,8 +69,8 @@ export function ThemeCustomizer() {
           <Customizer />
         </DrawerContent>
       </Drawer>
-      <div className="hidden md:flex">
-        <div className="mr-2 hidden items-center space-x-0.5 lg:flex">
+      <div className="hidden md_flex">
+        <div className="margin-right-s hidden align-items-center space-x-0.5 lg_flex">
           {mounted ? (
             <>
               {["zinc", "rose", "blue", "green", "orange"].map((color) => {
@@ -92,7 +92,7 @@ export function ThemeCustomizer() {
                           })
                         }
                         className={cn(
-                          "flex h-9 w-9 items-center justify-center rounded-full border-2 text-xs",
+                          "flex h-9 w-9 align-items-center justify-content-center rounded-full border-2 text-xs",
                           isActive
                             ? "border-[--theme-primary]"
                             : "border-transparent"
@@ -333,10 +333,10 @@ function CopyCodeButton() {
             })
             setHasCopied(true)
           }}
-          className="md:hidden"
+          className="md_hidden"
         >
           {hasCopied ? (
-            <CheckIcon className="mr-2 h-4 w-4" />
+            <CheckIcon className="margin-right-s h-4 w-4" />
           ) : (
             <CopyIcon className="mr-2 h-4 w-4" />
           )}
@@ -345,7 +345,7 @@ function CopyCodeButton() {
       )}
       <Dialog>
         <DialogTrigger asChild>
-          <Button className="hidden md:flex">Copy code</Button>
+          <Button className="hidden md_flex">Copy code</Button>
         </DialogTrigger>
         <DialogContent className="max-w-2xl outline-none">
           <DialogHeader>
@@ -396,7 +396,7 @@ function CustomizerCode() {
   const activeTheme = themes.find((theme) => theme.name === config.theme)
 
   return (
-    <ThemeWrapper defaultTheme="zinc" className="relative space-y-4">
+    <ThemeWrapper defaultTheme="zinc" className="relative space-y-base">
       <div data-rehype-pretty-code-fragment="">
         <pre className="max-h-[450px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900">
           <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">

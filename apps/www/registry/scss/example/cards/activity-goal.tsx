@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
 import {
   Card,
   CardContent,
@@ -79,29 +79,25 @@ export function CardsActivityGoal() {
       <CardContent className="pb-2">
         <div className="flex items-center justify-center space-x-2">
           <Button
-            variant="outline"
-            size="icon"
-            className="h-8 w-8 shrink-0 rounded-full"
+            className={buttonVariants({variant: "outline", size: "icon"}) + " h-8 w-8 shrink-0 border-radius-circle"}
             onClick={() => onClick(-10)}
             disabled={goal <= 200}
           >
-            <Minus className="h-4 w-4" />
+            <Minus />
             <span className="sr-only">Decrease</span>
           </Button>
           <div className="flex-1 text-center">
-            <div className="text-5xl font-bold tracking-tighter">{goal}</div>
-            <div className="text-[0.70rem] uppercase text-muted-foreground">
+            <div className="font-size-display font-bold tracking-tighter">{goal}</div>
+            <div className="font-size-xs text-uppercase text-muted-foreground">
               Calories/day
             </div>
           </div>
           <Button
-            variant="outline"
-            size="icon"
-            className="h-8 w-8 shrink-0 rounded-full"
+            className={buttonVariants({variant: "outline", size: "icon"}) + " h-8 w-8 shrink-0 border-radius-circle"}
             onClick={() => onClick(10)}
             disabled={goal >= 400}
           >
-            <Plus className="h-4 w-4" />
+            <Plus />
             <span className="sr-only">Increase</span>
           </Button>
         </div>
@@ -125,7 +121,7 @@ export function CardsActivityGoal() {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">Set Goal</Button>
+        <Button className="full-width">Set Goal</Button>
       </CardFooter>
     </Card>
   )
