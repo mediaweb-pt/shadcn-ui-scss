@@ -1,4 +1,8 @@
-/* Responsive classes */
+/// Mixin to create responsive utility classes
+/// @param {Map} $arrClass - Map of class types and their corresponding values
+/// @param {String} $prop - CSS property to be applied
+/// @param {String} $val - Value to be assigned to the CSS property
+/// @require $breakpoints
 @mixin responsive($arrClass, $prop, $val) {
   @each $breakpoint, $maxWidth in $breakpoints {
     @media (min-width: #{$maxWidth}) {
@@ -11,8 +15,39 @@
   }
 }
 
+/// Mixin to generate a utility class with a specified property and value
+/// @param {String} $className - The name of the class to be generated
+/// @param {String} $prop - The CSS property to be applied
+/// @param {String} $val - The value to be assigned to the CSS property
 @mixin useful($className, $prop, $val) {
   #{$className} {
     #{$prop}: #{$val} !important;
+  }
+}
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+/// Mixin to generate utility classes for different sizing properties
+/// @param {String} $property - The CSS property to be applied
+/// @require $sizes
+@mixin useful-sizing($property){
+  @each $type, $value in $sizes {
+    .#{$property}-#{$type} {
+      #{$property}: var(--space-#{$type}) !important;
+    }
   }
 }
