@@ -57,3 +57,34 @@
         }
     }
 }
+
+.space{
+  &-y{
+    &-xs{
+      & > *{
+        margin-bottom: var(--space-xs);
+        margin-top: var(--space-xs);
+      }
+    }
+    &-base{
+      & > *{
+        margin-bottom: var(--space-base);
+        margin-top: var(--space-base);
+      }
+    }
+  }
+  &-x{
+    &-xs{
+      & > *{
+        margin-left: var(--space-xs);
+        margin-right: var(--space-xs);
+      }
+    }
+    &-base{
+      & > *{
+        margin-left: var(--space-base);
+        margin-right: var(--space-base);
+      }
+    }
+  }
+}
