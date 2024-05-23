@@ -52,7 +52,7 @@ export function CardsStats() {
   const theme = themes.find((theme) => theme.name === config.theme)
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
+    <div className="components-example__subgrid components-example__subgrid-3">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-base font-normal">Total Revenue</CardTitle>
