@@ -3,18 +3,7 @@
 /// @group UsefullClasses-Position
 /// Usefull - Position
 
-///
-.relative {
-  position: relative !important;
-}
-
-///
-.fixed {
-  position: fixed !important;
-}
-
-///
-.sticky {
-  position: -webkit-sticky !important; //Fix for older iPhones
-  position: sticky !important;
-}
+@include useful(".relative", "position", "relative");
+@include useful(".fixed", "position", "fixed");
+@include useful(".sticky", "position", "sticky");
+@include useful(".absolute", "position", "absolute");

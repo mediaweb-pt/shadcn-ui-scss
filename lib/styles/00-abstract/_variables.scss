@@ -2,7 +2,7 @@
 // SCSS Variables
 //
 
-// Breakpoints
+// Responsive - Breakpoints
 $breakpoints: (
   "sm": 640px,
   "md": 768px,
@@ -42,12 +42,13 @@ $typography-weight: (
   bold: 700,
 );
 
+// Colors - Brand Palette
 $colors-brand: (
   primary: #8433ba,
   secondary: #ff9300,
 );
 
-// Colors
+// Colors - Extended Palette
 $colors-extended: (
   "red": (
     lightest: #faeaea,
@@ -159,11 +160,11 @@ $colors-extended: (
   ),
 );
 
-// Colors - Accessibility
+// Colors - Accessibility Palette
 $color-focus-outer: #77b7ee !default;
 $color-focus-inner: #fff !default;
 
-// Colors - Neutral
+// Colors - Neutral Palette
 $colors-neutral: (
   0: #ffffff,
   1: #f8f9fa,
@@ -178,7 +179,7 @@ $colors-neutral: (
   10: #101213,
 );
 
-// Color - Semantic
+// Color - Semantic Palette
 $colors-semantic: (
   error-light: #fbeaea,
   error: #e03131,
@@ -190,7 +191,7 @@ $colors-semantic: (
   info: #009dde,
 );
 
-// Spacing
+// Spacing - Spacing Sizes
 $sizes: (
   none: 0,
   xs: 0.25rem,
@@ -202,6 +203,7 @@ $sizes: (
   xxl: 3rem,
 );
 
+// Box Sides
 $box-sides: "top", "right", "bottom", "left";
 
 // Box Corners

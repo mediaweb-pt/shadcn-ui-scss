@@ -20,6 +20,9 @@
 @include useful(".flex", "display", "flex");
 @include responsive(".flex", "display", "flex");
 
+@include useful(".grid", "display", "grid");
+@include responsive(".grid", "display", "grid");
+
 .contents {
   display: contents !important;
 }
@@ -34,8 +37,4 @@
 
 .inline-flex {
   display: inline-flex !important;
-}
-
-.grid {
-  display: grid !important;
 }

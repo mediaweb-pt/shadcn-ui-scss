@@ -25,20 +25,11 @@
     }
 }
 
-///
-.bold {
-    font-weight: var(--font-bold) !important;
-}
+@include useful(".bold", "font-weight", "var(--font-bold)");
+@include useful(".semi-bold", "font-weight", "var(--font-semibold)");
 
-///
-.italic {
-    font-style: italic !important;
-}
-
-///
-.oblique {
-    font-style: oblique !important;
-}
+@include useful(".italic", "font-style", "italic");
+@include useful(".oblique", "font-style", "oblique");
 
 ///
 .text {
