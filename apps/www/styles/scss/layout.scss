@@ -385,7 +385,42 @@
   }
 }
 
+.customizer-popover{
+  width: 340px;
+  z-index: 40;
+
+  &__copy-dialog{
+    max-width: 672px !important;
+  }
+
+  &__code-snippet{
+    background-color: var(--color-neutral-10);
+    border: 1px solid currentColor;
+    border-radius: var(--border-radius-soft);
+    max-height: 450px;
+    overflow-x: auto;
+    padding: var(--space-base) 0;
+  }
+}
+.theme-wrapper{
+  .copy-code-btn{
+    right: var(--space-base);
+    top: var(--space-base);
+    z-index: 10;
+  }
+}
 .components-example {
+  &__total-revenue{
+    height: 80px;
+  }
+
+  &__metrics{
+    height: 200px;
+    &--small{
+      height: 60px;
+    }
+  }
+
   &__grid {
     display: grid;
     gap: var(--space-base);
