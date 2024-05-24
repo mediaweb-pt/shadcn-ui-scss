@@ -17,44 +17,44 @@ import { Icons } from "@/components/icons"
 export function CardsCreateAccount() {
   return (
     <Card>
-      <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl">Create an account</CardTitle>
+      <CardHeader className="space-y-xs">
+        <CardTitle>Create an account</CardTitle>
         <CardDescription>
           Enter your email below to create your account
         </CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-4">
-        <div className="grid grid-cols-2 gap-6">
-          <Button className={buttonVariants({ variant: "outline" })}>
-            <Icons.gitHub className="mr-2 h-4 w-4" />
+      <CardContent className="gap-base grid">
+        <div className="gap-m flex">
+          <Button className={buttonVariants({ variant: "outline" }) + " flex-1"}>
+            <Icons.gitHub className="margin-right-s height-base width-base" />
             Github
           </Button>
-          <Button className={buttonVariants({ variant: "outline" })}>
-            <Icons.google className="mr-2 h-4 w-4" />
+          <Button className={buttonVariants({ variant: "outline" }) + " flex-1"}>
+            <Icons.google className="margin-right-s height-base width-base" />
             Google
           </Button>
         </div>
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
-            <span className="w-full border-t" />
+            <span className="width-100 border-top-s " />
           </div>
-          <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background px-2 text-muted-foreground">
+          <div className="font-size-xs text-uppercase relative flex justify-center">
+            <span className="padding-x-s bg-background text-muted-foreground">
               Or continue with
             </span>
           </div>
         </div>
-        <div className="grid gap-2">
+        <div className="grid gap-s">
           <Label htmlFor="email">Email</Label>
           <Input id="email" type="email" placeholder="m@example.com" />
         </div>
-        <div className="grid gap-2">
+        <div className="grid gap-s">
           <Label htmlFor="password">Password</Label>
           <Input id="password" type="password" />
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">Create account</Button>
+        <Button className="width-100">Create account</Button>
       </CardFooter>
     </Card>
   )

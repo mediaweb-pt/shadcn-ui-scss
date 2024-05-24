@@ -125,7 +125,7 @@ export const columns: ColumnDef<Payment>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Email
-          <CaretSortIcon className="ml-2 h-4 w-4" />
+          <CaretSortIcon className="ml-2 height-base width-base" />
         </Button>
       )
     },
@@ -156,10 +156,10 @@ export const columns: ColumnDef<Payment>[] = [
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
-              className={buttonVariants({ variant: "ghost" }) + " h-8 w-8 p-0"}
+              className={buttonVariants({ variant: "ghost" }) + " height-l width-l padding-none"}
             >
               <span className="sr-only">Open menu</span>
-              <DotsHorizontalIcon className="h-4 w-4" />
+              <DotsHorizontalIcon className="height-base width-base" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -214,21 +214,20 @@ export function CardsDataTable() {
         <CardDescription>Manage your payments.</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="mb-4 flex items-center gap-4">
+        <div className="margin-bottom-base flex items-center gap-base">
           <Input
             placeholder="Filter emails..."
             value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
             onChange={(event) =>
               table.getColumn("email")?.setFilterValue(event.target.value)
             }
-            className="max-w-sm"
           />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
-                className={buttonVariants({ variant: "outline" }) + " ml-auto"}
+                className={buttonVariants({ variant: "outline" }) + " margin-left-auto"}
               >
-                Columns <ChevronDownIcon className="ml-2 h-4 w-4" />
+                Columns <ChevronDownIcon className="margin-left-s height-base width-base" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -252,8 +251,8 @@ export function CardsDataTable() {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <div className="rounded-md border">
-          <Table>
+        <div className="border-radius-soft border-size-s text-muted">
+          <Table className="text-muted-foreground">
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>
@@ -261,7 +260,6 @@ export function CardsDataTable() {
                     return (
                       <TableHead
                         key={header.id}
-                        className="[&:has([role=checkbox])]:pl-3"
                       >
                         {header.isPlaceholder
                           ? null
@@ -285,7 +283,6 @@ export function CardsDataTable() {
                     {row.getVisibleCells().map((cell) => (
                       <TableCell
                         key={cell.id}
-                        className="[&:has([role=checkbox])]:pl-3"
                       >
                         {flexRender(
                           cell.column.columnDef.cell,
@@ -299,7 +296,7 @@ export function CardsDataTable() {
                 <TableRow>
                   <TableCell
                     colSpan={columns.length}
-                    className="h-24 text-center"
+                    className="text-align-center"
                   >
                     No results.
                   </TableCell>
@@ -308,12 +305,12 @@ export function CardsDataTable() {
             </TableBody>
           </Table>
         </div>
-        <div className="flex items-center justify-end space-x-2 pt-4">
-          <div className="flex-1 text-sm text-muted-foreground">
+        <div className="flex items-center justify-end space-x-2 padding-top-base">
+          <div className="flex-1 font-size-s text-muted-foreground">
             {table.getFilteredSelectedRowModel().rows.length} of{" "}
             {table.getFilteredRowModel().rows.length} row(s) selected.
           </div>
-          <div className="space-x-2">
+          <div className="space-x-s">
             <Button
               className={buttonVariants({ variant: "outline", size: "sm" })}
               onClick={() => table.previousPage()}

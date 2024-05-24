@@ -32,9 +32,9 @@ export function CardsReportIssue() {
           What area are you having problems with?
         </CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-6">
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="grid gap-2">
+      <CardContent className="grid gap-l">
+        <div className="grid gap-base sm_grid-cols-2">
+          <div className="grid gap-s">
             <Label htmlFor={`area-${id}`}>Area</Label>
             <Select defaultValue="billing">
               <SelectTrigger id={`area-${id}`} aria-label="Area">
@@ -49,7 +49,7 @@ export function CardsReportIssue() {
               </SelectContent>
             </Select>
           </div>
-          <div className="grid gap-2">
+          <div className="grid gap-s">
             <Label htmlFor={`security-level-${id}`}>Security Level</Label>
             <Select defaultValue="2">
               <SelectTrigger
@@ -68,11 +68,11 @@ export function CardsReportIssue() {
             </Select>
           </div>
         </div>
-        <div className="grid gap-2">
+        <div className="grid gap-s">
           <Label htmlFor={`subject-${id}`}>Subject</Label>
           <Input id={`subject-${id}`} placeholder="I need help with..." />
         </div>
-        <div className="grid gap-2">
+        <div className="grid gap-s">
           <Label htmlFor={`description-${id}`}>Description</Label>
           <Textarea
             id={`description-${id}`}

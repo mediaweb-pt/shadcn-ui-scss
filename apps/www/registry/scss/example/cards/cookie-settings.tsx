@@ -19,31 +19,31 @@ export function CardsCookieSettings() {
         <CardTitle>Cookie Settings</CardTitle>
         <CardDescription>Manage your cookie settings here.</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-6">
-        <div className="flex items-center justify-between space-x-4">
-          <Label htmlFor="necessary" className="flex flex-col space-y-1">
+      <CardContent className="gap-m grid">
+        <div className="gap-base flex items-center justify-between">
+          <Label htmlFor="necessary" className="space-y-xs flex flex-col">
             <span>Strictly Necessary</span>
-            <span className="text-xs font-normal leading-snug text-muted-foreground">
+            <span className="font-size-xs font-normal leading-snug text-muted-foreground">
               These cookies are essential in order to use the website and use
               its features.
             </span>
           </Label>
           <Switch id="necessary" defaultChecked aria-label="Necessary" />
         </div>
-        <div className="flex items-center justify-between space-x-4">
-          <Label htmlFor="functional" className="flex flex-col space-y-1">
+        <div className="gap-base flex items-center justify-between">
+          <Label htmlFor="functional" className="space-y-xs flex flex-col">
             <span>Functional Cookies</span>
-            <span className="text-xs font-normal leading-snug text-muted-foreground">
+            <span className="font-size-xs font-normal leading-snug text-muted-foreground">
               These cookies allow the website to provide personalized
               functionality.
             </span>
           </Label>
           <Switch id="functional" aria-label="Functional" />
         </div>
-        <div className="flex items-center justify-between space-x-4">
-          <Label htmlFor="performance" className="flex flex-col space-y-1">
+        <div className="gap-base flex items-center justify-between">
+          <Label htmlFor="performance" className="space-y-xs flex flex-col">
             <span>Performance Cookies</span>
-            <span className="text-xs font-normal leading-snug text-muted-foreground">
+            <span className="font-size-xs font-normal leading-snug text-muted-foreground">
               These cookies help to improve the performance of the website.
             </span>
           </Label>
@@ -51,7 +51,7 @@ export function CardsCookieSettings() {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className={buttonVariants({ variant: "outline" }) + " w-full"}>
+        <Button className={buttonVariants({ variant: "outline" }) + " flex-1"}>
           Save preferences
         </Button>
       </CardFooter>

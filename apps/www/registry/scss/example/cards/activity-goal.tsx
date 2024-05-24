@@ -73,7 +73,7 @@ export function CardsActivityGoal() {
   return (
     <Card>
       <CardHeader className="pb-4">
-        <CardTitle className="text-base">Move Goal</CardTitle>
+        <CardTitle className="font-size-base">Move Goal</CardTitle>
         <CardDescription>Set your daily activity goal.</CardDescription>
       </CardHeader>
       <CardContent className="pb-2">
@@ -101,7 +101,7 @@ export function CardsActivityGoal() {
             <span className="sr-only">Increase</span>
           </Button>
         </div>
-        <div className="my-3 h-[60px]">
+        <div className="margin-y-s components-example__metrics--small">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data}>
               <Bar
@@ -121,7 +121,7 @@ export function CardsActivityGoal() {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="full-width">Set Goal</Button>
+        <Button className="width-100">Set Goal</Button>
       </CardFooter>
     </Card>
   )

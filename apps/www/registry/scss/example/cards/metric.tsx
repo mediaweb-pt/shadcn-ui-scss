@@ -56,8 +56,8 @@ export function CardsMetric() {
           Your exercise minutes are ahead of where you normally are.
         </CardDescription>
       </CardHeader>
-      <CardContent className="pb-4">
-        <div className="h-[200px]">
+      <CardContent className="padding-bottom-base">
+        <div className="components-example__metrics">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={data}
@@ -72,21 +72,21 @@ export function CardsMetric() {
                 content={({ active, payload }) => {
                   if (active && payload && payload.length) {
                     return (
-                      <div className="rounded-lg border bg-background p-2 shadow-sm">
-                        <div className="grid grid-cols-2 gap-2">
+                      <div className="border-radius-soft text-muted-foreground border-size-s bg-background padding-s shadow-sm">
+                        <div className="flex gap-s">
                           <div className="flex flex-col">
-                            <span className="text-[0.70rem] uppercase text-muted-foreground">
+                            <span className="font-size-s text-uppercase text-muted-foreground">
                               Average
                             </span>
-                            <span className="font-bold text-muted-foreground">
+                            <span className="bold text-muted-foreground">
                               {payload[0].value}
                             </span>
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[0.70rem] uppercase text-muted-foreground">
+                            <span className="font-size-s text-uppercase text-muted-foreground">
                               Today
                             </span>
-                            <span className="font-bold">
+                            <span className="bold">
                               {payload[1].value}
                             </span>
                           </div>
