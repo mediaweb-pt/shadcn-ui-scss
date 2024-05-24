@@ -25,8 +25,9 @@
     }
 }
 
+@include useful(".regular", "font-weight", "var(--font-regular)");
 @include useful(".bold", "font-weight", "var(--font-bold)");
-@include useful(".semi-bold", "font-weight", "var(--font-semibold)");
+@include useful(".semi-bold", "font-weight", "var(--font-semi-bold)");
 
 @include useful(".italic", "font-style", "italic");
 @include useful(".oblique", "font-style", "oblique");
