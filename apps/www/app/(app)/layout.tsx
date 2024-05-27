@@ -9,7 +9,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <>
       <SiteHeader />
-      <main className="site__content">{children}</main>
+      <main className="site-layout__content">{children}</main>
       <SiteFooter />
     </>
   )
