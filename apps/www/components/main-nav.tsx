@@ -23,7 +23,7 @@ export function MainNav() {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>
-            <Link href="/" className="site-layout__header-logo">
+            <Link href="/themes" className="site-layout__header-logo">
               <Icons.logo className="site-layout__header-icon--lg" />
               <span className="hidden bold sm_inline-block">
                 {siteConfig.name}
