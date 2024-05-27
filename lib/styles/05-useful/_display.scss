@@ -14,6 +14,9 @@
   "none"
 );
 
+@include useful(".inline-block", "display", "inline-block");
+@include responsive(".inline-block", "display", "inline-block");
+
 @include useful(".block", "display", "block");
 @include responsive(".block", "display", "block");
 
@@ -29,10 +32,6 @@
 
 .inline {
   display: inline !important;
-}
-
-.inline-block {
-  display: inline-block !important;
 }
 
 .inline-flex {
