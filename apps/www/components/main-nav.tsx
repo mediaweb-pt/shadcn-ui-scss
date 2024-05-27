@@ -19,13 +19,13 @@ export function MainNav() {
   const pathname = usePathname()
 
   return (
-    <div className="site__header-main_nav">
+    <div className="site-layout__header-main_nav">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>
-            <Link href="/" className="site__header-logo">
-              <Icons.logo className="site__header-icon--lg" />
-              <span className="hidden font-bold sm:inline-block">
+            <Link href="/" className="site-layout__header-logo">
+              <Icons.logo className="site-layout__header-icon--lg" />
+              <span className="hidden bold sm_inline-block">
                 {siteConfig.name}
               </span>
             </Link>
@@ -39,12 +39,12 @@ export function MainNav() {
         </Tooltip>
       </TooltipProvider>
 
-      <nav className="site__header-menu">
+      <nav className="site-layout__header-menu">
         {/* <Link
           href="/docs"
           className={cn(
-            "site__header-link",
-            pathname === "/docs" ? "site__header-link--active" : ""
+            "site-layout__header-link",
+            pathname === "/docs" ? "site-layout__header-link--active" : ""
           )}
         >
           Docs
@@ -52,9 +52,9 @@ export function MainNav() {
         <Link
           href="/docs/components"
           className={cn(
-            "site__header-link",
+            "site-layout__header-link",
             pathname?.startsWith("/docs/components")
-              ? "site__header-link--active"
+              ? "site-layout__header-link--active"
               : ""
           )}
         >
@@ -63,8 +63,8 @@ export function MainNav() {
         <Link
           href="/themes"
           className={cn(
-            "site__header-link",
-            pathname?.startsWith("/themes") ? "site__header-link--active" : ""
+            "site-layout__header-link",
+            pathname?.startsWith("/themes") ? "site-layout__header-link--active" : ""
           )}
         >
           Themes
@@ -72,9 +72,9 @@ export function MainNav() {
         {/* <Link
           href="/examples"
           className={cn(
-            "site__header-link",
+            "site-layout__header-link",
             pathname?.startsWith("/examples")
-              ? "site__header-link--active"
+              ? "site-layout__header-link--active"
               : ""
           )}
         >
@@ -83,9 +83,9 @@ export function MainNav() {
         <Link
           href="/blocks"
           className={cn(
-            "site__header-link",
+            "site-layout__header-link",
             pathname?.startsWith("/blocks")
-              ? "site__header-link--active"
+              ? "site-layout__header-link--active"
               : ""
           )}
         >
@@ -94,7 +94,7 @@ export function MainNav() {
         {/* <Link
           href={siteConfig.links.github}
           className={cn(
-            "site__header-link"
+            "site-layout__header-link"
           )}
         >
           GitHub

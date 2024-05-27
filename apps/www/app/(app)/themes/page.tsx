@@ -25,7 +25,9 @@ export default function ThemesPage() {
         className="themes-page"
       >
         <PageHeader>
-          <Announcement />
+          <div className="margin-bottom-base">
+            <Announcement />
+          </div>
           <PageHeaderHeading>
             Add colors,
           </PageHeaderHeading>

@@ -11,15 +11,15 @@ import { buttonVariants } from "@/registry/scss/ui/button"
 
 export function SiteHeader() {
   return (
-    <header className="site__header">
-      <div className="site__header-container container">
+    <header className="site-layout__header">
+      <div className="site-layout__header-container container">
         <MainNav />
         <MobileNav />
-        <div className="site__header-socials">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
+        <div className="site-layout__header-socials">
+          <div className="site-layout__header-command-menu">
             <CommandMenu />
           </div>
-          <nav className="site__header-socials_container">
+          <nav className="site-layout__header-socials_container">
             <Link
               href={siteConfig.links.github}
               target="_blank"
@@ -32,7 +32,7 @@ export function SiteHeader() {
                   }),
                 )}
               >
-                <Icons.gitHub className="h-4 w-4" />
+                <Icons.gitHub className="height-base width-base" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
@@ -48,7 +48,7 @@ export function SiteHeader() {
                   }),
                 )}
               >
-                <Icons.twitter className="h-3 w-3 fill-current" />
+                <Icons.twitter className="height-base width-base fill-current" />
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
