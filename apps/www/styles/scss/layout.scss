@@ -8,7 +8,13 @@
   }
 }
 
-.site {
+.site-layout {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+
   &__header {
     backdrop-filter: blur(8px);
     background-color: hsl(var(--background) / 0.95);
@@ -20,6 +26,51 @@
 
     @supports (backdrop-filter: blur(8px)) {
       background-color: hsl(var(--background) / 0.6);
+    }
+
+    &-command-menu{
+      flex: 1;
+      width: 100%;
+
+      @include breakpoint("md") {
+        flex: none;
+        width: auto;
+      }
+    }
+
+    &-kbd{
+        align-items: center;
+        background-color: hsl(var(--muted));
+        border-radius: var(--border-radius-soft);
+        display: none;
+        font-family: monospace;
+        font-size: 10px;
+        font-weight: 500;
+        gap: var(--space-s);
+        height: 1.25rem;
+        opacity: 1;
+        padding: 0 var(--space-s);
+        pointer-events: none;
+        position: absolute;
+        right: 0.3rem;
+        top: 0.3rem;
+        user-select: none;
+
+        @include breakpoint("sm") {
+          display: flex;
+        }
+      }
+
+    &-search{
+      @include breakpoint("sm") {
+        padding-right: 3rem;
+      }
+      @include breakpoint("md") {
+        width: 10rem;
+      }
+      @include breakpoint("lg") {
+        width: 16rem;
+      }
     }
 
     &-link {
@@ -431,7 +482,7 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     @include breakpoint("lg") {
-      grid-template-columns: repeat(110, minmax(0, 1fr));
+      grid-template-columns: repeat(11, minmax(0, 1fr));
     }
     @include breakpoint("xl") {
       grid-template-columns: repeat(11, minmax(0, 1fr));
@@ -454,10 +505,10 @@
         grid-column: span 6 / span 6;
       }
 
-      // & > * {
-      //   margin-bottom: var(--space-base);
-      //   margin-top: var(--space-base);
-      // }
+      & > * {
+        margin-bottom: var(--space-s);
+        margin-top: var(--space-s);
+      }
     }
 
     &-2{
@@ -471,10 +522,10 @@
         grid-column: span 5 / span 5;
       }
 
-      // & > * {
-      //   margin-bottom: var(--space-base);
-      //   margin-top: var(--space-base);
-      // }
+      & > * {
+        margin-bottom: var(--space-s);
+        margin-top: var(--space-s);
+      }
     }
 
     &-3{
@@ -526,4 +577,10 @@
       }
     }
   }
+}
+
+.bg-\[--theme-primary\]{background-color: var(--theme-primary);}
+
+.bg-\[--primary\]{
+  background-color: hsl(var(--primary));
 }
