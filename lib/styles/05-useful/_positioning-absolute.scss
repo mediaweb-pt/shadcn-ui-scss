@@ -1,0 +1,90 @@
+/* Usefull - Position Absolute */
+////
+/// @group UsefullClasses-Position_Absolute
+/// Usefull - Position Absolute
+
+///
+.absolute {
+  position: absolute !important;
+}
+
+///
+.absolute {
+  &-top {
+    top: 0 !important;
+
+    &-right {
+      right: 0 !important;
+      top: 0 !important;
+    }
+
+    &-left {
+      left: 0 !important;
+      top: 0 !important;
+    }
+
+    &-plus-header {
+      top: calc(var(--header-size) + var(--os-safe-area-top)) !important;
+    }
+  }
+
+  &-right {
+    right: 0 !important;
+  }
+
+  &-bottom {
+    bottom: 0 !important;
+
+    &-right {
+      bottom: 0 !important;
+      right: 0 !important;
+    }
+
+    &-left {
+      bottom: 0 !important;
+      left: 0 !important;
+    }
+
+    &.absolute {
+      &-center {
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+      }
+    }
+  }
+
+  &-left {
+    left: 0 !important;
+  }
+
+  &-center {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    &-top {
+      left: 50% !important;
+      top: 0 !important;
+      transform: translateX(-50%) !important;
+    }
+
+    &-right {
+      right: 0 !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+    }
+
+    &-bottom {
+      bottom: 0 !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+
+    &-left {
+      left: 0 !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+    }
+  }
+}

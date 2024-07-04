@@ -1,0 +1,27 @@
+/* Usefull - Colors Semantic */
+////
+/// @group UsefullClasses-Colors_Semantic
+/// Usefull - Colors Semantic
+
+/*
+	Note:
+	- In order to improve the SASSDOC generated file, the loop was splited in 2!
+*/
+
+///
+.background {
+    @each $type, $value in $colors-semantic {
+        &-#{$type} {
+            background-color: var(--color-#{$type}) !important;
+        }
+    }
+}
+
+///
+.text {
+    @each $type, $value in $colors-semantic {
+        &-#{$type} {
+            color: var(--color-#{$type}) !important;
+        }
+    }
+}

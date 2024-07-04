@@ -225,7 +225,9 @@ export const Index: Record<string, any> = {
         item.name
       }")),
       source: "${sourceFilename}",
-      files: [${resolveFiles.map((file) => `"${file}"`)}],
+      files: [${resolveFiles.map(
+        (file) => `"${file.replace("ui/", `ui/${item.name}/`)}"`
+      )}],
       category: "${item.category}",
       subcategory: "${item.subcategory}",
       chunks: [${chunks.map(
@@ -286,7 +288,12 @@ async function buildStyles(registry: Registry) {
 
       const files = item.files?.map((file) => {
         const content = readFileSync(
-          path.join(process.cwd(), "registry", style.name, file),
+          path.join(
+            process.cwd(),
+            "registry",
+            style.name,
+            file.replace("ui/", `ui/${item.name}/`)
+          ),
           "utf8"
         )
 
@@ -446,7 +453,7 @@ async function buildThemes() {
 
   @layer base {
     * {
-      @apply border-border;
+      border-color: hsl(var(--border));
     }
     body {
       @apply bg-background text-foreground;

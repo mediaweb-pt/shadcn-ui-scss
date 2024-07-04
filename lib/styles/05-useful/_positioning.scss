@@ -1,0 +1,9 @@
+/* Usefull - Position */
+////
+/// @group UsefullClasses-Position
+/// Usefull - Position
+
+@include useful(".relative", "position", "relative");
+@include useful(".fixed", "position", "fixed");
+@include useful(".sticky", "position", "sticky");
+@include useful(".absolute", "position", "absolute");

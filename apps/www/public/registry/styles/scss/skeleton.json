@@ -1,0 +1,22 @@
+{
+  "name": "skeleton",
+  "files": [
+    {
+      "name": "skeleton.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\n\nimport \"./skeleton.scss\"\n\nfunction Skeleton({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"skeleton\", className)} {...props} />\n}\n\nexport { Skeleton }\n"
+    },
+    {
+      "name": "skeleton.scss",
+      "content": ".skeleton {\n  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;\n  background-color: hsl(var(--muted));\n  border-radius: var(--border-radius-soft);\n}\n\n@keyframes pulse {\n  50% {\n    opacity: 0.5;\n  }\n}\n"
+    },
+    {
+      "name": "skeleton.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Skeleton } from \".\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/skeleton\n * # or\n * $ npm install @shadcn-ui-sass/skeleton\n * ```\n *\n */\n\nconst meta: Meta<typeof Skeleton> = {\n  title: \"Components/Skeleton\",\n  component: Skeleton,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof Skeleton>\n\nconst template = (args: any) => (\n  <div>\n    <Skeleton\n      {...args}\n      style={{ width: \"600px\", height: \"24px\", marginBottom: \"16px\" }}\n    />\n    <Skeleton {...args} style={{ width: \"500px\", height: \"48px\" }} />\n  </div>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Skeleton } from \"./skeleton\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

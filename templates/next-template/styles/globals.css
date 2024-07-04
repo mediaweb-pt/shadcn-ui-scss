@@ -72,10 +72,89 @@
 
 @layer base {
   * {
-    @apply border-border;
+    /* //@apply border-border; */
+    border-color: hsl(var(--border));
   }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+.border-border {
+  border-color: hsl(var(--border))
+}
+
+.border-border\/40 {
+  border-color: hsl(var(--border)/.4)
+}
+
+.border-border\/50 {
+  border-color: hsl(var(--border)/.5)
+}
+.hover\:border-border:hover {
+  border-color: hsl(var(--border))
+}
+.group.toaster .group-\[\.toaster\]\:border-border {
+  border-color: hsl(var(--border))
+}
+
+
+.bg-background {
+  background-color: hsl(var(--background))
+}
+
+.bg-background\/80 {
+  background-color: hsl(var(--background)/.8)
+}
+
+.bg-background\/90 {
+  background-color: hsl(var(--background)/.9)
+}
+
+.bg-background\/95 {
+  background-color: hsl(var(--background)/.95)
+}
+
+.data-\[state\=active\]\:bg-background[data-state=active] {
+  background-color: hsl(var(--background))
+}
+.group.toaster .group-\[\.toaster\]\:bg-background {
+  background-color: hsl(var(--background))
+}
+/*@supports ((-webkit-backdrop-filter: var(--tw )) or (backdrop-filter:var(--tw ))) {
+  .supports-\[backdrop-filter\]\:bg-background\/60 {
+    background-color:hsl(var(--background)/.6)
+  }
+}*/
+
+
+.text-foreground {
+  color: hsl(var(--foreground))
+}
+
+.text-foreground\/50 {
+  color: hsl(var(--foreground)/.5)
+}
+
+.text-foreground\/60 {
+  color: hsl(var(--foreground)/.6)
+}
+.hover\:text-foreground:hover {
+  color: hsl(var(--foreground))
+}
+
+.hover\:text-foreground\/80:hover {
+  color: hsl(var(--foreground)/.8)
+}
+.group.toaster .group-\[\.toaster\]\:text-foreground {
+  color: hsl(var(--foreground))
+}
+.data-\[state\=active\]\:text-foreground[data-state=active] {
+  color: hsl(var(--foreground))
+}
+.\[\&\>svg\]\:text-foreground>svg {
+  color: hsl(var(--foreground))
+}
+.\[\&_svg\]\:text-foreground svg {
+  color: hsl(var(--foreground))
 }

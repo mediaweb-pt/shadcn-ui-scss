@@ -1,0 +1,169 @@
+.sheet {
+  background-color: hsl(var(--background));
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  gap: var(--space-base);
+  padding: var(--space-m);
+  position: fixed;
+  transition: 0.3s ease-in-out;
+  z-index: 50;
+
+  &[data-state="open"] {
+    animation-duration: 0.5s;
+    animation-name: enter;
+  }
+
+  &[data-state="closed"] {
+    animation-duration: 0.3s;
+    animation-name: exit;
+  }
+
+  &--top {
+    border-bottom: var(--border-size-s) solid hsl(var(--border));
+    left: 0;
+    right: 0;
+    top: 0;
+
+    &[data-state="open"] {
+      animation: slideInFromTop 0.3s ease-in-out;
+    }
+
+    &[data-state="closed"] {
+      animation: slideOutToTop 0.3s ease-in-out;
+    }
+  }
+
+  &--bottom {
+    border-bottom: var(--border-size-s) solid hsl(var(--border));
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &[data-state="open"] {
+      animation: slideInFromBottom 0.3s ease-in-out;
+    }
+
+    &[data-state="closed"] {
+      animation: slideOutToBottom 0.3s ease-in-out;
+    }
+  }
+
+  &--left {
+    border-right: var(--border-size-s) solid hsl(var(--border));
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 75%;
+
+    &[data-state="open"] {
+      animation: slideInFromLeft 0.3s ease-in-out;
+    }
+
+    &[data-state="closed"] {
+      animation: slideOutToLeft 0.3s ease-in-out;
+    }
+
+    @media (min-width: 640px) {
+      margin: auto;
+      max-width: 24rem;
+    }
+  }
+
+  &--right {
+    border-right: var(--border-size-s) solid hsl(var(--border));
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 75%;
+
+    &[data-state="open"] {
+      animation: slideInFromRight 0.3s ease-in-out;
+    }
+
+    &[data-state="closed"] {
+      animation: slideOutToRight 0.3s ease-in-out;
+    }
+
+    @media (min-width: 640px) {
+      margin: auto;
+      max-width: 24rem;
+    }
+  }
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    inset: 0px;
+    position: fixed;
+    z-index: 50;
+
+    &[data-state="open"] {
+      animation-duration: 0.15s;
+      animation-name: enter;
+    }
+    &[data-state="closed"] {
+      animation-duration: 0.15s;
+      animation-name: exit;
+    }
+  }
+
+  &__close-btn {
+    border-radius: var(--border-radius-soft);
+    color: var(--color-neutral-7);
+    opacity: 0.5;
+    padding: var(--space-s);
+    position: absolute;
+    right: var(--space-s);
+    top: var(--space-s);
+    transition: 0.3s ease;
+
+    &:hover {
+      color: hsl(var(--foreground));
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+      outline: 2px solid var(--foreground);
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    & > *:not(:first-child) {
+      margin-top: var(--space-s);
+    }
+
+    @media (min-width: 640px) {
+      text-align: left;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: 640px) {
+      flex-direction: column;
+      justify-content: flex-end;
+
+      & > *:not(:first-child) {
+        margin-left: var(--space-s);
+      }
+    }
+  }
+
+  &__title {
+    color: hsl(var(--foreground));
+    font-size: var(--font-size-m);
+    font-weight: var(--font-semi-bold);
+  }
+
+  &__description {
+    color: hsl(var(--muted-foreground));
+    font-size: var(--font-size-s);
+  }
+}

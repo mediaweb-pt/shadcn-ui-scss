@@ -1,0 +1,25 @@
+{
+  "name": "label",
+  "dependencies": [
+    "@radix-ui/react-label"
+  ],
+  "files": [
+    {
+      "name": "label.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as LabelPrimitive from \"@radix-ui/react-label\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./label.scss\"\n\nconst Label = React.forwardRef<\n  React.ElementRef<typeof LabelPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <LabelPrimitive.Root\n    ref={ref}\n    className={cn(\"label\", className)}\n    {...props}\n  />\n))\nLabel.displayName = LabelPrimitive.Root.displayName\n\nexport { Label }\n"
+    },
+    {
+      "name": "label.scss",
+      "content": ".label {\n  font-size: var(--font-size-s);\n  font-weight: var(--font-medium);\n  line-height: 1;\n\n  input:disabled + &,\n  button:disabled + & {\n    cursor: not-allowed;\n    opacity: 0.7;\n  }\n}\n"
+    },
+    {
+      "name": "label.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Label } from \".\"\nimport { Checkbox } from \"../checkbox\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/label\n * # or\n * $ npm install @shadcn-ui-sass/label\n * ```\n *\n */\n\nconst meta: Meta<typeof Label> = {\n  title: \"Components/Label\",\n  component: Label,\n  tags: [\"autodocs\"],\n  args: {\n    children: \"Label text\",\n  },\n}\n\ntype Story = StoryObj<typeof Label>\n\nconst template = (args: any) => (\n  <div>\n    <div className=\"display-flex align-items-center gap-s\">\n      <Checkbox id=\"terms\" />\n      <Label {...args} htmlFor=\"terms\">\n        Accept terms and conditions\n      </Label>\n    </div>\n  </div>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport const Disabled: Story = {\n  render: (args) => (\n    <div>\n      <div className=\"display-flex align-items-center gap-s\">\n        <Checkbox id=\"terms\" disabled />\n        <Label {...args} htmlFor=\"terms\">\n          Accept terms and conditions\n        </Label>\n      </div>\n    </div>\n  ),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Label } from \"./label\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import {redirect} from "next/navigation";
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -12,10 +13,11 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
-import { buttonVariants } from "@/registry/new-york/ui/button"
+import { buttonVariants } from "@/registry/scss/ui/button"
 import MailPage from "@/app/(app)/examples/mail/page"
 
 export default function IndexPage() {
+  redirect('/themes');
   return (
     <div className="container relative">
       <PageHeader>
@@ -35,12 +37,12 @@ export default function IndexPage() {
             href={siteConfig.links.github}
             className={cn(buttonVariants({ variant: "outline" }))}
           >
-            <Icons.gitHub className="mr-2 h-4 w-4" />
+            <Icons.gitHub className="margin-right-s" />
             GitHub
           </Link>
         </PageActions>
       </PageHeader>
-      <ExamplesNav className="[&>a:first-child]:text-primary" />
+      {/*<ExamplesNav className="[&>a:first-child]:text-primary" />
       <section className="overflow-hidden rounded-lg border bg-background shadow-md md:hidden md:shadow-xl">
         <Image
           src="/examples/mail-dark.png"
@@ -61,7 +63,7 @@ export default function IndexPage() {
         <div className="overflow-hidden rounded-lg border bg-background shadow">
           <MailPage />
         </div>
-      </section>
+      </section>*/}
     </div>
   )
 }

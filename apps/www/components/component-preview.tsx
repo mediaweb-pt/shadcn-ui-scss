@@ -15,7 +15,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york/ui/tabs"
+} from "@/registry/scss/ui/tabs"
 import { styles } from "@/registry/styles"
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -97,7 +97,7 @@ export function ComponentPreview({
           <div className="flex items-center justify-between p-4">
             <StyleSwitcher />
             <div className="flex items-center gap-2">
-              {config.style === "default" && description ? (
+              {config.style === "scss" && description ? (
                 <V0Button
                   block={{
                     code: codeString,

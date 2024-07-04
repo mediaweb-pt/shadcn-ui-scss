@@ -1,0 +1,43 @@
+.radio-group {
+  /*grid gap-2*/
+  display: grid;
+  gap: var(--space-s);
+  &-item {
+    --ring-shadow: 0 0 0 calc(2px + var(--space-xs)) var(--background);
+
+    aspect-ratio: 1 / 1;
+    border: var(--border-size-s) solid hsl(var(--primary));
+    border-radius: var(--border-radius-circle);
+    box-shadow: 0 0 0 var(--space-xs) hsl(var(--background)), var(--ring-shadow);
+    color: hsl(var(--primary));
+    height: var(--space-base);
+    width: var(--space-base);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid hsl(var(--ring));
+      outline-offset: 2px;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    &__indicator {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      &-circle {
+        color: currentColor;
+        fill: currentColor;
+        height: 10px;
+        width: 10px;
+      }
+    }
+  }
+}

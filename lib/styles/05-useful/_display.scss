@@ -1,0 +1,39 @@
+/* Usefull - Display */
+////
+/// @group UsefullClasses-Display
+/// Usefull - Display
+
+///
+@include useful(".hidden,.none", "display", "none");
+@include responsive(
+  (
+    hidden: ".hidden",
+    none: ".none",
+  ),
+  "display",
+  "none"
+);
+
+@include useful(".inline-block", "display", "inline-block");
+@include responsive(".inline-block", "display", "inline-block");
+
+@include useful(".block", "display", "block");
+@include responsive(".block", "display", "block");
+
+@include useful(".flex", "display", "flex");
+@include responsive(".flex", "display", "flex");
+
+@include useful(".grid", "display", "grid");
+@include responsive(".grid", "display", "grid");
+
+.contents {
+  display: contents !important;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.inline-flex {
+  display: inline-flex !important;
+}

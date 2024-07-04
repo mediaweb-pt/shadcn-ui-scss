@@ -5,6 +5,9 @@ node_modules
 .pnp
 .pnp.js
 
+# storybook build files
+storybook-static
+
 # testing
 coverage
 
@@ -34,3 +37,4 @@ yarn-error.log*
 
 .contentlayer
 tsconfig.tsbuildinfo
+*storybook.log

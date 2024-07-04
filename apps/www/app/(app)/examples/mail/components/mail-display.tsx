@@ -13,35 +13,29 @@ import {
   Trash2,
 } from "lucide-react"
 
-import {
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/registry/default/ui/dropdown-menu"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/new-york/ui/avatar"
-import { Button } from "@/registry/new-york/ui/button"
-import { Calendar } from "@/registry/new-york/ui/calendar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Calendar } from "@/shadcn-scss/calendar"
 import {
   DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/shadcn-scss/dropdown-menu"
+import { Label } from "@/shadcn-scss/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
-import { Separator } from "@/registry/new-york/ui/separator"
-import { Switch } from "@/registry/new-york/ui/switch"
-import { Textarea } from "@/registry/new-york/ui/textarea"
+} from "@/shadcn-scss/popover"
+import { Separator } from "@/shadcn-scss/separator"
+import { Switch } from "@/shadcn-scss/switch"
+import { Textarea } from "@/shadcn-scss/textarea"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
+} from "@/shadcn-scss/tooltip"
 import { Mail } from "@/app/(app)/examples/mail/data"
 
 interface MailDisplayProps {
@@ -57,7 +51,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
         <div className="flex items-center gap-2">
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" disabled={!mail}>
+              <Button
+                className={buttonVariants({ variant: "ghost", size: "icon" })}
+                disabled={!mail}
+              >
                 <Archive className="h-4 w-4" />
                 <span className="sr-only">Archive</span>
               </Button>
@@ -66,7 +63,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" disabled={!mail}>
+              <Button
+                className={buttonVariants({ variant: "ghost", size: "icon" })}
+                disabled={!mail}
+              >
                 <ArchiveX className="h-4 w-4" />
                 <span className="sr-only">Move to junk</span>
               </Button>
@@ -75,7 +75,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" disabled={!mail}>
+              <Button
+                className={buttonVariants({ variant: "ghost", size: "icon" })}
+                disabled={!mail}
+              >
                 <Trash2 className="h-4 w-4" />
                 <span className="sr-only">Move to trash</span>
               </Button>
@@ -87,7 +90,13 @@ export function MailDisplay({ mail }: MailDisplayProps) {
             <Popover>
               <PopoverTrigger asChild>
                 <TooltipTrigger asChild>
-                  <Button variant="ghost" size="icon" disabled={!mail}>
+                  <Button
+                    className={buttonVariants({
+                      variant: "ghost",
+                      size: "icon",
+                    })}
+                    disabled={!mail}
+                  >
                     <Clock className="h-4 w-4" />
                     <span className="sr-only">Snooze</span>
                   </Button>
@@ -98,8 +107,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   <div className="px-4 text-sm font-medium">Snooze until</div>
                   <div className="grid min-w-[250px] gap-1">
                     <Button
-                      variant="ghost"
-                      className="justify-start font-normal"
+                      className={
+                        buttonVariants({ variant: "ghost" }) +
+                        " justify-start font-normal"
+                      }
                     >
                       Later today{" "}
                       <span className="ml-auto text-muted-foreground">
@@ -107,8 +118,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       </span>
                     </Button>
                     <Button
-                      variant="ghost"
-                      className="justify-start font-normal"
+                      className={
+                        buttonVariants({ variant: "ghost" }) +
+                        " justify-start font-normal"
+                      }
                     >
                       Tomorrow
                       <span className="ml-auto text-muted-foreground">
@@ -116,8 +129,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       </span>
                     </Button>
                     <Button
-                      variant="ghost"
-                      className="justify-start font-normal"
+                      className={
+                        buttonVariants({ variant: "ghost" }) +
+                        " justify-start font-normal"
+                      }
                     >
                       This weekend
                       <span className="ml-auto text-muted-foreground">
@@ -125,8 +140,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                       </span>
                     </Button>
                     <Button
-                      variant="ghost"
-                      className="justify-start font-normal"
+                      className={
+                        buttonVariants({ variant: "ghost" }) +
+                        " justify-start font-normal"
+                      }
                     >
                       Next week
                       <span className="ml-auto text-muted-foreground">
@@ -146,7 +163,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
         <div className="ml-auto flex items-center gap-2">
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" disabled={!mail}>
+              <Button
+                className={buttonVariants({ variant: "ghost", size: "icon" })}
+                disabled={!mail}
+              >
                 <Reply className="h-4 w-4" />
                 <span className="sr-only">Reply</span>
               </Button>
@@ -155,7 +175,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" disabled={!mail}>
+              <Button
+                className={buttonVariants({ variant: "ghost", size: "icon" })}
+                disabled={!mail}
+              >
                 <ReplyAll className="h-4 w-4" />
                 <span className="sr-only">Reply all</span>
               </Button>
@@ -164,7 +187,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" disabled={!mail}>
+              <Button
+                className={buttonVariants({ variant: "ghost", size: "icon" })}
+                disabled={!mail}
+              >
                 <Forward className="h-4 w-4" />
                 <span className="sr-only">Forward</span>
               </Button>
@@ -175,7 +201,10 @@ export function MailDisplay({ mail }: MailDisplayProps) {
         <Separator orientation="vertical" className="mx-2 h-6" />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" disabled={!mail}>
+            <Button
+              className={buttonVariants({ variant: "ghost", size: "icon" })}
+              disabled={!mail}
+            >
               <MoreVertical className="h-4 w-4" />
               <span className="sr-only">More</span>
             </Button>
@@ -238,8 +267,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   </Label>
                   <Button
                     onClick={(e) => e.preventDefault()}
-                    size="sm"
-                    className="ml-auto"
+                    className={buttonVariants({ size: "sm" }) + " ml-auto"}
                   >
                     Send
                   </Button>

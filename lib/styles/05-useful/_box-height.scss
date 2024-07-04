@@ -1,0 +1,26 @@
+/* Usefull - Box Height */
+////
+/// @group UsefullClasses-Box_Height
+/// Usefull - Box Height
+
+///
+@include useful(".max-height-25", "max-height", "25%");
+@include responsive(".max-height-25", "max-height", "25%");
+@include useful(".max-height-50", "max-height", "50%");
+@include responsive(".max-height-50", "max-height", "50%");
+@include useful(".max-height-75", "max-height", "75%");
+@include responsive(".max-height-75", "max-height", "75%");
+@include useful(".max-height-100", "max-height", "100%");
+@include responsive(".max-height-100", "max-height", "100%");
+
+@include useful(".height-25", "height", "25%");
+@include responsive(".height-25", "height", "25%");
+@include useful(".height-50", "height", "50%");
+@include responsive(".height-50", "height", "50%");
+@include useful(".height-75", "height", "75%");
+@include responsive(".height-75", "height", "75%");
+@include useful(".height-100", "height", "100%");
+@include responsive(".height-100", "height", "100%");
+
+/// Generate the height classes associated with the sizes map (xxs,xs,s,m,l,xl,xxl)
+@include useful-sizing("height");

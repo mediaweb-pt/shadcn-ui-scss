@@ -4,24 +4,24 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york/ui/avatar"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
-import { Separator } from "@/registry/new-york/ui/separator"
+} from "@/shadcn-scss/select"
+import { Separator } from "@/shadcn-scss/separator"
 
 export function DemoShareDocument() {
   return (
@@ -35,7 +35,7 @@ export function DemoShareDocument() {
       <CardContent>
         <div className="flex space-x-2">
           <Input value="http://example.com/link/to/document" readOnly />
-          <Button variant="secondary" className="shrink-0">
+          <Button className={buttonVariants({variant: "secondary"}) + " shrink-0"}>
             Copy Link
           </Button>
         </div>

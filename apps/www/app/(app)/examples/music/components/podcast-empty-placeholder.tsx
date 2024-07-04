@@ -1,4 +1,4 @@
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Dialog,
   DialogContent,
@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york/ui/dialog"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/shadcn-scss/dialog"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 
 export function PodcastEmptyPlaceholder() {
   return (
@@ -36,7 +36,7 @@ export function PodcastEmptyPlaceholder() {
         </p>
         <Dialog>
           <DialogTrigger asChild>
-            <Button size="sm" className="relative">
+            <Button className={buttonVariants({size: "sm"}) + " relative"}>
               Add Podcast
             </Button>
           </DialogTrigger>

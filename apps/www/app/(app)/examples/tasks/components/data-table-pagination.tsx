@@ -6,14 +6,14 @@ import {
 } from "@radix-ui/react-icons"
 import { Table } from "@tanstack/react-table"
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/shadcn-scss/select"
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>
@@ -55,8 +55,7 @@ export function DataTablePagination<TData>({
         </div>
         <div className="flex items-center space-x-2">
           <Button
-            variant="outline"
-            className="hidden h-8 w-8 p-0 lg:flex"
+            className={buttonVariants({ variant: "outline"}) + " hidden lg:flex"}
             onClick={() => table.setPageIndex(0)}
             disabled={!table.getCanPreviousPage()}
           >
@@ -64,8 +63,7 @@ export function DataTablePagination<TData>({
             <DoubleArrowLeftIcon className="h-4 w-4" />
           </Button>
           <Button
-            variant="outline"
-            className="h-8 w-8 p-0"
+            className={buttonVariants({ variant: "outline"})}
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
@@ -73,8 +71,7 @@ export function DataTablePagination<TData>({
             <ChevronLeftIcon className="h-4 w-4" />
           </Button>
           <Button
-            variant="outline"
-            className="h-8 w-8 p-0"
+            className={buttonVariants({ variant: "outline"})}
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >
@@ -82,8 +79,7 @@ export function DataTablePagination<TData>({
             <ChevronRightIcon className="h-4 w-4" />
           </Button>
           <Button
-            variant="outline"
-            className="hidden h-8 w-8 p-0 lg:flex"
+            className={buttonVariants({ variant: "outline"}) + " hidden lg:flex"}
             onClick={() => table.setPageIndex(table.getPageCount() - 1)}
             disabled={!table.getCanNextPage()}
           >

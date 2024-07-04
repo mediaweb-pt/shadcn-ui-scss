@@ -2,9 +2,8 @@ import { ComponentProps } from "react"
 import formatDistanceToNow from "date-fns/formatDistanceToNow"
 
 import { cn } from "@/lib/utils"
-import { Badge } from "@/registry/new-york/ui/badge"
-import { ScrollArea } from "@/registry/new-york/ui/scroll-area"
-import { Separator } from "@/registry/new-york/ui/separator"
+import { Badge } from "@/shadcn-scss/badge"
+import { ScrollArea } from "@/shadcn-scss/scroll-area"
 import { Mail } from "@/app/(app)/examples/mail/data"
 import { useMail } from "@/app/(app)/examples/mail/use-mail"
 
@@ -16,7 +15,15 @@ export function MailList({ items }: MailListProps) {
   const [mail, setMail] = useMail()
 
   return (
-    <ScrollArea className="h-screen">
+    <ScrollArea
+      className="h-screen"
+      style={
+        {
+          "--_scroll-area-width": "unset",
+          "--_scroll-area-height": "unset",
+        } as React.CSSProperties
+      }
+    >
       <div className="flex flex-col gap-2 p-4 pt-0">
         {items.map((item) => (
           <button
@@ -61,9 +68,7 @@ export function MailList({ items }: MailListProps) {
             {item.labels.length ? (
               <div className="flex items-center gap-2">
                 {item.labels.map((label) => (
-                  <Badge key={label} variant={getBadgeVariantFromLabel(label)}>
-                    {label}
-                  </Badge>
+                  <Badge key={label}>{label}</Badge>
                 ))}
               </div>
             ) : null}
@@ -74,16 +79,16 @@ export function MailList({ items }: MailListProps) {
   )
 }
 
-function getBadgeVariantFromLabel(
-  label: string
-): ComponentProps<typeof Badge>["variant"] {
-  if (["work"].includes(label.toLowerCase())) {
-    return "default"
-  }
+// function getBadgeVariantFromLabel(
+//   label: string
+// ): ComponentProps<typeof Badge>["variant"] {
+//   if (["work"].includes(label.toLowerCase())) {
+//     return "default"
+//   }
 
-  if (["personal"].includes(label.toLowerCase())) {
-    return "outline"
-  }
+//   if (["personal"].includes(label.toLowerCase())) {
+//     return "outline"
+//   }
 
-  return "secondary"
-}
+//   return "secondary"
+// }

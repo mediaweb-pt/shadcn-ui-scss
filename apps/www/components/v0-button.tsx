@@ -7,12 +7,12 @@ import { useFormStatus } from "react-dom"
 import { toast } from "sonner"
 
 import { cn } from "@/lib/utils"
-import { Button, ButtonProps } from "@/registry/new-york/ui/button"
+import { Button, ButtonProps } from "@/registry/scss/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
+} from "@/registry/scss/ui/tooltip"
 import { Block } from "@/registry/schema"
 import { Style } from "@/registry/styles"
 
@@ -20,7 +20,7 @@ type Size = "default" | "icon"
 
 function V0Tooltip({
   size,
-  style = "default",
+  style = "scss",
   children,
 }: React.PropsWithChildren<{ size: Size; style?: Style["name"] }>) {
   if (size === "default") {
@@ -30,14 +30,14 @@ function V0Tooltip({
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        {style === "new-york" ? (
+        {style === "scss" ? (
           <span tabIndex={-1}>{children}</span>
         ) : (
           <>{children}</>
         )}
       </TooltipTrigger>
       <TooltipContent>
-        {style === "new-york" ? (
+        {style === "scss" ? (
           <>Not available in New York</>
         ) : (
           <>Edit in v0</>
@@ -57,7 +57,7 @@ export function V0Button({
   block: Pick<Block, "name" | "description" | "code" | "style">
   size?: Size
 } & ButtonProps) {
-  if (block.style === "new-york") {
+  if (block.style === "scss") {
     return (
       <V0Tooltip size={size} style={block.style}>
         <Button
@@ -78,7 +78,7 @@ export function V0Button({
             })
           }}
           disabled={
-            block.style === "new-york" && size === "icon" ? true : disabled
+            block.style === "scss" && size === "icon" ? true : disabled
           }
           {...props}
         >
@@ -130,6 +130,7 @@ export function V0Button({
   )
 }
 
+// @ts-ignore
 function Form({
   disabled,
   size = "default",

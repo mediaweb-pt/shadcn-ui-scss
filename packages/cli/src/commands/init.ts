@@ -187,7 +187,7 @@ export async function promptForConfig(
   ])
 
   const config = rawConfigSchema.parse({
-    $schema: "https://ui.shadcn.com/schema.json",
+    $schema: "http://localhost:3003/schema.json",
     style: options.style,
     tailwind: {
       config: options.tailwindConfig,

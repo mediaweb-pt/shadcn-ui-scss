@@ -1,0 +1,13 @@
+/* Usefull - Shadow */
+////
+/// @group UsefullClasses-Shadow
+/// Usefull - Shadow
+
+///
+.shadow {
+    @each $type, $value in $shadow-types {
+        &-#{$type} {
+            box-shadow: var(--shadow-#{$type}) !important;
+        }
+    }
+}

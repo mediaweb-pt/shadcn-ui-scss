@@ -10,7 +10,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
-import { buttonVariants } from "@/registry/new-york/ui/button"
+import { buttonVariants } from "@/shadcn-scss/button"
 
 export const metadata: Metadata = {
   title: "Examples",
@@ -35,15 +35,12 @@ export default function ExamplesLayout({ children }: ExamplesLayoutProps) {
           components. Use this as a guide to build your own.
         </PageHeaderDescription>
         <PageActions>
-          <Link href="/docs" className={cn(buttonVariants(), "rounded-[6px]")}>
+          <Link href="/docs" className={cn(buttonVariants())}>
             Get Started
           </Link>
           <Link
             href="/components"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "rounded-[6px]"
-            )}
+            className={cn(buttonVariants({ variant: "outline" }))}
           >
             Components
           </Link>

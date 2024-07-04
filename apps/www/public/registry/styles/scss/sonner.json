@@ -1,0 +1,22 @@
+{
+  "name": "sonner",
+  "dependencies": [
+    "sonner",
+    "next-themes"
+  ],
+  "files": [
+    {
+      "name": "sonner.tsx",
+      "content": "\"use client\"\n\nimport { Toaster as Sonner } from \"sonner\"\n\ntype ToasterProps = React.ComponentProps<typeof Sonner>\n\nconst Toaster = ({ ...props }: ToasterProps) => {\n  return <Sonner className=\"toaster\" {...props} />\n}\n\nexport { Toaster }\n"
+    },
+    {
+      "name": "sonner.stories.tsx",
+      "content": "\"use client\"\n\nimport type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Toaster } from \".\"\nimport SonnerDemo from \"../../example/sonner-demo\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/sonner\n * # or\n * $ npm install @shadcn-ui-sass/sonner\n * ```\n *\n */\n\nconst meta: Meta<typeof SonnerDemo> = {\n  title: \"Components/Sonner\",\n  component: SonnerDemo,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof SonnerDemo>\n\nconst template = (args: any) => (\n  <>\n    <SonnerDemo {...args} />\n    <Toaster />\n  </>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Toaster } from \"./sonner\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

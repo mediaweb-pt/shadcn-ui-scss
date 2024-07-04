@@ -1,0 +1,22 @@
+{
+  "name": "alert",
+  "files": [
+    {
+      "name": "alert.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./alert.scss\"\n\nconst alertVariants = cva(\"alert\", {\n  variants: {\n    variant: {\n      destructive: \"destructive\",\n    },\n  },\n})\n\nconst Alert = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>\n>(({ className, variant, ...props }, ref) => (\n  <div\n    ref={ref}\n    role=\"alert\"\n    className={cn(alertVariants({ variant }), className)}\n    {...props}\n  />\n))\nAlert.displayName = \"Alert\"\n\nconst AlertTitle = React.forwardRef<\n  HTMLParagraphElement,\n  React.HTMLAttributes<HTMLHeadingElement>\n>(({ className, ...props }, ref) => (\n  <h5 ref={ref} className={cn(\"alert-title\", className)} {...props} />\n))\nAlertTitle.displayName = \"AlertTitle\"\n\nconst AlertDescription = React.forwardRef<\n  HTMLParagraphElement,\n  React.HTMLAttributes<HTMLParagraphElement>\n>(({ className, ...props }, ref) => (\n  <div ref={ref} className={cn(\"alert-description\", className)} {...props} />\n))\nAlertDescription.displayName = \"AlertDescription\"\n\nexport { Alert, AlertTitle, AlertDescription }\n"
+    },
+    {
+      "name": "alert.scss",
+      "content": ".alert {\n  position: relative;\n  width: 100%;\n  border-radius: var(--border-radius-soft);\n  border: var(--border-size-s) solid hsl(var(--border));\n  background-color: hsl(var(--background));\n  padding: var(--space-base);\n  color: hsl(var(--foreground));\n\n  &-title {\n    margin-top: var(--space-none);\n    margin-bottom: var(--space-xs);\n    font-weight: var(--font-medium);\n    line-height: 1;\n    letter-spacing: -0.025em;\n    font-size: var(--font-size-base);\n  }\n\n  &-description {\n    font-size: var(--font-size-s);\n\n    > p {\n      line-height: 1.625;\n    }\n  }\n\n  .icon,\n  > svg {\n    position: absolute;\n    left: var(--space-base);\n    top: var(--space-base);\n    color: hsl(var(--foreground));\n    line-height: 1;\n\n    & ~ * {\n      padding-left: var(--space-l);\n    }\n\n    & + div {\n      transform: translateY(-3px);\n    }\n  }\n\n  .icon {\n    font-size: var(--font-size-base);\n  }\n\n  > svg {\n    width: var(--font-size-base);\n    height: var(--font-size-base);\n  }\n\n  &.destructive {\n    --text-opacity: 1;\n    border-color: hsl(var(--destructive) / 0.5);\n    color: hsl(var(--destructive) / var(--text-opacity));\n    background-color: transparent;\n\n    .icon,\n    > svg {\n      --text-opacity: 1;\n      color: hsl(var(--destructive) / var(--text-opacity));\n\n      .dark & {\n        border-color: hsl(var(--destructive));\n\n        .icon,\n        > svg {\n          color: hsl(var(--destructive));\n        }\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "name": "alert.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\nimport { Terminal } from \"lucide-react\"\n\nimport { Alert, AlertDescription, AlertTitle } from \".\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/alert\n * # or\n * $ npm install @shadcn-ui-sass/alert\n * ```\n *\n */\nconst meta: Meta<typeof Alert> = {\n  title: \"Components/Alert\",\n  component: Alert,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof Alert>\n\nconst template = (args: any) => (\n  <Alert {...args}>\n    <Terminal />\n    <AlertTitle>Heads up!</AlertTitle>\n    <AlertDescription>\n      You can add components to your app using the cli.\n    </AlertDescription>\n  </Alert>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport const Distructive: Story = {\n  args: { variant: \"destructive\" },\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Alert, AlertDescription, AlertTitle } from \"./alert\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

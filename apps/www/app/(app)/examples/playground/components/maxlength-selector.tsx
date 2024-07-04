@@ -7,9 +7,9 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/new-york/ui/hover-card"
-import { Label } from "@/registry/new-york/ui/label"
-import { Slider } from "@/registry/new-york/ui/slider"
+} from "@/shadcn-scss/hover-card"
+import { Label } from "@/shadcn-scss/label"
+import { Slider } from "@/shadcn-scss/slider"
 
 interface MaxLengthSelectorProps {
   defaultValue: SliderProps["defaultValue"]

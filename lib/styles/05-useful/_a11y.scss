@@ -1,0 +1,49 @@
+/* Usefull - a11y (Accessibility) */
+////
+/// @group Patterns-a11y
+/// Usefull - a11y (Accessibility)
+
+///
+.wcag-hide-text {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}
+
+/* Skip-nav link used on Accessibility*/
+///
+.skip-nav {
+    left: var(--space-xl) !important;
+    opacity: 0 !important;
+    padding: var(--space-s) var(--space-base) !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    text-transform: uppercase !important;
+    top: 10px !important;
+    z-index: var(--layer-global-instant-interaction) !important;
+
+    &[data-showskipcontent="false"] {
+        display: none !important;
+    }
+
+    &[data-showskipcontent="true"] {
+        display: block !important;
+    }
+}
+
+///
+.has-accessible-features {
+    .skip-nav {
+        &:focus,
+        &:active {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
+    }
+}

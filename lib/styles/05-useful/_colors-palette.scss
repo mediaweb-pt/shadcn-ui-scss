@@ -1,0 +1,71 @@
+/* Usefull - Colors Palette */
+////
+/// @group UsefullClasses-Colors_Pallete
+/// Usefull - Colors Palette
+
+/*
+	Note:
+	- In order to improve the SASSDOC generated file, the loop was splited in 2!
+*/
+
+///
+.bg {
+  @each $color, $variations in $colors-extended {
+    @each $type, $value in $variations {
+      &-#{$color} {
+        @if ($type == "") {
+          & {
+            background-color: var(--color-#{$color}) !important;
+          }
+        } @else {
+          &-#{$type} {
+            background-color: var(--color-#{$color}-#{$type}) !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-background {
+    background-color: hsl(var(--background)) !important;
+  }
+
+  &-muted {
+    background-color: hsl(var(--muted)) !important;
+
+    &-foreground {
+      background-color: hsl(var(--foreground)) !important;
+    }
+  }
+}
+
+///
+.text {
+  @each $color, $variations in $colors-extended {
+    @each $type, $value in $variations {
+      &-#{$color} {
+        @if ($type == "") {
+          & {
+            color: var(--color-#{$color}) !important;
+          }
+        } @else {
+          &-#{$type} {
+            color: var(--color-#{$color}-#{$type}) !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-background {
+    color: hsl(var(--background)) !important;
+  }
+
+  &-muted {
+    color: hsl(var(--muted)) !important;
+
+    &-foreground {
+      color: hsl(var(--muted-foreground)) !important;
+    }
+  }
+}

@@ -13,8 +13,8 @@ import { absoluteUrl, cn } from "@/lib/utils"
 import { Mdx } from "@/components/mdx-components"
 import { DocsPager } from "@/components/pager"
 import { DashboardTableOfContents } from "@/components/toc"
-import { badgeVariants } from "@/registry/new-york/ui/badge"
-import { ScrollArea } from "@/registry/new-york/ui/scroll-area"
+import { badgeVariants } from "@/registry/scss/ui/badge"
+import { ScrollArea } from "@/registry/scss/ui/scroll-area"
 
 interface DocPageProps {
   params: {

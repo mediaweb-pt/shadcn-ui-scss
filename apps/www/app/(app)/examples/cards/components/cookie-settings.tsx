@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Label } from "@/registry/new-york/ui/label"
-import { Switch } from "@/registry/new-york/ui/switch"
+} from "@/shadcn-scss/card"
+import { Label } from "@/shadcn-scss/label"
+import { Switch } from "@/shadcn-scss/switch"
 
 export function DemoCookieSettings() {
   return (
@@ -51,7 +51,7 @@ export function DemoCookieSettings() {
         </div>
       </CardContent>
       <CardFooter>
-        <Button variant="outline" className="w-full">
+        <Button className={buttonVariants({variant: "outline"}) + " w-full"}>
           Save preferences
         </Button>
       </CardFooter>

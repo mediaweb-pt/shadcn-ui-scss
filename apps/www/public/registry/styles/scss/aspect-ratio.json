@@ -1,0 +1,25 @@
+{
+  "name": "aspect-ratio",
+  "dependencies": [
+    "@radix-ui/react-aspect-ratio"
+  ],
+  "files": [
+    {
+      "name": "aspect-ratio.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as AspectRatioPrimitive from \"@radix-ui/react-aspect-ratio\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./aspect-ratio.scss\"\n\nconst AspectRatio = React.forwardRef<\n  React.ElementRef<typeof AspectRatioPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof AspectRatioPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <AspectRatioPrimitive.Root\n    className={cn(\"aspect-ratio\", className)}\n    {...props}\n    ref={ref}\n  />\n))\nAspectRatio.displayName = AspectRatioPrimitive.Root.displayName\n\nexport { AspectRatio }\n"
+    },
+    {
+      "name": "aspect-ratio.scss",
+      "content": ".aspect-ratio {\n  img {\n    border-radius: var(--border-radius-soft);\n    object-fit: cover;\n    height: 100%;\n  }\n}\n"
+    },
+    {
+      "name": "aspect-ratio.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { AspectRatio } from \".\"\nimport LOGO from \"../../assets/images/bg_login_new.jpg\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/aspect-ratio\n * # or\n * $ npm install @shadcn-ui-sass/aspect-ratio\n * ```\n *\n */\n\nconst meta: Meta<typeof AspectRatio> = {\n  title: \"Components/AspectRatio\",\n  component: AspectRatio,\n  tags: [\"autodocs\"],\n  args: {\n    ratio: 16 / 9,\n  },\n}\n\ntype Story = StoryObj<typeof AspectRatio>\n\nconst template = (args: any) => (\n  <div style={{ width: 450 }}>\n    <AspectRatio ratio={args.ratio}>\n      <img src={LOGO.src} alt=\"Image\" />\n    </AspectRatio>\n  </div>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { AspectRatio } from \"./aspect-ratio\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

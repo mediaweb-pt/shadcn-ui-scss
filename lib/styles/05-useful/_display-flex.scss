@@ -1,0 +1,145 @@
+/* Usefull - Display Flex */
+////
+/// @group UsefullClasses-Display_Flex
+/// Usefull - Display Flex
+
+///
+@for $index from 1 through 3 {
+  // Generate .flex-1
+  @include useful(".flex-#{$index}", "flex", $index);
+  @include responsive(".flex-#{$index}", "flex", $index);
+}
+
+.flex {
+  &-col {
+    flex-direction: column !important;
+
+    &-reverse {
+      flex-direction: column-reverse !important;
+    }
+  }
+
+  &-row {
+    flex-direction: row !important;
+
+    &-reverse {
+      flex-direction: row-reverse !important;
+    }
+  }
+
+  &-wrap {
+    flex-wrap: wrap !important;
+
+    &-reverse {
+      flex-wrap: wrap-reverse !important;
+    }
+  }
+
+  &-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  &-shrink {
+    &-0 {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.justify {
+  &-end {
+    justify-content: flex-end !important;
+  }
+
+  &-start {
+    justify-content: flex-start !important;
+  }
+
+  &-center {
+    justify-content: center !important;
+  }
+
+  &-between {
+    justify-content: space-between !important;
+  }
+
+  &-around {
+    justify-content: space-around !important;
+  }
+
+  &-evenly {
+    justify-content: space-evenly !important;
+  }
+}
+
+.gap {
+  &-xs {
+    gap: var(--space-xs) !important;
+  }
+  &-s {
+    gap: var(--space-s) !important;
+  }
+  &-base {
+    gap: var(--space-base) !important;
+  }
+  &-m {
+    gap: var(--space-m) !important;
+  }
+  &-l {
+    gap: var(--space-l) !important;
+  }
+  &-xl {
+    gap: var(--space-xl) !important;
+  }
+  &-xxl {
+    gap: var(--space-xxl) !important;
+  }
+}
+
+.row-gap {
+  &-xs {
+    row-gap: var(--space-xs) !important;
+  }
+  &-s {
+    row-gap: var(--space-s) !important;
+  }
+  &-base {
+    row-gap: var(--space-base) !important;
+  }
+  &-m {
+    row-gap: var(--space-m) !important;
+  }
+  &-l {
+    row-gap: var(--space-l) !important;
+  }
+  &-xl {
+    row-gap: var(--space-xl) !important;
+  }
+  &-xxl {
+    row-gap: var(--space-xxl) !important;
+  }
+}
+
+.column-gap {
+  &-xs {
+    column-gap: var(--space-xs) !important;
+  }
+  &-s {
+    column-gap: var(--space-s) !important;
+  }
+  &-base {
+    column-gap: var(--space-base) !important;
+  }
+  &-m {
+    column-gap: var(--space-m) !important;
+  }
+  &-l {
+    column-gap: var(--space-l) !important;
+  }
+  &-xl {
+    column-gap: var(--space-xl) !important;
+  }
+  &-xxl {
+    column-gap: var(--space-xxl) !important;
+  }
+}

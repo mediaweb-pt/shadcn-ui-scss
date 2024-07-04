@@ -1,7 +1,8 @@
+/*
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+*/
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -51,7 +52,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   html {
     @apply scroll-smooth;
@@ -89,4 +90,13 @@
   .container {
     @apply px-4;
   }
+}
+
+.chunk-container::after {
+  border: var(--border-size-s) solid hsl(var(--border));
+  border-radius: var(--border-radius-soft);
+  box-shadow: var(--shadow-xl);
+  content: "";
+  inset: -1rem;
+  position: absolute;
 }

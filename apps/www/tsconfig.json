@@ -18,6 +18,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
+      "@/shadcn-scss/*": ["./registry/scss/ui/*"],
+      "@/shadcn-scss-example/*": ["./registry/scss/example/*"],
+      "@/scripts/*": ["./scripts/*"],
+      "@/styles/*": ["./styles/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [

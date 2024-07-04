@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -8,17 +8,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
-import { Textarea } from "@/registry/new-york/ui/textarea"
+} from "@/shadcn-scss/select"
+import { Textarea } from "@/shadcn-scss/textarea"
 
 export function DemoReportAnIssue() {
   return (
@@ -51,7 +51,7 @@ export function DemoReportAnIssue() {
             <Select defaultValue="2">
               <SelectTrigger
                 id="security-level"
-                className="line-clamp-1 w-[160px] truncate"
+                className="line-clamp-1 flex w-[160px] truncate"
               >
                 <SelectValue placeholder="Select level" />
               </SelectTrigger>
@@ -77,7 +77,7 @@ export function DemoReportAnIssue() {
         </div>
       </CardContent>
       <CardFooter className="justify-between space-x-2">
-        <Button variant="ghost">Cancel</Button>
+        <Button className={buttonVariants({variant: "ghost"})}>Cancel</Button>
         <Button>Submit</Button>
       </CardFooter>
     </Card>

@@ -1,0 +1,34 @@
+/* Usefull - Border Size */
+////
+/// @group UsefullClasses-Border_Size
+/// Usefull - Border Size
+
+///
+.border {
+    &-size {
+        @each $type, $value in $border-size {
+            // Generated - Eg: .border-size-none
+            &-#{$type} {
+                @if $type == "none" {
+                    border-width: var(--border-size-#{$type}) !important;
+                } @else {
+                    border: var(--border-size-#{$type}) solid currentColor !important;
+                }
+            }
+        }
+    }
+
+    & {
+        @each $box-side in $box-sides {
+            @each $type, $value in $border-size {
+                @if $type != "none" {
+                    // Generated - Eg: .border-top-s
+                    &-#{$box-side}-#{$type}:not(.columns),
+                    &-#{$box-side}-#{$type}.columns > .columns-item:not(:last-child) {
+                        border-#{$box-side}: var(--border-size-#{$type}) solid currentColor !important;
+                    }
+                }
+            }
+        }
+    }
+}

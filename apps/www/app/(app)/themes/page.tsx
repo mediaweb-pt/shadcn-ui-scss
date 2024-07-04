@@ -22,14 +22,16 @@ export default function ThemesPage() {
     <div className="container">
       <ThemeWrapper
         defaultTheme="zinc"
-        className="relative flex flex-col items-start md:flex-row md:items-center"
+        className="themes-page"
       >
         <PageHeader>
-          <Announcement />
-          <PageHeaderHeading className="hidden md:block">
-            Add colors. Make it yours.
+          <div className="margin-bottom-base">
+            <Announcement />
+          </div>
+          <PageHeaderHeading>
+            Add colors,
           </PageHeaderHeading>
-          <PageHeaderHeading className="md:hidden">
+          <PageHeaderHeading>
             Make it yours
           </PageHeaderHeading>
           <PageHeaderDescription>

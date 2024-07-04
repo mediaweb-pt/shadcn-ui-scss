@@ -1,0 +1,61 @@
+/* Usefull - Miscellaneous */
+////
+/// @group UsefullClasses-Miscellaneous
+/// Usefull - Miscellaneous
+
+///
+.transition-colors {
+  transition-duration: 150ms !important;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.fill-current{
+  fill: currentColor !important;
+}
+
+///
+.cursor {
+  &-pointer {
+    cursor: pointer !important;
+  }
+}
+
+///
+.no {
+  &-transition {
+    transition: none !important;
+  }
+
+  &-transform {
+    transform: none !important;
+  }
+}
+
+/* Hide StickyObserve when HideOnScroll is used*/
+///
+.sticky-observer {
+  height: var(--header-size) !important;
+  left: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Used in order to deal with allow propagation event when is't blocked by default
+Example can be checked at Tooltip since we can have clickable containers. */
+///
+[data-allow-event-propagation="true"] > *,
+[data-allow-event-propagation="True"] > * {
+  pointer-events: none !important;
+}
+
+// Responsive --------------------------------------------------------------------
+///
+.tablet .tablet-full-width,
+.phone .phone-full-width {
+  margin-left: 0 !important;
+  width: 100% !important;
+}

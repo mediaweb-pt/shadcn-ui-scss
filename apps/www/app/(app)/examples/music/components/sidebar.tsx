@@ -1,8 +1,12 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
-import { ScrollArea } from "@/registry/new-york/ui/scroll-area"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 
-import { Playlist } from "../data/playlists"
+import { cn } from "@/lib/utils"
+import { ScrollArea } from "@/shadcn-scss/scroll-area";
+
+
+
+import { Playlist } from "../data/playlists";
+
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   playlists: Playlist[]
@@ -17,7 +21,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
             Discover
           </h2>
           <div className="space-y-1">
-            <Button variant="secondary" className="w-full justify-start">
+            <Button className={buttonVariants({variant: "secondary"}) + " w-full justify-start"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -33,7 +37,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
               </svg>
               Listen Now
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Button className={buttonVariants({variant: "ghost"}) + " w-full justify-start"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -51,7 +55,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
               </svg>
               Browse
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Button className={buttonVariants({variant: "ghost"}) + " w-full justify-start"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -77,7 +81,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
             Library
           </h2>
           <div className="space-y-1">
-            <Button variant="ghost" className="w-full justify-start">
+            <Button className={buttonVariants({variant: "ghost"}) + " w-full justify-start"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -96,7 +100,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
               </svg>
               Playlists
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Button className={buttonVariants({variant: "ghost"}) + " w-full justify-start"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -112,7 +116,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
               </svg>
               Songs
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Button className={buttonVariants({variant: "ghost"}) + " w-full justify-start"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -128,7 +132,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
               </svg>
               Made for You
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Button className={buttonVariants({variant: "ghost"}) + " w-full justify-start"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -144,7 +148,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
               </svg>
               Artists
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Button className={buttonVariants({variant: "ghost"}) + " w-full justify-start"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -173,8 +177,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
               {playlists?.map((playlist, i) => (
                 <Button
                   key={`${playlist}-${i}`}
-                  variant="ghost"
-                  className="w-full justify-start font-normal"
+                  className={buttonVariants({variant: "ghost"}) + " w-full justify-start font-normal"}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

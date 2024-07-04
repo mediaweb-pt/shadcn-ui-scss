@@ -1,0 +1,221 @@
+.navigation-menu {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  max-width: max-content;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  &-list {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+  }
+
+  &-trigger {
+    display: inline-flex;
+    height: 2.5rem;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-soft);
+    background-color: hsl(var(--background));
+    padding: var(--space-s) var(--space-base);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-medium);
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+
+    &:hover {
+      background-color: hsl(var(--accent));
+      color: hsl(var(--accent-foreground));
+    }
+
+    &:focus {
+      background-color: hsl(var(--accent));
+      color: hsl(var(--accent-foreground));
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &[data-active] {
+      background-color: hsl(var(--accent) / 0.5);
+    }
+
+    &[data-state="open"] {
+      background-color: hsl(var(--accent) / 0.5);
+
+      .navigation-menu-icon {
+        --rotate: 180deg;
+        transform: translate(var(--translate-x), var(--translate-y))
+          rotate(var(--rotate)) skewX(var(--skew-x)) skewY(var(--skew-y))
+          scaleX(var(--scale-x)) scaleY(var(--scale-y));
+      }
+    }
+  }
+
+  &-icon {
+    position: relative;
+    top: 1px;
+    margin-left: var(--space-xs);
+    height: var(--font-size-xs);
+    width: var(--font-size-xs);
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+      filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.2s;
+    animation-duration: 0.2s;
+  }
+
+  &-content {
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      width: auto;
+    }
+
+    &[data-motion^="from-"],
+    &[data-state="open"],
+    &[data-state="visible"] {
+      animation-name: enter;
+      animation-duration: 0.15s;
+      --enter-opacity: initial;
+      --enter-scale: initial;
+      --enter-rotate: initial;
+      --enter-translate-x: initial;
+      --enter-translate-y: initial;
+    }
+
+    &[data-motion^="to-"],
+    &[data-state="closed"],
+    &[data-state="hidden"],
+    &[data-swipe="end"] {
+      animation-name: exit;
+      animation-duration: 0.15s;
+      --exit-opacity: initial;
+      --exit-scale: initial;
+      --exit-rotate: initial;
+      --exit-translate-x: initial;
+      --exit-translate-y: initial;
+    }
+
+    &[data-motion^="from-"] {
+      --enter-opacity: 0;
+    }
+
+    &[data-motion^="to-"],
+    &[data-state="closed"] {
+      --exit-opacity: 0;
+    }
+
+    &[data-motion="from-end"] {
+      --enter-translate-x: 13rem;
+    }
+
+    &[data-motion="from-start"] {
+      --enter-translate-x: -13rem;
+    }
+
+    &[data-motion="to-end"] {
+      --exit-translate-x: 13rem;
+    }
+
+    &[data-motion="to-start"] {
+      --exit-translate-x: -13rem;
+    }
+  }
+
+  &-viewportWrapper {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-viewport {
+    position: relative;
+    margin-top: var(--space-xs);
+    height: var(--radix-navigation-menu-viewport-height);
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius-soft);
+    border: var(--border-size-s) solid hsl(var(--border));
+    background-color: hsl(var(--popover));
+    color: hsl(var(--popover-foreground));
+    box-shadow: var(--shadow-l);
+
+    &[data-motion^="from-"],
+    &[data-state="open"],
+    &[data-state="visible"] {
+      animation-name: enter;
+      animation-duration: 0.15s;
+      --enter-opacity: initial;
+      --enter-scale: initial;
+      --enter-rotate: initial;
+      --enter-translate-x: initial;
+      --enter-translate-y: initial;
+    }
+
+    &[data-motion^="to-"],
+    &[data-state="closed"],
+    &[data-state="hidden"],
+    &[data-swipe="end"] {
+      animation-name: exit;
+      animation-duration: 0.15s;
+      --exit-opacity: initial;
+      --exit-scale: initial;
+      --exit-rotate: initial;
+      --exit-translate-x: initial;
+      --exit-translate-y: initial;
+    }
+
+    &[data-state="closed"] {
+      --exit-scale: 0.95;
+    }
+
+    &[data-state="open"] {
+      --enter-scale: 0.9;
+    }
+
+    @media (min-width: 768px) {
+      width: var(--radix-navigation-menu-viewport-width);
+    }
+  }
+
+  &-link {
+    display: block;
+    user-select: none;
+    border-radius: var(--border-radius-soft);
+    padding: var(--space-s);
+    line-height: 1;
+    text-decoration-line: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+
+    &:hover,
+    &:focus {
+      background-color: hsl(var(--accent));
+      color: hsl(var(--accent-foreground));
+    }
+  }
+}

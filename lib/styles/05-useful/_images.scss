@@ -1,0 +1,29 @@
+/* Usefull - Images */
+////
+/// @group UsefullClasses-Image
+/// Usefull - Images
+
+///
+.img-cover {
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+///
+img {
+    &.img {
+        &-rounded {
+            border-radius: 10px !important;
+        }
+
+        &-circle {
+            border-radius: var(--border-radius-circle) !important;
+        }
+    }
+
+    &.thumbnail {
+        background-color: var(--color-neutral-0) !important;
+        border: var(--border-size-s) solid var(--color-neutral-4) !important;
+        padding: var(--space-xs) !important;
+    }
+}

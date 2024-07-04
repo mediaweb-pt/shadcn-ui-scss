@@ -4,15 +4,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york/ui/avatar"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/shadcn-scss/card"
 import {
   Command,
   CommandEmpty,
@@ -20,12 +20,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york/ui/command"
+} from "@/shadcn-scss/command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from "@/shadcn-scss/popover"
 
 export function DemoTeamMembers() {
   return (
@@ -50,7 +50,7 @@ export function DemoTeamMembers() {
           </div>
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" className="ml-auto">
+              <Button className={buttonVariants({variant: "outline"}) + " ml-auto"}>
                 Owner{" "}
                 <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>

@@ -6,13 +6,13 @@ import { addDays, format } from "date-fns"
 import { DateRange } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
-import { Calendar } from "@/registry/new-york/ui/calendar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Calendar } from "@/shadcn-scss/calendar"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from "@/shadcn-scss/popover"
 
 export function CalendarDateRangePicker({
   className,
@@ -29,9 +29,9 @@ export function CalendarDateRangePicker({
           <Button
             id="date"
             variant={"outline"}
-            className={cn(
-              "w-[260px] justify-start text-left font-normal",
-              !date && "text-muted-foreground"
+            className={buttonVariants({variant: "outline"}) + cn(
+              " w-[260px] justify-start text-left font-normal",
+              !date && " text-muted-foreground"
             )}
           >
             <CalendarIcon className="mr-2 h-4 w-4" />

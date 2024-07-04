@@ -11,7 +11,7 @@ import { highlightCode } from "@/lib/highlight-code"
 import { BlockChunk, blockSchema, registryEntrySchema } from "@/registry/schema"
 import { Style } from "@/registry/styles"
 
-const DEFAULT_BLOCKS_STYLE = "default" satisfies Style["name"]
+const DEFAULT_BLOCKS_STYLE = "scss" satisfies Style["name"]
 
 const project = new Project({
   compilerOptions: {},

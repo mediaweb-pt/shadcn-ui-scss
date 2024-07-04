@@ -1,0 +1,173 @@
+/* ===============================================================================
+Animations - Enter & Exit
+=============================================================================== */
+
+@keyframes enter {
+    0% {
+        opacity: var(--enter-opacity, 1);
+        transform: translate3d(var(--enter-translate-x, 0), var(--enter-translate-y, 0), 0)
+            scale3d(var(--enter-scale, 1), var(--enter-scale, 1), var(--enter-scale, 1)) rotate(var(--enter-rotate, 0));
+    }
+}
+
+@keyframes exit {
+    100% {
+        opacity: var(--exit-opacity, 1);
+        transform: translate3d(var(--exit-translate-x, 0), var(--exit-translate-y, 0), 0)
+            scale3d(var(--exit-scale, 1), var(--exit-scale, 1), var(--exit-scale, 1)) rotate(var(--exit-rotate, 0));
+    }
+}
+
+/* ===============================================================================
+Animations - Slide In From {side}
+=============================================================================== */
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================================================================
+Animations - Slide Out To {side}
+=============================================================================== */
+
+@keyframes slideOutToRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideOutToLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideOutToBottom {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+@keyframes slideOutToTop {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+/* ===============================================================================
+Animation Classes
+=============================================================================== */
+
+.slide {
+    &-in-from {
+        &-left {
+            animation: slideInFromLeft 0.5s ease-out;
+        }
+
+        &-right {
+            animation: slideInFromRight 0.5s ease-out;
+        }
+
+        &-top {
+            animation: slideInFromTop 0.5s ease-out;
+        }
+
+        &-bottom {
+            animation: slideInFromBottom 0.5s ease-out;
+        }
+    }
+
+    &-out-to {
+        &-left {
+            animation: slideOutToLeft 0.5s ease-out;
+        }
+
+        &-right {
+            animation: slideOutToRight 0.5s ease-out;
+        }
+
+        &-top {
+            animation: slideOutToTop 0.5s ease-out;
+        }
+
+        &-bottom {
+            animation: slideOutToBottom 0.5s ease-out;
+        }
+    }
+}
+
+/* ===============================================================================
+Animation Caret Blink
+=============================================================================== */
+@keyframes caret-blink {
+    0%,
+    70%,
+    to {
+        opacity: 1;
+    }
+
+    20%,
+    50% {
+        opacity: 0;
+    }
+}

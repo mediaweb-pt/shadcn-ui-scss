@@ -1,0 +1,320 @@
+//
+// SCSS Variables
+//
+
+// Responsive - Breakpoints
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "xxl": 1536px,
+);
+
+// Typography - Size
+$typography-sizes: (
+  display: 36px,
+  xl: 24px,
+  l: 20px,
+  m: 18px,
+  base: 16px,
+  s: 14px,
+  xs: 12px,
+  xxs: 8px,
+  label: 12px,
+);
+
+$typography-heading-sizes: (
+  1: 32px,
+  2: 28px,
+  3: 26px,
+  4: 22px,
+  5: 20px,
+  6: 18px,
+);
+
+// Typography - Weight
+$typography-weight: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+);
+
+// Colors - Brand Palette
+$colors-brand: (
+  primary: #8433ba,
+  secondary: #ff9300,
+);
+
+// Colors - Extended Palette
+$colors-extended: (
+  "red": (
+    lightest: #faeaea,
+    lighter: #e9aaaa,
+    light: #d96a6a,
+    "": #c92a2a,
+    dark: #ab2424,
+    darker: #8d1d1d,
+    darkest: #6f1717,
+  ),
+  "orange": (
+    lightest: #fef0e6,
+    lighter: #fcc29c,
+    light: #f99551,
+    "": #f76707,
+    dark: #d25806,
+    darker: #ad4805,
+    darkest: #883904,
+  ),
+  "yellow": (
+    lightest: #fef5e5,
+    lighter: #fbd999,
+    light: #f8bc4c,
+    "": #f59f00,
+    dark: #d08700,
+    darker: #ac6f00,
+    darkest: #875700,
+  ),
+  "lime": (
+    lightest: #f1f8e8,
+    lighter: #c7e3a2,
+    light: #9ecd5c,
+    "": #74b816,
+    dark: #639c13,
+    darker: #51810f,
+    darkest: #40650c,
+  ),
+  "green": (
+    lightest: #ebf7ed,
+    lighter: #afe0b8,
+    light: #73c982,
+    "": #37b24d,
+    dark: #2f9741,
+    darker: #267d36,
+    darkest: #1e622a,
+  ),
+  "teal": (
+    lightest: #e6f2ef,
+    lighter: #9cccbd,
+    light: #52a58c,
+    "": #087f5b,
+    dark: #076c4d,
+    darker: #065940,
+    darkest: #044632,
+  ),
+  "cyan": (
+    lightest: #e7f2f4,
+    lighter: #9eccd3,
+    light: #56a6b2,
+    "": #0d8091,
+    dark: #0b6d7b,
+    darker: #095a66,
+    darkest: #074650,
+  ),
+  "blue": (
+    lightest: #e8f2fa,
+    lighter: #a3c9ea,
+    light: #5fa1db,
+    "": #1a79cb,
+    dark: #1667ad,
+    darker: #12558e,
+    darkest: #0e4370,
+  ),
+  "indigo": (
+    lightest: #eceffd,
+    lighter: #b3c1f7,
+    light: #7b92f1,
+    "": #4263eb,
+    dark: #3854c8,
+    darker: #2e45a5,
+    darkest: #243681,
+  ),
+  "violet": (
+    lightest: #f1edfd,
+    lighter: #c6b6f6,
+    light: #9b7fef,
+    "": #7048e8,
+    dark: #5f3dc5,
+    darker: #4e32a2,
+    darkest: #3e2880,
+  ),
+  "grape": (
+    lightest: #f7ecfa,
+    lighter: #dfb2e9,
+    light: #c678d9,
+    "": #ae3ec9,
+    dark: #9435ab,
+    darker: #7a2b8d,
+    darkest: #60226f,
+  ),
+  "pink": (
+    lightest: #fbebf0,
+    lighter: #efadc4,
+    light: #e27098,
+    "": #d6336c,
+    dark: #b62b5c,
+    darker: #96244c,
+    darkest: #761c3b,
+  ),
+);
+
+// Colors - Accessibility Palette
+$color-focus-outer: #77b7ee !default;
+$color-focus-inner: #fff !default;
+
+// Colors - Neutral Palette
+$colors-neutral: (
+  0: #ffffff,
+  1: #f8f9fa,
+  2: #f1f3f5,
+  3: #e9ecef,
+  4: #dee2e6,
+  5: #ced4da,
+  6: #adb5bd,
+  7: #6a7178,
+  8: #4f575e,
+  9: #272b30,
+  10: #101213,
+);
+
+// Color - Semantic Palette
+$colors-semantic: (
+  error-light: #fbeaea,
+  error: #e03131,
+  warning-light: #fcf5e6,
+  warning: #e9a100,
+  success-light: #eaf2eb,
+  success: #2a843c,
+  info-light: #e6f5fb,
+  info: #009dde,
+);
+
+// Spacing - Spacing Sizes
+$sizes: (
+  none: 0,
+  xs: 0.25rem,
+  s: 0.5rem,
+  base: 1rem,
+  m: 1.5rem,
+  l: 2rem,
+  xl: 2.5rem,
+  xxl: 3rem,
+);
+
+// Box Sides
+$box-sides: "top", "right", "bottom", "left";
+
+// Box Corners
+$box-corners: "top-left", "top-right", "bottom-right", "bottom-left";
+
+// Border Radius
+$border-radius-types: (
+  none: 0,
+  soft: 4px,
+  rounded: 100px,
+  circle: 100%,
+);
+
+// Border Size
+$border-size: (
+  none: 0,
+  s: 1px,
+  m: 2px,
+  l: 3px,
+  xl: 4px,
+);
+
+// Border Radius BoxSides
+$border-radius-box-sides: "top" "left" "right", "bottom" "left" "right";
+
+// Shadows (Elevations)
+$shadow-types: (
+  "none": none,
+  "xs": "0 1px 2px 0 rgb(0 0 0 / 0.01)",
+  "s": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+  "m": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+  "l": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+  "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+);
+
+// App Settings
+$color-background-body: #f3f6f8 !default;
+$color-background-login: #ffffff !default;
+
+$header-color: #ffffff !default;
+$header-size: 56px !default;
+$header-size-content: 48px !default;
+$bottom-bar-size: 56px !default;
+
+$side-menu-color: #ffffff !default;
+$side-menu-size: 300px !default;
+$side-menu-size-collapsed: 76px !default;
+$side-menu-size-vertical: 120px !default;
+$side-menu-size-secondary: 280px !default;
+
+$sidebar-small-color: #fff !default;
+$sidebar-small-size: 60px !default;
+
+$sidebar-width: 450px !default;
+
+// Opacities
+$opacity-high: 0.3;
+$opacity-medium: 0.2;
+$opacity-low: 0.05;
+
+$bg-low-opacity: rgba(0, 0, 0, 0.02);
+$bg-medium-opacity: rgba(0, 0, 0, 0.06);
+$bg-high-opacity: rgba(0, 0, 0, 0.12);
+
+// Button Size
+$btn-height-small: 32px;
+$btn-height: 40px;
+$btn-height-large: 48px;
+
+// Input Size
+$input-height-small: $btn-height-small;
+$input-height: $btn-height;
+$input-height-large: $btn-height-large;
+
+// iOS Safe Areas (Notch Support)
+$os-safe-area-top: env(safe-area-inset-top);
+$os-safe-area-right: env(safe-area-inset-right);
+$os-safe-area-bottom: env(safe-area-inset-bottom);
+$os-safe-area-left: env(safe-area-inset-left);
+
+// TODO: Remove upon review
+// /* New Layouts */
+$sidemenu-color: #ffffff !default;
+$sidemenu-size: 300px !default;
+$sidemenu-collapsed-size: 100px !default;
+$sidemenu-vertical-size: 120px !default;
+$sidemenu-sidebar-size: 295px !default;
+
+// /* New varibles colors */
+$color-text-main: #101213;
+$color-text-main-opacity: rgba(0, 0, 0, 0.9);
+$color-text-secondary: #272b30;
+$color-text-secondary-opacity: rgba(0, 0, 0, 0.75);
+$color-text-subtle: #4f575e;
+$color-text-subtle-opacity: rgba(0, 0, 0, 0.6);
+$color-text-disabled: rgba(0, 0, 0, 0.3);
+
+$color-background-body: #f8f9fa;
+$color-background-content: #ffffff;
+$color-background-soft: #f1f3f5;
+$color-background-medium-soft: #e9ecef;
+$color-background-input: #ffffff;
+$color-background-input-disabled: #f1f3f5;
+$color-background-menu: #ffffff;
+$color-background-header: #ffffff;
+$color-background-opacity-low: rgba(0, 0, 0, 0.02);
+$color-background-opacity-medium: rgba(0, 0, 0, 0.06);
+$color-background-opacity-high: rgba(0, 0, 0, 0.12);
+
+$color-border-input: #6a7178;
+$color-border-input-hover: #4f575e;
+$color-border-soft: rgba(0, 0, 0, 0.06);
+$color-border-focus: #77b7ee;
+$color-border-shadow: rgba(0, 0, 0, 0.1);

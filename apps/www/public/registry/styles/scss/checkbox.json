@@ -1,0 +1,25 @@
+{
+  "name": "checkbox",
+  "dependencies": [
+    "@radix-ui/react-checkbox"
+  ],
+  "files": [
+    {
+      "name": "checkbox.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as CheckboxPrimitive from \"@radix-ui/react-checkbox\"\nimport { Check } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./checkbox.scss\"\n\nconst Checkbox = React.forwardRef<\n  React.ElementRef<typeof CheckboxPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <CheckboxPrimitive.Root\n    ref={ref}\n    className={cn(\"checkbox\", className)}\n    {...props}\n  >\n    <CheckboxPrimitive.Indicator className={cn(\"checkbox-indicator\")}>\n      <Check />\n    </CheckboxPrimitive.Indicator>\n  </CheckboxPrimitive.Root>\n))\nCheckbox.displayName = CheckboxPrimitive.Root.displayName\n\nexport { Checkbox }\n"
+    },
+    {
+      "name": "checkbox.scss",
+      "content": ".checkbox {\n  height: 1rem;\n  width: 1rem;\n  flex-shrink: 0;\n  border-radius: var(--border-radius-soft);\n  border: var(--border-size-s) solid hsl(var(--primary));\n\n  &:focus-visible {\n    outline: 2px solid transparent;\n    outline-offset: 2px;\n    box-shadow: 0 0 #0000;\n  }\n\n  &:disabled {\n    cursor: not-allowed;\n    opacity: 0.5;\n  }\n\n  &[data-state=\"checked\"] {\n    background-color: hsl(var(--primary));\n    color: hsl(var(--primary-foreground));\n  }\n\n  &-indicator {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: currentColor;\n\n    .icon {\n      font-size: var(--font-size-base);\n    }\n\n    svg {\n      width: var(--font-size-base);\n      height: var(--font-size-base);\n    }\n  }\n\n  &:disabled + * {\n    cursor: not-allowed;\n    opacity: 0.7;\n  }\n}\n"
+    },
+    {
+      "name": "checkbox.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Checkbox } from \".\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/checkbox\n * # or\n * $ npm install @shadcn-ui-sass/checkbox\n * ```\n *\n */\n\nconst meta: Meta<typeof Checkbox> = {\n  title: \"Components/Checkbox\",\n  component: Checkbox,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof Checkbox>\n\nconst template = (args: any) => (\n  <div className=\"display-flex align-items-center gap-s\">\n    <Checkbox {...args} id=\"terms\" />\n    <label\n      htmlFor=\"terms\"\n      className=\"font-size-s font-medium\"\n      style={{\n        lineHeight: 1,\n      }}\n    >\n      Accept terms and conditions\n    </label>\n  </div>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport const WithText: Story = {\n  render: (args) => (\n    <div className=\"display-flex gap-s\">\n      <Checkbox {...args} id=\"terms1\" />\n      <div className=\"display-grid gap-s\" style={{ lineHeight: 1 }}>\n        <label\n          htmlFor=\"terms1\"\n          className=\"font-size-s font-medium\"\n          style={{ lineHeight: 1 }}\n        >\n          Accept terms and conditions\n        </label>\n        <p className=\"font-size-s text-neutral-7\">\n          You agree to our Terms of Service and Privacy Policy.\n        </p>\n      </div>\n    </div>\n  ),\n}\n\nexport const Disabled: Story = {\n  render: (args) => (\n    <div className=\"display-flex align-items-center gap-s\">\n      <Checkbox {...args} id=\"terms2\" disabled />\n      <label\n        htmlFor=\"terms2\"\n        className=\"font-size-s font-medium\"\n        style={{ lineHeight: 1 }}\n      >\n        Accept terms and conditions\n      </label>\n    </div>\n  ),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Checkbox } from \"./checkbox\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

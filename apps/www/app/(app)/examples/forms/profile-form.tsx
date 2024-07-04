@@ -1,12 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useFieldArray, useForm } from "react-hook-form"
-import { z } from "zod"
-
-import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Form,
   FormControl,
@@ -15,17 +10,22 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/new-york/ui/form"
-import { Input } from "@/registry/new-york/ui/input"
+} from "@/shadcn-scss/form"
+import { Input } from "@/shadcn-scss/input"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
-import { Textarea } from "@/registry/new-york/ui/textarea"
-import { toast } from "@/registry/new-york/ui/use-toast"
+} from "@/shadcn-scss/select"
+import { Textarea } from "@/shadcn-scss/textarea"
+import { toast } from "@/shadcn-scss/toast/use-toast"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useFieldArray, useForm } from "react-hook-form"
+import { z } from "zod"
+
+import { cn } from "@/lib/utils"
 
 const profileFormSchema = z.object({
   username: z
@@ -92,7 +92,7 @@ export function ProfileForm() {
           control={form.control}
           name="username"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-2">
               <FormLabel>Username</FormLabel>
               <FormControl>
                 <Input placeholder="shadcn" {...field} />
@@ -109,7 +109,7 @@ export function ProfileForm() {
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-2">
               <FormLabel>Email</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
@@ -135,7 +135,7 @@ export function ProfileForm() {
           control={form.control}
           name="bio"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-2">
               <FormLabel>Bio</FormLabel>
               <FormControl>
                 <Textarea
@@ -159,7 +159,7 @@ export function ProfileForm() {
               key={field.id}
               name={`urls.${index}.value`}
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="space-y-2">
                   <FormLabel className={cn(index !== 0 && "sr-only")}>
                     URLs
                   </FormLabel>
@@ -176,9 +176,9 @@ export function ProfileForm() {
           ))}
           <Button
             type="button"
-            variant="outline"
-            size="sm"
-            className="mt-2"
+            className={
+              buttonVariants({ variant: "outline", size: "sm" }) + " mt-2"
+            }
             onClick={() => append({ value: "" })}
           >
             Add URL

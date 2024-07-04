@@ -1,0 +1,25 @@
+{
+  "name": "avatar",
+  "dependencies": [
+    "@radix-ui/react-avatar"
+  ],
+  "files": [
+    {
+      "name": "avatar.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as AvatarPrimitive from \"@radix-ui/react-avatar\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./avatar.scss\"\n\nconst Avatar = React.forwardRef<\n  React.ElementRef<typeof AvatarPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <AvatarPrimitive.Root\n    ref={ref}\n    className={cn(\"avatar\", className)}\n    {...props}\n  />\n))\nAvatar.displayName = AvatarPrimitive.Root.displayName\n\nconst AvatarImage = React.forwardRef<\n  React.ElementRef<typeof AvatarPrimitive.Image>,\n  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>\n>(({ className, ...props }, ref) => (\n  <AvatarPrimitive.Image\n    ref={ref}\n    className={cn(\"avatar-image\", className)}\n    {...props}\n  />\n))\nAvatarImage.displayName = AvatarPrimitive.Image.displayName\n\nconst AvatarFallback = React.forwardRef<\n  React.ElementRef<typeof AvatarPrimitive.Fallback>,\n  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>\n>(({ className, ...props }, ref) => (\n  <AvatarPrimitive.Fallback\n    ref={ref}\n    className={cn(\"avatar-fallback\", className)}\n    {...props}\n  />\n))\nAvatarFallback.displayName = AvatarPrimitive.Fallback.displayName\n\nexport { Avatar, AvatarImage, AvatarFallback }\n"
+    },
+    {
+      "name": "avatar.scss",
+      "content": ".avatar {\n  position: relative;\n  display: flex;\n  height: 2.5rem;\n  width: 2.5rem;\n  flex-shrink: 0;\n  overflow: hidden;\n  border-radius: var(--border-radius-circle);\n\n  &-image {\n    aspect-ratio: 1 / 1;\n    height: 100%;\n    width: 100%;\n  }\n\n  &-fallback {\n    display: flex;\n    height: 100%;\n    width: 100%;\n    align-items: center;\n    justify-content: center;\n    border-radius: var(--border-radius-circle);\n    background-color: hsl(var(--muted));\n  }\n}\n"
+    },
+    {
+      "name": "avatar.stories.tsx",
+      "content": "import { ComponentProps } from \"react\"\nimport type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \".\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/avatar\n * # or\n * $ npm install @shadcn-ui-sass/avatar\n * ```\n *\n */\n\nconst meta: Meta<ComponentProps<typeof Avatar>> = {\n  title: \"Components/Avatar\",\n  component: Avatar,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof Avatar>\n\nconst template = (args: any) => (\n  <Avatar {...args}>\n    <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />\n    <AvatarFallback>CN</AvatarFallback>\n  </Avatar>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport const Fallback: Story = {\n  render: (args) => (\n    <Avatar {...args}>\n      <AvatarFallback>CN</AvatarFallback>\n    </Avatar>\n  ),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Avatar, AvatarImage, AvatarFallback } from \"./avatar\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

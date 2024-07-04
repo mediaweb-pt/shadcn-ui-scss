@@ -1,0 +1,22 @@
+{
+  "name": "textarea",
+  "files": [
+    {
+      "name": "textarea.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./textarea.scss\"\n\nexport interface TextareaProps\n  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}\n\nconst Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(\n  ({ className, ...props }, ref) => {\n    return (\n      <textarea className={cn(\"text-area\", className)} ref={ref} {...props} />\n    )\n  }\n)\nTextarea.displayName = \"Textarea\"\n\nexport { Textarea }\n"
+    },
+    {
+      "name": "textarea.scss",
+      "content": "/*\nplaceholder:text-muted-foreground */\n\n.text-area {\n  background-color: hsl(var(--background-color));\n  border: var(--border-size-s) solid hsl(var(--input));\n  border-radius: var(--border-radius-soft);\n  display: flex;\n  font-size: var(--font-size-s);\n  min-height: 80px;\n  padding: var(--space-s) var(--space-base);\n  width: 100%;\n\n  &::placeholder {\n    color: hsl(var(--muted-foreground));\n  }\n\n  &:focus {\n    outline: 1px solid hsl(var(--ring));\n  }\n\n  &:focus-visible {\n    outline: 2px solid hsl(var(--ring));\n    outline-offset: 2px;\n  }\n\n  &[disabled] {\n    cursor: not-allowed;\n    opacity: 0.5;\n  }\n}\n"
+    },
+    {
+      "name": "textarea.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Textarea } from \".\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/textarea\n * # or\n * $ npm install @shadcn-ui-sass/textarea\n * ```\n *\n */\n\nconst meta: Meta<typeof Textarea> = {\n  title: \"Components/Textarea\",\n  component: Textarea,\n  tags: [\"autodocs\"],\n  args: {\n    placeholder: \"placeholder\",\n    disabled: false,\n  },\n}\n\ntype Story = StoryObj<typeof Textarea>\n\nconst template = (args: any) => <Textarea {...args} />\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport const Disabled: Story = {\n  args: {\n    disabled: true,\n  },\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Textarea } from \"./textarea\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

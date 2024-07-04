@@ -5,14 +5,20 @@
       "@radix-ui/react-accordion"
     ],
     "files": [
-      "ui/accordion.tsx"
+      "ui/accordion.tsx",
+      "ui/accordion.scss",
+      "ui/accordion.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
   {
     "name": "alert",
     "files": [
-      "ui/alert.tsx"
+      "ui/alert.tsx",
+      "ui/alert.scss",
+      "ui/alert.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -25,7 +31,10 @@
       "button"
     ],
     "files": [
-      "ui/alert-dialog.tsx"
+      "ui/alert-dialog.tsx",
+      "ui/alert-dialog.scss",
+      "ui/alert-dialog.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -35,7 +44,10 @@
       "@radix-ui/react-aspect-ratio"
     ],
     "files": [
-      "ui/aspect-ratio.tsx"
+      "ui/aspect-ratio.tsx",
+      "ui/aspect-ratio.scss",
+      "ui/aspect-ratio.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -45,14 +57,20 @@
       "@radix-ui/react-avatar"
     ],
     "files": [
-      "ui/avatar.tsx"
+      "ui/avatar.tsx",
+      "ui/avatar.scss",
+      "ui/avatar.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
   {
     "name": "badge",
     "files": [
-      "ui/badge.tsx"
+      "ui/badge.tsx",
+      "ui/badge.scss",
+      "ui/badge.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -62,7 +80,10 @@
       "@radix-ui/react-slot"
     ],
     "files": [
-      "ui/breadcrumb.tsx"
+      "ui/breadcrumb.tsx",
+      "ui/breadcrumb.scss",
+      "ui/breadcrumb.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -72,7 +93,10 @@
       "@radix-ui/react-slot"
     ],
     "files": [
-      "ui/button.tsx"
+      "ui/button.tsx",
+      "ui/button.scss",
+      "ui/button.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -86,14 +110,20 @@
       "button"
     ],
     "files": [
-      "ui/calendar.tsx"
+      "ui/calendar.tsx",
+      "ui/calendar.scss",
+      "ui/calendar.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
   {
     "name": "card",
     "files": [
-      "ui/card.tsx"
+      "ui/card.tsx",
+      "ui/card.scss",
+      "ui/card.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -106,7 +136,10 @@
       "button"
     ],
     "files": [
-      "ui/carousel.tsx"
+      "ui/carousel.tsx",
+      "ui/carousel.scss",
+      "ui/carousel.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -116,7 +149,10 @@
       "@radix-ui/react-checkbox"
     ],
     "files": [
-      "ui/checkbox.tsx"
+      "ui/checkbox.tsx",
+      "ui/checkbox.scss",
+      "ui/checkbox.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -126,7 +162,10 @@
       "@radix-ui/react-collapsible"
     ],
     "files": [
-      "ui/collapsible.tsx"
+      "ui/collapsible.tsx",
+      "ui/collapsible.scss",
+      "ui/collapsible.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -139,7 +178,10 @@
       "dialog"
     ],
     "files": [
-      "ui/command.tsx"
+      "ui/command.tsx",
+      "ui/command.scss",
+      "ui/command.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -149,7 +191,10 @@
       "@radix-ui/react-context-menu"
     ],
     "files": [
-      "ui/context-menu.tsx"
+      "ui/context-menu.tsx",
+      "ui/context-menu.scss",
+      "ui/context-menu.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -159,7 +204,10 @@
       "@radix-ui/react-dialog"
     ],
     "files": [
-      "ui/dialog.tsx"
+      "ui/dialog.tsx",
+      "ui/dialog.scss",
+      "ui/dialog.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -170,7 +218,10 @@
       "@radix-ui/react-dialog"
     ],
     "files": [
-      "ui/drawer.tsx"
+      "ui/drawer.tsx",
+      "ui/drawer.scss",
+      "ui/drawer.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -180,7 +231,10 @@
       "@radix-ui/react-dropdown-menu"
     ],
     "files": [
-      "ui/dropdown-menu.tsx"
+      "ui/dropdown-menu.tsx",
+      "ui/dropdown-menu.scss",
+      "ui/dropdown-menu.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -198,7 +252,10 @@
       "label"
     ],
     "files": [
-      "ui/form.tsx"
+      "ui/form.tsx",
+      "ui/form.scss",
+      "ui/form.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -208,14 +265,20 @@
       "@radix-ui/react-hover-card"
     ],
     "files": [
-      "ui/hover-card.tsx"
+      "ui/hover-card.tsx",
+      "ui/hover-card.scss",
+      "ui/hover-card.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
   {
     "name": "input",
     "files": [
-      "ui/input.tsx"
+      "ui/input.tsx",
+      "ui/input.scss",
+      "ui/input.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -225,7 +288,10 @@
       "input-otp"
     ],
     "files": [
-      "ui/input-otp.tsx"
+      "ui/input-otp.tsx",
+      "ui/input-otp.scss",
+      "ui/input-otp.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -235,7 +301,10 @@
       "@radix-ui/react-label"
     ],
     "files": [
-      "ui/label.tsx"
+      "ui/label.tsx",
+      "ui/label.scss",
+      "ui/label.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -245,7 +314,10 @@
       "@radix-ui/react-menubar"
     ],
     "files": [
-      "ui/menubar.tsx"
+      "ui/menubar.tsx",
+      "ui/menubar.scss",
+      "ui/menubar.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -255,7 +327,10 @@
       "@radix-ui/react-navigation-menu"
     ],
     "files": [
-      "ui/navigation-menu.tsx"
+      "ui/navigation-menu.tsx",
+      "ui/navigation-menu.scss",
+      "ui/navigation-menu.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -265,7 +340,10 @@
       "button"
     ],
     "files": [
-      "ui/pagination.tsx"
+      "ui/pagination.tsx",
+      "ui/pagination.scss",
+      "ui/pagination.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -275,7 +353,10 @@
       "@radix-ui/react-popover"
     ],
     "files": [
-      "ui/popover.tsx"
+      "ui/popover.tsx",
+      "ui/popover.scss",
+      "ui/popover.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -285,7 +366,10 @@
       "@radix-ui/react-progress"
     ],
     "files": [
-      "ui/progress.tsx"
+      "ui/progress.tsx",
+      "ui/progress.scss",
+      "ui/progress.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -295,7 +379,10 @@
       "@radix-ui/react-radio-group"
     ],
     "files": [
-      "ui/radio-group.tsx"
+      "ui/radio-group.tsx",
+      "ui/radio-group.scss",
+      "ui/radio-group.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -305,7 +392,10 @@
       "react-resizable-panels"
     ],
     "files": [
-      "ui/resizable.tsx"
+      "ui/resizable.tsx",
+      "ui/resizable.scss",
+      "ui/resizable.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -315,7 +405,10 @@
       "@radix-ui/react-scroll-area"
     ],
     "files": [
-      "ui/scroll-area.tsx"
+      "ui/scroll-area.tsx",
+      "ui/scroll-area.scss",
+      "ui/scroll-area.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -325,7 +418,10 @@
       "@radix-ui/react-select"
     ],
     "files": [
-      "ui/select.tsx"
+      "ui/select.tsx",
+      "ui/select.scss",
+      "ui/select.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -335,7 +431,10 @@
       "@radix-ui/react-separator"
     ],
     "files": [
-      "ui/separator.tsx"
+      "ui/separator.tsx",
+      "ui/separator.scss",
+      "ui/separator.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -345,14 +444,20 @@
       "@radix-ui/react-dialog"
     ],
     "files": [
-      "ui/sheet.tsx"
+      "ui/sheet.tsx",
+      "ui/sheet.scss",
+      "ui/sheet.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
   {
     "name": "skeleton",
     "files": [
-      "ui/skeleton.tsx"
+      "ui/skeleton.tsx",
+      "ui/skeleton.scss",
+      "ui/skeleton.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -362,7 +467,10 @@
       "@radix-ui/react-slider"
     ],
     "files": [
-      "ui/slider.tsx"
+      "ui/slider.tsx",
+      "ui/slider.scss",
+      "ui/slider.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -373,7 +481,9 @@
       "next-themes"
     ],
     "files": [
-      "ui/sonner.tsx"
+      "ui/sonner.tsx",
+      "ui/sonner.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -383,14 +493,20 @@
       "@radix-ui/react-switch"
     ],
     "files": [
-      "ui/switch.tsx"
+      "ui/switch.tsx",
+      "ui/switch.scss",
+      "ui/switch.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
   {
     "name": "table",
     "files": [
-      "ui/table.tsx"
+      "ui/table.tsx",
+      "ui/table.scss",
+      "ui/table.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -400,14 +516,20 @@
       "@radix-ui/react-tabs"
     ],
     "files": [
-      "ui/tabs.tsx"
+      "ui/tabs.tsx",
+      "ui/tabs.scss",
+      "ui/tabs.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
   {
     "name": "textarea",
     "files": [
-      "ui/textarea.tsx"
+      "ui/textarea.tsx",
+      "ui/textarea.scss",
+      "ui/textarea.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -419,7 +541,10 @@
     "files": [
       "ui/toast.tsx",
       "ui/use-toast.ts",
-      "ui/toaster.tsx"
+      "ui/toaster.tsx",
+      "ui/toast.scss",
+      "ui/toast.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -429,7 +554,10 @@
       "@radix-ui/react-toggle"
     ],
     "files": [
-      "ui/toggle.tsx"
+      "ui/toggle.tsx",
+      "ui/toggle.scss",
+      "ui/toggle.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -442,7 +570,10 @@
       "toggle"
     ],
     "files": [
-      "ui/toggle-group.tsx"
+      "ui/toggle-group.tsx",
+      "ui/toggle-group.scss",
+      "ui/toggle-group.stories.tsx",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   },
@@ -452,7 +583,11 @@
       "@radix-ui/react-tooltip"
     ],
     "files": [
-      "ui/tooltip.tsx"
+      "ui/tooltip.tsx",
+      "ui/tooltip.scss",
+      "ui/tooltip.stories.tsx",
+      "ui/tooltip.types.ts",
+      "ui/index.ts"
     ],
     "type": "components:ui"
   }

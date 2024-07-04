@@ -1,0 +1,26 @@
+/* Usefull - Box Width */
+////
+/// @group UsefullClasses-Box_Width
+/// Usefull - Box Width
+
+///
+@include useful(".max-width-25", "max-width", "25%");
+@include responsive(".max-width-25", "max-width", "25%");
+@include useful(".max-width-50", "max-width", "50%");
+@include responsive(".max-width-50", "max-width", "50%");
+@include useful(".max-width-75", "max-width", "75%");
+@include responsive(".max-width-75", "max-width", "75%");
+@include useful(".max-width-100", "max-width", "100%");
+@include responsive(".max-width-100", "max-width", "100%");
+
+@include useful(".width-25", "width", "25%");
+@include responsive(".width-25", "width", "25%");
+@include useful(".width-50", "width", "50%");
+@include responsive(".width-50", "width", "50%");
+@include useful(".width-75", "width", "75%");
+@include responsive(".width-75", "width", "75%");
+@include useful(".width-100", "width", "100%");
+@include responsive(".width-100", "width", "100%");
+
+/// Generate the width classes associated with the sizes map (xxs,xs,s,m,l,xl,xxl)
+@include useful-sizing("width");

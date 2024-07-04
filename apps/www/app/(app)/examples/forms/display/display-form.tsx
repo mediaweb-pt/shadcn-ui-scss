@@ -4,8 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/registry/new-york/ui/button"
-import { Checkbox } from "@/registry/new-york/ui/checkbox"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Checkbox } from "@/shadcn-scss/checkbox"
 import {
   Form,
   FormControl,
@@ -14,8 +14,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/new-york/ui/form"
-import { toast } from "@/registry/new-york/ui/use-toast"
+} from "@/shadcn-scss/form"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 
 const items = [
   {
@@ -90,14 +90,14 @@ export function DisplayForm() {
               </div>
               {items.map((item) => (
                 <FormField
-                  key={item.id}
-                  control={form.control}
-                  name="items"
-                  render={({ field }) => {
-                    return (
-                      <FormItem
-                        key={item.id}
-                        className="flex flex-row items-start space-x-3 space-y-0"
+                key={item.id}
+                control={form.control}
+                name="items"
+                render={({ field }) => {
+                  return (
+                    <FormItem
+                    key={item.id}
+                        className="mb-2 flex items-center space-x-3"
                       >
                         <FormControl>
                           <Checkbox

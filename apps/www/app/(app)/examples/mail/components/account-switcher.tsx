@@ -9,7 +9,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from "@/shadcn-scss/select"
 
 interface AccountSwitcherProps {
   isCollapsed: boolean

@@ -2,15 +2,15 @@ import { Metadata } from "next"
 import Image from "next/image"
 import { PlusCircledIcon } from "@radix-ui/react-icons"
 
-import { Button } from "@/registry/new-york/ui/button"
-import { ScrollArea, ScrollBar } from "@/registry/new-york/ui/scroll-area"
-import { Separator } from "@/registry/new-york/ui/separator"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { ScrollArea, ScrollBar } from "@/shadcn-scss/scroll-area"
+import { Separator } from "@/shadcn-scss/separator"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york/ui/tabs"
+} from "@/shadcn-scss/tabs"
 
 import { AlbumArtwork } from "./components/album-artwork"
 import { Menu } from "./components/menu"

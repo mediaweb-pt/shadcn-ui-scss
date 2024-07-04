@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { DialogProps } from "@radix-ui/react-alert-dialog"
 import {
   CircleIcon,
   FileIcon,
@@ -14,7 +13,7 @@ import { useTheme } from "next-themes"
 
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/scss/ui/button"
 import {
   CommandDialog,
   CommandEmpty,
@@ -23,7 +22,8 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/new-york/ui/command"
+} from "@/registry/scss/ui/command"
+import { DialogProps } from "@/registry/scss/ui/dialog"
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
@@ -61,15 +61,17 @@ export function CommandMenu({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          "relative h-8 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64"
+          "site-layout__header-search height-l border-radius-soft font-size-s regular relative justify-between bg-background text-muted-foreground shadow-none"
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
-        <span className="hidden lg:inline-flex">Search documentation...</span>
-        <span className="inline-flex lg:hidden">Search...</span>
-        <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-          <span className="text-xs">⌘</span>K
+        <>
+          {/* <span className="hidden lg_inline-flex">Search documentation...</span> */}
+          <span className="lg_hidden inline-flex">Search...</span>
+        </>
+        <kbd className="site-layout__header-kbd">
+          <span className="font-size-s">⌘</span>K
         </kbd>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
@@ -77,7 +79,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Links">
-            {docsConfig.mainNav
+            {docsConfig?.mainNav && docsConfig?.mainNav
               .filter((navitem) => !navitem.external)
               .map((navItem) => (
                 <CommandItem
@@ -87,12 +89,12 @@ export function CommandMenu({ ...props }: DialogProps) {
                     runCommand(() => router.push(navItem.href as string))
                   }}
                 >
-                  <FileIcon className="mr-2 h-4 w-4" />
+                  <FileIcon className="margin-right-s height-base width-base" />
                   {navItem.title}
                 </CommandItem>
               ))}
           </CommandGroup>
-          {docsConfig.sidebarNav.map((group) => (
+          {docsConfig?.sidebarNav?.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem
@@ -102,8 +104,8 @@ export function CommandMenu({ ...props }: DialogProps) {
                     runCommand(() => router.push(navItem.href as string))
                   }}
                 >
-                  <div className="mr-2 flex h-4 w-4 items-center justify-center">
-                    <CircleIcon className="h-3 w-3" />
+                  <div className="margin-right-s height-base width-base flex items-center justify-center">
+                    <CircleIcon className="height-base width-base" />
                   </div>
                   {navItem.title}
                 </CommandItem>
@@ -113,15 +115,15 @@ export function CommandMenu({ ...props }: DialogProps) {
           <CommandSeparator />
           <CommandGroup heading="Theme">
             <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
-              <SunIcon className="mr-2 h-4 w-4" />
+              <SunIcon className="margin-right-s height-base width-base" />
               Light
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
-              <MoonIcon className="mr-2 h-4 w-4" />
+              <MoonIcon className="margin-right-s height-base width-base" />
               Dark
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
-              <LaptopIcon className="mr-2 h-4 w-4" />
+              <LaptopIcon className="margin-right-s height-base width-base" />
               System
             </CommandItem>
           </CommandGroup>

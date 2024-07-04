@@ -1,0 +1,25 @@
+{
+  "name": "tabs",
+  "dependencies": [
+    "@radix-ui/react-tabs"
+  ],
+  "files": [
+    {
+      "name": "tabs.tsx",
+      "content": "\"use client\"\n\nimport React from \"react\"\nimport {\n  Content,\n  List,\n  Root,\n  TabsProps as TabsRadixProps,\n  Trigger,\n} from \"@radix-ui/react-tabs\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport \"./tabs.scss\"\n\ninterface TabsProps extends TabsRadixProps {\n  className?: string\n}\n\nconst Tabs = ({ className, ...props }: TabsProps) => {\n  return <Root className={cn(\"tabs\", className)} {...props} />\n}\n\nTabs.displayName = Root.displayName\n\nconst TabsList = React.forwardRef<\n  React.ElementRef<typeof List>,\n  React.ComponentPropsWithoutRef<typeof List>\n>(({ className, ...props }, ref) => (\n  <List ref={ref} className={cn(\"tabs__list\", className)} {...props} />\n))\nTabsList.displayName = List.displayName\n\nconst TabsTrigger = React.forwardRef<\n  React.ElementRef<typeof Trigger>,\n  React.ComponentPropsWithoutRef<typeof Trigger>\n>(({ className, ...props }, ref) => (\n  <Trigger ref={ref} className={cn(\"tabs__trigger\", className)} {...props} />\n))\nTabsTrigger.displayName = Trigger.displayName\n\nconst TabsContent = React.forwardRef<\n  React.ElementRef<typeof Content>,\n  React.ComponentPropsWithoutRef<typeof Content>\n>(({ className, ...props }, ref) => (\n  <Content ref={ref} className={cn(\"tabs__content\", className)} {...props} />\n))\nTabsContent.displayName = Content.displayName\n\nexport { Tabs, TabsList, TabsTrigger, TabsContent }\n"
+    },
+    {
+      "name": "tabs.scss",
+      "content": ".tabs {\n  &__list {\n    align-items: center;\n    background-color: hsl(var(--muted));\n    border-radius: var(--border-radius-soft);\n    color: hsl(var(--muted-foreground));\n    display: inline-flex;\n    height: 2.25rem;\n    justify-content: center;\n    padding: var(--space-xs);\n  }\n\n  &__trigger {\n    align-items: center;\n    border-radius: var(--border-radius-soft);\n    display: inline-flex;\n    font-size: var(--font-size-s);\n    font-weight: var(--font-semi-bold);\n    justify-content: center;\n    padding: var(--space-xs) var(--space-s);\n    transition: 0.3s ease;\n    white-space: nowrap;\n\n    &:focus-visible {\n      outline: 2px solid hsl(var(--ring));\n      outline-offset: 2px;\n    }\n\n    &[disabled] {\n      opacity: 0.5;\n      pointer-events: none;\n    }\n\n    &[data-state=\"active\"] {\n      background-color: hsl(var(--background));\n      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n      color: hsl(var(--foreground));\n    }\n  }\n\n  &__content {\n    margin-top: var(--space-xs);\n\n    &:focus-visible {\n      outline: 2px solid hsl(var(--ring));\n      outline-offset: 2px;\n    }\n  }\n}\n"
+    },
+    {
+      "name": "tabs.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \".\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/tabs\n * # or\n * $ npm install @shadcn-ui-sass/tabs\n * ```\n *\n */\n\nconst meta: Meta<typeof Tabs> = {\n  title: \"Components/Tabs\",\n  component: Tabs,\n  tags: [\"autodocs\"],\n  decorators: [\n    (Story) => (\n      <div>\n        <Story />\n      </div>\n    ),\n  ],\n  args: {\n    defaultValue: \"account\",\n    orientation: \"horizontal\",\n  },\n  argTypes: {\n    defaultValue: {\n      options: [\"account\", \"documents\", \"settings\"],\n      control: { type: \"select\" },\n    },\n    orientation: {\n      options: [\"horizontal\", \"vertical\"],\n      control: { type: \"select\" },\n    },\n  },\n}\n\ntype Story = StoryObj<typeof Tabs>\n\nconst template = (args: any) => (\n  <Tabs {...args}>\n    <TabsList>\n      <TabsTrigger value=\"account\">Account</TabsTrigger>\n      <TabsTrigger value=\"documents\">Documents</TabsTrigger>\n    </TabsList>\n\n    <TabsContent value=\"account\">\n      <p>Make changes to your account.</p>\n    </TabsContent>\n\n    <TabsContent value=\"documents\">\n      <p>Access and update your documents.</p>\n    </TabsContent>\n  </Tabs>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\n// export const Vertical: Story = {\n//     args: {\n//         orientation: \"vertical\",\n//     },\n//     render: (args) => template(args),\n// }\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export { Tabs, TabsList, TabsTrigger, TabsContent } from \"./tabs\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

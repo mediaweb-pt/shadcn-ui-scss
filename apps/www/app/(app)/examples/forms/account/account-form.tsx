@@ -7,15 +7,15 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
-import { Calendar } from "@/registry/new-york/ui/calendar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Calendar } from "@/shadcn-scss/calendar"
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/registry/new-york/ui/command"
+} from "@/shadcn-scss/command"
 import {
   Form,
   FormControl,
@@ -24,14 +24,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/new-york/ui/form"
-import { Input } from "@/registry/new-york/ui/input"
+} from "@/shadcn-scss/form"
+import { Input } from "@/shadcn-scss/input"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
-import { toast } from "@/registry/new-york/ui/use-toast"
+} from "@/shadcn-scss/popover"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 
 const languages = [
   { label: "English", value: "en" },
@@ -94,7 +94,7 @@ export function AccountForm() {
           control={form.control}
           name="name"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-2">
               <FormLabel>Name</FormLabel>
               <FormControl>
                 <Input placeholder="Your name" {...field} />
@@ -111,16 +111,15 @@ export function AccountForm() {
           control={form.control}
           name="dob"
           render={({ field }) => (
-            <FormItem className="flex flex-col">
+            <FormItem className="flex flex-col space-y-2">
               <FormLabel>Date of birth</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant={"outline"}
-                      className={cn(
-                        "w-[240px] pl-3 text-left font-normal",
-                        !field.value && "text-muted-foreground"
+                      className={buttonVariants({variant: "outline"}) + cn(
+                        " w-[240px] pl-3 text-left font-normal",
+                        !field.value && " text-muted-foreground"
                       )}
                     >
                       {field.value ? (
@@ -155,17 +154,16 @@ export function AccountForm() {
           control={form.control}
           name="language"
           render={({ field }) => (
-            <FormItem className="flex flex-col">
+            <FormItem className="flex flex-col space-y-2">
               <FormLabel>Language</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant="outline"
                       role="combobox"
-                      className={cn(
-                        "w-[200px] justify-between",
-                        !field.value && "text-muted-foreground"
+                      className={buttonVariants({ variant: "outline"}) + cn(
+                        " w-[200px] justify-between",
+                        !field.value && " text-muted-foreground"
                       )}
                     >
                       {field.value

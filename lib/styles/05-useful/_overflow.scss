@@ -1,0 +1,19 @@
+/* Usefull - Overflow */
+////
+/// @group UsefullClasses-Overflow
+/// Usefull - Overflow
+
+///
+.overflow {
+    &-hidden {
+        overflow: hidden !important;
+    }
+
+    &-horizontal {
+        overflow-x: auto !important;
+    }
+
+    &-vertical {
+        overflow-y: auto !important;
+    }
+}

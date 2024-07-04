@@ -5,14 +5,14 @@ import {
   StarIcon,
 } from "@radix-ui/react-icons"
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/shadcn-scss/card"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -21,8 +21,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
-import { Separator } from "@/registry/new-york/ui/separator"
+} from "@/shadcn-scss/dropdown-menu"
+import { Separator } from "@/shadcn-scss/separator"
 
 export function DemoGithub() {
   return (
@@ -36,14 +36,14 @@ export function DemoGithub() {
           </CardDescription>
         </div>
         <div className="flex items-center space-x-1 rounded-md bg-secondary text-secondary-foreground">
-          <Button variant="secondary" className="px-3 shadow-none">
+          <Button className={buttonVariants({variant: "secondary"}) + " px-3 shadow-none"}>
             <StarIcon className="mr-2 h-4 w-4" />
             Star
           </Button>
           <Separator orientation="vertical" className="h-[20px]" />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="secondary" className="px-2 shadow-none">
+              <Button className={buttonVariants({variant: "secondary"}) + " px-2 shadow-none"}>
                 <ChevronDownIcon className="h-4 w-4 text-secondary-foreground" />
               </Button>
             </DropdownMenuTrigger>

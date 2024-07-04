@@ -7,19 +7,19 @@ import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeToggle } from "@/components/mode-toggle"
-import { buttonVariants } from "@/registry/new-york/ui/button"
+import { buttonVariants } from "@/registry/scss/ui/button"
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
+    <header className="site-layout__header">
+      <div className="site-layout__header-container container">
         <MainNav />
         <MobileNav />
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
+        <div className="site-layout__header-socials">
+          <div className="site-layout__header-command-menu">
             <CommandMenu />
           </div>
-          <nav className="flex items-center">
+          <nav className="site-layout__header-socials_container">
             <Link
               href={siteConfig.links.github}
               target="_blank"
@@ -30,10 +30,9 @@ export function SiteHeader() {
                   buttonVariants({
                     variant: "ghost",
                   }),
-                  "w-9 px-0"
                 )}
               >
-                <Icons.gitHub className="h-4 w-4" />
+                <Icons.gitHub className="height-base width-base" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
@@ -47,10 +46,9 @@ export function SiteHeader() {
                   buttonVariants({
                     variant: "ghost",
                   }),
-                  "w-9 px-0"
                 )}
               >
-                <Icons.twitter className="h-3 w-3 fill-current" />
+                <Icons.twitter className="height-base width-base fill-current" />
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>

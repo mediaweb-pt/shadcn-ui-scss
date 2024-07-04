@@ -1,7 +1,8 @@
 import { expect, test } from "vitest"
 
 import { transform } from "../../src/utils/transformers"
-import stone from "../fixtures/colors/stone.json"
+// @ts-ignore
+import stone from "../fixtures/colors/zinc.json"
 
 test("transform css vars", async () => {
   expect(

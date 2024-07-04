@@ -1,0 +1,39 @@
+.scroll-area {
+  height: var(--_scroll-area-height);
+  overflow: hidden;
+  position: relative;
+  width: var(--_scroll-area-width);
+
+  &__viewport {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__scrollbar {
+    display: flex;
+    touch-action: none;
+    transition: 0.3s ease;
+    user-select: none;
+    &--horizontal {
+      border-top: var(--border-size-s) solid transparent;
+      flex-direction: column;
+      height: 10px;
+      padding: 1px;
+    }
+
+    &--vertical {
+      border-left: var(--border-size-s) solid transparent;
+      flex-direction: column;
+      height: 10px;
+      padding: 1px;
+    }
+
+    &-thumb {
+      background-color: hsl(var(--border));
+      border-radius: var(--border-radius-rounded);
+      flex: 1;
+      position: relative;
+    }
+  }
+}

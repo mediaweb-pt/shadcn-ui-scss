@@ -1,19 +1,19 @@
 import { CopyIcon } from "@radix-ui/react-icons"
 
-import { Button } from "@/registry/new-york/ui/button"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from "@/shadcn-scss/popover"
 
 export function PresetShare() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="secondary">Share</Button>
+        <Button className={buttonVariants({variant: "secondary"})}>Share</Button>
       </PopoverTrigger>
       <PopoverContent align="end" className="w-[520px]">
         <div className="flex flex-col space-y-2 text-center sm:text-left">

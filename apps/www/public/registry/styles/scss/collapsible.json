@@ -1,0 +1,25 @@
+{
+  "name": "collapsible",
+  "dependencies": [
+    "@radix-ui/react-collapsible"
+  ],
+  "files": [
+    {
+      "name": "collapsible.tsx",
+      "content": "\"use client\"\n\nimport * as CollapsiblePrimitive from \"@radix-ui/react-collapsible\"\n\nimport \"./collapsible.scss\"\n\nconst Collapsible = CollapsiblePrimitive.Root\n\nconst CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger\n\nconst CollapsibleContent = CollapsiblePrimitive.CollapsibleContent\n\nexport { Collapsible, CollapsibleTrigger, CollapsibleContent }\n"
+    },
+    {
+      "name": "collapsible.scss",
+      "content": ".collapsible {\n}\n"
+    },
+    {
+      "name": "collapsible.stories.tsx",
+      "content": "import { useState } from \"react\"\nimport type { Meta, StoryObj } from \"@storybook/react\"\nimport { ChevronsUpDown } from \"lucide-react\"\n\nimport { Collapsible, CollapsibleContent, CollapsibleTrigger } from \".\"\nimport { Button } from \"../button\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/collapsible\n * # or\n * $ npm install @shadcn-ui-sass/collapsible\n * ```\n *\n */\n\nconst meta: Meta<typeof Collapsible> = {\n  title: \"Components/Collapsible\",\n  component: Collapsible,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof Collapsible>\nconst template = (args: any) => {\n  const [isOpen, setIsOpen] = useState(false)\n\n  return (\n    <Collapsible\n      {...args}\n      open={isOpen}\n      onOpenChange={setIsOpen}\n      style={{ width: 350 }}\n    >\n      <div className=\"display-flex align-items-center justify-content-space-between gap-base padding-x-base\">\n        <h4 className=\"font-size-s font-semi-bold\">\n          @peduarte starred 3 repositories\n        </h4>\n        <CollapsibleTrigger asChild>\n          <Button variant=\"ghost\" size=\"sm\">\n            <ChevronsUpDown />\n            <span className=\"sr-only\">Toggle</span>\n          </Button>\n        </CollapsibleTrigger>\n      </div>\n      <div className=\"margin-top-s border-size-s border-radius-soft padding-x-base padding-y-s font-size-s\">\n        @radix-ui/primitives\n      </div>\n      <CollapsibleContent className=\"margin-top-s\">\n        <div className=\"border-radius-soft border-size-s padding-x-base padding-y-s font-size-s\">\n          @radix-ui/colors\n        </div>\n        <div className=\"margin-top-s border-radius-soft border-size-s padding-x-base padding-y-s font-size-s\">\n          @stitches/react\n        </div>\n      </CollapsibleContent>\n    </Collapsible>\n  )\n}\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+    },
+    {
+      "name": "index.ts",
+      "content": "export {\n  Collapsible,\n  CollapsibleTrigger,\n  CollapsibleContent,\n} from \"./collapsible\"\n"
+    }
+  ],
+  "type": "components:ui"
+}

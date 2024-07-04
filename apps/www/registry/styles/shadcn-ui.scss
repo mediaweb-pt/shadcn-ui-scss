@@ -1,0 +1,141 @@
+/* ==================================================================== */
+/* ==================================================================== */
+/*  Shadcn SCSS UI v1.0.2                                                    */
+/*  For more information, visit https://mediaweb.pt/                    */
+/* ==================================================================== */
+/*  $0 - Root - CSS Variables                                           */
+/*  $1 - Font Definition                                                */
+/*  $2 - HTML Elements                                                  */
+/*       $2.1 - HTML Elements - Links                                   */
+/*       $2.2 - HTML Elements - Images                                  */
+/*       $2.3 - HTML Elements - Headings                                */
+/*       $2.4 - HTML Elements - Inputs and Selectors                    */
+/*       $2.5 - HTML Elements - Buttons                                 */
+/*  $3 - Page Layout                                                    */
+/*       $3.1 - Page Layout - Header                                    */
+/*       $3.2 - Page Layout - Menu                                      */
+/*       $3.3 - Page Layout - Content                                   */
+/*       $3.4 - Page Layout - Login                                     */
+/*  $4 - Widgets                                                        */
+/*       $4.1  - Widgets - List                                         */
+/*       $4.2  - Widgets - ListItem                                     */
+/*       $4.3  - Widgets - Table                                        */
+/*       $4.4  - Widgets - BulkActions                                  */
+/*       $4.5  - Widgets - Form                                         */
+/*       $4.6  - Widgets - Upload                                       */
+/*       $4.7  - Widgets - ButtonGroup                                  */
+/*       $4.8  - Widgets - Popover                                      */
+/*       $4.9  - Widgets - Popup                                        */
+/*       $4.10 - Widgets - FeedbackMessage                              */
+/*  $5 - Patterns                                                       */
+/*       $5.1 - Patterns - Adaptive                                     */
+/*       $5.2 - Patterns - Content                                      */
+/*       $5.3 - Patterns - Interaction                                  */
+/*       $5.4 - Patterns - Navigation                                   */
+/*       $5.5 - Patterns - Numbers                                      */
+/*       $5.6 - Patterns - Utilities                                    */
+/*  $6 - Styles                                                         */
+/*       $6.1 - Styles - Typography                                     */
+/*       $6.2 - Styles - Colors                                         */
+/*       $6.3 - Styles - Space                                          */
+/*       $6.4 - Styles - Border Radius                                  */
+/*       $6.5 - Styles - Border Size                                    */
+/*       $6.6 - Styles - Elevation/Shadows                              */
+/*       $6.7 - Styles - Display Flex Properties                        */
+/*       $6.8 - Styles - Others                                         */
+/*  $7 - Screen Transitions                                             */
+/* ==================================================================== */
+/* ==================================================================== */
+
+@import "00-abstract/variables";
+
+/* ===============================================================================
+Functions & Mixins
+=============================================================================== */
+@import "00-abstract/functions";
+@import "00-abstract/mixins";
+
+/* ==================================================================== */
+/*  $0 - Root - CSS Variables                                           */
+/* ==================================================================== */
+@import "01-foundations/root";
+
+@import "7-themes/dark.scss";
+@include theme_dark();
+
+/*! ==============================================================================
+1. Resets
+=============================================================================== */
+@import "01-foundations/resets";
+
+/*! ==============================================================================
+2. HTML Elements
+=============================================================================== */
+/*! 2.2. Images */
+@import "01-foundations/html-elements-img";
+/*! 2.3. Headings */
+@import "01-foundations/html-elements-headings";
+
+/*! ==============================================================================
+3. Page Layout
+=============================================================================== */
+
+/*! ==============================================================================
+4. Widgets
+=============================================================================== */
+
+/*! ==============================================================================
+6. Patterns
+=============================================================================== */
+// @import "../components/accordion/accordion.scss";
+// @import "../components/alert/alert.scss";
+// @import "../components/alert-dialog/alert-dialog.scss";
+// @import "../components/aspect-ratio/aspect-ratio.scss";
+// @import "../components/avatar/avatar.scss";
+// @import "../components/badge/badge.scss";
+// @import "../components/breadcrumbs/breadcrumbs.scss";
+// @import "../components/button/button.scss";
+// @import "../components/calendar/calendar.scss";
+// @import "../components/card/card.scss";
+// @import "../components/carousel/carousel.scss";
+// @import "../components/checkbox/checkbox.scss";
+// @import "../components/collapsible/collapsible.scss";
+// @import "../components/command/command.scss";
+// @import "../components/context-menu/context-menu.scss";
+// @import "../components/dialog/dialog.scss";
+// @import "../components/drawer/drawer.scss";
+// @import "../components/dropdown-menu/dropdown-menu.scss";
+// @import "../components/form/form.scss";
+// @import "../components/hover-card/hover-card.scss";
+// @import "../components/input/input.scss";
+// @import "../components/input-otp/input-otp.scss";
+// @import "../components/label/label.scss";
+// @import "../components/menubar/menubar.scss";
+// @import "../components/navigation-menu/navigation-menu.scss";
+// @import "../components/pagination/pagination.scss";
+// @import "../components/popover/popover.scss";
+// @import "../components/progress/progress.scss";
+// @import "../components/radio-group/radio-group.scss";
+// @import "../components/resizable/resizable.scss";
+// @import "../components/scroll-area/scroll-area.scss";
+// @import "../components/select/select.scss";
+// @import "../components/separator/separator.scss";
+// @import "../components/sheet/sheet.scss";
+// @import "../components/skeleton/skeleton.scss";
+// @import "../components/slider/slider.scss";
+// @import "../components/switch/switch.scss";
+// @import "../components/table/table.scss";
+// @import "../components/tabs/tabs.scss";
+// @import "../components/textarea/textarea.scss";
+// @import "../components/toast/toast.scss";
+// @import "../components/toggle/toggle.scss";
+// @import "../components/toggle-group/toggle-group.scss";
+// @import "../components/tooltip/tooltip.scss";
+
+/*! ==============================================================================
+7. Usefull Classes
+=============================================================================== */
+@tailwind utilities;
+
+/*! 7.1. Animations */
+@import "05-useful/animations";

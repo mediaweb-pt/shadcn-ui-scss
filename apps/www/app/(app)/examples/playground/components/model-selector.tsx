@@ -6,7 +6,7 @@ import { PopoverProps } from "@radix-ui/react-popover"
 
 import { cn } from "@/lib/utils"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Command,
   CommandEmpty,
@@ -14,18 +14,18 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york/ui/command"
+} from "@/shadcn-scss/command"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/new-york/ui/hover-card"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/shadcn-scss/hover-card"
+import { Label } from "@/shadcn-scss/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from "@/shadcn-scss/popover"
 
 import { Model, ModelType } from "../data/models"
 
@@ -61,7 +61,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
             role="combobox"
             aria-expanded={open}
             aria-label="Select a model"
-            className="w-full justify-between"
+            className={buttonVariants({ variant: "outline"}) + " w-full justify-between"}
           >
             {selectedModel ? selectedModel.name : "Select a model..."}
             <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />

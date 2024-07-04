@@ -1,4 +1,6 @@
-import "@/styles/globals.css"
+//import "@/styles/globals.css"
+import "@/styles/scss/layout.scss"
+import "../registry/styles/shadcn-ui.scss"
 import { Metadata, Viewport } from "next"
 
 import { siteConfig } from "@/config/site"
@@ -6,11 +8,8 @@ import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Analytics } from "@/components/analytics"
 import { ThemeProvider } from "@/components/providers"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeSwitcher } from "@/components/theme-switcher"
-import { Toaster as DefaultToaster } from "@/registry/default/ui/toaster"
-import { Toaster as NewYorkSonner } from "@/registry/new-york/ui/sonner"
-import { Toaster as NewYorkToaster } from "@/registry/new-york/ui/toaster"
+import { Toaster as SCSSSonner } from "@/registry/scss/ui/sonner"
 
 export const metadata: Metadata = {
   title: {
@@ -22,14 +21,20 @@ export const metadata: Metadata = {
   keywords: [
     "Next.js",
     "React",
-    "Tailwind CSS",
+    "SCSS",
     "Server Components",
     "Radix UI",
+    "Rocket UI",
+    "Mediaweb",
   ],
   authors: [
     {
       name: "shadcn",
       url: "https://shadcn.com",
+    },
+    {
+      name: "Mediaweb",
+      url: "https://mediaweb.pt",
     },
   ],
   creator: "shadcn",
@@ -77,35 +82,24 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(fontSans.variable)}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div vaul-drawer-wrapper="">
-              <div className="relative flex min-h-screen flex-col bg-background">
-                {children}
-              </div>
+          <div vaul-drawer-wrapper="">
+            <div className="site-layout">
+              {children}
             </div>
-            <TailwindIndicator />
-            <ThemeSwitcher />
-            <Analytics />
-            <NewYorkToaster />
-            <DefaultToaster />
-            <NewYorkSonner />
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+          </div>
+          <ThemeSwitcher />
+          <Analytics />
+          <SCSSSonner />
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }
