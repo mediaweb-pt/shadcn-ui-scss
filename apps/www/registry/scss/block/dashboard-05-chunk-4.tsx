@@ -1,3 +1,25 @@
+import { Button } from "@/shadcn-scss/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/shadcn-scss/card"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/shadcn-scss/dropdown-menu"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+} from "@/shadcn-scss/pagination"
+import { Separator } from "@/shadcn-scss/separator"
 import {
   ChevronLeft,
   ChevronRight,
@@ -7,33 +29,10 @@ import {
   Truck,
 } from "lucide-react"
 
-import { Button } from "@/registry/scss/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/shadcn-scss/components/Card"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-} from "@/registry/scss/ui/pagination"
-import { Separator } from "@/registry/scss/ui/separator"
-
 export default function Component() {
   return (
     <Card className="overflow-hidden" x-chunk="dashboard-05-chunk-4">
-      <CardHeader className="flex flex-row items-start bg-muted/50">
+      <CardHeader className="bg-muted/50 flex flex-row items-start">
         <div className="grid gap-0.5">
           <CardTitle className="group flex items-center gap-2 text-lg">
             Order Oe31b70H
@@ -112,7 +111,7 @@ export default function Component() {
         <div className="grid grid-cols-2 gap-4">
           <div className="grid gap-3">
             <div className="font-semibold">Shipping Information</div>
-            <address className="grid gap-0.5 not-italic text-muted-foreground">
+            <address className="text-muted-foreground grid gap-0.5 not-italic">
               <span>Liam Johnson</span>
               <span>1234 Main St.</span>
               <span>Anytown, CA 12345</span>
@@ -152,7 +151,7 @@ export default function Component() {
           <div className="font-semibold">Payment Information</div>
           <dl className="grid gap-3">
             <div className="flex items-center justify-between">
-              <dt className="flex items-center gap-1 text-muted-foreground">
+              <dt className="text-muted-foreground flex items-center gap-1">
                 <CreditCard className="h-4 w-4" />
                 Visa
               </dt>
@@ -161,8 +160,8 @@ export default function Component() {
           </dl>
         </div>
       </CardContent>
-      <CardFooter className="flex flex-row items-center border-t bg-muted/50 px-6 py-3">
-        <div className="text-xs text-muted-foreground">
+      <CardFooter className="bg-muted/50 flex flex-row items-center border-t px-6 py-3">
+        <div className="text-muted-foreground text-xs">
           Updated <time dateTime="2023-11-23">November 23, 2023</time>
         </div>
         <Pagination className="ml-auto mr-0 w-auto">

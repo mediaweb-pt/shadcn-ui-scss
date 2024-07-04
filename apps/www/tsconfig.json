@@ -18,9 +18,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/shadcn-scss/*": ["../../lib/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"],
-      "@/styles/*": ["./styles/*"]
+      "@/shadcn-scss/*": ["./registry/scss/ui/*"],
+      "@/shadcn-scss-example/*": ["./registry/scss/example/*"],
+      "@/scripts/*": ["./scripts/*"],
+      "@/styles/*": ["./styles/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [
       {

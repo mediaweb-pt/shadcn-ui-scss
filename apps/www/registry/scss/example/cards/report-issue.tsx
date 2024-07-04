@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -9,17 +9,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
-import { Textarea } from "@/shadcn-scss/components/TextArea"
+} from "@/shadcn-scss/select"
+import { Textarea } from "@/shadcn-scss/textarea"
 
 export function CardsReportIssue() {
   const id = React.useId()
@@ -32,9 +32,9 @@ export function CardsReportIssue() {
           What area are you having problems with?
         </CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-l">
-        <div className="grid gap-base sm_grid-cols-2">
-          <div className="grid gap-s">
+      <CardContent className="gap-l grid">
+        <div className="gap-base sm_grid-cols-2 grid">
+          <div className="gap-s grid">
             <Label htmlFor={`area-${id}`}>Area</Label>
             <Select defaultValue="billing">
               <SelectTrigger id={`area-${id}`} aria-label="Area">
@@ -49,7 +49,7 @@ export function CardsReportIssue() {
               </SelectContent>
             </Select>
           </div>
-          <div className="grid gap-s">
+          <div className="gap-s grid">
             <Label htmlFor={`security-level-${id}`}>Security Level</Label>
             <Select defaultValue="2">
               <SelectTrigger
@@ -68,11 +68,11 @@ export function CardsReportIssue() {
             </Select>
           </div>
         </div>
-        <div className="grid gap-s">
+        <div className="gap-s grid">
           <Label htmlFor={`subject-${id}`}>Subject</Label>
           <Input id={`subject-${id}`} placeholder="I need help with..." />
         </div>
-        <div className="grid gap-s">
+        <div className="gap-s grid">
           <Label htmlFor={`description-${id}`}>Description</Label>
           <Textarea
             id={`description-${id}`}

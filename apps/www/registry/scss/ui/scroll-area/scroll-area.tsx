@@ -14,7 +14,7 @@ const ScrollArea = React.forwardRef<
   <ScrollAreaPrimitive.Root
     ref={ref}
     className={cn("scroll-area", className)}
-    style={...props.style}
+    style={props.style}
     {...props}
   >
     <ScrollAreaPrimitive.Viewport className="scroll-area__viewport">

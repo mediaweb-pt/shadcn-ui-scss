@@ -1,3 +1,4 @@
+import { ComponentProps } from "react"
 import type { Meta, StoryObj } from "@storybook/react"
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "."
@@ -14,7 +15,9 @@ import { Button } from "../button"
  *
  */
 
-const meta: Meta<typeof Tooltip> = {
+type Props = ComponentProps<typeof Tooltip> &
+  ComponentProps<typeof TooltipContent>
+const meta: Meta<Props> = {
   title: "Components/Tooltip",
   component: Tooltip,
   tags: ["autodocs"],

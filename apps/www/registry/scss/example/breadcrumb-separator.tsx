@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/shadcn-scss/components/Breadcrumbs"
+} from "@/shadcn-scss/breadcrumb"
 import { Slash } from "lucide-react"
 
 export default function BreadcrumbWithCustomSeparator() {

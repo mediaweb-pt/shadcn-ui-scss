@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   CheckIcon,
   CopyIcon,
@@ -53,7 +53,7 @@ export function ThemeCustomizer() {
   }, [])
 
   return (
-    <div className="flex align-items-center space-x-s">
+    <div className="align-items-center space-x-s flex">
       <Drawer>
         <DrawerTrigger asChild>
           <Button
@@ -69,8 +69,8 @@ export function ThemeCustomizer() {
           <Customizer />
         </DrawerContent>
       </Drawer>
-      <div className="hidden md_flex">
-        <div className="margin-right-s hidden align-items-center space-x-xs lg_flex">
+      <div className="md_flex hidden">
+        <div className="margin-right-s align-items-center space-x-xs lg_flex hidden">
           {mounted ? (
             <>
               {["zinc", "rose", "blue", "green", "orange"].map((color) => {
@@ -92,7 +92,7 @@ export function ThemeCustomizer() {
                           })
                         }
                         className={cn(
-                          "flex height-l width-l items-center justify-center border-radius-circle font-size-s",
+                          "height-l width-l border-radius-circle font-size-s flex items-center justify-center",
                           isActive
                             ? "border-size-m border-[--primary]"
                             : "border-transparent"
@@ -109,7 +109,7 @@ export function ThemeCustomizer() {
                       >
                         <span
                           className={cn(
-                            "flex height-m width-m items-center justify-center border-radius-circle bg-[--theme-primary]"
+                            "height-m width-m border-radius-circle flex items-center justify-center bg-[--theme-primary]"
                           )}
                         >
                           {isActive && (
@@ -130,7 +130,7 @@ export function ThemeCustomizer() {
               })}
             </>
           ) : (
-            <div className="margin-right-xs flex items-center gap-base">
+            <div className="margin-right-xs gap-base flex items-center">
               <Skeleton className="height-m width-m rounded-full" />
               <Skeleton className="height-m width-m rounded-full" />
               <Skeleton className="height-m width-m rounded-full" />
@@ -148,7 +148,7 @@ export function ThemeCustomizer() {
           </PopoverTrigger>
           <PopoverContent
             align="center"
-            className="costumizer-popover border-radius-soft bg-background padding-m"
+            className="costumizer-popover border-radius-soft padding-m bg-background"
           >
             <Customizer />
           </PopoverContent>
@@ -171,9 +171,9 @@ function Customizer() {
   return (
     <ThemeWrapper
       defaultTheme="blue"
-      className="flex flex-col space-y-base"
+      className="space-y-base flex flex-col"
     >
-      <div className="flex items-start margin-top-none">
+      <div className="margin-top-none flex items-start">
         <div className="space-y-xs padding-right-s">
           <div className="semi-bold">
             Customize
@@ -199,10 +199,10 @@ function Customizer() {
           <span className="sr-only">Reset</span>
         </Button>
       </div>
-      <div className="flex flex-1 flex-col space-y-base">
+      <div className="space-y-base flex flex-1 flex-col">
         <div className="space-y-xs">
           <Label className="font-size-s">Color</Label>
-          <div className="grid grid-cols-3 gap-s">
+          <div className="gap-s grid grid-cols-3">
             {themes.map((theme) => {
               const isActive = config.theme === theme.name
 
@@ -229,7 +229,7 @@ function Customizer() {
                 >
                   <span
                     className={cn(
-                      "flex height-base width-base flex-shrink-0 items-center justify-center border-radius-circle bg-[--theme-primary]"
+                      "height-base width-base border-radius-circle flex shrink-0 items-center justify-center bg-[--theme-primary]"
                     )}
                   >
                     {isActive && <CheckIcon className="height-base width-base text-neutral-0" />}
@@ -244,7 +244,7 @@ function Customizer() {
         </div>
         <div className="space-y-xs">
           <Label className="font-size-s">Radius</Label>
-          <div className="grid grid-cols-5 gap-s">
+          <div className="gap-s grid grid-cols-5">
             {["0", "0.3", "0.5", "0.75", "1.0"].map((value) => {
               return (
                 <Button
@@ -271,7 +271,7 @@ function Customizer() {
         </div>
         <div className="space-y-xs">
           <Label className="font-size-s">Mode</Label>
-          <div className="grid grid-cols-3 gap-s">
+          <div className="gap-s grid grid-cols-3">
             {mounted ? (
               <>
                 <Button
@@ -345,7 +345,7 @@ function CopyCodeButton() {
       )}
       <Dialog>
         <DialogTrigger asChild>
-          <Button className="hidden md_flex">Copy code</Button>
+          <Button className="md_flex hidden">Copy code</Button>
         </DialogTrigger>
         <DialogContent className="customizer-popover__copy-dialog outline-none">
           <DialogHeader>
@@ -396,10 +396,10 @@ function CustomizerCode() {
   const activeTheme = themes.find((theme) => theme.name === config.theme)
 
   return (
-    <ThemeWrapper defaultTheme="zinc" className="relative space-y-base">
+    <ThemeWrapper defaultTheme="zinc" className="space-y-base relative">
       <div data-rehype-pretty-code-fragment="">
         <pre className="customizer-popover__code-snippet">
-          <code className="relative border-radius-soft padding-xs font-size-s">
+          <code className="border-radius-soft padding-xs font-size-s relative">
             <span className="line">@layer base &#123;</span>
             <span className="line">&nbsp;&nbsp;:root &#123;</span>
             <span className="line">

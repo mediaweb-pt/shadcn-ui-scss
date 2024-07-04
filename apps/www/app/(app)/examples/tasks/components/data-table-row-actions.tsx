@@ -3,7 +3,7 @@
 import { DotsHorizontalIcon } from "@radix-ui/react-icons"
 import { Row } from "@tanstack/react-table"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,7 +16,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
+} from "@/shadcn-scss/dropdown-menu"
 
 import { labels } from "../data/data"
 import { taskSchema } from "../data/schema"

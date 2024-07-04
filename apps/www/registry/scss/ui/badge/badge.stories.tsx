@@ -29,9 +29,9 @@ export const Default: Story = {
 
 export const Link: Story = {
   render: (args) => (
-    <a href="!#" className={badgeVariants({ variant: "outline" })} {...args}>
-      Badge
-    </a>
+    <div className={badgeVariants({ variant: "outline" })} {...args}>
+      <a href="!#">Badge</a>
+    </div>
   ),
 }
 

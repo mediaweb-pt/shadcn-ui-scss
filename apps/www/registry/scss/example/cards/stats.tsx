@@ -1,9 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/shadcn-scss/components/Card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/shadcn-scss/card"
 import { useTheme } from "next-themes"
 import { Bar, BarChart, Line, LineChart, ResponsiveContainer } from "recharts"
 
@@ -55,7 +50,9 @@ export function CardsStats() {
     <div className="components-example__subgrid components-example__subgrid-3">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 padding-bottom-s">
-          <CardTitle className="font-size-base regular">Total Revenue</CardTitle>
+          <CardTitle className="font-size-base regular">
+            Total Revenue
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="font-size-xl bold">$15,231.89</div>
@@ -98,7 +95,9 @@ export function CardsStats() {
       </Card>
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 padding-bottom-s">
-          <CardTitle className="font-size-base regular">Subscriptions</CardTitle>
+          <CardTitle className="font-size-base regular">
+            Subscriptions
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="font-size-xl bold">+2350</div>

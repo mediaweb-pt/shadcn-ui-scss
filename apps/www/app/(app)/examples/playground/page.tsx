@@ -1,20 +1,20 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import { Button } from "@/shadcn-scss/components/Button"
+import { Button } from "@/shadcn-scss/button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/shadcn-scss/components/HoverCard"
-import { Label } from "@/shadcn-scss/components/Label"
-import { Separator } from "@/shadcn-scss/components/Separator"
+} from "@/shadcn-scss/hover-card"
+import { Label } from "@/shadcn-scss/label"
+import { Separator } from "@/shadcn-scss/separator"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/shadcn-scss/components/Tabs"
-import { Textarea } from "@/shadcn-scss/components/TextArea"
+} from "@/shadcn-scss/tabs"
+import { Textarea } from "@/shadcn-scss/textarea"
 import { CounterClockwiseClockIcon } from "@radix-ui/react-icons"
 
 import { CodeViewer } from "./components/code-viewer"

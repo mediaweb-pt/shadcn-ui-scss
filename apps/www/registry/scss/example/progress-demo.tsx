@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Progress } from "@/shadcn-scss/components/Progress"
+import { Progress } from "@/shadcn-scss/progress"
 
 export default function ProgressDemo() {
   const [progress, setProgress] = React.useState(13)

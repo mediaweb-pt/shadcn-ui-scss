@@ -2,8 +2,8 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 
-import { Badge } from "@/shadcn-scss/components/Badge"
-import { Checkbox } from "@/shadcn-scss/components/Checkbox"
+import { Badge } from "@/shadcn-scss/badge"
+import { Checkbox } from "@/shadcn-scss/checkbox"
 
 import { labels, priorities, statuses } from "../data/data"
 import { Task } from "../data/schema"

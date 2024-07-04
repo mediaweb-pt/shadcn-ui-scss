@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 
 export function DemoNotifications() {
   return (

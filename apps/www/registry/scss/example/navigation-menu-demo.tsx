@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/shadcn-scss/components/NavigationMenu"
+} from "@/shadcn-scss/navigation-menu"
 
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"

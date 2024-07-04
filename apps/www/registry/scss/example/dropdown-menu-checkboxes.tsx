@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -9,7 +9,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
+} from "@/shadcn-scss/dropdown-menu"
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
 
 type Checked = DropdownMenuCheckboxItemProps["checked"]

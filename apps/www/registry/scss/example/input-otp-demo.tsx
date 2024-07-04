@@ -3,7 +3,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/shadcn-scss/components/InputOTP"
+} from "@/shadcn-scss/input-otp"
 
 export default function InputOTPDemo() {
   return (

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Command,
   CommandEmpty,
@@ -9,12 +9,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/shadcn-scss/components/Command"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+} from "@/shadcn-scss/command"
+import { Popover, PopoverContent, PopoverTrigger } from "@/shadcn-scss/popover"
 import {
   ArrowUpCircle,
   CheckCircle2,

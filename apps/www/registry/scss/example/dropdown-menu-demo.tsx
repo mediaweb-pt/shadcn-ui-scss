@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -6,10 +6,14 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuPortal,
   DropdownMenuSeparator,
   DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
+} from "@/shadcn-scss/dropdown-menu"
 import {
   Cloud,
   CreditCard,

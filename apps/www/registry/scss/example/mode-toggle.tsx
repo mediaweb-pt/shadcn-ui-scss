@@ -1,13 +1,13 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
+} from "@/shadcn-scss/dropdown-menu"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 

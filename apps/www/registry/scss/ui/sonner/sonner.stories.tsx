@@ -3,7 +3,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 
 import { Toaster } from "."
-import { SonnerDemo } from "./demo/sonner-demo"
+import SonnerDemo from "../../example/sonner-demo"
 
 /**
  * ## Installation

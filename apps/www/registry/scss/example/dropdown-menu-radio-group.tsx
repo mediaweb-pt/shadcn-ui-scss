@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -11,7 +11,7 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
+} from "@/shadcn-scss/dropdown-menu"
 
 export default function DropdownMenuRadioGroupDemo() {
   const [position, setPosition] = React.useState("bottom")

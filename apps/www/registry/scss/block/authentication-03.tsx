@@ -1,15 +1,14 @@
 import Link from "next/link"
-
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 
 export const description =
   "A sign up form with first name, last name, email and password inside a card. There's an option to sign up with GitHub and a link to login if you already have an account"
@@ -56,7 +55,9 @@ export default function LoginForm() {
           <Button type="submit" className="w-full">
             Create an account
           </Button>
-          <Button className={buttonVariants({variant: "outline"}) + " w-full"}>
+          <Button
+            className={buttonVariants({ variant: "outline" }) + " w-full"}
+          >
             Sign up with GitHub
           </Button>
         </div>

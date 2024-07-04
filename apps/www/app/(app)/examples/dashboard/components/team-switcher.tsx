@@ -12,8 +12,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/shadcn-scss/components/Avatar"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+} from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Command,
   CommandEmpty,
@@ -22,7 +22,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/shadcn-scss/components/Command"
+} from "@/shadcn-scss/command"
 import {
   Dialog,
   DialogContent,
@@ -31,21 +31,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/shadcn-scss/components/Dialog"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/dialog"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+} from "@/shadcn-scss/popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
+} from "@/shadcn-scss/select"
 
 const groups = [
   {

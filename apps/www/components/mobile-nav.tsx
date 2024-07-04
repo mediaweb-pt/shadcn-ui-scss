@@ -71,8 +71,8 @@ export function MobileNav() {
           "--_scroll-area-height": "calc(100vh-8rem)",
         } as React.CSSProperties
       }>
-          <div className="flex flex-col space-y-s">
-            {docsConfig.mainNav?.map(
+          <div className="space-y-s flex flex-col">
+            {docsConfig?.mainNav?.map(
               (item) =>
                 item.href && (
                   <MobileLink
@@ -85,7 +85,7 @@ export function MobileNav() {
                 )
             )}
           </div>
-          <div className="flex flex-col space-y-s">
+          <div className="space-y-s flex flex-col">
             {/* {docsConfig.sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>

@@ -7,7 +7,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/scss/ui/button"
 
 export const metadata: Metadata = {
   title: "Building Blocks.",

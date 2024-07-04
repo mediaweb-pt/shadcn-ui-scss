@@ -13,29 +13,29 @@ import {
   Trash2,
 } from "lucide-react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/components/Avatar"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import { Calendar } from "@/shadcn-scss/components/Calendar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Calendar } from "@/shadcn-scss/calendar"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/dropdown-menu"
+import { Label } from "@/shadcn-scss/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
-import { Separator } from "@/shadcn-scss/components/Separator"
-import { Switch } from "@/shadcn-scss/components/Switch"
-import { Textarea } from "@/shadcn-scss/components/TextArea"
+} from "@/shadcn-scss/popover"
+import { Separator } from "@/shadcn-scss/separator"
+import { Switch } from "@/shadcn-scss/switch"
+import { Textarea } from "@/shadcn-scss/textarea"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/shadcn-scss/components/Tooltip"
+} from "@/shadcn-scss/tooltip"
 import { Mail } from "@/app/(app)/examples/mail/data"
 
 interface MailDisplayProps {

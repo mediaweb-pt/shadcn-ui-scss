@@ -1,15 +1,14 @@
 import Link from "next/link"
-
-import { Button } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 
 export const description =
   "A login form with email and password. There's an option to login with Google and a link to sign up if you don't have an account."
@@ -51,7 +50,9 @@ export default function LoginForm() {
           <Button type="submit" className="w-full">
             Login
           </Button>
-          <Button variant="outline" className="w-full">
+          <Button
+            className={buttonVariants({ variant: "outline" }) + " w-full"}
+          >
             Login with Google
           </Button>
         </div>

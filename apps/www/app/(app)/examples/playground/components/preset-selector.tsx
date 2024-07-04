@@ -6,19 +6,19 @@ import { CaretSortIcon, CheckIcon } from "@radix-ui/react-icons"
 import { PopoverProps } from "@radix-ui/react-popover"
 
 import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/shadcn-scss/components/Command"
+} from "@/shadcn-scss/command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+} from "@/shadcn-scss/popover"
 
 import { Preset } from "../data/presets"
 

@@ -1,4 +1,4 @@
-import { Separator } from "@/shadcn-scss/components/Separator"
+import { Separator } from "@/shadcn-scss/separator"
 import { DisplayForm } from "@/app/(app)/examples/forms/display/display-form"
 
 export default function SettingsDisplayPage() {

@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Dialog,
   DialogContent,
@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/shadcn-scss/components/Dialog"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/dialog"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 
 export function PresetSave() {
   return (

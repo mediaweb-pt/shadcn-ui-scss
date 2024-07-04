@@ -1,4 +1,4 @@
-import { Button } from "@/shadcn-scss/components/Button"
+import { Button } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -6,15 +6,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/shadcn-scss/components/Tabs"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/shadcn-scss/tabs"
 
 export default function TabsDemo() {
   return (

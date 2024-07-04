@@ -4,10 +4,10 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
-import { Textarea } from "@/shadcn-scss/components/TextArea"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
+import { Textarea } from "@/shadcn-scss/textarea"
 
 export default function Component() {
   return (

@@ -1,4 +1,4 @@
-import { Separator } from "@/shadcn-scss/components/Separator"
+import { Separator } from "@/shadcn-scss/separator"
 import { NotificationsForm } from "@/app/(app)/examples/forms/notifications/notifications-form"
 
 export default function SettingsNotificationsPage() {

@@ -5,7 +5,7 @@ import { NavItem, NavItemWithChildren } from "types/nav"
 
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/registry/new-york/ui/button"
+import { buttonVariants } from "@/registry/scss/ui/button"
 
 interface DocsPagerProps {
   doc: Doc
@@ -43,7 +43,8 @@ export function DocsPager({ doc }: DocsPagerProps) {
 }
 
 export function getPagerForDoc(doc: Doc) {
-  const flattenedLinks = [null, ...flatten(docsConfig.sidebarNav), null]
+  const sidebarLinks = docsConfig.sidebarNav ? docsConfig.sidebarNav : [];
+  const flattenedLinks = [null, ...flatten(sidebarLinks), null]
   const activeIndex = flattenedLinks.findIndex(
     (link) => doc.slug === link?.href
   )

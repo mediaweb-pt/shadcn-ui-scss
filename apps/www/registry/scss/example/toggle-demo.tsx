@@ -1,4 +1,4 @@
-import { Toggle } from "@/shadcn-scss/components/Toggle"
+import { Toggle } from "@/shadcn-scss/toggle"
 import { Bold } from "lucide-react"
 
 export default function ToggleDemo() {

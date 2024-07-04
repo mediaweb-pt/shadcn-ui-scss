@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Button } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -7,16 +7,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
+} from "@/shadcn-scss/select"
 
 export default function CardWithForm() {
   return (

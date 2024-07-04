@@ -1,11 +1,11 @@
-import { Badge } from "@/shadcn-scss/components/Badge"
+import { Badge } from "@/shadcn-scss/badge"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 import {
   Table,
   TableBody,
@@ -13,7 +13,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/shadcn-scss/components/Table"
+} from "@/shadcn-scss/table"
 
 export default function Component() {
   return (
@@ -37,7 +37,7 @@ export default function Component() {
             <TableRow className="bg-accent">
               <TableCell>
                 <div className="font-medium">Liam Johnson</div>
-                <div className="hidden text-sm text-muted-foreground md:inline">
+                <div className="text-muted-foreground hidden text-sm md:inline">
                   liam@example.com
                 </div>
               </TableCell>
@@ -53,7 +53,7 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="font-medium">Olivia Smith</div>
-                <div className="hidden text-sm text-muted-foreground md:inline">
+                <div className="text-muted-foreground hidden text-sm md:inline">
                   olivia@example.com
                 </div>
               </TableCell>
@@ -69,7 +69,7 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="font-medium">Noah Williams</div>
-                <div className="hidden text-sm text-muted-foreground md:inline">
+                <div className="text-muted-foreground hidden text-sm md:inline">
                   noah@example.com
                 </div>
               </TableCell>
@@ -87,7 +87,7 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="font-medium">Emma Brown</div>
-                <div className="hidden text-sm text-muted-foreground md:inline">
+                <div className="text-muted-foreground hidden text-sm md:inline">
                   emma@example.com
                 </div>
               </TableCell>
@@ -103,7 +103,7 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="font-medium">Liam Johnson</div>
-                <div className="hidden text-sm text-muted-foreground md:inline">
+                <div className="text-muted-foreground hidden text-sm md:inline">
                   liam@example.com
                 </div>
               </TableCell>
@@ -119,7 +119,7 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="font-medium">Liam Johnson</div>
-                <div className="hidden text-sm text-muted-foreground md:inline">
+                <div className="text-muted-foreground hidden text-sm md:inline">
                   liam@example.com
                 </div>
               </TableCell>
@@ -135,7 +135,7 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="font-medium">Olivia Smith</div>
-                <div className="hidden text-sm text-muted-foreground md:inline">
+                <div className="text-muted-foreground hidden text-sm md:inline">
                   olivia@example.com
                 </div>
               </TableCell>
@@ -151,7 +151,7 @@ export default function Component() {
             <TableRow>
               <TableCell>
                 <div className="font-medium">Emma Brown</div>
-                <div className="hidden text-sm text-muted-foreground md:inline">
+                <div className="text-muted-foreground hidden text-sm md:inline">
                   emma@example.com
                 </div>
               </TableCell>

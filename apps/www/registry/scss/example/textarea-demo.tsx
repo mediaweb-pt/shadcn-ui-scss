@@ -1,4 +1,4 @@
-import { Textarea } from "@/shadcn-scss/components/TextArea"
+import { Textarea } from "@/shadcn-scss/textarea"
 
 export default function TextareaDemo() {
   return <Textarea placeholder="Type your message here." />

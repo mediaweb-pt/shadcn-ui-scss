@@ -1,4 +1,4 @@
-import { Input } from "@/shadcn-scss/components/Input"
+import { Input } from "@/shadcn-scss/input"
 
 export function Search() {
   return (

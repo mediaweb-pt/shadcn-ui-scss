@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Dialog,
   DialogContent,
@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/shadcn-scss/components/Dialog"
+} from "@/shadcn-scss/dialog"
 
 export function CodeViewer() {
   return (

@@ -1,14 +1,10 @@
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/shadcn-scss/components/Avatar"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/shadcn-scss/components/HoverCard"
+} from "@/shadcn-scss/hover-card"
 import { CalendarDays } from "lucide-react"
 
 export default function HoverCardDemo() {

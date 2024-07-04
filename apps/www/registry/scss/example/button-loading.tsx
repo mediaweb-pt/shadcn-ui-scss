@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import { Loader2 } from "lucide-react"
 
 export default function ButtonLoading() {

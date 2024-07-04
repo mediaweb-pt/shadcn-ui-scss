@@ -1,11 +1,11 @@
-import { Button } from "@/registry/scss/ui/button"
+import { Button } from "@/shadcn-scss/button"
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 
 export default function Component() {
   return (

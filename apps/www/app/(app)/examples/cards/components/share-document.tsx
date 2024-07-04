@@ -4,24 +4,24 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/shadcn-scss/components/Avatar"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+} from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
-import { Separator } from "@/shadcn-scss/components/Separator"
+} from "@/shadcn-scss/select"
+import { Separator } from "@/shadcn-scss/separator"
 
 export function DemoShareDocument() {
   return (

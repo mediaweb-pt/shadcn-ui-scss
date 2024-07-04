@@ -5,14 +5,14 @@ import {
   StarIcon,
 } from "@radix-ui/react-icons"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -21,8 +21,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
-import { Separator } from "@/shadcn-scss/components/Separator"
+} from "@/shadcn-scss/dropdown-menu"
+import { Separator } from "@/shadcn-scss/separator"
 
 export function DemoGithub() {
   return (

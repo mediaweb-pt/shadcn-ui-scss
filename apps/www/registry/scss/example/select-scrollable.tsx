@@ -7,7 +7,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
+} from "@/shadcn-scss/select"
 
 export default function SelectScrollable() {
   return (

@@ -1,6 +1,4 @@
-import { PlusCircle } from "lucide-react"
-
-import { Button } from "@/registry/scss/ui/button"
+import { Button } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -8,9 +6,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 import {
   Table,
   TableBody,
@@ -18,8 +16,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/shadcn-scss/components/Table"
-import { ToggleGroup, ToggleGroupItem } from "@/registry/scss/ui/toggle-group"
+} from "@/shadcn-scss/table"
+import { ToggleGroup, ToggleGroupItem } from "@/shadcn-scss/toggle-group"
+import { PlusCircle } from "lucide-react"
 
 export default function Component() {
   return (

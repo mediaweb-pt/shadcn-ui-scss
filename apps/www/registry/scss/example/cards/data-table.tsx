@@ -1,15 +1,15 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Checkbox } from "@/shadcn-scss/components/Checkbox"
+} from "@/shadcn-scss/card"
+import { Checkbox } from "@/shadcn-scss/checkbox"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -18,8 +18,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
-import { Input } from "@/shadcn-scss/components/Input"
+} from "@/shadcn-scss/dropdown-menu"
+import { Input } from "@/shadcn-scss/input"
 import {
   Table,
   TableBody,
@@ -27,7 +27,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/shadcn-scss/components/Table"
+} from "@/shadcn-scss/table"
 import {
   CaretSortIcon,
   ChevronDownIcon,
@@ -156,7 +156,10 @@ export const columns: ColumnDef<Payment>[] = [
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
-              className={buttonVariants({ variant: "ghost" }) + " height-l width-l padding-none"}
+              className={
+                buttonVariants({ variant: "ghost" }) +
+                " height-l width-l padding-none"
+              }
             >
               <span className="sr-only">Open menu</span>
               <DotsHorizontalIcon className="height-base width-base" />
@@ -225,9 +228,12 @@ export function CardsDataTable() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
-                className={buttonVariants({ variant: "outline" }) + " margin-left-auto"}
+                className={
+                  buttonVariants({ variant: "outline" }) + " margin-left-auto"
+                }
               >
-                Columns <ChevronDownIcon className="margin-left-s height-base width-base" />
+                Columns{" "}
+                <ChevronDownIcon className="margin-left-s height-base width-base" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -258,9 +264,7 @@ export function CardsDataTable() {
                 <TableRow key={headerGroup.id}>
                   {headerGroup.headers.map((header) => {
                     return (
-                      <TableHead
-                        key={header.id}
-                      >
+                      <TableHead key={header.id}>
                         {header.isPlaceholder
                           ? null
                           : flexRender(
@@ -281,9 +285,7 @@ export function CardsDataTable() {
                     data-state={row.getIsSelected() && "selected"}
                   >
                     {row.getVisibleCells().map((cell) => (
-                      <TableCell
-                        key={cell.id}
-                      >
+                      <TableCell key={cell.id}>
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext()

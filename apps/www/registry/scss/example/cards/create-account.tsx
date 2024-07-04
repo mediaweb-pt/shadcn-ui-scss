@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 
 import { Icons } from "@/components/icons"
 
@@ -25,11 +25,15 @@ export function CardsCreateAccount() {
       </CardHeader>
       <CardContent className="gap-base grid">
         <div className="gap-m flex">
-          <Button className={buttonVariants({ variant: "outline" }) + " flex-1"}>
+          <Button
+            className={buttonVariants({ variant: "outline" }) + " flex-1"}
+          >
             <Icons.gitHub className="margin-right-s height-base width-base" />
             Github
           </Button>
-          <Button className={buttonVariants({ variant: "outline" }) + " flex-1"}>
+          <Button
+            className={buttonVariants({ variant: "outline" }) + " flex-1"}
+          >
             <Icons.google className="margin-right-s height-base width-base" />
             Google
           </Button>
@@ -44,11 +48,11 @@ export function CardsCreateAccount() {
             </span>
           </div>
         </div>
-        <div className="grid gap-s">
+        <div className="gap-s grid">
           <Label htmlFor="email">Email</Label>
           <Input id="email" type="email" placeholder="m@example.com" />
         </div>
-        <div className="grid gap-s">
+        <div className="gap-s grid">
           <Label htmlFor="password">Password</Label>
           <Input id="password" type="password" />
         </div>

@@ -4,15 +4,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/shadcn-scss/components/Avatar"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+} from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 import {
   Command,
   CommandEmpty,
@@ -20,12 +20,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/shadcn-scss/components/Command"
+} from "@/shadcn-scss/command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+} from "@/shadcn-scss/popover"
 
 export function DemoTeamMembers() {
   return (

@@ -1,10 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/components/Avatar"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/shadcn-scss/components/Card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/avatar"
+import { Card, CardContent, CardHeader, CardTitle } from "@/shadcn-scss/card"
 
 export default function Component() {
   return (
@@ -20,7 +15,7 @@ export default function Component() {
           </Avatar>
           <div className="grid gap-1">
             <p className="text-sm font-medium leading-none">Olivia Martin</p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               olivia.martin@email.com
             </p>
           </div>
@@ -33,7 +28,7 @@ export default function Component() {
           </Avatar>
           <div className="grid gap-1">
             <p className="text-sm font-medium leading-none">Jackson Lee</p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               jackson.lee@email.com
             </p>
           </div>
@@ -46,7 +41,7 @@ export default function Component() {
           </Avatar>
           <div className="grid gap-1">
             <p className="text-sm font-medium leading-none">Isabella Nguyen</p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               isabella.nguyen@email.com
             </p>
           </div>
@@ -59,7 +54,7 @@ export default function Component() {
           </Avatar>
           <div className="grid gap-1">
             <p className="text-sm font-medium leading-none">William Kim</p>
-            <p className="text-sm text-muted-foreground">will@email.com</p>
+            <p className="text-muted-foreground text-sm">will@email.com</p>
           </div>
           <div className="ml-auto font-medium">+$99.00</div>
         </div>
@@ -70,7 +65,7 @@ export default function Component() {
           </Avatar>
           <div className="grid gap-1">
             <p className="text-sm font-medium leading-none">Sofia Davis</p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               sofia.davis@email.com
             </p>
           </div>

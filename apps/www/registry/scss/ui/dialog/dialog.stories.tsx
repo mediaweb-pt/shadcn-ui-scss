@@ -1,3 +1,4 @@
+import { Row } from "@/scripts/structure/Grid"
 import type { Meta, StoryObj } from "@storybook/react"
 import { Copy } from "lucide-react"
 
@@ -11,7 +12,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "."
-import { Row } from "../../structure/Grid"
 import { Button } from "../button"
 import { Input } from "../input"
 import { Label } from "../label"

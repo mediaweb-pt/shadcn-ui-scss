@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/shadcn-scss/components/Breadcrumbs"
+} from "@/shadcn-scss/breadcrumb"
 
 export default function BreadcrumbCollapsed() {
   return (

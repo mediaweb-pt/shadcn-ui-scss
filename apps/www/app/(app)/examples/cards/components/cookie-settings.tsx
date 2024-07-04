@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Label } from "@/shadcn-scss/components/Label"
-import { Switch } from "@/shadcn-scss/components/Switch"
+} from "@/shadcn-scss/card"
+import { Label } from "@/shadcn-scss/label"
+import { Switch } from "@/shadcn-scss/switch"
 
 export function DemoCookieSettings() {
   return (

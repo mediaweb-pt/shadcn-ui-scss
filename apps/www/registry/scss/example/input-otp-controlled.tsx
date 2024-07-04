@@ -1,11 +1,7 @@
 "use client"
 
 import * as React from "react"
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-} from "@/shadcn-scss/components/InputOTP"
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/shadcn-scss/input-otp"
 
 export default function InputOTPControlled() {
   const [value, setValue] = React.useState("")

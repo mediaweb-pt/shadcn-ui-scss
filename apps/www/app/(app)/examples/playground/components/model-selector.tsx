@@ -6,7 +6,7 @@ import { PopoverProps } from "@radix-ui/react-popover"
 
 import { cn } from "@/lib/utils"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Command,
   CommandEmpty,
@@ -14,18 +14,18 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/shadcn-scss/components/Command"
+} from "@/shadcn-scss/command"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/shadcn-scss/components/HoverCard"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/hover-card"
+import { Label } from "@/shadcn-scss/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+} from "@/shadcn-scss/popover"
 
 import { Model, ModelType } from "../data/models"
 

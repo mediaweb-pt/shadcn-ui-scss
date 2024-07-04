@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Form,
   FormControl,
@@ -10,17 +10,17 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/shadcn-scss/components/Form"
-import { Input } from "@/shadcn-scss/components/Input"
+} from "@/shadcn-scss/form"
+import { Input } from "@/shadcn-scss/input"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
-import { Textarea } from "@/shadcn-scss/components/TextArea"
-import { toast } from "@/shadcn-scss/components/Toast/useToast"
+} from "@/shadcn-scss/select"
+import { Textarea } from "@/shadcn-scss/textarea"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useFieldArray, useForm } from "react-hook-form"
 import { z } from "zod"

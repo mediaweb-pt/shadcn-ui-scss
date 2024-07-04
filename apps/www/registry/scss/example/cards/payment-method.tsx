@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -8,17 +8,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
-import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
+import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/radio-group"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
+} from "@/shadcn-scss/select"
 
 import { Icons } from "@/components/icons"
 
@@ -31,8 +31,8 @@ export function CardsPaymentMethod() {
           Add a new payment method to your account.
         </CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-m">
-        <RadioGroup defaultValue="card" className="flex gap-base">
+      <CardContent className="gap-m grid">
+        <RadioGroup defaultValue="card" className="gap-base flex">
           <div className="flex-1">
             <RadioGroupItem
               value="card"
@@ -42,7 +42,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="card"
-              className="flex flex-col items-center justify-between border-radius-soft border-size-m bg-transparent padding-base"
+              className="border-radius-soft border-size-m padding-base flex flex-col items-center justify-between bg-transparent"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="paypal"
-              className="flex flex-col items-center justify-between border-radius-soft border-size-m bg-transparent padding-base"
+              className="border-radius-soft border-size-m padding-base flex flex-col items-center justify-between bg-transparent"
             >
               <Icons.paypal className="margin-bottom-s height-m width-m" />
               Paypal
@@ -86,27 +86,27 @@ export function CardsPaymentMethod() {
             />
             <Label
               htmlFor="apple"
-              className="flex flex-col items-center justify-between border-radius-soft border-size-m bg-transparent padding-base"
+              className="border-radius-soft border-size-m padding-base flex flex-col items-center justify-between bg-transparent"
             >
               <Icons.apple className="margin-bottom-s height-m width-m" />
               Apple
             </Label>
           </div>
         </RadioGroup>
-        <div className="grid gap-s">
+        <div className="gap-s grid">
           <Label htmlFor="name">Name</Label>
           <Input id="name" placeholder="First Last" />
         </div>
-        <div className="grid gap-s">
+        <div className="gap-s grid">
           <Label htmlFor="city">City</Label>
           <Input id="city" placeholder="" />
         </div>
-        <div className="grid gap-s">
+        <div className="gap-s grid">
           <Label htmlFor="number">Card number</Label>
           <Input id="number" placeholder="" />
         </div>
-        <div className="flex gap-base">
-          <div className="grid flex-1 gap-s">
+        <div className="gap-base flex">
+          <div className="gap-s grid flex-1">
             <Label htmlFor="month">Expires</Label>
             <Select>
               <SelectTrigger id="month" aria-label="Month">
@@ -128,7 +128,7 @@ export function CardsPaymentMethod() {
               </SelectContent>
             </Select>
           </div>
-          <div className="grid gap-s">
+          <div className="gap-s grid">
             <Label htmlFor="year">Year</Label>
             <Select>
               <SelectTrigger id="year" aria-label="Year">
@@ -143,7 +143,7 @@ export function CardsPaymentMethod() {
               </SelectContent>
             </Select>
           </div>
-          <div className="grid gap-s">
+          <div className="gap-s grid">
             <Label htmlFor="cvc">CVC</Label>
             <Input id="cvc" placeholder="CVC" />
           </div>

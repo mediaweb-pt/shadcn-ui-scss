@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/shadcn-scss/components/Button"
+import { Button } from "@/shadcn-scss/button"
 import {
   Form,
   FormControl,
@@ -9,17 +9,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/shadcn-scss/components/Form"
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-} from "@/shadcn-scss/components/InputOTP"
+} from "@/shadcn-scss/form"
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/shadcn-scss/input-otp"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
-import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({
   pin: z.string().min(6, {

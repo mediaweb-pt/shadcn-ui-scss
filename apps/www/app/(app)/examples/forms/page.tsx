@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/scss/ui/separator"
+import { Separator } from "@/shadcn-scss/separator"
 import { ProfileForm } from "@/app/(app)/examples/forms/profile-form"
 
 export default function SettingsProfilePage() {

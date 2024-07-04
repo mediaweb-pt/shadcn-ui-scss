@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Form,
   FormControl,
@@ -8,13 +8,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/shadcn-scss/components/Form"
-import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup"
+} from "@/shadcn-scss/form"
+import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/radio-group"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
-import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {
@@ -44,7 +43,7 @@ export default function RadioGroupForm() {
         <FormField
           control={form.control}
           name="type"
-          render={({ field }) => (
+          render={({ field }: { field: any }) => (
             <FormItem className="space-y-3">
               <FormLabel>Notify me about...</FormLabel>
               <FormControl>

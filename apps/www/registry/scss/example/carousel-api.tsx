@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Card, CardContent } from "@/shadcn-scss/components/Card"
+import { Card, CardContent } from "@/shadcn-scss/card"
 import {
   Carousel,
   CarouselContent,
@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from "@/shadcn-scss/components/Carousel"
+} from "@/shadcn-scss/carousel"
 
 export default function CarouselDApiDemo() {
   const [api, setApi] = React.useState<CarouselApi>()

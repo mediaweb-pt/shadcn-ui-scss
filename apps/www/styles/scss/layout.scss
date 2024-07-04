@@ -1,5 +1,6 @@
-@import "../../../../lib/styles/00-abstract/mixins";
-@import "../../../../lib/styles/00-abstract/variables";
+@import "../../registry/styles/00-abstract/mixins";
+@import "../../registry/styles/00-abstract/variables";
+
 .btn {
   @media (min-width: 768px) {
     &.md\:hidden {

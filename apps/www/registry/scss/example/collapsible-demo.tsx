@@ -1,12 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/shadcn-scss/components/Collapsible"
+} from "@/shadcn-scss/collapsible"
 import { ChevronsUpDown, Plus, X } from "lucide-react"
 
 export default function CollapsibleDemo() {

@@ -1,10 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-
-import { Button } from "@/shadcn-scss/components/Button"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
-import { buttonVariants } from "../ui/button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 
 export const description =
   "A login page with two columns. The first column has the login form with email and password. There's a Forgot your passwork link and a link to sign up if you do not have an account. The second column has a cover image."
@@ -20,7 +18,7 @@ export default function Dashboard() {
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-center">
             <h1 className="text-3xl font-bold">Login</h1>
-            <p className="text-balance text-muted-foreground">
+            <p className="text-muted-foreground text-balance">
               Enter your email below to login to your account
             </p>
           </div>
@@ -49,7 +47,9 @@ export default function Dashboard() {
             <Button type="submit" className="w-full">
               Login
             </Button>
-            <Button className={buttonVariants({variant: "outline"}) + " w-full"}>
+            <Button
+              className={buttonVariants({ variant: "outline" }) + " w-full"}
+            >
               Login with Google
             </Button>
           </div>

@@ -1,8 +1,4 @@
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@/shadcn-scss/components/Alert"
+import { Alert, AlertDescription, AlertTitle } from "@/shadcn-scss/alert"
 import { Terminal } from "lucide-react"
 
 export default function AlertDemo() {

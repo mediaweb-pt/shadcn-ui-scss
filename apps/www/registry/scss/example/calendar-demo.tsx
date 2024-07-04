@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Calendar } from "@/shadcn-scss/components/Calendar"
+import { Calendar } from "@/shadcn-scss/calendar"
 
 export default function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())

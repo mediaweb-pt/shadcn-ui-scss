@@ -1,5 +1,5 @@
-import { Label } from "@/shadcn-scss/components/Label"
-import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup"
+import { Label } from "@/shadcn-scss/label"
+import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/radio-group"
 
 export default function RadioGroupDemo() {
   return (

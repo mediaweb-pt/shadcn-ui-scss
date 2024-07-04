@@ -1,11 +1,7 @@
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
+import { Popover, PopoverContent, PopoverTrigger } from "@/shadcn-scss/popover"
 
 export default function PopoverDemo() {
   return (
@@ -17,7 +13,7 @@ export default function PopoverDemo() {
         <div className="grid gap-4">
           <div className="space-y-2">
             <h4 className="font-medium leading-none">Dimensions</h4>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               Set the dimensions for the layer.
             </p>
           </div>

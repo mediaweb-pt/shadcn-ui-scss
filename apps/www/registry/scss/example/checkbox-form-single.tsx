@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { Button } from "@/shadcn-scss/components/Button"
-import { Checkbox } from "@/shadcn-scss/components/Checkbox"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Checkbox } from "@/shadcn-scss/checkbox"
 import {
   Form,
   FormControl,
@@ -10,12 +10,11 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/shadcn-scss/components/Form"
+} from "@/shadcn-scss/form"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
-import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({
   mobile: z.boolean().default(false).optional(),

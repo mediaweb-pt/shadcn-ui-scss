@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { BellRing, Check } from "lucide-react"
 
+import { cn } from "@/lib/utils"
+
 import {
   Card,
   CardContent,
@@ -9,7 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from "."
-import { cn } from "../../utils/utils"
 import { Button } from "../button"
 import { Input } from "../input"
 import { Label } from "../label"

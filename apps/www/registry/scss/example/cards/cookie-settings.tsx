@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Label } from "@/shadcn-scss/components/Label"
-import { Switch } from "@/shadcn-scss/components/Switch"
+} from "@/shadcn-scss/card"
+import { Label } from "@/shadcn-scss/label"
+import { Switch } from "@/shadcn-scss/switch"
 
 export function CardsCookieSettings() {
   return (
@@ -23,7 +23,7 @@ export function CardsCookieSettings() {
         <div className="gap-base flex items-center justify-between">
           <Label htmlFor="necessary" className="space-y-xs flex flex-col">
             <span>Strictly Necessary</span>
-            <span className="font-size-xs font-normal leading-snug text-muted-foreground">
+            <span className="font-size-xs text-muted-foreground font-normal leading-snug">
               These cookies are essential in order to use the website and use
               its features.
             </span>
@@ -33,7 +33,7 @@ export function CardsCookieSettings() {
         <div className="gap-base flex items-center justify-between">
           <Label htmlFor="functional" className="space-y-xs flex flex-col">
             <span>Functional Cookies</span>
-            <span className="font-size-xs font-normal leading-snug text-muted-foreground">
+            <span className="font-size-xs text-muted-foreground font-normal leading-snug">
               These cookies allow the website to provide personalized
               functionality.
             </span>
@@ -43,7 +43,7 @@ export function CardsCookieSettings() {
         <div className="gap-base flex items-center justify-between">
           <Label htmlFor="performance" className="space-y-xs flex flex-col">
             <span>Performance Cookies</span>
-            <span className="font-size-xs font-normal leading-snug text-muted-foreground">
+            <span className="font-size-xs text-muted-foreground font-normal leading-snug">
               These cookies help to improve the performance of the website.
             </span>
           </Label>

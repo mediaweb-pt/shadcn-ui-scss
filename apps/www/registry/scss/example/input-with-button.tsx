@@ -1,5 +1,5 @@
-import { Button } from "@/shadcn-scss/components/Button"
-import { Input } from "@/shadcn-scss/components/Input"
+import { Button } from "@/shadcn-scss/button"
+import { Input } from "@/shadcn-scss/input"
 
 export default function InputWithButton() {
   return (

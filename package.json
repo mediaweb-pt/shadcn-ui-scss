@@ -21,6 +21,7 @@
     "cli:dev": "turbo --filter=shadcn-ui dev",
     "cli:start": "pnpm --filter=shadcn-ui start:dev",
     "www:dev": "pnpm --filter=www dev",
+    "www:start": "pnpm --filter=www start",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "preview": "turbo run preview",
@@ -84,6 +85,7 @@
     "@types/react-dom": "^18.2.22",
     "eslint-plugin-storybook": "^0.8.0",
     "storybook": "^8.0.10",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.2",
+    "class-variance-authority": "latest"
   }
 }

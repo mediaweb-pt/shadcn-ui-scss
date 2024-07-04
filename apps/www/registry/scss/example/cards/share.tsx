@@ -1,28 +1,24 @@
 "use client"
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/shadcn-scss/components/Avatar"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
-import { Separator } from "@/shadcn-scss/components/Separator"
+} from "@/shadcn-scss/select"
+import { Separator } from "@/shadcn-scss/separator"
 
 export function CardsShare() {
   return (
@@ -34,7 +30,7 @@ export function CardsShare() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex space-x-s">
+        <div className="space-x-s flex">
           <Label htmlFor="link" className="sr-only">
             Link
           </Label>
@@ -52,9 +48,9 @@ export function CardsShare() {
         <Separator className="margin-y-base" />
         <div className="space-y-base">
           <h4 className="font-size-s font-medium">People with access</h4>
-          <div className="grid gap-m">
-            <div className="flex items-center justify-between space-x-base">
-              <div className="flex items-center space-x-base">
+          <div className="gap-m grid">
+            <div className="space-x-base flex items-center justify-between">
+              <div className="space-x-base flex items-center">
                 <Avatar>
                   <AvatarImage src="/avatars/03.png" alt="Image" />
                   <AvatarFallback>OM</AvatarFallback>
@@ -63,11 +59,16 @@ export function CardsShare() {
                   <p className="font-size-s font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="font-size-s text-muted-foreground">m@example.com</p>
+                  <p className="font-size-s text-muted-foreground">
+                    m@example.com
+                  </p>
                 </div>
               </div>
               <Select defaultValue="edit">
-                <SelectTrigger className="margin-left-auto width-25" aria-label="Edit">
+                <SelectTrigger
+                  className="margin-left-auto width-25"
+                  aria-label="Edit"
+                >
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
                 <SelectContent>
@@ -76,8 +77,8 @@ export function CardsShare() {
                 </SelectContent>
               </Select>
             </div>
-            <div className="flex items-center justify-between space-x-base">
-              <div className="flex items-center space-x-base">
+            <div className="space-x-base flex items-center justify-between">
+              <div className="space-x-base flex items-center">
                 <Avatar>
                   <AvatarImage src="/avatars/05.png" alt="Image" />
                   <AvatarFallback>IN</AvatarFallback>
@@ -86,11 +87,16 @@ export function CardsShare() {
                   <p className="font-size-s font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="font-size-s text-muted-foreground">b@example.com</p>
+                  <p className="font-size-s text-muted-foreground">
+                    b@example.com
+                  </p>
                 </div>
               </div>
               <Select defaultValue="view">
-                <SelectTrigger className="margin-left-auto width-25" aria-label="Edit">
+                <SelectTrigger
+                  className="margin-left-auto width-25"
+                  aria-label="Edit"
+                >
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
                 <SelectContent>
@@ -99,8 +105,8 @@ export function CardsShare() {
                 </SelectContent>
               </Select>
             </div>
-            <div className="flex items-center justify-between space-x-base">
-              <div className="flex items-center space-x-base">
+            <div className="space-x-base flex items-center justify-between">
+              <div className="space-x-base flex items-center">
                 <Avatar>
                   <AvatarImage src="/avatars/01.png" alt="Image" />
                   <AvatarFallback>SD</AvatarFallback>
@@ -109,11 +115,16 @@ export function CardsShare() {
                   <p className="font-size-s font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="font-size-s text-muted-foreground">p@example.com</p>
+                  <p className="font-size-s text-muted-foreground">
+                    p@example.com
+                  </p>
                 </div>
               </div>
               <Select defaultValue="view">
-                <SelectTrigger className="margin-left-auto width-25" aria-label="Edit">
+                <SelectTrigger
+                  className="margin-left-auto width-25"
+                  aria-label="Edit"
+                >
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
                 <SelectContent>

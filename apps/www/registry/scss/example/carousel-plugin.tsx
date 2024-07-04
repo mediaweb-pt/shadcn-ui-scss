@@ -1,12 +1,12 @@
 import * as React from "react"
-import { Card, CardContent } from "@/shadcn-scss/components/Card"
+import { Card, CardContent } from "@/shadcn-scss/card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/shadcn-scss/components/Carousel"
+} from "@/shadcn-scss/carousel"
 import Autoplay from "embla-carousel-autoplay"
 
 export default function CarouselPlugin() {

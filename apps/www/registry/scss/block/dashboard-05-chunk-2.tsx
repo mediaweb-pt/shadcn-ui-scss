@@ -5,8 +5,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Progress } from "@/registry/scss/ui/progress"
+} from "@/shadcn-scss/card"
+import { Progress } from "@/shadcn-scss/progress"
 
 export default function Component() {
   return (
@@ -16,7 +16,7 @@ export default function Component() {
         <CardTitle className="text-4xl">$5,329</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="text-xs text-muted-foreground">
+        <div className="text-muted-foreground text-xs">
           +10% from last month
         </div>
       </CardContent>

@@ -2,6 +2,8 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react"
 import type { Meta, StoryObj } from "@storybook/react"
 import { Home } from "lucide-react"
 
+import { cn } from "@/lib/utils"
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,8 +11,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from "."
-import { cn } from "../../utils/utils"
 
 /**
  * ## Installation
@@ -93,6 +95,8 @@ const ListItem = forwardRef<ElementRef<"a">, ComponentPropsWithoutRef<"a">>(
     )
   }
 )
+ListItem.displayName = "ListItem"
+
 const template = (args: any) => (
   <NavigationMenu {...args}>
     <NavigationMenuList>

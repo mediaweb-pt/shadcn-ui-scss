@@ -1,7 +1,7 @@
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 
 import { cn } from "@/lib/utils"
-import { ScrollArea } from "@/shadcn-scss/components/ScrollArea";
+import { ScrollArea } from "@/shadcn-scss/scroll-area";
 
 
 

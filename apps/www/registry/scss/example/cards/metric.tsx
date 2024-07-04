@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 import { useTheme } from "next-themes"
 import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts"
 
@@ -86,9 +86,7 @@ export function CardsMetric() {
                             <span className="font-size-s text-uppercase text-muted-foreground">
                               Today
                             </span>
-                            <span className="bold">
-                              {payload[1].value}
-                            </span>
+                            <span className="bold">{payload[1].value}</span>
                           </div>
                         </div>
                       </div>

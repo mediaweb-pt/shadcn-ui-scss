@@ -1,8 +1,8 @@
 "use client"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 import {
   Sheet,
   SheetClose,
@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/shadcn-scss/components/Sheet"
+} from "@/shadcn-scss/sheet"
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const
 

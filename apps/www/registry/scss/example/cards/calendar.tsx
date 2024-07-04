@@ -1,7 +1,7 @@
 "use client"
 
-import { Calendar } from "@/shadcn-scss/components/Calendar"
-import { Card, CardContent } from "@/shadcn-scss/components/Card"
+import { Calendar } from "@/shadcn-scss/calendar"
+import { Card, CardContent } from "@/shadcn-scss/card"
 import { addDays } from "date-fns"
 
 const start = new Date(2023, 5, 5)

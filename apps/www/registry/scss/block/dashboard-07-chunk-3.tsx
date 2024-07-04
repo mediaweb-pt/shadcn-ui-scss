@@ -1,17 +1,12 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Label } from "@/shadcn-scss/components/Label"
+import { Card, CardContent, CardHeader, CardTitle } from "@/shadcn-scss/card"
+import { Label } from "@/shadcn-scss/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/scss/ui/select"
+} from "@/shadcn-scss/select"
 
 export default function Component() {
   return (

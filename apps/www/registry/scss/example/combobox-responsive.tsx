@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Command,
   CommandEmpty,
@@ -9,17 +9,9 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/shadcn-scss/components/Command"
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/shadcn-scss/components/Drawer"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+} from "@/shadcn-scss/command"
+import { Drawer, DrawerContent, DrawerTrigger } from "@/shadcn-scss/drawer"
+import { Popover, PopoverContent, PopoverTrigger } from "@/shadcn-scss/popover"
 
 import { useMediaQuery } from "@/hooks/use-media-query"
 

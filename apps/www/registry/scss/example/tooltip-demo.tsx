@@ -1,10 +1,10 @@
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/shadcn-scss/components/Tooltip"
+} from "@/shadcn-scss/tooltip"
 
 export default function TooltipDemo() {
   return (

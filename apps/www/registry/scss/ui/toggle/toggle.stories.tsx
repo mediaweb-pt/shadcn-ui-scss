@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from "@storybook/react"
+import { ToggleGroup } from "@/shadcn-scss/toggle-group"
+import type { Meta, StoryObj } from "@storybook/react"
 import { Bold } from "lucide-react"
 
 import { Toggle } from "."
@@ -28,43 +29,46 @@ const meta: Meta<typeof Toggle> = {
       control: { type: "select" },
     },
   },
-  decorators: [
-    (Story) => (
-      <div>
-        <Story />
-      </div>
-    ),
-  ],
 }
 
-const Template: StoryFn = (props) => (
-  <Toggle {...props}>
+type Story = StoryObj<typeof ToggleGroup>
+
+const template = (args: any) => (
+  <Toggle {...args}>
     <Bold />
   </Toggle>
 )
 
-export const Default = Template.bind({})
-Default.args = {
-  variant: "default",
-  size: "default",
+export const Default: Story = {
+  args: {
+    variant: "default",
+    size: "default",
+  },
+  render: (args) => template(args),
 }
 
-export const Small = Template.bind({})
-Small.args = {
-  variant: "default",
-  size: "sm",
+export const Small: Story = {
+  args: {
+    variant: "default",
+    size: "sm",
+  },
+  render: (args) => template(args),
 }
 
-export const Large = Template.bind({})
-Large.args = {
-  variant: "default",
-  size: "lg",
+export const Large: Story = {
+  args: {
+    variant: "default",
+    size: "lg",
+  },
+  render: (args) => template(args),
 }
 
-export const Outline = Template.bind({})
-Outline.args = {
-  variant: "outline",
-  size: "default",
+export const Outline: Story = {
+  args: {
+    variant: "outline",
+    size: "default",
+  },
+  render: (args) => template(args),
 }
 
 export default meta

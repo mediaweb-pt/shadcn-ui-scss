@@ -1,6 +1,6 @@
 import * as React from "react"
 import Image from "next/image"
-import { ScrollArea, ScrollBar } from "@/shadcn-scss/components/ScrollArea"
+import { ScrollArea, ScrollBar } from "@/shadcn-scss/scroll-area"
 
 export interface Artwork {
   artist: string

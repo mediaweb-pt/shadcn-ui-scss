@@ -1,9 +1,8 @@
 "use client"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import { ToastAction } from "@/shadcn-scss/components/Toast"
-
-import { useToast } from "@/registry/default/ui/use-toast"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { ToastAction } from "@/shadcn-scss/toast"
+import { useToast } from "@/shadcn-scss/toast/use-toast"
 
 export default function ToastDestructive() {
   const { toast } = useToast()

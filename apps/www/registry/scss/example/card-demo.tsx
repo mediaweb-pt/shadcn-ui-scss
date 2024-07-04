@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -6,8 +6,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Switch } from "@/shadcn-scss/components/Switch"
+} from "@/shadcn-scss/card"
+import { Switch } from "@/shadcn-scss/switch"
 import { BellRing, Check } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -43,7 +43,7 @@ export default function CardDemo({ className, ...props }: CardProps) {
             <p className="text-sm font-medium leading-none">
               Push Notifications
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               Send notifications to device.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function CardDemo({ className, ...props }: CardProps) {
                 <p className="text-sm font-medium leading-none">
                   {notification.title}
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   {notification.description}
                 </p>
               </div>

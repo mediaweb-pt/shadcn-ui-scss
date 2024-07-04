@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { AspectRatio } from "@/shadcn-scss/components/AspectRatio"
+import { AspectRatio } from "@/shadcn-scss/aspect-ratio"
 
 export default function AspectRatioDemo() {
   return (

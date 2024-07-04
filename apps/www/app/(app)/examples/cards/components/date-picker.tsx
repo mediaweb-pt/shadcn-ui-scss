@@ -1,7 +1,7 @@
-import { Card, CardContent } from "@/shadcn-scss/components/Card"
-import { Label } from "@/shadcn-scss/components/Label"
+import { Card, CardContent } from "@/shadcn-scss/card"
+import { Label } from "@/shadcn-scss/label"
 
-import DatePickerWithRange from "@/registry/scss/example/date-picker-with-range"
+import DatePickerWithRange from "@/shadcn-scss-example/date-picker-with-range"
 
 export function DemoDatePicker() {
   return (

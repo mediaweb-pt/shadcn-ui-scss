@@ -22,7 +22,7 @@
     },
     {
       "name": "toast.stories.tsx",
-      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Toaster } from \".\"\nimport { ToastDemo } from \"./demo/toast-demo\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/toast\n * # or\n * $ npm install @shadcn-ui-sass/toast\n * ```\n *\n */\n\nconst meta: Meta<typeof ToastDemo> = {\n  title: \"Components/Toast\",\n  component: ToastDemo,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof ToastDemo>\n\nconst template = (args: any) => (\n  <>\n    <ToastDemo {...args} />\n    <Toaster />\n  </>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
+      "content": "import type { Meta, StoryObj } from \"@storybook/react\"\n\nimport { Toaster } from \".\"\nimport ToastDemo from \"../../example/toast-demo\"\n\n/**\n * ## Installation\n *\n * ```sh\n * $ yarn add @shadcn-ui-sass/toast\n * # or\n * $ npm install @shadcn-ui-sass/toast\n * ```\n *\n */\n\nconst meta: Meta<typeof ToastDemo> = {\n  title: \"Components/Toast\",\n  component: ToastDemo,\n  tags: [\"autodocs\"],\n}\n\ntype Story = StoryObj<typeof ToastDemo>\n\nconst template = (args: any) => (\n  <>\n    <ToastDemo {...args} />\n    <Toaster />\n  </>\n)\n\nexport const Default: Story = {\n  render: (args) => template(args),\n}\n\nexport default meta\n"
     },
     {
       "name": "index.ts",

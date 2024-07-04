@@ -1,18 +1,14 @@
 "use client"
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/shadcn-scss/components/Avatar"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 import {
   Command,
   CommandEmpty,
@@ -20,12 +16,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/shadcn-scss/components/Command"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+} from "@/shadcn-scss/command"
+import { Popover, PopoverContent, PopoverTrigger } from "@/shadcn-scss/popover"
 import { ChevronDownIcon } from "@radix-ui/react-icons"
 
 export function CardsTeamMembers() {
@@ -45,7 +37,9 @@ export function CardsTeamMembers() {
               <AvatarFallback>OM</AvatarFallback>
             </Avatar>
             <div>
-              <p className="font-size-s font-medium leading-none">Sofia Davis</p>
+              <p className="font-size-s font-medium leading-none">
+                Sofia Davis
+              </p>
               <p className="font-size-s text-muted-foreground">m@example.com</p>
             </div>
           </div>
@@ -104,7 +98,9 @@ export function CardsTeamMembers() {
               <AvatarFallback>JL</AvatarFallback>
             </Avatar>
             <div>
-              <p className="font-size-s font-medium leading-none">Jackson Lee</p>
+              <p className="font-size-s font-medium leading-none">
+                Jackson Lee
+              </p>
               <p className="font-size-s text-muted-foreground">p@example.com</p>
             </div>
           </div>

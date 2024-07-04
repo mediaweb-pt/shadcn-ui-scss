@@ -1,4 +1,4 @@
-import { Slider } from "@/shadcn-scss/components/Slider"
+import { Slider } from "@/shadcn-scss/slider"
 
 import { cn } from "@/lib/utils"
 

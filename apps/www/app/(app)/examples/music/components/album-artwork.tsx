@@ -11,7 +11,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/shadcn-scss/components/ContextMenu"
+} from "@/shadcn-scss/context-menu"
 
 import { Album } from "../data/albums"
 import { playlists } from "../data/playlists"

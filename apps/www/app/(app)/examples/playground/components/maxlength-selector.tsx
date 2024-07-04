@@ -7,9 +7,9 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/shadcn-scss/components/HoverCard"
-import { Label } from "@/shadcn-scss/components/Label"
-import { Slider } from "@/shadcn-scss/components/Slider"
+} from "@/shadcn-scss/hover-card"
+import { Label } from "@/shadcn-scss/label"
+import { Slider } from "@/shadcn-scss/slider"
 
 interface MaxLengthSelectorProps {
   defaultValue: SliderProps["defaultValue"]

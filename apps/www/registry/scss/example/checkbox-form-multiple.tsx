@@ -1,7 +1,7 @@
 "use client"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import { Checkbox } from "@/shadcn-scss/components/Checkbox"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Checkbox } from "@/shadcn-scss/checkbox"
 import {
   Form,
   FormControl,
@@ -10,12 +10,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/shadcn-scss/components/Form"
+} from "@/shadcn-scss/form"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
-import { toast } from "@/registry/default/ui/use-toast"
 
 const items = [
   {

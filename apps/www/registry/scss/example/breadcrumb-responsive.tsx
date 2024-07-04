@@ -10,8 +10,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/shadcn-scss/components/Breadcrumbs"
-import { Button } from "@/shadcn-scss/components/Button"
+} from "@/shadcn-scss/breadcrumb"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Drawer,
   DrawerClose,
@@ -21,13 +21,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/shadcn-scss/components/Drawer"
+} from "@/shadcn-scss/drawer"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
+} from "@/shadcn-scss/dropdown-menu"
 
 import { useMediaQuery } from "@/hooks/use-media-query"
 

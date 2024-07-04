@@ -1,4 +1,4 @@
-import { Skeleton } from "@/shadcn-scss/components/Skeleton"
+import { Skeleton } from "@/shadcn-scss/skeleton"
 
 export default function SkeletonCard() {
   return (

@@ -6,14 +6,14 @@ import {
 } from "@radix-ui/react-icons"
 import { Table } from "@tanstack/react-table"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
+} from "@/shadcn-scss/select"
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>

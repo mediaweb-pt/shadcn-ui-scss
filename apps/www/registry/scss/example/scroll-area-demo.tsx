@@ -1,6 +1,6 @@
 import * as React from "react"
-import { ScrollArea } from "@/shadcn-scss/components/ScrollArea"
-import { Separator } from "@/shadcn-scss/components/Separator"
+import { ScrollArea } from "@/shadcn-scss/scroll-area"
+import { Separator } from "@/shadcn-scss/separator"
 
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`

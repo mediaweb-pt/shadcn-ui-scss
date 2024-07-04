@@ -1,8 +1,4 @@
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-} from "@/shadcn-scss/components/InputOTP"
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/shadcn-scss/input-otp"
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 
 export default function InputOTPPattern() {

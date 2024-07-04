@@ -1,4 +1,4 @@
-import { Separator } from "@/shadcn-scss/components/Separator"
+import { Separator } from "@/shadcn-scss/separator"
 import { AppearanceForm } from "@/app/(app)/examples/forms/appearance/appearance-form"
 
 export default function SettingsAppearancePage() {

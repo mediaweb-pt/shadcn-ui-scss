@@ -1,7 +1,7 @@
+import { Row } from "@/scripts/structure/Grid"
 import type { Meta, StoryObj } from "@storybook/react"
 
 import { Popover, PopoverContent, PopoverTrigger } from "."
-import { Row } from "../../structure/Grid"
 import { Button } from "../button"
 import { Input } from "../input"
 import { Label } from "../label"

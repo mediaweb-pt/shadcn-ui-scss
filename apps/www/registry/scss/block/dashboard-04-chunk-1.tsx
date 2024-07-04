@@ -1,4 +1,4 @@
-import { Button } from "@/registry/scss/ui/button"
+import { Button } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -6,8 +6,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
-import { Input } from "@/shadcn-scss/components/Input"
+} from "@/shadcn-scss/card"
+import { Input } from "@/shadcn-scss/input"
 
 export default function Component() {
   return (

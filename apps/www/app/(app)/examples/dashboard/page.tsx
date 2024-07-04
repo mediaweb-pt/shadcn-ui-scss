@@ -1,20 +1,20 @@
 import { Metadata } from "next"
 import Image from "next/image"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/shadcn-scss/components/Tabs"
+} from "@/shadcn-scss/tabs"
 import { CalendarDateRangePicker } from "@/app/(app)/examples/dashboard/components/date-range-picker"
 import { MainNav } from "@/app/(app)/examples/dashboard/components/main-nav"
 import { Overview } from "@/app/(app)/examples/dashboard/components/overview"

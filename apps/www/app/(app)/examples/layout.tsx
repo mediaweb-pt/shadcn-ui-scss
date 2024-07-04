@@ -10,7 +10,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
-import { buttonVariants } from "@/registry/scss/ui/button"
+import { buttonVariants } from "@/shadcn-scss/button"
 
 export const metadata: Metadata = {
   title: "Examples",

@@ -1,13 +1,13 @@
 import { CopyIcon } from "@radix-ui/react-icons"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import { Input } from "@/shadcn-scss/components/Input"
-import { Label } from "@/shadcn-scss/components/Label"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+} from "@/shadcn-scss/popover"
 
 export function PresetShare() {
   return (

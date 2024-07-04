@@ -25,13 +25,17 @@ const meta: Meta<typeof Carousel> = {
   component: Carousel,
   tags: ["autodocs"],
   args: {
-    num: 1,
-    space: "base",
+    opts: {
+      num: 1,
+      space: "base",
+    },
   },
   argTypes: {
-    space: {
-      options: ["xs", "s", "base", "m", "l", "xl", "xxl"],
-      control: { type: "select" },
+    opts: {
+      space: {
+        options: ["xs", "s", "base", "m", "l", "xl", "xxl"],
+        control: { type: "select" },
+      },
     },
     orientation: {
       options: ["horizontal", "vertical"],
@@ -47,24 +51,24 @@ const template = (args: any) => (
     <Carousel
       className="full-width"
       style={{ maxWidth: "20rem" }}
-      opts={{ space: args.space, num: args.num }}
+      opts={{ space: args.opts.space, num: args.opts.num }}
       orientation={args.orientation}
     >
       <CarouselContent
         style={{
           height:
             args.orientation === "vertical"
-              ? args.space === "xs" || args.space === "s"
+              ? args.opts.space === "xs" || args.opts.space === "s"
                 ? 200
-                : args.space === "base"
+                : args.opts.space === "base"
                 ? 210
-                : args.space === "m"
+                : args.opts.space === "m"
                 ? 220
-                : args.space === "l"
+                : args.opts.space === "l"
                 ? 240
-                : args.space === "xl"
+                : args.opts.space === "xl"
                 ? 260
-                : args.space === "xxl"
+                : args.opts.space === "xxl"
                 ? 270
                 : ""
               : "",
@@ -105,17 +109,17 @@ export const Default: Story = {
 }
 
 export const Sizes: Story = {
-  args: { num: 2 },
+  args: { opts: { num: 2 } },
   render: (args) => template(args),
 }
 
 export const Spacing: Story = {
-  args: { num: 2, space: "xl" },
+  args: { opts: { num: 2, space: "xl" } },
   render: (args) => template(args),
 }
 
 export const Oriention: Story = {
-  args: { num: 2, orientation: "vertical" },
+  args: { opts: { num: 2 }, orientation: "vertical" },
   render: (args) => template(args),
 }
 

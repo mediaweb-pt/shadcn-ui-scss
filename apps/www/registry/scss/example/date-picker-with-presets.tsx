@@ -1,20 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import { Calendar } from "@/shadcn-scss/components/Calendar"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Calendar } from "@/shadcn-scss/calendar"
+import { Popover, PopoverContent, PopoverTrigger } from "@/shadcn-scss/popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn-scss/components/Select"
+} from "@/shadcn-scss/select"
 import { addDays, format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 

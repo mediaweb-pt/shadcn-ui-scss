@@ -9,6 +9,7 @@ import "./button.scss"
 const buttonVariants = cva("btn", {
   variants: {
     variant: {
+      default: "bg-primary",
       destructive: "btn-destructive ",
       outline: "btn-outline ",
       secondary: "btn-secondary ",

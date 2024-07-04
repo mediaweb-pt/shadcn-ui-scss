@@ -1,13 +1,12 @@
 import Image from "next/image"
-import { Upload } from "lucide-react"
-
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
+import { Upload } from "lucide-react"
 
 export default function Component() {
   return (
@@ -47,7 +46,7 @@ export default function Component() {
               />
             </button>
             <button className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed">
-              <Upload className="h-4 w-4 text-muted-foreground" />
+              <Upload className="text-muted-foreground h-4 w-4" />
               <span className="sr-only">Upload</span>
             </button>
           </div>

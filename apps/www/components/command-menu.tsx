@@ -61,14 +61,14 @@ export function CommandMenu({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          "site-layout__header-search relative height-l justify-between border-radius-soft bg-background font-size-s regular text-muted-foreground shadow-none"
+          "site-layout__header-search height-l border-radius-soft font-size-s regular relative justify-between bg-background text-muted-foreground shadow-none"
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
         <>
           {/* <span className="hidden lg_inline-flex">Search documentation...</span> */}
-          <span className="inline-flex lg_hidden">Search...</span>
+          <span className="lg_hidden inline-flex">Search...</span>
         </>
         <kbd className="site-layout__header-kbd">
           <span className="font-size-s">⌘</span>K
@@ -79,7 +79,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Links">
-            {docsConfig.mainNav
+            {docsConfig?.mainNav && docsConfig?.mainNav
               .filter((navitem) => !navitem.external)
               .map((navItem) => (
                 <CommandItem
@@ -94,7 +94,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
           </CommandGroup>
-          {docsConfig.sidebarNav?.map((group) => (
+          {docsConfig?.sidebarNav?.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem
@@ -104,7 +104,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                     runCommand(() => router.push(navItem.href as string))
                   }}
                 >
-                  <div className="flex margin-right-s height-base width-base items-center justify-center">
+                  <div className="margin-right-s height-base width-base flex items-center justify-center">
                     <CircleIcon className="height-base width-base" />
                   </div>
                   {navItem.title}

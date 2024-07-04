@@ -1,6 +1,6 @@
 "use client"
 
-import { Checkbox } from "@/shadcn-scss/components/Checkbox"
+import { Checkbox } from "@/shadcn-scss/checkbox"
 
 export default function CheckboxDemo() {
   return (

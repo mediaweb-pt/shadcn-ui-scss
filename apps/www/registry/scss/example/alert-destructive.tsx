@@ -1,8 +1,4 @@
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@/shadcn-scss/components/Alert"
+import { Alert, AlertDescription, AlertTitle } from "@/shadcn-scss/alert"
 import { AlertCircle } from "lucide-react"
 
 export default function AlertDestructive() {

@@ -14,13 +14,12 @@ import LOGO from "../../assets/images/bg_login_new.jpg"
  *
  */
 
-const meta: Meta<typeof AspectRatio & { from: number; to: number }> = {
+const meta: Meta<typeof AspectRatio> = {
   title: "Components/AspectRatio",
   component: AspectRatio,
   tags: ["autodocs"],
   args: {
-    from: 16,
-    to: 9,
+    ratio: 16 / 9,
   },
 }
 
@@ -28,8 +27,8 @@ type Story = StoryObj<typeof AspectRatio>
 
 const template = (args: any) => (
   <div style={{ width: 450 }}>
-    <AspectRatio ratio={args.from / args.to}>
-      <img src={LOGO} alt="Image" />
+    <AspectRatio ratio={args.ratio}>
+      <img src={LOGO.src} alt="Image" />
     </AspectRatio>
   </div>
 )

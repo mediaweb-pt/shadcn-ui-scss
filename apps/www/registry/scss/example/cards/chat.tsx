@@ -1,16 +1,7 @@
 import * as React from "react"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/shadcn-scss/components/Avatar"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/shadcn-scss/components/Card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/shadcn-scss/avatar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Card, CardContent, CardFooter, CardHeader } from "@/shadcn-scss/card"
 import {
   Command,
   CommandEmpty,
@@ -18,7 +9,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/shadcn-scss/components/Command"
+} from "@/shadcn-scss/command"
 import {
   Dialog,
   DialogContent,
@@ -26,14 +17,14 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/shadcn-scss/components/Dialog"
-import { Input } from "@/shadcn-scss/components/Input"
+} from "@/shadcn-scss/dialog"
+import { Input } from "@/shadcn-scss/input"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/shadcn-scss/components/Tooltip"
+} from "@/shadcn-scss/tooltip"
 import { Check, Plus, Send } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -68,10 +59,10 @@ const users = [
 
 type User = (typeof users)[number]
 
-export function CardsChat({props}) {
+export function CardsChat({ props }: { props?: any }) {
   const [open, setOpen] = React.useState(false)
   const [selectedUsers, setSelectedUsers] = React.useState<User[]>([])
-  const theme = props?.theme;
+  const theme = props?.theme
   const [messages, setMessages] = React.useState([
     {
       role: "agent",
@@ -97,13 +88,15 @@ export function CardsChat({props}) {
     <>
       <Card>
         <CardHeader className="flex flex-row items-center">
-          <div className="space-x-base flex-1 flex items-center">
+          <div className="space-x-base flex flex-1 items-center">
             <Avatar>
               <AvatarImage src="/avatars/01.png" alt="Image" />
               <AvatarFallback>OM</AvatarFallback>
             </Avatar>
             <div>
-              <p className="font-size-s font-medium leading-none">Sofia Davis</p>
+              <p className="font-size-s font-medium leading-none">
+                Sofia Davis
+              </p>
               <p className="font-size-s text-muted-foreground">m@example.com</p>
             </div>
           </div>
@@ -131,11 +124,15 @@ export function CardsChat({props}) {
               <div
                 key={index}
                 className={cn(
-                  "flex width-75 flex-col gap-s border-radius-soft padding-s font-size-s",
+                  "width-75 gap-s border-radius-soft padding-s font-size-s flex flex-col",
                   message.role === "user"
-                    ? "margin-left-auto bg-[--primary] text-primary-foreground"
+                    ? "margin-left-auto text-primary-foreground bg-[--primary]"
                     : "bg-muted",
-                  message.role === "user" && theme === "theme-zinc" || message.role === "user" && theme === "theme-yellow" || message.role === "user" && theme === "theme-green" ? "text-primary-foreground" : "text-foreground"
+                  (message.role === "user" && theme === "theme-zinc") ||
+                    (message.role === "user" && theme === "theme-yellow") ||
+                    (message.role === "user" && theme === "theme-green")
+                    ? "text-primary-foreground"
+                    : "text-foreground"
                 )}
               >
                 {message.content}
@@ -157,7 +154,7 @@ export function CardsChat({props}) {
               ])
               setInput("")
             }}
-            className="flex width-100 items-center space-x-s"
+            className="width-100 space-x-s flex items-center"
           >
             <Input
               id="message"
@@ -179,7 +176,7 @@ export function CardsChat({props}) {
         </CardFooter>
       </Card>
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="gap-0 padding-none outline-none">
+        <DialogContent className="padding-none gap-0 outline-none">
           <DialogHeader className="padding-base">
             <DialogTitle>New message</DialogTitle>
             <DialogDescription>
@@ -187,8 +184,11 @@ export function CardsChat({props}) {
               message.
             </DialogDescription>
           </DialogHeader>
-          <Command className="overflow-hidden border-radius-top-none border-top-s text-muted">
-            <CommandInput className="text-muted-foreground" placeholder="Search user..." />
+          <Command className="border-radius-top-none border-top-s text-muted overflow-hidden">
+            <CommandInput
+              className="text-muted-foreground"
+              placeholder="Search user..."
+            />
             <CommandList>
               <CommandEmpty>No users found.</CommandEmpty>
               <CommandGroup className="padding-s">
@@ -225,20 +225,20 @@ export function CardsChat({props}) {
                       </p>
                     </div>
                     {selectedUsers.includes(user) ? (
-                      <Check className="margin-left-auto flex height-base width-base text-primary" />
+                      <Check className="margin-left-auto height-base width-base text-primary flex" />
                     ) : null}
                   </CommandItem>
                 ))}
               </CommandGroup>
             </CommandList>
           </Command>
-          <DialogFooter className="flex items-center border-top-s padding-base sm:justify-between">
+          <DialogFooter className="border-top-s padding-base flex items-center sm:justify-between">
             {selectedUsers.length > 0 ? (
-              <div className="flex -space-x-s overflow-hidden">
+              <div className="-space-x-s flex overflow-hidden">
                 {selectedUsers.map((user) => (
                   <Avatar
                     key={user.email}
-                    className="inline-block border-size-m border-background"
+                    className="border-size-m border-background inline-block"
                   >
                     <AvatarImage src={user.avatar} />
                     <AvatarFallback>{user.name[0]}</AvatarFallback>

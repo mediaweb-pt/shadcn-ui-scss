@@ -5,13 +5,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/shadcn-scss/components/Breadcrumbs"
+} from "@/shadcn-scss/breadcrumb"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
+} from "@/shadcn-scss/dropdown-menu"
 import { ChevronDown, Slash } from "lucide-react"
 
 export default function BreadcrumbWithDropdown() {

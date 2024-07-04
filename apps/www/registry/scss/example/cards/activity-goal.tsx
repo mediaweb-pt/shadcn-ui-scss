@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 import { Minus, Plus } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Bar, BarChart, ResponsiveContainer } from "recharts"
@@ -79,7 +79,10 @@ export function CardsActivityGoal() {
       <CardContent className="pb-2">
         <div className="flex items-center justify-center space-x-2">
           <Button
-            className={buttonVariants({variant: "outline", size: "icon"}) + " h-8 w-8 shrink-0 border-radius-circle"}
+            className={
+              buttonVariants({ variant: "outline", size: "icon" }) +
+              " h-8 w-8 shrink-0 border-radius-circle"
+            }
             onClick={() => onClick(-10)}
             disabled={goal <= 200}
           >
@@ -87,13 +90,18 @@ export function CardsActivityGoal() {
             <span className="sr-only">Decrease</span>
           </Button>
           <div className="flex-1 text-center">
-            <div className="font-size-display font-bold tracking-tighter">{goal}</div>
+            <div className="font-size-display font-bold tracking-tighter">
+              {goal}
+            </div>
             <div className="font-size-xs text-uppercase text-muted-foreground">
               Calories/day
             </div>
           </div>
           <Button
-            className={buttonVariants({variant: "outline", size: "icon"}) + " h-8 w-8 shrink-0 border-radius-circle"}
+            className={
+              buttonVariants({ variant: "outline", size: "icon" }) +
+              " h-8 w-8 shrink-0 border-radius-circle"
+            }
             onClick={() => onClick(10)}
             disabled={goal >= 400}
           >

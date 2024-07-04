@@ -1,7 +1,7 @@
 "use client"
 
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
-import { Calendar } from "@/shadcn-scss/components/Calendar"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
+import { Calendar } from "@/shadcn-scss/calendar"
 import {
   Form,
   FormControl,
@@ -10,12 +10,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/shadcn-scss/components/Form"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/shadcn-scss/components/Popover"
+} from "@/shadcn-scss/form"
+import { Popover, PopoverContent, PopoverTrigger } from "@/shadcn-scss/popover"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { format } from "date-fns"
 import { CalendarIcon } from "lucide-react"
@@ -23,7 +20,6 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({
   dob: z.date({

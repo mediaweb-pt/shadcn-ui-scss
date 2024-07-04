@@ -2,7 +2,8 @@ import { expect, test } from "vitest"
 
 import { transform } from "../../src/utils/transformers"
 import { applyPrefixesCss } from "../../src/utils/transformers/transform-tw-prefix"
-import stone from "../fixtures/colors/stone.json"
+// @ts-ignore
+import stone from "../fixtures/colors/zinc.json"
 
 test("transform tailwind prefix", async () => {
   expect(

@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   Form,
   FormControl,
@@ -15,9 +15,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/shadcn-scss/components/Form"
-import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/components/RadioGroup"
-import { toast } from "@/registry/scss/ui/toast/use-toast"
+} from "@/shadcn-scss/form"
+import { RadioGroup, RadioGroupItem } from "@/shadcn-scss/radio-group"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 
 const appearanceFormSchema = z.object({
   theme: z.enum(["light", "dark"], {

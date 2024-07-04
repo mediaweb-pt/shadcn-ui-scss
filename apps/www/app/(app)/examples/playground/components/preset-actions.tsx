@@ -9,25 +9,25 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/shadcn-scss/components/AlertDialog"
-import { Button, buttonVariants } from "@/shadcn-scss/components/Button"
+} from "@/shadcn-scss/alert-dialog"
+import { Button, buttonVariants } from "@/shadcn-scss/button"
 import {
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/shadcn-scss/components/Dialog"
+} from "@/shadcn-scss/dialog"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
-import { Label } from "@/shadcn-scss/components/Label"
-import { Switch } from "@/shadcn-scss/components/Switch"
-import { toast } from "@/shadcn-scss/components/Toast/useToast"
+} from "@/shadcn-scss/dropdown-menu"
+import { Label } from "@/shadcn-scss/label"
+import { Switch } from "@/shadcn-scss/switch"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 import { Dialog } from "@radix-ui/react-dialog"
 import { DotsHorizontalIcon } from "@radix-ui/react-icons"
 

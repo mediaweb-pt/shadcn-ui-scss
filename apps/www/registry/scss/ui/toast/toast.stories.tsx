@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 
 import { Toaster } from "."
-import { ToastDemo } from "./demo/toast-demo"
+import ToastDemo from "../../example/toast-demo"
 
 /**
  * ## Installation

@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/shadcn-scss/components/Button"
+import { Button } from "@/shadcn-scss/button"
 import {
   Form,
   FormControl,
@@ -8,13 +8,12 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/shadcn-scss/components/Form"
-import { Switch } from "@/shadcn-scss/components/Switch"
+} from "@/shadcn-scss/form"
+import { Switch } from "@/shadcn-scss/switch"
+import { toast } from "@/shadcn-scss/toast/use-toast"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
-import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({
   marketing_emails: z.boolean().default(false).optional(),
@@ -49,7 +48,7 @@ export default function SwitchForm() {
             <FormField
               control={form.control}
               name="marketing_emails"
-              render={({ field }) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">
@@ -71,7 +70,7 @@ export default function SwitchForm() {
             <FormField
               control={form.control}
               name="security_emails"
-              render={({ field }) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Security emails</FormLabel>

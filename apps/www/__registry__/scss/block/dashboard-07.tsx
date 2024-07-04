@@ -1,5 +1,52 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Badge } from "@/shadcn-scss/badge"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/shadcn-scss/breadcrumb"
+import { Button } from "@/shadcn-scss/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/shadcn-scss/card"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/shadcn-scss/dropdown-menu"
+import { Input } from "@/shadcn-scss/input"
+import { Label } from "@/shadcn-scss/label"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/shadcn-scss/select"
+import { Sheet, SheetContent, SheetTrigger } from "@/shadcn-scss/sheet"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/shadcn-scss/table"
+import { Textarea } from "@/shadcn-scss/textarea"
+import { ToggleGroup, ToggleGroupItem } from "@/shadcn-scss/toggle-group"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/shadcn-scss/tooltip"
 import {
   ChevronLeft,
   Home,
@@ -15,58 +62,6 @@ import {
   Users2,
 } from "lucide-react"
 
-import { Badge } from "@/registry/scss/ui/badge"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/registry/scss/ui/breadcrumb"
-import { Button } from "@/registry/scss/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/scss/ui/card"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/scss/ui/dropdown-menu"
-import { Input } from "@/registry/scss/ui/input"
-import { Label } from "@/registry/scss/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/scss/ui/select"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/scss/ui/sheet"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/registry/scss/ui/table"
-import { Textarea } from "@/registry/scss/ui/textarea"
-import { ToggleGroup, ToggleGroupItem } from "@/registry/scss/ui/toggle-group"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/scss/ui/tooltip"
-
 export const description =
   "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images."
 
@@ -76,12 +71,12 @@ export const containerClassName = "w-full h-full"
 
 export default function Dashboard() {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-muted/40">
-      <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
+    <div className="bg-muted/40 flex min-h-screen w-full flex-col">
+      <aside className="bg-background fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r sm:flex">
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
           <Link
             href="#"
-            className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
+            className="bg-primary text-primary-foreground group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:h-8 md:w-8 md:text-base"
           >
             <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
             <span className="sr-only">Acme Inc</span>
@@ -90,7 +85,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className="text-muted-foreground hover:text-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <Home className="h-5 w-5" />
                 <span className="sr-only">Dashboard</span>
@@ -102,7 +97,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className="bg-accent text-accent-foreground hover:text-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <ShoppingCart className="h-5 w-5" />
                 <span className="sr-only">Orders</span>
@@ -114,7 +109,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className="text-muted-foreground hover:text-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <Package className="h-5 w-5" />
                 <span className="sr-only">Products</span>
@@ -126,7 +121,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className="text-muted-foreground hover:text-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <Users2 className="h-5 w-5" />
                 <span className="sr-only">Customers</span>
@@ -138,7 +133,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className="text-muted-foreground hover:text-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <LineChart className="h-5 w-5" />
                 <span className="sr-only">Analytics</span>
@@ -152,7 +147,7 @@ export default function Dashboard() {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className="text-muted-foreground hover:text-foreground flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:h-8 md:w-8"
               >
                 <Settings className="h-5 w-5" />
                 <span className="sr-only">Settings</span>
@@ -163,7 +158,7 @@ export default function Dashboard() {
         </nav>
       </aside>
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
-        <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+        <header className="bg-background sticky top-0 z-30 flex h-14 items-center gap-4 border-b px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
@@ -175,42 +170,42 @@ export default function Dashboard() {
               <nav className="grid gap-6 text-lg font-medium">
                 <Link
                   href="#"
-                  className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
+                  className="bg-primary text-primary-foreground group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:text-base"
                 >
                   <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
                   <span className="sr-only">Acme Inc</span>
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  className="text-muted-foreground hover:text-foreground flex items-center gap-4 px-2.5"
                 >
                   <Home className="h-5 w-5" />
                   Dashboard
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  className="text-muted-foreground hover:text-foreground flex items-center gap-4 px-2.5"
                 >
                   <ShoppingCart className="h-5 w-5" />
                   Orders
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-foreground"
+                  className="text-foreground flex items-center gap-4 px-2.5"
                 >
                   <Package className="h-5 w-5" />
                   Products
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  className="text-muted-foreground hover:text-foreground flex items-center gap-4 px-2.5"
                 >
                   <Users2 className="h-5 w-5" />
                   Customers
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  className="text-muted-foreground hover:text-foreground flex items-center gap-4 px-2.5"
                 >
                   <LineChart className="h-5 w-5" />
                   Settings
@@ -238,11 +233,11 @@ export default function Dashboard() {
             </BreadcrumbList>
           </Breadcrumb>
           <div className="relative ml-auto flex-1 md:grow-0">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+            <Search className="text-muted-foreground absolute left-2.5 top-2.5 h-4 w-4" />
             <Input
               type="search"
               placeholder="Search..."
-              className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
+              className="bg-background w-full rounded-lg pl-8 md:w-[200px] lg:w-[336px]"
             />
           </div>
           <DropdownMenu>
@@ -569,7 +564,7 @@ export default function Dashboard() {
                           />
                         </button>
                         <button className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed">
-                          <Upload className="h-4 w-4 text-muted-foreground" />
+                          <Upload className="text-muted-foreground h-4 w-4" />
                           <span className="sr-only">Upload</span>
                         </button>
                       </div>

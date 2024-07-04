@@ -1,6 +1,6 @@
 //import "@/styles/globals.css"
 import "@/styles/scss/layout.scss"
-import "../../../lib/styles/shadcn-ui.scss"
+import "../registry/styles/shadcn-ui.scss"
 import { Metadata, Viewport } from "next"
 
 import { siteConfig } from "@/config/site"
@@ -82,27 +82,24 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body className={cn(fontSans.variable)}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div vaul-drawer-wrapper="">
-              <div className="site-layout">
-                {children}
-              </div>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(fontSans.variable)}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div vaul-drawer-wrapper="">
+            <div className="site-layout">
+              {children}
             </div>
-            <ThemeSwitcher />
-            <Analytics />
-            <SCSSSonner />
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+          </div>
+          <ThemeSwitcher />
+          <Analytics />
+          <SCSSSonner />
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }

@@ -25,7 +25,7 @@ export function MainNav() {
           <TooltipTrigger>
             <Link href="/themes" className="site-layout__header-logo">
               <Icons.logo className="site-layout__header-icon--lg" />
-              <span className="hidden bold sm_inline-block">
+              <span className="bold sm_inline-block hidden">
                 {siteConfig.name}
               </span>
             </Link>

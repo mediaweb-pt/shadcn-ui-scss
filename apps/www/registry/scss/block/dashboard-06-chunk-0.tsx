@@ -1,8 +1,6 @@
 import Image from "next/image"
-import { MoreHorizontal } from "lucide-react"
-
-import { Badge } from "@/shadcn-scss/components/Badge"
-import { Button } from "@/registry/scss/ui/button"
+import { Badge } from "@/shadcn-scss/badge"
+import { Button } from "@/shadcn-scss/button"
 import {
   Card,
   CardContent,
@@ -10,14 +8,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/shadcn-scss/components/Card"
+} from "@/shadcn-scss/card"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/shadcn-scss/components/DropdownMenu"
+} from "@/shadcn-scss/dropdown-menu"
 import {
   Table,
   TableBody,
@@ -25,7 +23,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/shadcn-scss/components/Table"
+} from "@/shadcn-scss/table"
+import { MoreHorizontal } from "lucide-react"
 
 export default function Component() {
   return (
@@ -278,7 +277,7 @@ export default function Component() {
         </Table>
       </CardContent>
       <CardFooter>
-        <div className="text-xs text-muted-foreground">
+        <div className="text-muted-foreground text-xs">
           Showing <strong>1-10</strong> of <strong>32</strong> products
         </div>
       </CardFooter>

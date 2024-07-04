@@ -7,7 +7,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/shadcn-scss/components/Command"
+} from "@/shadcn-scss/command"
 import {
   Calculator,
   Calendar,
