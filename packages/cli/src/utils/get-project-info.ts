@@ -88,7 +88,7 @@ export async function getProjectConfig(cwd: string): Promise<Config | null> {
   const isTsx = await isTypeScriptProject(cwd)
 
   const config: RawConfig = {
-    $schema: "http://localhost:3003/schema.json",
+    $schema: "https://shadcn-ui-scss.vercel.app/schema.json",
     rsc: ["next-app", "next-app-src"].includes(projectType),
     tsx: isTsx,
     style: "scss",

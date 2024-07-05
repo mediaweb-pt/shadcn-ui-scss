@@ -1,13 +1,13 @@
 {
-  "$schema": "http://localhost:3003/schema.json",
+  "$schema": "https://shadcn-ui-scss.vercel.app/schema.json",
   "style": "scss",
   "rsc": true,
   "tsx": true,
   "tailwind": {
-    "config": "tailwind.config.ts",
+    "config": "tailwind.config.js",
     "scss": "styles/shadcn-ui.scss",
     "baseColor": "slate",
-    "cssVariables": false,
+    "cssVariables": true,
     "prefix": ""
   },
   "aliases": {

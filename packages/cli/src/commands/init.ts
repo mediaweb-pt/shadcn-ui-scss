@@ -188,7 +188,7 @@ export async function promptForConfig(
   ])
 
   const config = rawConfigSchema.parse({
-    $schema: "http://localhost:3003/schema.json",
+    $schema: "https://shadcn-ui-scss.vercel.app/schema.json",
     style: options.style,
     tailwind: {
       config: options.tailwindConfig,
