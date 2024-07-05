@@ -17,7 +17,7 @@ const ScrollArea = React.forwardRef<
     style={props.style}
     {...props}
   >
-    <ScrollAreaPrimitive.Viewport className="scroll-area__viewport">
+    <ScrollAreaPrimitive.Viewport className={cn("scroll-area__viewport")}>
       {children}
     </ScrollAreaPrimitive.Viewport>
     <ScrollBar />
@@ -34,14 +34,16 @@ const ScrollBar = React.forwardRef<
     ref={ref}
     orientation={orientation}
     className={cn(
-      "scroll-area__scrollbar",
-      orientation === "vertical" && "scroll-area__scrollbar--vertical",
-      orientation === "horizontal" && "scroll-area__scrollbar--horizontal",
+      "scroll-area__scrollBar",
+      {
+        "scroll-area__scrollBar--vertical": orientation === "vertical",
+        "scroll-area__scrollBar--horizontal": orientation === "horizontal",
+      },
       className
     )}
     {...props}
   >
-    <ScrollAreaPrimitive.ScrollAreaThumb className="scroll-area__scrollbar-thumb" />
+    <ScrollAreaPrimitive.ScrollAreaThumb className={cn("scroll-area__thumb")} />
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName

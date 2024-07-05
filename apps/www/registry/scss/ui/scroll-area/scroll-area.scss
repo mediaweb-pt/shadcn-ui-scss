@@ -1,8 +1,6 @@
 .scroll-area {
-  height: var(--_scroll-area-height);
-  overflow: hidden;
   position: relative;
-  width: var(--_scroll-area-width);
+  overflow: hidden;
 
   &__viewport {
     border-radius: inherit;
@@ -13,27 +11,33 @@
   &__scrollbar {
     display: flex;
     touch-action: none;
-    transition: 0.3s ease;
     user-select: none;
-    &--horizontal {
-      border-top: var(--border-size-s) solid transparent;
-      flex-direction: column;
-      height: 10px;
-      padding: 1px;
-    }
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
 
     &--vertical {
-      border-left: var(--border-size-s) solid transparent;
-      flex-direction: column;
-      height: 10px;
+      height: 100%;
+      width: 0.625rem;
+      border-left-width: 1px;
+      border-left-color: transparent;
       padding: 1px;
     }
 
-    &-thumb {
-      background-color: hsl(var(--border));
-      border-radius: var(--border-radius-rounded);
-      flex: 1;
-      position: relative;
+    &--horizontal {
+      height: 0.625rem;
+      flex-direction: column;
+      border-top-width: 1px;
+      border-top-color: transparent;
+      padding: 1px;
     }
+  }
+
+  &-thumb {
+    background-color: hsl(var(--border));
+    border-radius: var(--border-radius-rounded);
+    flex: 1;
+    position: relative;
   }
 }

@@ -67,6 +67,7 @@ export const init = new Command()
       preFlight(cwd)
 
       const projectConfig = await getProjectConfig(cwd)
+
       if (projectConfig) {
         const config = await promptForMinimalConfig(
           cwd,
@@ -138,7 +139,7 @@ export async function promptForConfig(
       type: "text",
       name: "tailwindCss",
       message: `Where is your ${highlight("global CSS")} file?`,
-      initial: defaultConfig?.tailwind.css ?? DEFAULT_TAILWIND_CSS,
+      initial: defaultConfig?.tailwind.scss ?? DEFAULT_TAILWIND_CSS,
     },
     {
       type: "toggle",

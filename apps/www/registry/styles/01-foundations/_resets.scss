@@ -2,14 +2,17 @@
   border-color: hsl(var(--border));
 }
 
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  /* font-feature-settings: "rlig" 1, "calt" 1; */
   font-synthesis-weight: none;
   text-rendering: optimizeLegibility;
   min-height: 100vh;

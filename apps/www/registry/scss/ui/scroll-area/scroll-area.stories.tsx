@@ -27,7 +27,7 @@ const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
 )
 
-export interface Artwork {
+interface Artwork {
   artist: string
   art: string
 }
@@ -51,9 +51,13 @@ const works: Artwork[] = [
 
 export const Default: Story = {
   render: (args) => (
-    <ScrollArea className="border-size-s border-radius-soft" {...args}>
+    <ScrollArea
+      className="border-size-s border-radius-soft"
+      style={{ height: "18rem", width: "12rem" }}
+      {...args}
+    >
       <div className="padding-base">
-        <h4 className="margin-bottom-base font-size-s font-semi-bold">Tags</h4>
+        <h4 className="margin-bottom-base font-size-s font-semi-bold">Tag</h4>
         {tags.map((tag) => (
           <div key={tag}>
             <div className="font-size-s">{tag}</div>
@@ -67,20 +71,11 @@ export const Default: Story = {
 
 export const Horizontal: Story = {
   render: (args) => (
-    <ScrollArea
-      className="white-space-nowrap border-size-s border-radius-soft"
-      style={
-        {
-          "--_scroll-area-width": "384px",
-          "--_scroll-area-height": "485px",
-        } as React.CSSProperties
-      }
-      {...args}
-    >
+    <ScrollArea className="border-size-s border-radius-soft" {...args}>
       <div className="display-flex gap-base padding-base">
         {works.map((artwork) => (
-          <figure key={artwork.artist} className="flex-shrink-0">
-            <div className="overflow-hidden border-radius-soft">
+          <figure key={artwork.artist} className="shrink-0">
+            <div className="border-radius-soft overflow-hidden">
               <img
                 src={artwork.art}
                 alt={`Photo by ${artwork.artist}`}
@@ -91,7 +86,7 @@ export const Horizontal: Story = {
             </div>
             <figcaption className="padding-top-s font-size-xs text-neutral-7">
               Photo by{" "}
-              <span className="font-bold text-neutral-10">
+              <span className="text-neutral-10 font-bold">
                 {artwork.artist}
               </span>
             </figcaption>

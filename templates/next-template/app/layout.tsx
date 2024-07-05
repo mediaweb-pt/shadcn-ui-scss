@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+import "@/styles/shadcn-ui.scss"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
