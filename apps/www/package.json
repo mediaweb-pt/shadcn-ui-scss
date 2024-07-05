@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@8.5.1",
   "scripts": {
     "dev": "next dev -p 3003",
     "build": "contentlayer build && pnpm build:registry && next build",
