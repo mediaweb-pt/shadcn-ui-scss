@@ -1,5 +1,11 @@
 // @sts-nocheck
-import { existsSync, promises as fs, readFileSync } from "fs"
+import {
+  existsSync,
+  promises as fs,
+  readFile,
+  readFileSync,
+  readdirSync,
+} from "fs"
 import { tmpdir } from "os"
 import path, { basename } from "path"
 import { cwd } from "process"
@@ -308,6 +314,10 @@ async function buildStyles(registry: Registry) {
         files,
       }
 
+      if (!existsSync(targetPath)) {
+        await fs.mkdir(targetPath, { recursive: true })
+      }
+
       await fs.writeFile(
         path.join(targetPath, `${item.name}.json`),
         JSON.stringify(payload, null, 2),
@@ -380,8 +390,7 @@ async function buildThemes() {
   // ----------------------------------------------------------------------------
   const BASE_STYLES = `@tailwind base;
   @tailwind components;
-  @tailwind utilities;
-  `
+  @tailwind utilities;`
 
   const BASE_STYLES_WITH_VARIABLES = `@tailwind base;
   @tailwind components;
@@ -456,7 +465,8 @@ async function buildThemes() {
       border-color: hsl(var(--border));
     }
     body {
-      @apply bg-background text-foreground;
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
     }
   }`
 
@@ -630,6 +640,45 @@ async function buildThemes() {
   }
 }
 
+// ----------------------------------------------------------------------------
+// Build registry/themeSCSS/index.json
+// ----------------------------------------------------------------------------
+async function buildSCSSTheme() {
+  const SCSSTargetPath = path.join(REGISTRY_PATH, "scssTheme")
+  rimraf.sync(SCSSTargetPath)
+  if (!existsSync(SCSSTargetPath)) {
+    await fs.mkdir(SCSSTargetPath, { recursive: true })
+  }
+
+  const files = readdirSync(path.join(process.cwd(), "registry/styles"), {
+    recursive: true,
+  })
+  console.log(files.filter((file) => !file.includes(".scss")))
+
+  for (const file of files) {
+    if (!existsSync(`${SCSSTargetPath}/${file}`)) {
+      await fs.mkdir(`${SCSSTargetPath}/${file}`)
+    }
+
+    if (!file.includes(".scss")) {
+      
+    } else {
+      // const content = await fs.readFile(
+      //   `${path.join(process.cwd(), "registry/styles")}/${file.name}`
+      // )
+      // console.log(content)
+      // await fs.writeFile(
+      //   path.join(
+      //     `${SCSSTargetPath}`,
+      //     `${file.name.slice(0, file.name.length - 5)}.json`
+      //   ),
+      //   JSON.stringify({}),
+      //   "utf8"
+      // )
+    }
+  }
+}
+
 try {
   const result = registrySchema.safeParse(registry)
 
@@ -641,6 +690,7 @@ try {
   await buildRegistry(result.data)
   await buildStyles(result.data)
   await buildThemes()
+  await buildSCSSTheme()
 
   console.log("✅ Done!")
 } catch (error) {

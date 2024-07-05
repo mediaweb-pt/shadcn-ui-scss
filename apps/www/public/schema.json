@@ -12,7 +12,7 @@
         "config": {
           "type": "string"
         },
-        "css": {
+        "scss": {
           "type": "string"
         },
         "baseColor": {

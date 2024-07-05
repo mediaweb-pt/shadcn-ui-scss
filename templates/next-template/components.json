@@ -1,13 +1,14 @@
 {
-  "$schema": "https://ui.shadcn.com/schema.json",
+  "$schema": "https://shadcn-ui-scss.vercel.app/schema.json",
   "style": "scss",
-  "rsc": false,
+  "rsc": true,
   "tsx": true,
   "tailwind": {
     "config": "tailwind.config.js",
-    "css": "app/globals.css",
+    "scss": "styles/shadcn-ui.scss",
     "baseColor": "slate",
-    "cssVariables": false
+    "cssVariables": true,
+    "prefix": ""
   },
   "aliases": {
     "components": "@/components",

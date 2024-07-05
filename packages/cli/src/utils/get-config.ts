@@ -25,7 +25,7 @@ export const rawConfigSchema = z
     tsx: z.coerce.boolean().default(true),
     tailwind: z.object({
       config: z.string(),
-      css: z.string(),
+      scss: z.string(),
       baseColor: z.string(),
       cssVariables: z.boolean().default(true),
       prefix: z.string().default("").optional(),
@@ -78,7 +78,7 @@ export async function resolveConfigPaths(cwd: string, config: RawConfig) {
     ...config,
     resolvedPaths: {
       tailwindConfig: path.resolve(cwd, config.tailwind.config),
-      tailwindCss: path.resolve(cwd, config.tailwind.css),
+      tailwindCss: path.resolve(cwd, config.tailwind.scss),
       utils: await resolveImport(config.aliases["utils"], tsConfig),
       components: await resolveImport(config.aliases["components"], tsConfig),
       ui: config.aliases["ui"]

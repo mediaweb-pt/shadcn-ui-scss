@@ -78,24 +78,24 @@ export async function getProjectConfig(cwd: string): Promise<Config | null> {
   }
 
   const projectType = await getProjectType(cwd)
-  const tailwindCssFile = await getTailwindCssFile(cwd)
+  const scssFile = await getSCSSFile(cwd)
   const tsConfigAliasPrefix = await getTsConfigAliasPrefix(cwd)
 
-  if (!projectType || !tailwindCssFile || !tsConfigAliasPrefix) {
+  if (!projectType || !scssFile || !tsConfigAliasPrefix) {
     return null
   }
 
   const isTsx = await isTypeScriptProject(cwd)
 
   const config: RawConfig = {
-    $schema: "https://ui.shadcn.com/schema.json",
+    $schema: "https://shadcn-ui-scss.vercel.app/schema.json",
     rsc: ["next-app", "next-app-src"].includes(projectType),
     tsx: isTsx,
-    style: "new-york",
+    style: "scss",
     tailwind: {
       config: isTsx ? "tailwind.config.ts" : "tailwind.config.js",
       baseColor: "zinc",
-      css: tailwindCssFile,
+      scss: scssFile,
       cssVariables: true,
       prefix: "",
     },
@@ -132,8 +132,8 @@ export async function getProjectType(cwd: string): Promise<ProjectType | null> {
   return isUsingSrcDir ? "next-pages-src" : "next-pages"
 }
 
-export async function getTailwindCssFile(cwd: string) {
-  const files = await fg.glob("**/*.css", {
+export async function getSCSSFile(cwd: string) {
+  const files = await fg.glob("**/*.scss", {
     cwd,
     deep: 3,
     ignore: PROJECT_SHARED_IGNORE,
@@ -143,15 +143,7 @@ export async function getTailwindCssFile(cwd: string) {
     return null
   }
 
-  for (const file of files) {
-    const contents = await fs.readFile(path.resolve(cwd, file), "utf8")
-    // Assume that if the file contains `@tailwind base` it's the main css file.
-    if (contents.includes("@tailwind base")) {
-      return file
-    }
-  }
-
-  return null
+  return "styles/shadcn-ui.scss"
 }
 
 export async function getTsConfigAliasPrefix(cwd: string) {
