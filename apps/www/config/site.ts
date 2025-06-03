@@ -9,7 +9,7 @@ export const siteConfig = {
     twitter: "https://twitter.com/MediawebC",
     instagram: "https://instagram.com/mediaweb.pt/",
     linkedin: "https://linkedin.com/company/mediaweb-creations/",
-    github: "https://github.com/mediaweb-pt/shadcn-ui-sass",
+    github: "https://github.com/mediaweb-pt/shadcn-ui-scss",
     mediaweb: "https://mediaweb.pt",
     shadcn: "https://ui.shadcn.com"
   },
